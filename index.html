@@ -43,6 +43,7 @@
     <tr><td><a href="https://searchuserinterfaces.com/book/">Hearst『Search User Interfaces』</a></td><td>検索 UI の定本、共通原則、適用</td><td>検索 UI の実証研究の総覧。語彙問題、ファセット、0件の回避</td></tr>
     <tr><td>fzf と端末ツール</td><td>fzf、適用</td><td>インクリメンタル検索の実装例</td></tr>
   </table></div>
+  <p>全資料の一覧と、それぞれをどこまで確認したかは、付録の<a href="#refs">参考資料</a>にまとめた。</p>
 </section>
 
 <!-- ============ history ============ -->
@@ -988,6 +989,127 @@
       <h4>7 0件と失敗（どの段でも）</h4><ul><li>0件画面に検索欄を残し、緩めた結果と「もしかして」を自動で（7。東京都 5、NN/g 9）</li><li>タイポは「もしかして」で提案し、勝手に置換しない（11）</li><li>司書への相談導線を全ページに（7。東京都 5）</li><li>全文検索の索引が落ちても見出し検索の結果は出し、部分結果であることを示す（11。フェイルセーフ）</li></ul></div>
   </div>
 
+</section>
+
+<!-- ============ refs ============ -->
+<section class="slide" data-title="参考資料" id="refs">
+  <div class="eyebrow">付録</div>
+  <h2>参考資料 ― 出典と確認の範囲</h2>
+  <p>本資料が引いた資料を種類ごとにまとめた。章の名前を押すとその章へ移る。各章の末尾の注記は、数値や主張のすぐ近くで出典を確かめるために残してあり、このページはその索引に当たる。</p>
+  <p>右端の列は、各章の注記に書いた確認の範囲を四段階に分けたものである。同じ主張でも、原典を読んだのか、紹介記事で確かめたのかで信頼の度合いが変わるので、引用するときはこの列を見る。</p>
+  <div class="tbl"><table class="lvkey">
+    <tr><th>表記</th><th>意味</th></tr>
+    <tr><td><span class="lv lv-src">原典</span></td><td>資料そのものを開いて確認した</td></tr>
+    <tr><td><span class="lv lv-abs">要旨</span></td><td>論文の要旨、動画の説明文や要約記事で確認した。本体は読んでいない</td></tr>
+    <tr><td><span class="lv lv-sec">二次</span></td><td>Wikipedia・解説・報道で確認した。主張の出どころである原典は開いていない</td></tr>
+    <tr><td><span class="lv lv-no">記載なし</span></td><td>本文で引いているが、確認の範囲を注記に書いていない</td></tr>
+  </table></div>
+  <h3>ガイドラインと規範</h3>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
+    <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/">Human Interface Guidelines</a></td><td>Apple</td><td><a href="#intro">はじめに</a>、<a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
+    <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/searching">HIG「Searching」</a></td><td>Apple</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
+    <tr><td><a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a></td><td>Apple、2025</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://m3.material.io/">Material Design 3</a></td><td>Google</td><td><a href="#intro">はじめに</a>、<a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://m3.material.io/foundations/layout/breakpoints">Material Design 3「Breakpoints」</a></td><td>Google</td><td><a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://m3.material.io/components/search/guidelines">Material Design 3「Search」</a></td><td>Google</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
+    <tr><td><a href="https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/uidesign_guide_v100">UI設計実践ガイド v1.0.0</a></td><td>東京都</td><td><a href="#intro">はじめに</a>、<a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
+    <tr><td><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">10 Usability Heuristics</a></td><td>Nielsen Norman Group</td><td><a href="#intro">はじめに</a>、<a href="#classics">古典と法則</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
+    <tr><td><a href="https://lawsofux.com/">Laws of UX</a></td><td>Jon Yablonski</td><td><a href="#classics">古典と法則</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">The Design of Everyday Things</a></td><td>Norman</td><td><a href="#classics">古典と法則</a>、<a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Dieter_Rams">Ten Principles for Good Design</a></td><td>Rams</td><td><a href="#classics">古典と法則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">Eight Golden Rules</a></td><td>Shneiderman、1986</td><td><a href="#classics">古典と法則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+  </table></div>
+  <h3>情報探索と検索 UI の研究</h3>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
+    <tr><td><a href="https://eric.ed.gov/?id=EJ404172">The Design of Browsing and Berrypicking Techniques for the Online Search Interface</a></td><td>Bates、1989</td><td><a href="#seeking">情報探索</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">The Eyes Have It</a></td><td>Shneiderman、1996</td><td><a href="#seeking">情報探索</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Information_foraging">Information Foraging</a></td><td>Pirolli と Card、1990 年代</td><td><a href="#seeking">情報探索</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Exploratory_search">Exploratory Search: From Finding to Understanding</a></td><td>Marchionini、2006</td><td><a href="#seeking">情報探索</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://searchuserinterfaces.com/book/">Search User Interfaces</a></td><td>Hearst、2009</td><td><a href="#intro">はじめに</a>、<a href="#seeking">情報探索</a>、<a href="#hearst">検索 UI の定本</a></td><td><span class="lv lv-src">原典</span></td></tr>
+  </table></div>
+  <h3>知覚・可視化・好みの研究</h3>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
+    <tr><td><a href="https://www.textbookofusability.com/references/clevelandmcgill1984.html">Graphical Perception</a></td><td>Cleveland と McGill、1984</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Visual_variable">Visual variable</a></td><td>Bertin</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://link.springer.com/rwe/10.1007/978-3-319-55065-7_1588">Feature Integration Theory の解説</a></td><td>Treisman の理論</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Chartjunk">Chartjunk</a></td><td>Tufte、1983</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Small_multiple">Small multiple</a></td><td>Tufte、1990</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://www.researchgate.net/publication/6873629_Humans_prefer_curved_visual_objects">Humans prefer curved visual objects</a></td><td>Bar と Neta、2006</td><td><a href="#swiss">スイス</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://link.springer.com/article/10.1186/s41235-023-00499-6">Cognitive Research: Principles and Implications の論文</a></td><td>Bellaiche ら、2023</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://www.researchgate.net/publication/222427507_The_effort_heuristic">The effort heuristic</a></td><td>Kruger ら、2004</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://online.ucpress.edu/collabra/article/9/1/87489/197632/The-Effort-Heuristic-Revisited-Mixed-Results-for">The Effort Heuristic Revisited</a></td><td>Collabra、2023</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
+  </table></div>
+  <h3>様式・心理・工学の解説</h3>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/International_Typographic_Style">International Typographic Style</a></td><td>Wikipedia</td><td><a href="#swiss">スイス</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://dev.to/sgbp/the-concentric-border-radius-rule-why-nested-rounded-corners-look-slightly-wrong-3hog">The concentric border-radius rule</a></td><td>DEV Community</td><td><a href="#swiss">スイス</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://ja.wikipedia.org/wiki/ゲシュタルト心理学">ゲシュタルト心理学</a></td><td>Wikipedia</td><td><a href="#gestalt">ゲシュタルト</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Rubin_vase">Rubin vase</a></td><td>Wikipedia</td><td><a href="#gestalt">ゲシュタルト</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Principles_of_grouping">Principles of grouping</a></td><td>Wikipedia</td><td><a href="#gestalt">ゲシュタルト</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Color_scheme">Color scheme</a></td><td>Wikipedia</td><td><a href="#color">色</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Johannes_Itten">Johannes Itten</a></td><td>Wikipedia</td><td><a href="#color">色</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://ja.wikipedia.org/wiki/PCCS">PCCS</a></td><td>Wikipedia</td><td><a href="#color">色</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation">Twelve basic principles of animation</a></td><td>Wikipedia</td><td><a href="#motion">動き</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://ja.wikipedia.org/wiki/ポカヨケ">ポカヨケ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://ja.wikipedia.org/wiki/フェイルセーフ">フェイルセーフ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+  </table></div>
+  <h3>動画</h3>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
+    <tr><td><a href="https://www.youtube.com/playlist?list=PLi8SA3sbzYVTl4FV0rLnSsf6ElOh-_Cv1">桜井政博のゲーム作るには【J: UI】（本文では 20 本を個別に引く）</a></td><td>桜井政博</td><td><a href="#intro">はじめに</a>、<a href="#sakurai">桜井の UI</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+  </table></div>
+  <h3>事例・報道・記事</h3>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
+    <tr><td><a href="https://ascii.jp/elem/000/004/229/4229563/">JR 東日本アプリの紹介</a></td><td>ASCII.jp</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://app-liv.jp/articles/153120/">JR 東日本アプリの紹介</a></td><td>Appliv</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://k-tai.watch.impress.co.jp/docs/column/teppan/1634024.html">JR 東日本アプリの画面</a></td><td>ケータイ Watch</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://note.com/navitime_app_tr/n/n5acf2992d460">早・楽・安の札</a></td><td>NAVITIME 公式 note</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://www.makewordart.com/blog/the_history_of_microsoft_wordart/">The History of Microsoft WordArt</a></td><td>WordArt Blog</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://office-watch.com/2025/retro-wordart-modern-microsoft-word/">レトロな WordArt</a></td><td>Office Watch、2025</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://knowyourmeme.com/memes/wordart-image-macros">WordArt Image Macros</a></td><td>Know Your Meme</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://ja.wikipedia.org/wiki/%E3%81%84%E3%82%89%E3%81%99%E3%81%A8%E3%82%84">いらすとや</a></td><td>Wikipedia</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://media-innovation.jp/article/2021/01/25/53858.html">いらすとやの更新停止</a></td><td>Media Innovation、2021</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://hashout.jp/ai/2298/">いらすとやと生成 AI</a></td><td>hashout</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://kurokumasoft.com/2023/05/09/howto-remove-ai-like-style/">AI らしさを消す方法</a></td><td>くろくまそふと、2023</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
+    <tr><td><a href="https://ai.watch.impress.co.jp/docs/serial/glossary/2122362.html">AI slop の用語解説</a></td><td>Impress Watch</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://togetter.com/li/2229909">マスピ顔のまとめ</a></td><td>Togetter</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://news.livedoor.com/topics/detail/12370065/">WordArt の流行</a></td><td>ライブドアニュース、2016</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://www.gakken.jp/kyouikusouken/whitepaper/30history/chapter2/02.html">パソコンの普及率</a></td><td>学研</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://time.com/6253615/chatgpt-fastest-growing/">ChatGPT の利用者数</a></td><td>TIME</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://the-decoder.com/chatgpts-image-generation-explodes-with-700m-creations-in-first-week/">画像生成の枚数</a></td><td>The Decoder</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://www.marketingprofs.com/charts/2023/49890/surge-of-ai-generated-images-online">AI 生成画像の推計</a></td><td>Everypixel</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://www.itmedia.co.jp/news/articles/2212/23/news154.html">mimic</a></td><td>ITmedia</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+  </table></div>
+  <h3>図版と道具</h3>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
+    <tr><td><a href="https://www.irasutoya.com/2026/08/frenemywoman.html">フレネミーのイラスト（女性）</a></td><td>いらすとや</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://www.irasutoya.com/2015/02/blog-post_744.html">新聞を読むビジネスマンのイラスト</a></td><td>いらすとや</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://www.irasutoya.com/2018/08/blog-post_2.html">会議でプレゼンをする人のイラスト（男性）</a></td><td>いらすとや</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://commons.wikimedia.org/wiki/File:Girl,_impressionism,_(faint_light),_looking_at_hand,business_suit,Rectangular_glasses_s-1226632615.webp">生成画像の例</a></td><td>Wikimedia Commons</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://github.com/junegunn/fzf">fzf</a></td><td>junegunn、2013</td><td><a href="#fzf">fzf と TUI</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
+  </table></div>
+  <h3>名前を挙げたが開いていない資料</h3>
+  <p>本文で触れたが、作成時に開いていないものである。主張の根拠には使っていない。</p>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>挙げた章</th></tr>
+    <tr><td>Tschichold『新しいタイポグラフィ』、Gerstner『Designing Programmes』、Müller-Brockmann『Grid Systems in Graphic Design』、Ruder『Typographie』</td><td><a href="#swiss">スイス</a></td></tr>
+    <tr><td>Palmer の共通領域の論文（1992）</td><td><a href="#gestalt">ゲシュタルト</a></td></tr>
+    <tr><td>色の印象の出典となる書籍</td><td><a href="#color">色</a></td></tr>
+    <tr><td>Cleveland と McGill、Bertin、Treisman、Tufte の原典</td><td><a href="#charts">可視化</a></td></tr>
+    <tr><td>Cowan「The magical number 4 in short-term memory」（2001）</td><td><a href="#classics">古典と法則</a></td></tr>
+    <tr><td>Krug『Don&#x27;t Make Me Think』、Cooper『About Face』、Raskin『The Humane Interface』、Victor「Magic Ink」、Garrett、WCAG</td><td><a href="#classics">古典と法則</a></td></tr>
+    <tr><td>Thomas と Johnston『The Illusion of Life』（1981）、Willenskomer の UX in Motion Manifesto、Head の著書、Material と Apple の Motion の本文</td><td><a href="#motion">動き</a></td></tr>
+    <tr><td>Bates の原論文</td><td><a href="#seeking">情報探索</a></td></tr>
+    <tr><td>Rosenfeld と Morville『Information Architecture』、Russell-Rose と Tate『Designing the Search Experience』、Baymard の調査</td><td><a href="#seeking">情報探索</a></td></tr>
+    <tr><td>Hearst が引く個々の研究の原論文</td><td><a href="#hearst">検索 UI の定本</a></td></tr>
+  </table></div>
+  <p>本資料の著者自身のデザイン原則（グリッド、色の配分、文字組み）は公開資料ではないので、この一覧には載せていない。</p>
 </section>
 
 <div class="slidefoot"><button class="navlink" id="prev2" type="button"></button><span id="footl"></span><button class="navlink" id="next2" type="button"></button></div>

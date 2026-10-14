@@ -537,3 +537,10 @@ table.sys{font-size:.78rem}table.sys td:first-child{font-family:var(--mono);whit
 #fctlist{max-height:300px;overflow:auto}
 .vp.one{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
 .quad{grid-template-columns:40px minmax(0,1fr) minmax(0,1fr)}.quad>*{min-width:0;overflow-wrap:anywhere}
+
+/* ---------- 参考資料 ---------- */
+/* 確認の程度は色だけでなく文字と枠の形で区別する。上の段ほど濃い */
+.lv{display:inline-block;font-family:var(--mono);font-size:.7rem;padding:0 8px;white-space:nowrap}
+.lv-src{background:var(--main);color:var(--bg)}.lv-abs{box-shadow:inset 0 0 0 1px var(--main);color:var(--main)}.lv-sec{box-shadow:inset 0 0 0 1px var(--line);color:var(--muted)}.lv-no{color:var(--muted);text-decoration:underline dotted}
+table.refs td:nth-child(2){color:var(--muted);white-space:nowrap}table.refs td:last-child{width:6em}
+table.lvkey{max-width:40em}

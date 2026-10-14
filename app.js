@@ -3,7 +3,7 @@
 
   /* ---------- tabs / slides ---------- */
   var slides=[].slice.call(document.querySelectorAll('.slide')), tabs=document.getElementById('tabs'), cur=0;
-  var grp=null,lastPart='';slides.forEach(function(s,i){var eb=s.querySelector('.eyebrow'),part=eb&&/^第\d部/.test(eb.textContent)?eb.textContent.match(/^第\d部/)[0]:'';if(!grp||part!==lastPart){grp=document.createElement('div');grp.className='grp';var sp=document.createElement('span');sp.className='part';sp.textContent=part;grp.appendChild(sp);var row=document.createElement('div');row.className='row';grp.appendChild(row);tabs.appendChild(grp);lastPart=part;}var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.innerHTML='<span class="n">'+i+'</span>'+s.dataset.title;b.addEventListener('click',function(){go(i);});grp.querySelector('.row').appendChild(b);});
+  var grp=null,lastPart='';slides.forEach(function(s,i){var eb=s.querySelector('.eyebrow'),part=eb&&/^(第\d部|付録)/.test(eb.textContent)?eb.textContent.match(/^(第\d部|付録)/)[0]:'';if(!grp||part!==lastPart){grp=document.createElement('div');grp.className='grp';var sp=document.createElement('span');sp.className='part';sp.textContent=part;grp.appendChild(sp);var row=document.createElement('div');row.className='row';grp.appendChild(row);tabs.appendChild(grp);lastPart=part;}var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.innerHTML='<span class="n">'+i+'</span>'+s.dataset.title;b.addEventListener('click',function(){go(i);});grp.querySelector('.row').appendChild(b);});
   var tabBtns=[].slice.call(tabs.querySelectorAll('button'));
   /* 章の移動は履歴に積み、各履歴にスクロール位置を持たせる。ブラウザの戻る（Mac の2本指スワイプ、Cmd+[）でも元の位置に戻すため */
   var scrollPos={};
