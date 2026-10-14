@@ -509,3 +509,31 @@ a[data-prin]{text-decoration:underline dotted}
 .vp{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:calc(var(--u)*4);margin-top:calc(var(--u)*2)}.vp>*{min-width:0}
 .vp .fig{margin-top:0;background:var(--panel);padding:var(--u)}.vp h4{margin-top:calc(var(--u)*2)}.vp .src{margin-top:4px;font-size:.78rem;color:var(--muted)}.vp p{font-size:.88rem}
 .vps{width:100%;height:auto}.vps .vpl{font-size:10px;fill:var(--fg)}.vps .vps-s{font-size:9px;fill:var(--muted)}
+
+/* ---------- Hearst の 12 章 ---------- */
+.hmap{width:100%;max-width:720px;height:auto}.hmap .hmno{font-family:var(--mono);font-size:11px;fill:var(--muted)}.hmap .hmnm{font-family:var(--sans);font-size:13px;font-weight:700;fill:var(--fg)}.hmap .hmsub{font-family:var(--sans);font-size:10px;fill:var(--muted)}
+.vps .num{font-family:var(--mono)}
+.anat{background:var(--panel);padding:10px 12px;font-size:.85rem;display:grid;gap:6px}
+.anat .arow{display:grid;grid-template-columns:72px 1fr;gap:8px;align-items:baseline}.anat .atag{font-family:var(--mono);font-size:.68rem;color:var(--muted)}
+.anat .at{color:var(--main);font-weight:500}.anat .au{font-family:var(--mono);font-size:.75rem;color:var(--muted)}.anat .as{line-height:1.6}.anat b{color:var(--accent)}
+.dym{background:var(--panel);padding:10px 12px;font-size:.85rem;display:grid;gap:8px}.dym .q{background:var(--bg);box-shadow:inset 0 0 0 1px var(--fg);padding:4px 8px}.dym .q b{font-weight:400;text-decoration:underline wavy var(--err)}
+.dym .old{color:var(--muted);font-size:.75rem;text-decoration:line-through}.dym .new a{color:var(--main);text-decoration:underline}
+.anch{list-style:none;margin:0;padding:10px 12px;background:var(--panel);font-family:var(--mono);font-size:.68rem;line-height:1.5;max-width:none}.anch li{margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.anch .num{display:inline-block;width:1.6em;color:var(--muted)}.anch i{font-style:normal;color:var(--accent);font-weight:700}
+.crumbs{background:var(--panel);padding:10px 12px;display:grid;gap:10px;font-size:.8rem}.crumbs>div{display:grid;grid-template-columns:72px 1fr;gap:8px;align-items:baseline}.crumbs .ct{font-family:var(--mono);font-size:.68rem;color:var(--muted)}.crumbs .ck{display:inline-block;padding:0 8px;margin:0 4px 4px 0;background:var(--main-soft);font-size:.75rem}
+.quad{display:grid;grid-template-columns:40px 1fr 1fr;gap:4px;font-size:.78rem;line-height:1.5}.quad .qh{font-family:var(--mono);font-size:.68rem;color:var(--muted);align-self:end;padding:2px 4px}.quad .qc{background:var(--panel);padding:8px}.quad .qc span{display:block;color:var(--muted);font-size:.72rem;margin-top:4px}.quad .qc.on{box-shadow:inset 3px 0 0 var(--accent)}
+table.sys{font-size:.78rem}table.sys td:first-child{font-family:var(--mono);white-space:nowrap}
+.fct{background:var(--panel);padding:10px;font-size:.8rem}
+.fct-mode{display:flex;gap:4px;margin-bottom:10px}.fct-mode .btn.on{background:var(--fg);color:var(--bg)}
+.fct-body{display:grid;grid-template-columns:150px 1fr;gap:12px}.fct-body>*{min-width:0}
+.fct-side h5{font:500 .68rem var(--mono);color:var(--muted);margin:8px 0 2px}.fct-side h5:first-child{margin-top:0}
+.fct-opt{display:flex;justify-content:space-between;width:100%;font:inherit;font-size:.8rem;text-align:left;border:0;background:transparent;color:var(--fg);padding:2px 6px;cursor:pointer}.fct-opt .n{font-family:var(--mono);color:var(--muted)}
+.fct-opt.on{background:var(--main-soft);box-shadow:inset 3px 0 0 var(--accent)}.fct-opt:disabled{color:var(--line);cursor:default}.fct-opt:disabled .n{color:var(--line)}.fct-opt:focus-visible{outline:2px solid var(--accent)}
+.fct-side select{width:100%;font:inherit;font-size:.8rem;margin-bottom:4px;background:var(--bg);color:var(--fg);border:1px solid var(--fg)}
+.fct-side .go{margin-top:8px}
+.fct-cnt{font-family:var(--mono);font-size:.72rem;color:var(--muted);padding-bottom:6px}.fct-cnt.zero{color:var(--err)}
+#fctlist{list-style:none;margin:0;padding:0;max-width:none}#fctlist li{margin:0;padding:3px 0;display:flex;justify-content:space-between;gap:8px;box-shadow:inset 0 -1px 0 color-mix(in srgb,var(--line) 55%,transparent)}#fctlist li span{font-family:var(--mono);font-size:.68rem;color:var(--muted);white-space:nowrap}
+@media (max-width:640px){.fct-body{grid-template-columns:1fr}}
+.anch li{white-space:normal}.anch .bk{color:var(--muted)}
+#fctlist{max-height:300px;overflow:auto}
+.vp.one{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.quad{grid-template-columns:40px minmax(0,1fr) minmax(0,1fr)}.quad>*{min-width:0;overflow-wrap:anywhere}
