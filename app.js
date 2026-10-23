@@ -130,6 +130,11 @@
   /* ---------- gestalt ---------- */
   document.querySelectorAll('#skr .card:not(.static), #skr2 .card, #laws .card:not(.static), #nng .card').forEach(function(c){function f(){c.classList.toggle('on');}c.addEventListener('click',function(e){if(e.target.closest('input,button,label,a,[data-tip]'))return;f();});c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();f();}});});
 
+  /* ---------- NN/g 5: postal code ---------- */
+  var zg=document.querySelector('.zip-good'),zb=document.querySelector('.zip-bad'),zs=document.querySelector('.zip-send'),zo=document.querySelector('.zip-out');
+  if(zg){zg.addEventListener('input',function(){var d=zg.value.replace(/[０-９]/g,function(c){return String.fromCharCode(c.charCodeAt(0)-0xFEE0);}).replace(/\D/g,'').slice(0,7);zg.value=d.length>3?d.slice(0,3)+'-'+d.slice(3):d;});
+    zs.addEventListener('click',function(){var ok=/^\d{3}-?\d{4}$/.test(zb.value);zo.textContent=ok?'送信しました':'入力内容に誤りがあります';zo.className='zip-out '+(ok?'':'err');});}
+
   /* ---------- color wheel ---------- */
   var BASE=205, wheel=document.getElementById('wheel');
   function hsl(h,sa,l){return 'hsl('+((h%360+360)%360)+' '+sa+'% '+l+'%)'}
