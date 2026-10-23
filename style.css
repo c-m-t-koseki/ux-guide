@@ -104,9 +104,9 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background
 /* Swiss poster */
 .m-swiss{background:#fff}
 .m-swiss .g{position:absolute;inset:10px;display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
-.m-swiss .g i{background:rgba(209,35,42,.07)}
+.m-swiss .g i{background:rgba(0,0,0,.05)}
 .m-swiss .h{position:absolute;left:10px;top:12px;font:700 22px/1 Helvetica,Arial,sans-serif;color:#111}
-.m-swiss .p{position:absolute;left:10px;top:64px;width:60px;height:60px;background:#d1232a}
+.m-swiss .p{position:absolute;left:10px;top:64px;width:60px;height:60px;background:linear-gradient(160deg,#9aa1a8,#5e656c)}
 .m-swiss .tx{position:absolute;left:80px;top:66px;right:10px;height:56px;background:repeating-linear-gradient(#333 0 2px,transparent 2px 6px);opacity:.6}
 /* Mac 1984 */
 .m-mac{background:#dcdcdc}
@@ -239,9 +239,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background
 .poster .inner{position:relative;height:100%;display:flex;flex-direction:column}
 .poster .t1{font-size:2rem;font-weight:700;line-height:1.05;margin-top:30%}
 .poster .t2{font-size:.8rem;margin-top:16px;column-count:2;column-gap:8px;line-height:1.5;color:var(--muted)}
-.poster .sq{width:33%;aspect-ratio:1;background:var(--accent);margin-top:auto}
-.typespec{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;font-family:var(--mono);font-size:.75rem;color:var(--muted);align-items:baseline}
-.typespec b{font-family:var(--sans);color:var(--fg);white-space:nowrap}
+.poster .ph{height:34%;margin-top:auto;background:linear-gradient(160deg,#9aa1a8,#5e656c);position:relative}.poster .ph span{position:absolute;left:8px;bottom:6px;font:500 .7rem var(--mono);color:#fff}
 
 /* ---------- Gestalt ---------- */
 .gest{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:calc(var(--u)*2);margin-top:calc(var(--u)*2)}
@@ -537,7 +535,7 @@ table.refs td:nth-child(2){color:var(--muted);white-space:nowrap}table.refs td:l
 table.lvkey{max-width:40em}
 
 /* 主張の表：図の列。値はトークン定義に合わせ、見た目は縮尺の図 */
-table.claims td:first-child{white-space:nowrap}
+table.claims td:first-child{width:10em}
 table.claims td:last-child{width:232px;min-width:232px}
 .mc-elev{display:flex;gap:16px;padding:8px 0 12px}
 .mc-elev i{width:40px;height:40px;background:var(--panel);display:grid;place-items:center;font:500 .72rem var(--mono);font-style:normal;color:var(--muted)}
@@ -545,21 +543,13 @@ table.claims td:last-child{width:232px;min-width:232px}
 .mc-elev i:nth-child(2){box-shadow:0 1px 2px rgba(0,0,0,.3)}
 .mc-elev i:nth-child(3){box-shadow:0 2px 6px rgba(0,0,0,.3)}
 .mc-elev i:nth-child(4){box-shadow:0 6px 12px rgba(0,0,0,.3)}
-.mc-type{display:grid;line-height:1.15;gap:2px}
 .mc-motion{position:relative;height:72px}
 .mc-motion .row{position:absolute;left:0;top:8px;width:72px;height:16px;border:1px dashed var(--muted);font-size:.7rem;line-height:14px;padding-left:4px;color:var(--muted)}
 .mc-motion .card{position:absolute;left:96px;top:0;width:120px;height:72px;background:var(--main-soft);font-size:.7rem;padding:0 4px;line-height:14px;overflow:hidden;animation:mcgrow 2.4s cubic-bezier(.2,0,0,1) infinite alternate}
 @keyframes mcgrow{from{left:0;top:8px;width:72px;height:16px}40%{left:0;top:8px;width:72px;height:16px}to{left:96px;top:0;width:120px;height:72px}}
 @media (prefers-reduced-motion:reduce){.mc-motion .card{animation:none}}
-.mc-token{display:grid;gap:4px;font-size:.72rem}
-.mc-token span{display:flex;align-items:center;gap:6px}
-.mc-token span+span::before{content:"→";color:var(--muted)}
-.mc-token i{width:12px;height:12px;flex:none}
 .mc-tone{display:flex;height:16px}.mc-tone+.mc-tone{margin-top:4px}
 .mc-tone i{flex:1}
-.mc-state{display:flex;gap:4px}
-.mc-state span{position:relative;flex:1;padding:6px 0;text-align:center;font-size:.72rem;background:var(--main-soft);color:var(--fg)}
-.mc-state span::after{content:"";position:absolute;inset:0;background:var(--fg);opacity:var(--o)}
 .mc-wsc{display:flex;gap:2px}
 .mc-wsc i{background:var(--main-soft);font:500 .72rem/24px var(--mono);font-style:normal;padding-left:4px;min-width:0}
 .mc-tone i:nth-child(1){background:color-mix(in oklab,var(--seed) 0%,black)}
@@ -581,13 +571,6 @@ table.claims td:last-child{width:232px;min-width:232px}
 .sw-grid i{height:12px;background:var(--fg)}
 .sw-left{display:grid;gap:6px;border-left:1px solid var(--accent);padding:4px 0}
 .sw-left i{height:6px;background:var(--fg)}
-.sw-geo{display:flex;align-items:center;gap:16px;height:48px}
-.sw-geo .c{width:40px;height:40px;border-radius:50%;background:var(--fg)}
-.sw-geo .s{width:40px;height:40px;background:var(--accent)}
-.sw-geo .l{width:72px;height:2px;background:var(--fg)}
-.sw-space{position:relative;height:96px;width:68px;box-shadow:inset 0 0 0 1px var(--line)}
-.sw-space i{position:absolute;left:8px;top:8px;width:32px;height:40px;background:repeating-linear-gradient(var(--fg) 0 2px,transparent 2px 6px)}
-.sw-space span{position:absolute;left:8px;bottom:8px;font-size:.7rem;color:var(--muted)}
 .sw-plain{display:grid;font-size:.8rem;line-height:1.6}
 .sw-plain b{font-family:var(--mono);font-weight:500;color:var(--muted);font-size:.72rem;margin-bottom:4px}
 .sw-plain em{font-style:normal;font-weight:700;color:var(--accent)}
@@ -647,3 +630,15 @@ table.claims td:last-child{width:232px;min-width:232px}
 .mver:has(#mv14:checked) .mp-chips span{border-radius:16px;background:#e0e0e0;color:rgba(0,0,0,.87)}
 .mver:has(#mv14:checked) .mp-fab{background:#ff4081;color:#fff;width:56px;height:56px;padding:0;border-radius:50%;font-size:1.5rem;box-shadow:0 6px 10px rgba(0,0,0,.14),0 1px 18px rgba(0,0,0,.12),0 3px 5px -1px rgba(0,0,0,.2)}
 .mver:has(#mv14:checked) .mp-fab .lb{display:none}
+.sw-sans{display:grid}
+.sw-sans b{font:700 32px/1.1 Helvetica,Arial,sans-serif;letter-spacing:-.01em}
+.sw-sans span{font:400 15px Helvetica,Arial,sans-serif;color:var(--muted)}
+.sw-photo{position:relative;width:140px;aspect-ratio:1.414;background:linear-gradient(160deg,#9aa1a8,#5e656c)}
+.sw-photo span{position:absolute;left:8px;bottom:6px;font:500 .7rem var(--mono);color:#fff}
+.mc-bold{display:grid;gap:4px;width:180px}
+.mc-bold .img{height:36px;background:linear-gradient(160deg,#9aa1a8,#5e656c)}
+.mc-bold b{font-size:24px;line-height:1.1}
+.mc-bold .blk{height:12px;width:50%;background:var(--main)}
+.mc-a11y{display:flex;gap:12px;align-items:center}
+.mc-a11y span{font-size:.75rem;padding:4px 12px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);color:var(--muted)}
+.mc-a11y .hi{font-size:1rem;font-weight:700;color:var(--fg);box-shadow:inset 0 0 0 2px var(--fg)}
