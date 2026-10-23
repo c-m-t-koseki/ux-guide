@@ -323,7 +323,6 @@ table.pick tr.sep{cursor:default}table.pick tr.sep td{background:none;font-size:
 .hick{list-style:none;margin:0;padding:0;background:var(--panel);font-size:.8rem}.hick li{padding:3px 8px}.hick small{color:var(--muted);margin-left:6px}
 .hick .sub{padding-left:28px;color:var(--muted)}.hick.flat{columns:2;column-gap:12px}.hick.flat li{break-inside:avoid;padding:2px 8px}
 .miller{display:grid;gap:6px;font-size:1.1rem;background:var(--panel);padding:10px}
-.postel{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;font-size:.9rem}.postel span:nth-child(odd){color:var(--muted)}.postel span:nth-child(odd)::after{content:" →";color:var(--line)}
 .jakob{display:grid;grid-template-columns:1fr;gap:12px}
 .jakob .mw{height:80px;background:var(--panel);position:relative;padding:8px}
 .jakob i,.jakob span{position:absolute;background:var(--main-soft)}
