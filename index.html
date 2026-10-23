@@ -33,7 +33,7 @@
   <p>元になったのは、わたしが経験則として持っていた UI と UX の項目と、どこかで読んで覚えていた話である。それらを思い出しながら出典を調べ直し、互いに矛盾しないように整えたのがこの資料で、出典を確認できなかった項目は各章でそう書いた。見た目はスイスデザインと Material の構造に、並べ方はゲシュタルトに、振る舞いは使いやすさの古典に、探し方は情報探索の理論に拠り、新聞・蔵書・図書の検索 UI に当てはめる。写実の様式や Liquid Glass は採らない。第 1 部は見た目の規範、第 2 部は振る舞いの規範、第 3 部は探す行為、第 4 部は 12 行の共通原則と適用である。</p>
   <div class="tbl"><table>
     <tr><th>参照資料</th><th>使う章</th><th>役割</th></tr>
-    <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/">Apple HIG</a></td><td>変遷、現行のガイドライン、適用</td><td>プラットフォームの作法。Searching と Liquid Glass の評価</td></tr>
+    <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/">Apple HIG</a></td><td>変遷、Liquid Glass、現行のガイドライン、適用</td><td>プラットフォームの作法。Searching と Liquid Glass の評価</td></tr>
     <tr><td><a href="https://m3.material.io/">Material Design 3</a></td><td>変遷、Material、現行のガイドライン、適用</td><td>デザイントークンと適応レイアウト。Search の指針</td></tr>
     <tr><td><a href="https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/uidesign_guide_v100">東京都 UI設計実践ガイド</a></td><td>現行のガイドライン、適用</td><td>行政サービスの点検表。0件時の扱い</td></tr>
     <tr><td><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">NN/g 10 Heuristics</a></td><td>古典、共通原則</td><td>評価の物差し</td></tr>
@@ -217,11 +217,42 @@
   <p class="note">2014 年の三原則は <a href="https://material.io/archive/guidelines/material-design/introduction.html">2014 年版ガイドライン「Introduction」（アーカイブ）</a>で、2021 年の三つは <a href="https://m3.material.io/blog/announcing-material-you">「Unveiling Material You」（2021-05-18）</a>で確認した。表の中身はこの二つの本文の要約に限った。ウィンドウサイズクラスの値は <a href="https://m3.material.io/foundations/layout/breakpoints">Material Design 3「Breakpoints」</a>で確認した。デザイン例のうち、2014 年版の配色（500 番を主色、A 番台をアクセント）、カードの標高 2dp、FAB の直径 56dp は <a href="https://material.io/archive/guidelines/">2014 年版ガイドラインのアーカイブ</a>で、2021 年版の標高・タイプスケール・角の半径（28dp ほか）は <a href="https://github.com/material-components/material-web/tree/main/tokens">material-web のトークン定義</a>で確認した。角の半径は 2025 年の M3 Expressive で大きい段が 20・32・48dp に改められた（<a href="https://m3.material.io/styles/shape/overview-principles">Shape</a>）。</p>
 </section>
 
+<!-- ============ liquid glass ============ -->
+<section class="slide" data-title="Liquid Glass" id="glass">
+  <div class="eyebrow">第1部 見た目の規範</div>
+  <h2>Liquid Glass ― 三つの原則と素材</h2>
+  <p>Apple が 2025 年の WWDC で発表した、全プラットフォームに共通の設計である。中心は Liquid Glass という半透明の素材で、Apple はこの素材と合わせて、階層を作る、調和させる、一貫性を保つ、という三つの原則を掲げた。表はこの三つに、素材の性質を述べた二つを加えたものである。1 はスイスデザインと Material の 1 と同じく形の組み立てを、2 は面の扱いを、3 は動きを述べるので、前の二章と同じ順に並べた。</p>
+  <h3>Liquid Glass の主張</h3>
+  <div class="tbl"><table class="claims">
+    <tr><th>主張</th><th>中身</th><th>図</th></tr>
+    <tr><td><b>1 調和させる</b><br><span class="note">原則</span></td><td>操作部品を、機器と窓の丸い角と同心に合わせ、ハードウェア・ソフトウェア・内容を調和させる。入れ子の内側の半径は、外側の半径から余白を引いた値にする</td><td><svg viewBox="0 0 220 110" class="lg-con" role="img" aria-label="同心の角丸の入れ子"><rect x="10" y="5" width="200" height="100" rx="28" fill="none" stroke="var(--fg)" stroke-width="2"/><rect x="26" y="21" width="168" height="68" rx="12" fill="var(--main-soft)"/><rect x="42" y="37" width="70" height="36" rx="18" fill="var(--main)"/><text x="150" y="60" text-anchor="middle" class="mu">28 − 16 = 12</text></svg></td></tr>
+    <tr><td><b>2 階層を作る</b><br><span class="note">原則</span></td><td>操作とナビゲーションを、内容の上に浮かぶ機能の層として Liquid Glass で作る。内容の層には Liquid Glass を使わない</td><td><div class="lg-fig lg-layer"><span></span><span></span><span></span><span></span><i class="lg-glass lg-bar"><b></b><b></b><b></b></i></div></td></tr>
+    <tr><td><b>3 内容に合わせて変わる</b><br><span class="note">素材</span></td><td>周りを映し、屈折させる半透明の素材で、内容と文脈に応じて形を変え、内容に焦点を移す。スクロールするとタブバーは縮み、戻すと広がる</td><td><div class="lg-fig lg-shrink"><span></span><span></span><span></span><span></span><i class="lg-glass lg-bar"><b></b><b></b><b></b></i></div></td></tr>
+    <tr><td><b>4 一貫性を保つ</b><br><span class="note">原則</span></td><td>機器とプラットフォームをまたいで、標準の図像と予測できる操作の配置を使う</td><td><div class="lg-devs"><div class="lg-dev ph"><i class="lg-glass lg-bar"><b></b><b></b><b></b></i></div><div class="lg-dev pad"><i class="lg-glass lg-bar"><b></b><b></b><b></b></i></div></div></td></tr>
+    <tr><td><b>5 読みやすさを保つ</b><br><span class="note">素材</span></td><td>多くの部品が使う regular は、背後の内容をぼかして明るさを整え、上の文字を読めるようにする。透明度の高い clear は写真や動画の上に限り、背後が明るければ 35% の暗い層を足す</td><td><div class="lg-read"><div class="lg-photo"><i class="lg-glass reg">regular</i></div><div class="lg-photo"><i class="lg-glass clr">clear + 35%</i></div></div></td></tr>
+  </table></div>
+
+  <h3>デザイン例</h3>
+  <div class="cols postercols">
+    <div><div class="lgposter"><div class="lgp-title">Neue Grafik 1958</div><div class="lg-glass lgp-card"><b>グリッドと左揃え</b><p>数学的なグリッド、左揃え、サンセリフ。内容が変わっても崩れない規則として画面に残った。</p><div class="lgp-chips"><span class="lg-glass">グリッド</span><span class="lg-glass">左揃え</span><span class="lg-glass">サンセリフ</span></div></div><div class="lg-glass lgp-tab"><b>展示</b><b>年表</b><b>検索</b></div></div></div>
+    <ul>
+      <li>写真を紙面の端まで敷き、題字はその上に直接置く。</li>
+      <li>本文は regular のガラスに載せ、背後の写真をぼかして文字を読めるようにする（主張 5）。</li>
+      <li>操作のタブバーは、内容の上に浮かぶガラスのカプセルにする（主張 2）。</li>
+      <li>カードの角は 24px、その内側のチップは高さの半分を半径にしたカプセルで、紙面の角の丸みとそろえる（主張 1）。</li>
+    </ul>
+  </div>
+
+  <h3>本資料での扱い</h3>
+  <p>ここからは本資料の判断である。本資料は Liquid Glass を採らない。部品が背後の内容を透かすので、その上の文字の対比は背後に何が来るかで変わる。Apple は regular のぼかしと明るさの調整、clear の暗い層で読みやすさを保つよう求めているが、コントラスト比 4.5:1 を常に満たすとまでは言えない。本資料は文字の密度が高い画面を扱い、読めることを優先する。また屈折の揺らぎは、何がどこへ変わったかを伝える動き（動きの章）ではなく、素材の質感を見せる動きである。</p>
+  <p class="note">三つの原則は <a href="https://developer.apple.com/documentation/technologyoverviews/liquid-glass">Apple Developer「Liquid Glass」</a>で、素材が周りを映して屈折させ、内容と文脈に応じて変わること、操作部品を機器の丸い角と同心にすること、タブバーがスクロールで縮むことは <a href="https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/">Apple Newsroom（2025-06-09）</a>で、同心の半径の計算は <a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a>で、機能の層、regular と clear、35% の暗い層は <a href="https://developer.apple.com/design/human-interface-guidelines/materials">HIG「Materials」</a>で確認した。</p>
+</section>
+
 <!-- ============ gestalt ============ -->
 <section class="slide" data-title="ゲシュタルト" id="gestalt">
   <div class="eyebrow">第1部 見た目の規範</div>
   <h2>ゲシュタルトの法則 ― なぜその並びで伝わるか</h2>
-  <p>要素の並びから人がまとまりを知覚する規則で、20 世紀初頭のベルリン学派（Wertheimer、Köhler、Koffka）が示した。前の二章の主張は並べ方と見せ方の規則であり、この章の法則は、その並びがなぜまとまりとして見えるかを説明する。</p>
+  <p>要素の並びから人がまとまりを知覚する規則で、20 世紀初頭のベルリン学派（Wertheimer、Köhler、Koffka）が示した。前の三章の主張は並べ方と見せ方の規則であり、この章の法則は、その並びがなぜまとまりとして見えるかを説明する。</p>
   <h3>法則</h3>
   <div class="tbl" id="gest"><table class="claims">
     <tr><th>法則</th><th>中身</th><th>図</th></tr>
@@ -235,16 +266,16 @@
   </table></div>
 
   <h3>デザイン例での現れ</h3>
-  <p>スイスデザインと Material の章のデザイン例で、各法則がどこに使われているかを示す。</p>
+  <p>スイスデザイン・Material・Liquid Glass の章のデザイン例で、各法則がどこに使われているかを示す。</p>
   <div class="tbl"><table>
-    <tr><th>法則</th><th>スイスデザインの例</th><th>Material の例</th></tr>
-    <tr><td>近接</td><td>題字と本文の間より、本文と写真の間を広く空け、上の文字と下の写真を二つの群に分ける</td><td>チップどうしの間隔（8px）を、チップの列とカードの間隔（16px）より狭くする</td></tr>
-    <tr><td>類同</td><td>題字は太さ 700、本文は 400 と、役割ごとに太さを変える</td><td>三つのチップは同じ形と色で、同じ種類の要素に見える</td></tr>
-    <tr><td>共通領域</td><td>使わない。枠も背景もない（主張 5）</td><td>題字は色の面に、本文はカードの面に入れて分ける（主張 2）</td></tr>
-    <tr><td>連続</td><td>題字・本文・写真の左端が一本の縦線に揃う（主張 1・2）</td><td>題字の面・カード・チップの左端が一本の縦線に揃う</td></tr>
-    <tr><td>閉合</td><td>本文の 2 段は、枠がなくても二つの矩形の段に見える</td><td>2021 年版のカードは輪郭線がなく、影と地の差だけで矩形として閉じて見える</td></tr>
-    <tr><td>図と地</td><td>白い地に黒の題字</td><td>2014 年版は Indigo 500 の面に白の題字、2021 年版は淡いトーンの面に濃いトーンの題字</td></tr>
-    <tr><td>プレグナンツ</td><td>要素は文字の段と写真の矩形だけ</td><td>面は角丸の長方形、FAB は円（2014 年版）か角丸の長方形（2021 年版）で、基本形の組み合わせ</td></tr>
+    <tr><th>法則</th><th>スイスデザインの例</th><th>Material の例</th><th>Liquid Glass の例</th></tr>
+    <tr><td>近接</td><td>題字と本文の間より、本文と写真の間を広く空け、上の文字と下の写真を二つの群に分ける</td><td>チップどうしの間隔（8px）を、チップの列とカードの間隔（16px）より狭くする</td><td>タブバーの項目どうしの間隔を、タブバーとカードの間隔より狭くする</td></tr>
+    <tr><td>類同</td><td>題字は太さ 700、本文は 400 と、役割ごとに太さを変える</td><td>三つのチップは同じ形と色で、同じ種類の要素に見える</td><td>三つのチップは同じガラスのカプセルで、同じ種類の要素に見える</td></tr>
+    <tr><td>共通領域</td><td>使わない。枠も背景もない（主張 5）</td><td>題字は色の面に、本文はカードの面に入れて分ける（主張 2）</td><td>本文はガラスのカード、操作はガラスのタブバーの中に入れて分ける（主張 2）</td></tr>
+    <tr><td>連続</td><td>題字・本文・写真の左端が一本の縦線に揃う（主張 1・2）</td><td>題字の面・カード・チップの左端が一本の縦線に揃う</td><td>題字とカードの左端が一本の縦線に揃う</td></tr>
+    <tr><td>閉合</td><td>本文の 2 段は、枠がなくても二つの矩形の段に見える</td><td>2021 年版のカードは輪郭線がなく、影と地の差だけで矩形として閉じて見える</td><td>ガラスの面には輪郭線がなく、縁の光とぼけの差で面として閉じて見える</td></tr>
+    <tr><td>図と地</td><td>白い地に黒の題字</td><td>2014 年版は Indigo 500 の面に白の題字、2021 年版は淡いトーンの面に濃いトーンの題字</td><td>題字は写真の上の白文字で、明暗差は背後の写真で変わる。本文はぼかしたガラスの上に置く（主張 5）</td></tr>
+    <tr><td>プレグナンツ</td><td>要素は文字の段と写真の矩形だけ</td><td>面は角丸の長方形、FAB は円（2014 年版）か角丸の長方形（2021 年版）で、基本形の組み合わせ</td><td>面は角丸の長方形、チップとタブバーはカプセルで、基本形の組み合わせ</td></tr>
   </table></div>
   <p class="note">ゲシュタルト心理学は 20 世紀初頭のベルリン学派（Wertheimer、Köhler、Koffka）に始まり、プレグナンツの法則の下に近接・類同・閉合・よい連続の要因を置く（<a href="https://ja.wikipedia.org/wiki/ゲシュタルト心理学">Wikipedia「ゲシュタルト心理学」</a>で確認）。Rubin の壺は 1915 年頃の考案（<a href="https://en.wikipedia.org/wiki/Rubin_vase">Wikipedia「Rubin vase」</a>）。共通領域は Palmer（1992）が加えた要因で（<a href="https://en.wikipedia.org/wiki/Principles_of_grouping">Wikipedia「Principles of grouping」</a>で確認）、原論文は開いていない。</p>
 </section>
@@ -586,13 +617,12 @@
 <section class="slide" data-title="ガイドライン" id="guidelines">
   <div class="eyebrow">第2部 振る舞いの規範</div>
   <h2>現行のガイドライン ― Apple HIG、Google Material Design 3、東京都</h2>
-  <p>前章の古典は、各プラットフォームのガイドラインに部品単位で翻訳されている。Apple と Google は自社 OS の作法を、東京都は行政サービスを発注する職員向けの点検表を定めている。対象は違うが、求める振る舞いは重なる。</p>
+  <p>Apple と Google は自社 OS の作法を、東京都は行政サービスを発注する職員向けの点検表を定めている。この章は、そのうち検索と振る舞いに関わる部分を扱う。見た目の原則は Material と Liquid Glass の章で扱った。</p>
   <div class="cols">
     <div><h3>Apple HIG</h3>
-      <ul><li>階層。操作部品は内容の上の層に置き、内容を引き立てる</li><li>調和。機器の丸い角と同心の形で、部品・システム・機器をそろえる</li><li>一貫性。プラットフォームの慣習に従い、画面の大きさや明暗が変わっても同じに振る舞う</li><li>システム標準の部品・ジェスチャ・ショートカットを優先。Dynamic Type、VoiceOver、タッチ領域 44pt</li></ul>
+      <ul><li>Liquid Glass と三つの原則は Liquid Glass の章で扱った</li><li>システム標準の部品・ジェスチャ・ショートカットを優先。Dynamic Type、VoiceOver、タッチ領域 44pt</li></ul>
       <p><a href="https://developer.apple.com/design/human-interface-guidelines/searching">Searching</a>（2026-06-08 更新）：検索欄はアプリ内で一か所。スコープを常に示す。入力前に最近の検索、入力中に候補。履歴は消せるように。</p>
-      <p>この三つは 2025 年の Liquid Glass と同時に掲げられたもので（<a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a>の紹介記事で確認）、それ以前の HIG は明快さ・内容への譲歩・奥行きを挙げていた。</p>
-      <p>Liquid Glass は屈折と反射を持つ半透明素材で、操作部品を内容の上に浮かせて階層を示す。本資料は採らない。部品が背後の内容を透かすので、その上の文字の対比は背後に何が来るかで変わり、コントラスト比 4.5:1 を常に満たすとは言えない。ここまでは測れる事実だが、それを欠点と見るかは優先順位による（序）。本資料は文字の密度が高い画面を扱い、読めることを優先する。また屈折の揺らぎは、何がどこへ変わったかを伝える動き（動きの章）ではなく、素材の質感を見せる動きである。</p></div>
+</div>
     <div><h4>Searching が求める検索欄</h4>
     <div><div class="mockui sfield"><div class="sf"><span class="scope">新聞 ▾</span><span class="q">関東大しん<i></i></span><span class="clear">×</span></div>
       <div class="grp">最近の検索 <a>消去</a></div><div class="it">帝都復興院</div><div class="it">1923 横浜</div>
@@ -1098,7 +1128,10 @@
     <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
     <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/">Human Interface Guidelines</a></td><td>Apple</td><td><a href="#intro">はじめに</a>、<a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
     <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/searching">HIG「Searching」</a></td><td>Apple</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
-    <tr><td><a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a></td><td>Apple、2025</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a></td><td>Apple、2025</td><td><a href="#glass">Liquid Glass</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://developer.apple.com/documentation/technologyoverviews/liquid-glass">Liquid Glass</a></td><td>Apple Developer</td><td><a href="#glass">Liquid Glass</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/">Apple introduces a delightful and elegant new software design</a></td><td>Apple Newsroom、2025</td><td><a href="#glass">Liquid Glass</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/materials">HIG「Materials」</a></td><td>Apple</td><td><a href="#glass">Liquid Glass</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://m3.material.io/">Material Design 3</a></td><td>Google</td><td><a href="#intro">はじめに</a>、<a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://m3.material.io/foundations/layout/breakpoints">Material Design 3「Breakpoints」</a></td><td>Google</td><td><a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://github.com/material-components/material-web/tree/main/tokens">material-web のトークン定義</a></td><td>Google</td><td><a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>

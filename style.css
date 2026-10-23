@@ -665,3 +665,32 @@ table.claims svg{display:block;width:100%;max-width:220px;height:auto}
 .zipdemo{display:grid;gap:6px;background:var(--panel);padding:10px;font-size:.8rem}.zipdemo label{display:grid;grid-template-columns:4.5em 1fr;align-items:center;gap:8px}.zipdemo .k{font-size:.7rem}.zipdemo input::placeholder{color:var(--muted);opacity:.6;font-size:.7rem}.zipdemo .zip-out{font-size:.75rem;min-height:1.2em;margin-left:calc(4.5em + 8px)}.zipdemo .zip-out.err{color:var(--err)}
 .zipdemo input{font:inherit;font-size:.85rem;padding:4px 8px;border:0;box-shadow:inset 0 0 0 1px var(--fg);background:var(--bg);color:var(--fg);width:100%;min-width:0}
 .zipdemo .zrow{display:flex;gap:8px}.nm .k.ok{color:var(--ok)}.nm .k.ng{color:var(--err)}
+
+/* ---------- Liquid Glass ---------- */
+/* 写真の代わりの多色の地。ガラスは背後をぼかし、縁に光を入れる */
+.lg-glass{background:rgba(255,255,255,.28);-webkit-backdrop-filter:blur(10px) saturate(1.6);backdrop-filter:blur(10px) saturate(1.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 0 0 1px rgba(255,255,255,.35),0 4px 12px rgba(0,0,0,.15);color:#111}
+.lg-fig{position:relative;height:96px;width:200px;background:var(--panel);overflow:hidden;padding:8px;display:grid;gap:6px;align-content:start}
+.lg-fig span{height:10px;background:linear-gradient(90deg,#e8603c,#f2b134,#3c8de8);opacity:.8}
+.lg-fig span:nth-child(2){width:80%}.lg-fig span:nth-child(3){width:90%}.lg-fig span:nth-child(4){width:60%}
+.lg-bar{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);display:flex;gap:10px;padding:6px 12px;border-radius:999px;font-style:normal}
+.lg-bar b{width:14px;height:14px;border-radius:50%;background:rgba(0,0,0,.55)}
+.lg-shrink .lg-bar{animation:lgshrink 3s cubic-bezier(.2,0,0,1) infinite alternate}
+@keyframes lgshrink{0%,30%{padding:6px 12px;gap:10px}70%,100%{padding:3px 6px;gap:4px}}
+@media (prefers-reduced-motion:reduce){.lg-shrink .lg-bar{animation:none}}
+.lg-con{display:block;width:100%;max-width:220px;height:auto}
+.lg-devs{display:flex;gap:12px;align-items:flex-end}
+.lg-dev{position:relative;background:linear-gradient(160deg,#e8603c,#f2b134 45%,#3c8de8);box-shadow:inset 0 0 0 2px var(--fg)}
+.lg-dev.ph{width:56px;height:100px;border-radius:14px}.lg-dev.pad{width:120px;height:84px;border-radius:12px}
+.lg-dev .lg-bar{bottom:6px;gap:5px;padding:3px 7px}.lg-dev .lg-bar b{width:8px;height:8px}
+.lg-read{display:flex;gap:8px}
+.lg-photo{position:relative;width:96px;height:72px;background:linear-gradient(160deg,#fff6c8,#f2b134 40%,#e8603c);overflow:hidden}
+.lg-photo i{position:absolute;left:8px;right:8px;bottom:8px;padding:4px 6px;border-radius:999px;font:500 .65rem var(--mono);font-style:normal;text-align:center}
+.lg-photo .reg{background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.lg-photo .clr{background:rgba(0,0,0,.35);-webkit-backdrop-filter:none;backdrop-filter:none;color:#fff}
+.lgposter{position:relative;aspect-ratio:1/1.414;max-width:360px;padding:24px;overflow:hidden;display:flex;flex-direction:column;gap:16px;border-radius:28px;background:radial-gradient(circle at 20% 15%,#ffd36e,transparent 45%),radial-gradient(circle at 85% 40%,#3c8de8,transparent 50%),linear-gradient(160deg,#e8603c,#7b3fbf);box-shadow:inset 0 0 0 1px var(--line)}
+.lgp-title{font-size:2.2rem;font-weight:700;line-height:1.05;color:#fff;margin-top:20%;letter-spacing:-.01em}
+.lgp-card{border-radius:24px;padding:16px;font-size:.8rem}
+.lgp-card b{font-size:1rem}.lgp-card p{margin:4px 0 8px;line-height:1.5}
+.lgp-chips{display:flex;flex-wrap:wrap;gap:6px}.lgp-chips span{font-size:.72rem;font-weight:500;padding:4px 10px;border-radius:999px}
+.lgp-tab{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);display:flex;gap:16px;padding:10px 20px;border-radius:999px;font-size:.75rem}
+.lgp-tab b{font-weight:500}
