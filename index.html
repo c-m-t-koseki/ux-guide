@@ -123,7 +123,6 @@
   </div>
   <h3>成立と継承</h3>
   <p>バウハウスと Tschichold『新しいタイポグラフィ』（1928）を受け継ぎ、中立国スイスで戦中も途切れず発展した。チューリッヒ（Müller-Brockmann）とバーゼル（Ruder、Hofmann）の二拠点があり、誌 Neue Grafik（1958 年創刊）が国外に広めた。「見た目を規則として固定し、内容だけを流し込む」方法は、寸法が決まらず内容が毎回変わる画面にそのまま合い、デザインシステムと CSS Grid になった。Gerstner『Designing Programmes』（1964）の、デザインを規則の集合として設計する考えは、デザイントークンと同じである。</p>
-  <p>限界は識別性である。すべてが Helvetica とグリッドになると見分けがつかない。</p>
   <h3>角丸 ― なぜ既定で避け、いつ使うか</h3>
   <div class="fig rad">
     <div><div class="box r24"><i class="g"></i><div class="in r12 tx"><b>関東大震災 1923</b>朝刊 1 面　842 件<br>夕刊 1 面　229 件</div></div><p class="cap"><b>良い例</b> 同心の入れ子（外 24 / 内 12）。隙間は一定。ただし文字の開始位置は角から離す必要が残る</p></div>
@@ -222,37 +221,31 @@
 <section class="slide" data-title="ゲシュタルト" id="gestalt">
   <div class="eyebrow">第1部 見た目の規範</div>
   <h2>ゲシュタルトの法則 ― なぜその並びで伝わるか</h2>
-  <p>要素の並びから人がまとまりを知覚する規則を、1910〜30 年代の実験で示した。スイスデザインが「どう並べるか」の作法なら、ゲシュタルトは「なぜその並びで伝わるか」の根拠である。カードを押すと、法則を外した状態と当てはめた状態が切り替わる。</p>
-  <div class="gest" id="gest">
-    <div class="card on" tabindex="0"><h4>近接<span>Wertheimer</span></h4>
-      <svg viewBox="0 0 220 90" class="after"><g fill="var(--main)"><circle cx="20" cy="30" r="7"/><circle cx="44" cy="30" r="7"/><circle cx="68" cy="30" r="7"/><circle cx="20" cy="60" r="7"/><circle cx="44" cy="60" r="7"/><circle cx="68" cy="60" r="7"/><circle cx="140" cy="30" r="7"/><circle cx="164" cy="30" r="7"/><circle cx="188" cy="30" r="7"/><circle cx="140" cy="60" r="7"/><circle cx="164" cy="60" r="7"/><circle cx="188" cy="60" r="7"/></g></svg>
-      <svg viewBox="0 0 220 90" class="before"><g fill="var(--main)"><circle cx="20" cy="30" r="7"/><circle cx="52" cy="30" r="7"/><circle cx="84" cy="30" r="7"/><circle cx="116" cy="30" r="7"/><circle cx="148" cy="30" r="7"/><circle cx="180" cy="30" r="7"/><circle cx="20" cy="60" r="7"/><circle cx="52" cy="60" r="7"/><circle cx="84" cy="60" r="7"/><circle cx="116" cy="60" r="7"/><circle cx="148" cy="60" r="7"/><circle cx="180" cy="60" r="7"/></g></svg>
-      <p>近いものは同じ群に見える。群の内側の間隔は群の間の半分以下にする。ラベルと入力欄、見出しと本文の距離がこれで決まる。</p></div>
-    <div class="card on" tabindex="0"><h4>類同<span>Wertheimer</span></h4>
-      <svg viewBox="0 0 220 90" class="after"><g><circle cx="24" cy="30" r="8" fill="var(--main)"/><rect x="48" y="22" width="16" height="16" fill="var(--accent)"/><circle cx="88" cy="30" r="8" fill="var(--main)"/><rect x="112" y="22" width="16" height="16" fill="var(--accent)"/><circle cx="152" cy="30" r="8" fill="var(--main)"/><rect x="176" y="22" width="16" height="16" fill="var(--accent)"/><circle cx="24" cy="62" r="8" fill="var(--main)"/><rect x="48" y="54" width="16" height="16" fill="var(--accent)"/><circle cx="88" cy="62" r="8" fill="var(--main)"/><rect x="112" y="54" width="16" height="16" fill="var(--accent)"/><circle cx="152" cy="62" r="8" fill="var(--main)"/><rect x="176" y="54" width="16" height="16" fill="var(--accent)"/></g></svg>
-      <svg viewBox="0 0 220 90" class="before"><g fill="var(--main)"><circle cx="24" cy="30" r="8"/><circle cx="56" cy="30" r="8"/><circle cx="88" cy="30" r="8"/><circle cx="120" cy="30" r="8"/><circle cx="152" cy="30" r="8"/><circle cx="184" cy="30" r="8"/><circle cx="24" cy="62" r="8"/><circle cx="56" cy="62" r="8"/><circle cx="88" cy="62" r="8"/><circle cx="120" cy="62" r="8"/><circle cx="152" cy="62" r="8"/><circle cx="184" cy="62" r="8"/></g></svg>
-      <p>同じ見た目は同じ役割に見え、縦の列としてまとまる。見た目の差は必ず意味の差に対応させる。</p></div>
-    <div class="card on" tabindex="0"><h4>共通領域<span>Palmer, 1992</span></h4>
-      <svg viewBox="0 0 220 90" class="after"><rect x="8" y="12" width="96" height="66" fill="none" stroke="var(--line)"/><rect x="116" y="12" width="96" height="66" fill="none" stroke="var(--line)"/><g fill="var(--main)"><circle cx="30" cy="45" r="8"/><circle cx="56" cy="45" r="8"/><circle cx="82" cy="45" r="8"/><circle cx="138" cy="45" r="8"/><circle cx="164" cy="45" r="8"/><circle cx="190" cy="45" r="8"/></g></svg>
-      <svg viewBox="0 0 220 90" class="before"><g fill="var(--main)"><circle cx="30" cy="45" r="8"/><circle cx="56" cy="45" r="8"/><circle cx="82" cy="45" r="8"/><circle cx="138" cy="45" r="8"/><circle cx="164" cy="45" r="8"/><circle cx="190" cy="45" r="8"/></g></svg>
-      <p>同じ枠の中は一つの群に見える。近接より強いが線が増える。余白で足りないときだけ枠と背景を使う。</p></div>
-    <div class="card on" tabindex="0"><h4>連続<span>Wertheimer</span></h4>
-      <svg viewBox="0 0 220 90" class="after"><g fill="var(--main)"><circle cx="14" cy="72" r="5"/><circle cx="38" cy="58" r="5"/><circle cx="62" cy="46" r="5"/><circle cx="86" cy="38" r="5"/><circle cx="110" cy="34" r="5"/><circle cx="134" cy="34" r="5"/><circle cx="158" cy="38" r="5"/><circle cx="182" cy="46" r="5"/><circle cx="206" cy="58" r="5"/><circle cx="14" cy="18" r="5"/><circle cx="38" cy="24" r="5"/><circle cx="62" cy="30" r="5"/><circle cx="86" cy="36" r="5"/><circle cx="134" cy="48" r="5"/><circle cx="158" cy="54" r="5"/><circle cx="182" cy="60" r="5"/><circle cx="206" cy="66" r="5"/></g></svg>
-      <svg viewBox="0 0 220 90" class="before"><g fill="var(--main)"><circle cx="14" cy="60" r="5"/><circle cx="38" cy="70" r="5"/><circle cx="62" cy="34" r="5"/><circle cx="86" cy="52" r="5"/><circle cx="110" cy="20" r="5"/><circle cx="134" cy="44" r="5"/><circle cx="158" cy="24" r="5"/><circle cx="182" cy="62" r="5"/><circle cx="206" cy="40" r="5"/><circle cx="14" cy="24" r="5"/><circle cx="38" cy="40" r="5"/><circle cx="62" cy="66" r="5"/><circle cx="86" cy="18" r="5"/><circle cx="134" cy="72" r="5"/><circle cx="158" cy="56" r="5"/><circle cx="182" cy="28" r="5"/><circle cx="206" cy="74" r="5"/></g></svg>
-      <p>線に沿って並ぶ点は、交点で折れた二つの形ではなく「交差する二本の線」に見える。端を揃えた要素の列も一本の線として読まれ、視線がそれに沿って進む。</p></div>
-    <div class="card on" tabindex="0"><h4>閉合<span>Kanizsa</span></h4>
-      <svg viewBox="0 0 220 90" class="after"><g fill="var(--main)"><path d="M122.8 29.4 A20 20 0 1 0 97.2 29.4 L110 14z"/><path d="M80 74 A20 20 0 1 1 72.8 58.6 L60 74z"/><path d="M147.2 58.6 A20 20 0 1 1 140 74 L160 74z"/></g></svg>
-      <svg viewBox="0 0 220 90" class="before"><g fill="var(--main)"><circle cx="110" cy="14" r="20"/><circle cx="60" cy="74" r="20"/><circle cx="160" cy="74" r="20"/></g></svg>
-      <p>三つの円の欠けが揃うと、描いていない三角形が見える（Kanizsa の三角形）。輪郭を全周描かなくても領域は伝わるので、カードは角や背景だけで示せる。</p></div>
-    <div class="card on" tabindex="0"><h4>図と地<span>Rubin, 1915 頃</span></h4>
-      <svg viewBox="0 0 220 90" class="after"><rect width="220" height="90" fill="var(--fg)"/><path d="M80 8 C 92 12, 98 20, 100 30 C 101 38, 92 44, 88 52 C 86 60, 94 66, 96 72 C 98 78, 84 82, 76 84 L144 84 C 136 82, 122 78, 124 72 C 126 66, 134 60, 132 52 C 128 44, 119 38, 120 30 C 122 20, 128 12, 140 8 z" fill="var(--bg)"/></svg>
-      <svg viewBox="0 0 220 90" class="before"><rect width="220" height="90" fill="#8a949e"/><path d="M80 8 C 92 12, 98 20, 100 30 C 101 38, 92 44, 88 52 C 86 60, 94 66, 96 72 C 98 78, 84 82, 76 84 L144 84 C 136 82, 122 78, 124 72 C 126 66, 134 60, 132 52 C 128 44, 119 38, 120 30 C 122 20, 128 12, 140 8 z" fill="#a4adb6"/></svg>
-      <p>Rubin の壺。壺と二つの横顔は同時には見えず、片方が図、残りが地になる。明暗差が小さいと、どちらも図として立たない。本文のコントラスト比は 4.5:1 以上。半透明の地はこれを保証できない。</p></div>
-    <div class="card on" tabindex="0"><h4>プレグナンツ<span>Wertheimer</span></h4>
-      <svg viewBox="0 0 220 90" class="after"><circle cx="85" cy="45" r="32" fill="none" stroke="var(--main)" stroke-width="3"/><rect x="100" y="20" width="66" height="50" fill="none" stroke="var(--main)" stroke-width="3"/></svg>
-      <svg viewBox="0 0 220 90" class="before"><defs><clipPath id="pz"><circle cx="85" cy="45" r="32"/></clipPath></defs><circle cx="85" cy="45" r="32" fill="var(--main-soft)"/><rect x="100" y="20" width="66" height="50" fill="var(--accent)" opacity=".35"/><rect x="100" y="20" width="66" height="50" fill="var(--main)" clip-path="url(#pz)"/></svg>
-      <p>人は最も単純な解釈を選ぶ。この輪郭は「円と四角の重なり」に見え、色で分けない限り三つの不定形には見えない。部品やアイコンは基本形で作る。</p></div>
-  </div>
+  <p>要素の並びから人がまとまりを知覚する規則で、20 世紀初頭のベルリン学派（Wertheimer、Köhler、Koffka）が示した。前の二章の主張は並べ方と見せ方の規則であり、この章の法則は、その並びがなぜまとまりとして見えるかを説明する。</p>
+  <h3>法則</h3>
+  <div class="tbl" id="gest"><table class="claims">
+    <tr><th>法則</th><th>中身</th><th>図</th></tr>
+    <tr class="g-prox"><td><b>近接</b><br><span class="note">Wertheimer</span></td><td>近いものは同じ群に見える。<br><b>使い方</b>　群の内側の間隔を、群の間の間隔より狭くする。ラベルと入力欄、見出しと本文の距離がこれで決まる</td><td><svg viewBox="0 0 220 90"><g fill="var(--main)"><circle cx="20" cy="30" r="7"/><circle cx="44" cy="30" r="7"/><circle cx="68" cy="30" r="7"/><circle cx="20" cy="60" r="7"/><circle cx="44" cy="60" r="7"/><circle cx="68" cy="60" r="7"/><circle cx="140" cy="30" r="7"/><circle cx="164" cy="30" r="7"/><circle cx="188" cy="30" r="7"/><circle cx="140" cy="60" r="7"/><circle cx="164" cy="60" r="7"/><circle cx="188" cy="60" r="7"/></g></svg></td></tr>
+    <tr class="g-sim"><td><b>類同</b><br><span class="note">Wertheimer</span></td><td>同じ見た目のものは同じ群に見え、図では縦の列としてまとまる。<br><b>使い方</b>　同じ役割には同じ見た目を、違う役割には違う見た目を与える。見た目の差は必ず意味の差に対応させる</td><td><svg viewBox="0 0 220 90"><g><circle cx="24" cy="30" r="8" fill="var(--main)"/><rect x="48" y="22" width="16" height="16" fill="var(--accent)"/><circle cx="88" cy="30" r="8" fill="var(--main)"/><rect x="112" y="22" width="16" height="16" fill="var(--accent)"/><circle cx="152" cy="30" r="8" fill="var(--main)"/><rect x="176" y="22" width="16" height="16" fill="var(--accent)"/><circle cx="24" cy="62" r="8" fill="var(--main)"/><rect x="48" y="54" width="16" height="16" fill="var(--accent)"/><circle cx="88" cy="62" r="8" fill="var(--main)"/><rect x="112" y="54" width="16" height="16" fill="var(--accent)"/><circle cx="152" cy="62" r="8" fill="var(--main)"/><rect x="176" y="54" width="16" height="16" fill="var(--accent)"/></g></svg></td></tr>
+    <tr class="g-region"><td><b>共通領域</b><br><span class="note">Palmer, 1992</span></td><td>同じ枠や背景の中にあるものは一つの群に見える。近接より強い。<br><b>使い方</b>　枠と背景は線と面を増やすので、余白で分けて足りないときだけ使う</td><td><svg viewBox="0 0 220 90"><rect x="8" y="12" width="96" height="66" fill="none" stroke="var(--line)"/><rect x="116" y="12" width="96" height="66" fill="none" stroke="var(--line)"/><g fill="var(--main)"><circle cx="30" cy="45" r="8"/><circle cx="56" cy="45" r="8"/><circle cx="82" cy="45" r="8"/><circle cx="138" cy="45" r="8"/><circle cx="164" cy="45" r="8"/><circle cx="190" cy="45" r="8"/></g></svg></td></tr>
+    <tr class="g-cont"><td><b>連続</b><br><span class="note">Wertheimer</span></td><td>線に沿って並ぶ点は、交点で折れた二つの形ではなく交差する二本の線に見える。<br><b>使い方</b>　端を揃えた要素の列は一本の線として読まれ、視線がそれに沿って進む。揃える線を少なくする</td><td><svg viewBox="0 0 220 90"><g fill="var(--main)"><circle cx="14" cy="72" r="5"/><circle cx="38" cy="58" r="5"/><circle cx="62" cy="46" r="5"/><circle cx="86" cy="38" r="5"/><circle cx="110" cy="34" r="5"/><circle cx="134" cy="34" r="5"/><circle cx="158" cy="38" r="5"/><circle cx="182" cy="46" r="5"/><circle cx="206" cy="58" r="5"/><circle cx="14" cy="18" r="5"/><circle cx="38" cy="24" r="5"/><circle cx="62" cy="30" r="5"/><circle cx="86" cy="36" r="5"/><circle cx="134" cy="48" r="5"/><circle cx="158" cy="54" r="5"/><circle cx="182" cy="60" r="5"/><circle cx="206" cy="66" r="5"/></g></svg></td></tr>
+    <tr class="g-close"><td><b>閉合</b><br><span class="note">Kanizsa</span></td><td>欠けた輪郭からも閉じた形が見える。図では描いていない三角形が見える。<br><b>使い方</b>　輪郭を全周描かなくても領域は伝わる。カードは角や背景だけで示せる</td><td><svg viewBox="0 0 220 90"><g fill="var(--main)"><path d="M122.8 29.4 A20 20 0 1 0 97.2 29.4 L110 14z"/><path d="M80 74 A20 20 0 1 1 72.8 58.6 L60 74z"/><path d="M147.2 58.6 A20 20 0 1 1 140 74 L160 74z"/></g></svg></td></tr>
+    <tr class="g-fig"><td><b>図と地</b><br><span class="note">Rubin, 1915 頃</span></td><td>壺と二つの横顔は同時には見えず、片方が図、残りが地になる。明暗差が小さいと、どちらも図として立たない。<br><b>使い方</b>　本文のコントラスト比は 4.5:1 以上にする。半透明の地はこれを保証できない</td><td><svg viewBox="0 0 220 90"><rect width="220" height="90" fill="var(--fg)"/><path d="M80 8 C 92 12, 98 20, 100 30 C 101 38, 92 44, 88 52 C 86 60, 94 66, 96 72 C 98 78, 84 82, 76 84 L144 84 C 136 82, 122 78, 124 72 C 126 66, 134 60, 132 52 C 128 44, 119 38, 120 30 C 122 20, 128 12, 140 8 z" fill="var(--bg)"/></svg></td></tr>
+    <tr class="g-prag"><td><b>プレグナンツ</b><br><span class="note">Wertheimer</span></td><td>最も単純な解釈が選ばれる。図の輪郭は円と四角の重なりに見え、三つの不定形には見えない。<br><b>使い方</b>　部品やアイコンは基本形で作る</td><td><svg viewBox="0 0 220 90"><circle cx="85" cy="45" r="32" fill="none" stroke="var(--main)" stroke-width="3"/><rect x="100" y="20" width="66" height="50" fill="none" stroke="var(--main)" stroke-width="3"/></svg></td></tr>
+  </table></div>
+
+  <h3>デザイン例での現れ</h3>
+  <p>スイスデザインと Material の章のデザイン例で、各法則がどこに使われているかを示す。</p>
+  <div class="tbl"><table>
+    <tr><th>法則</th><th>スイスデザインの例</th><th>Material の例</th></tr>
+    <tr><td>近接</td><td>題字と本文の間より、本文と写真の間を広く空け、上の文字と下の写真を二つの群に分ける</td><td>チップどうしの間隔（8px）を、チップの列とカードの間隔（16px）より狭くする</td></tr>
+    <tr><td>類同</td><td>題字は太さ 700、本文は 400 と、役割ごとに太さを変える</td><td>三つのチップは同じ形と色で、同じ種類の要素に見える</td></tr>
+    <tr><td>共通領域</td><td>使わない。枠も背景もない（主張 5）</td><td>題字は色の面に、本文はカードの面に入れて分ける（主張 2）</td></tr>
+    <tr><td>連続</td><td>題字・本文・写真の左端が一本の縦線に揃う（主張 1・2）</td><td>題字の面・カード・チップの左端が一本の縦線に揃う</td></tr>
+    <tr><td>閉合</td><td>本文の 2 段は、枠がなくても二つの矩形の段に見える</td><td>2021 年版のカードは輪郭線がなく、影と地の差だけで矩形として閉じて見える</td></tr>
+    <tr><td>図と地</td><td>白い地に黒の題字</td><td>2014 年版は Indigo 500 の面に白の題字、2021 年版は淡いトーンの面に濃いトーンの題字</td></tr>
+    <tr><td>プレグナンツ</td><td>要素は文字の段と写真の矩形だけ</td><td>面は角丸の長方形、FAB は円（2014 年版）か角丸の長方形（2021 年版）で、基本形の組み合わせ</td></tr>
+  </table></div>
   <p class="note">ゲシュタルト心理学は 20 世紀初頭のベルリン学派（Wertheimer、Köhler、Koffka）に始まり、プレグナンツの法則の下に近接・類同・閉合・よい連続の要因を置く（<a href="https://ja.wikipedia.org/wiki/ゲシュタルト心理学">Wikipedia「ゲシュタルト心理学」</a>で確認）。Rubin の壺は 1915 年頃の考案（<a href="https://en.wikipedia.org/wiki/Rubin_vase">Wikipedia「Rubin vase」</a>）。共通領域は Palmer（1992）が加えた要因で（<a href="https://en.wikipedia.org/wiki/Principles_of_grouping">Wikipedia「Principles of grouping」</a>で確認）、原論文は開いていない。</p>
 </section>
 
@@ -998,9 +991,9 @@
   <div class="tbl"><table class="pick" id="prin">
     <tr><th>#</th><th>原則</th><th>内容</th><th>出典</th></tr>
     <tr class="sep"><td colspan="4">第 1 部 見た目</td></tr>
-    <tr tabindex="0" data-demo="#gest .card:nth-child(1)|#gest .card:nth-child(3)|#skr .card:nth-child(7)"><td class="num">1</td><td>まとまりは余白と揃えで作る</td><td>近接・類同・グリッド。枠線と背景は最後の手段</td><td>スイス、Material、ゲシュタルト、桜井「色による区分」</td></tr>
+    <tr tabindex="0" data-demo="#gest .g-prox svg|#gest .g-region svg|#skr .card:nth-child(7)"><td class="num">1</td><td>まとまりは余白と揃えで作る</td><td>近接・類同・グリッド。枠線と背景は最後の手段</td><td>スイス、Material、ゲシュタルト、桜井「色による区分」</td></tr>
     <tr tabindex="0" data-demo="#skr .card:nth-child(1)|#poster"><td class="num">2</td><td>飾りは意味があるときだけ</td><td>情報を足さない影・半透明・角丸・挿絵を置かない。既定値を飾りに頼らない</td><td>スイス、飾りと既定値、Rams、NN/g 8、桜井「わかりやすさとスタイル性」</td></tr>
-    <tr tabindex="0" data-demo="#skr .card:nth-child(14)|#gest .card:nth-child(6)"><td class="num">3</td><td>色や形だけで伝えない</td><td>色・形・文字・位置のうち二つ以上で伝え、コントラスト 4.5:1</td><td>色、ゲシュタルト（図と地）、WCAG、Apple、Material、桜井「言語がなくてもわかるように」</td></tr>
+    <tr tabindex="0" data-demo="#skr .card:nth-child(14)|#gest .g-fig svg"><td class="num">3</td><td>色や形だけで伝えない</td><td>色・形・文字・位置のうち二つ以上で伝え、コントラスト 4.5:1</td><td>色、ゲシュタルト（図と地）、WCAG、Apple、Material、桜井「言語がなくてもわかるように」</td></tr>
     <tr tabindex="0" data-demo="#charts .vp > div:nth-child(5)|#charts .vp > div:nth-child(4)"><td class="num">4</td><td>量は位置と長さで示す</td><td>比べさせたい量は共通の尺度の上に置き、色は区別に使う。データでないインクは消す</td><td>Cleveland と McGill、Bertin、Tufte、JR 東日本アプリ</td></tr>
     <tr class="sep"><td colspan="4">第 2 部 振る舞い</td></tr>
     <tr tabindex="0" data-demo="#guidelines .sfield|#skr .card:nth-child(9)"><td class="num">5</td><td>想起させず、見せて選ばせる</td><td>選択肢・候補・履歴・ショートカットを画面に出す</td><td>NN/g 6、黄金律 8、ミラー、Apple、Material、fzf、Hearst</td></tr>

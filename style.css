@@ -642,3 +642,4 @@ table.claims td:last-child{width:232px;min-width:232px}
 .mc-a11y{display:flex;gap:12px;align-items:center}
 .mc-a11y span{font-size:.75rem;padding:4px 12px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);color:var(--muted)}
 .mc-a11y .hi{font-size:1rem;font-weight:700;color:var(--fg);box-shadow:inset 0 0 0 2px var(--fg)}
+table.claims svg{display:block;width:100%;max-width:220px;height:auto}
