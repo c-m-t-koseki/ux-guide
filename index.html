@@ -467,33 +467,6 @@
   <div class="tbl"><table><tr><th>何をしたか</th><th>原則</th></tr><tr><td>時間を長さと位置で示す</td><td>位置と長さ（Cleveland と McGill）、データインク比</td></tr><tr><td>候補を同じ尺度の上に並べる</td><td>スモールマルチプル</td></tr><tr><td>乗換を切れ目、路線を色で</td><td>色と位置と形の併用</td></tr><tr><td>文字を減らし、詳細はタップで</td><td>全体を先に、詳細は求めに応じて（第 3 部の Shneiderman）</td></tr></table></div>
   <p class="note">JR の画面は <a href="https://k-tai.watch.impress.co.jp/docs/column/teppan/1634024.html">ケータイ Watch</a> と Appliv の画面写真、NAVITIME の札は <a href="https://note.com/navitime_app_tr/n/n5acf2992d460">NAVITIME の公式 note</a> で確認した。斜めのスクロールは画面写真から読み取ったもので、公式の説明は確認していない。順位は <a href="https://www.textbookofusability.com/references/clevelandmcgill1984.html">Cleveland &amp; McGill, Graphical Perception, JASA 79(387), 1984</a> の紹介、視覚変数は <a href="https://en.wikipedia.org/wiki/Visual_variable">Wikipedia「Visual variable」</a>、前注意的属性は <a href="https://link.springer.com/rwe/10.1007/978-3-319-55065-7_1588">Feature Integration Theory の解説</a>、データインク比は <a href="https://en.wikipedia.org/wiki/Chartjunk">Wikipedia「Chartjunk」</a>、スモールマルチプルは <a href="https://en.wikipedia.org/wiki/Small_multiple">Wikipedia「Small multiple」</a>で確認した。原典はいずれも開いていない。</p>
 
-  <h3>見比べるものの並べ方 ― 横に並べる根拠はどこまであるか</h3>
-  <p>JR の図は候補を横に並べた。見比べるものを横に並べるのは妥当そうだが、「横並びのほうが比較が速く正確」と直接確かめた研究は見つからなかった。根拠は、目の性質と、比べやすさの一般則からの推論である。根拠の強さの順に見る。</p>
-  <h4>目の動きと視野（よく確かめられている）</h4>
-  <ul>
-    <li>見て探す課題では、一度に情報を取れる範囲が縦より横に広く、横方向に走査するほうが速いと報告されている。差は目の跳躍（サッケード）の側から来る（<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2712349/">Najemnik と Geisler の系統の視覚探索研究</a>）。</li>
-    <li>視野の水平方向（水平子午線）は、垂直方向より見え方の成績が良いと、多くの課題で繰り返し報告されている（<a href="https://link.springer.com/article/10.1007/s00221-025-07152-2">2025 年の研究</a>、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9012886">総説</a>）。</li>
-    <li>縦方向のサッケードは横より遅いという報告もあるが、振幅をそろえた比較は確認できなかった。</li>
-  </ul>
-  <h4>見比べやすさ（一部は確かめられ、一部は推論）</h4>
-  <ul>
-    <li>Cleveland と McGill（1984）は、共通の軸の上で位置を比べるのが最も正確で、比べるものが離れるほど精度が落ちると示した（<a href="https://vis.arc.vt.edu/%7Enpolys/projects/safas/science.pdf">論文</a>）。上の「正確に読める順」と同じ出典である。</li>
-    <li>比べるものを近くに並べ、軸をそろえるほど比較が楽になる。Tufte のスモールマルチプルと、Matlen ら（2020）の<a href="https://groups.psych.northwestern.edu/gentner/papers/MatlenEtAl_2020-SpatialAlign.pdf">空間整合の枠組み</a>がこの考え方である。</li>
-    <li>二つの刺激を横並びと縦並びで直接比べた、人の反応時間の研究は見つからなかった。</li>
-  </ul>
-  <h4>道具の慣習（研究の根拠は弱い）</h4>
-  <ul>
-    <li>放射線科で前回と今回の画像を比べるときは、横に並べるのが一般的である（<a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">ハンギングプロトコルの解説</a>）。</li>
-    <li>全体と詳細を別々に見せる画面（overview+detail）の総説（<a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/01/cockburn-ComputingSurveys09.pdf">Cockburn ら、2009</a>）も、全体図（ミニマップ）を左右どちらに置くかは扱っていない。コードエディタのミニマップが右にあるのも慣習である。</li>
-    <li>左から右に読む人は、左から見始め、右側を見落としやすいとされる（<a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">NN/g</a>）。主に見るもの（拡大画像）を左、補助（ミニマップ）を右に置くのは、この点では筋が通る。</li>
-  </ul>
-  <h4>縦書きの文脈帯</h4>
-  <ul>
-    <li>縦書きの日本語は、横書きより注視の回数が多くなるという報告と、読む速さは変わらないという報告がある（<a href="https://researchmap.jp/kojimiwa/published_papers/3501775">Miwa ら</a>）。</li>
-    <li>紙面に添える文脈帯を紙面と同じ縦の列にしておくのは自然だが、比較の精度を示す研究ではない。</li>
-  </ul>
-  <p>本資料はこれを次のように扱う。比べさせたいものは横に並べ、軸をそろえる（<a href="#principles" data-prin="4">原則 4</a>）。拡大画像とミニマップの左右、文脈帯の向きは研究ではなく慣習で決まる問題として、主に見るものを左に置く。</p>
-  <p class="note">この節の研究は、各論文の要旨と解説で確かめた範囲で、原典は通読していない。</p>
 </section>
 
 <!-- ============ classics ============ -->
@@ -1112,11 +1085,29 @@
       <h4>2 入力中</h4><ul><li>一文字ごとに候補、400ms 以内（6。fzf、Doherty）</li><li>表記ゆれを既定で同一視：新字旧字、異体字、かなカナ、全角半角、長音、ローマ字（11。ポステル）</li><li>曖昧一致は候補にのみ。本検索の既定は単語単位の AND（5。fzf の章）</li><li>候補をカテゴリで区切り、マッチ箇所を太字に（5。Material）</li><li>件数を入力中から出す（6。fzf）</li><li>Enter 連打で二度走らせない（11）</li></ul>
       <h4>3 結果一覧</h4><ul><li>年代別ヒストグラムを上に置き、ドラッグで期間を絞る（12。Shneiderman）</li><li>同じ事件の記事は日付を、同じ書名の版と巻は刊行年を縦軸に並べる（4。JR の乗換結果）</li><li>ファセットを左に、件数付き。0件になる選択肢はグレー（11。NN/g 5）</li><li>密度の高い左揃えの表。列はタイトル・著者・日付・所在（1。スイス）</li><li>スニペットはヒット語の前後、ヒット語だけアクセント色（3・12。Pirolli と Card）</li><li>古い・重複・非公開は既定で除き「含めて再検索」を用意（2。ripgrep）</li><li>遅い全文検索は見出しの結果を先に出し、残りの進捗と止める道を示す（6。桜井）</li><li>既定は関連度、新聞は日付降順に一回で切替</li></ul></div>
     <div><h4>4 絞り込みと往復</h4><ul><li>検索語・ファセット・並び順・ページを URL に（11。東京都 4、NN/g 3）</li><li>適用中の条件をチップで、× で外せる。全部外すのも一回で（11。Apple tokens、桜井「リトライは迅速に」）</li><li>無効な期間は入力できない（11）</li><li>AND / OR / NOT / <code>title:</code> <code>date:1923..1924</code> を同じ欄で（9。fzf）</li><li>検索欄は結果画面でも入力語を保ったまま上に（12。Bates、Material）</li><li>絞り込みで結果が変わるときは、消える行と残る行を動きでつなぐ（10）</li></ul>
-      <h4>5 詳細</h4><ul><li>広い画面では一覧と詳細の 2 ペイン。幅の判断は Material のウィンドウサイズクラス（1・12。fzf --preview、lazygit）</li><li>j/k で移動、Enter で開く、Esc で戻る。位置を保つ（9）</li><li>「同じ著者」「同じ日の紙面」へ一回で（12。Bates）</li><li>新聞は紙面全体を見せてヒット箇所を枠で</li><li>紙面は拡大画像を左、紙面全体のミニマップを右に置き、文脈帯は紙面と同じ縦の列にする（4。可視化の章。左右は研究ではなく慣習による）</li></ul>
+      <h4>5 詳細</h4><ul><li>広い画面では一覧と詳細の 2 ペイン。幅の判断は Material のウィンドウサイズクラス（1・12。fzf --preview、lazygit）</li><li>j/k で移動、Enter で開く、Esc で戻る。位置を保つ（9）</li><li>「同じ著者」「同じ日の紙面」へ一回で（12。Bates）</li><li>新聞は紙面全体を見せてヒット箇所を枠で</li><li>紙面は拡大画像を左、紙面全体のミニマップを右に置き、文脈帯は紙面と同じ縦の列にする（4。下の「詳細画面の配置」）</li></ul>
       <h4>6 持ち出しと保存</h4><ul><li>書誌の書き出しと検索条件の保存（12。Shneiderman の「取り出し」）</li><li>エクスポートは件数を先に見せ、上限超過時だけ確認（11）</li><li>保存した検索の削除は即時実行して数秒の「元に戻す」（11）</li></ul>
       <h4>7 0件と失敗（どの段でも）</h4><ul><li>0件画面に検索欄を残し、緩めた結果と「もしかして」を自動で（7。東京都 5、NN/g 9）</li><li>タイポは「もしかして」で提案し、勝手に置換しない（11）</li><li>司書への相談導線を全ページに（7。東京都 5）</li><li>全文検索の索引が落ちても見出し検索の結果は出し、部分結果であることを示す（11。フェイルセーフ）</li></ul></div>
   </div>
 
+  <h3>詳細画面の配置 ― 主に見るものを左、補助を右</h3>
+  <p>上の「5 詳細」では、比べさせたいものを横に並べて軸をそろえ（<a href="#principles" data-prin="4">原則 4</a>）、紙面の拡大画像を左、紙面全体のミニマップを右に置き、文脈帯は紙面と同じ縦の列にすると決めた。ここではその理由と限界を示す。</p>
+  <h4>理由</h4>
+  <ul>
+    <li>見て探す課題では、一度に情報を取れる範囲が縦より横に広く、横方向に走査するほうが速いと報告されている。差は目の跳躍（サッケード）の側から来る（<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2712349/">Najemnik と Geisler の系統の視覚探索研究</a>）。</li>
+    <li>視野の水平方向（水平子午線）は、垂直方向より見え方の成績が良いと、多くの課題で繰り返し報告されている（<a href="https://link.springer.com/article/10.1007/s00221-025-07152-2">2025 年の研究</a>、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9012886">総説</a>）。</li>
+    <li>縦方向のサッケードは横より遅いという報告もあるが、振幅をそろえた比較は確認できなかった。</li>
+    <li>Cleveland と McGill（1984）は、共通の軸の上で位置を比べるのが最も正確で、比べるものが離れるほど精度が落ちると示した（<a href="https://vis.arc.vt.edu/%7Enpolys/projects/safas/science.pdf">論文</a>）。可視化の章の「正確に読める順」と同じ出典である。</li>
+    <li>比べるものを近くに並べ、軸をそろえるほど比較が楽になる。Tufte のスモールマルチプルと、Matlen ら（2020）の<a href="https://groups.psych.northwestern.edu/gentner/papers/MatlenEtAl_2020-SpatialAlign.pdf">空間整合の枠組み</a>がこの考え方である。</li>
+    <li>放射線科で前回と今回の画像を比べるときは、横に並べるのが一般的である（<a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">ハンギングプロトコルの解説</a>）。</li>
+    <li>全体と詳細を別々に見せる画面（overview+detail）の総説（<a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/01/cockburn-ComputingSurveys09.pdf">Cockburn ら、2009</a>）も、全体図（ミニマップ）を左右どちらに置くかは扱っていない。コードエディタのミニマップが右にあるのも慣習である。</li>
+    <li>左から右に読む人は、左から見始め、右側を見落としやすいとされる（<a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">NN/g</a>）。主に見るもの（拡大画像）を左、補助（ミニマップ）を右に置くのは、この点では筋が通る。</li>
+    <li>縦書きの日本語は、横書きより注視の回数が多くなるという報告と、読む速さは変わらないという報告がある（<a href="https://researchmap.jp/kojimiwa/published_papers/3501775">Miwa ら</a>）。</li>
+    <li>紙面に添える文脈帯を紙面と同じ縦の列にしておくのは自然だが、比較の精度を示す研究ではない。</li>
+  </ul>
+  <h4>限界</h4>
+  <p>横並びと縦並びの比較を、人の反応時間で直接確かめた研究は見つからなかった。拡大画像とミニマップの左右、文脈帯の向きは、研究ではなく慣習で決まる問題である。</p>
+  <p class="note">この節の研究は、各論文の要旨と解説で確かめた範囲で、原典は通読していない。</p>
 </section>
 
 <!-- ============ refs ============ -->
@@ -1173,15 +1164,15 @@
     <tr><td><a href="https://link.springer.com/rwe/10.1007/978-3-319-55065-7_1588">Feature Integration Theory の解説</a></td><td>Treisman の理論</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Chartjunk">Chartjunk</a></td><td>Tufte、1983</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Small_multiple">Small multiple</a></td><td>Tufte、1990</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2712349/">視覚探索とサッケードの研究</a></td><td>Najemnik と Geisler の系統</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://link.springer.com/article/10.1007/s00221-025-07152-2">視野の水平・垂直の差の研究</a></td><td>Experimental Brain Research、2025</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9012886">視野の非対称性の総説</a></td><td>PMC</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://vis.arc.vt.edu/%7Enpolys/projects/safas/science.pdf">Graphical Perception（論文）</a></td><td>Cleveland と McGill、1984</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://groups.psych.northwestern.edu/gentner/papers/MatlenEtAl_2020-SpatialAlign.pdf">Spatial alignment</a></td><td>Matlen ら、2020</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/01/cockburn-ComputingSurveys09.pdf">A review of overview+detail, zooming, and focus+context interfaces</a></td><td>Cockburn ら、2009</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">Hanging Protocol Overview</a></td><td>LEADTOOLS</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">Text Scanning Patterns: Eyetracking Evidence</a></td><td>Nielsen Norman Group</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://researchmap.jp/kojimiwa/published_papers/3501775">縦書きと横書きの読みの研究</a></td><td>Miwa ら</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2712349/">視覚探索とサッケードの研究</a></td><td>Najemnik と Geisler の系統</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://link.springer.com/article/10.1007/s00221-025-07152-2">視野の水平・垂直の差の研究</a></td><td>Experimental Brain Research、2025</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9012886">視野の非対称性の総説</a></td><td>PMC</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://vis.arc.vt.edu/%7Enpolys/projects/safas/science.pdf">Graphical Perception（論文）</a></td><td>Cleveland と McGill、1984</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://groups.psych.northwestern.edu/gentner/papers/MatlenEtAl_2020-SpatialAlign.pdf">Spatial alignment</a></td><td>Matlen ら、2020</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/01/cockburn-ComputingSurveys09.pdf">A review of overview+detail, zooming, and focus+context interfaces</a></td><td>Cockburn ら、2009</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">Hanging Protocol Overview</a></td><td>LEADTOOLS</td><td><a href="#apply">適用</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">Text Scanning Patterns: Eyetracking Evidence</a></td><td>Nielsen Norman Group</td><td><a href="#apply">適用</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://researchmap.jp/kojimiwa/published_papers/3501775">縦書きと横書きの読みの研究</a></td><td>Miwa ら</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
     <tr><td><a href="https://www.researchgate.net/publication/6873629_Humans_prefer_curved_visual_objects">Humans prefer curved visual objects</a></td><td>Bar と Neta、2006</td><td><a href="#swiss">スイス</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
     <tr><td><a href="https://link.springer.com/article/10.1186/s41235-023-00499-6">Cognitive Research: Principles and Implications の論文</a></td><td>Bellaiche ら、2023</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
     <tr><td><a href="https://www.researchgate.net/publication/222427507_The_effort_heuristic">The effort heuristic</a></td><td>Kruger ら、2004</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
