@@ -478,59 +478,84 @@
     <tr><td><a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">The Design of Everyday Things</a></td><td>Norman, 1988 / 2013</td><td>アフォーダンスを設計の語として持ち込み、2013 年版でシグニファイアを加えた。見えること・よい概念モデル・よい対応付け・フィードバック。制約を活かし、エラーを見越して設計する。実行の深淵と評価の深淵</td></tr>
   </table></div>
   <h4>Norman の二つの深淵</h4>
-  <div class="fig"><svg viewBox="0 0 720 150" width="720" height="150" class="dia" role="img" aria-label="実行の深淵と評価の深淵">
-    <rect x="10" y="40" width="120" height="50" fill="var(--main-soft)"/><text x="70" y="70" text-anchor="middle">意図</text>
-    <rect x="300" y="40" width="120" height="50" fill="var(--main-soft)"/><text x="360" y="70" text-anchor="middle">世界（画面）</text>
-    <rect x="590" y="40" width="120" height="50" fill="var(--main-soft)"/><text x="650" y="70" text-anchor="middle">解釈</text>
-    <path d="M130 55 H300" stroke="var(--fg)" stroke-width="2" marker-end="url(#ah-f)"/><text x="215" y="42" text-anchor="middle" class="ac">実行の深淵</text><text x="215" y="110" text-anchor="middle" class="mu">意図と、許された操作との差</text>
-    <path d="M420 75 H590" stroke="var(--fg)" stroke-width="2" marker-end="url(#ah-f)"/><text x="505" y="42" text-anchor="middle" class="ac">評価の深淵</text><text x="505" y="110" text-anchor="middle" class="mu">状態を解釈するのに要る労力</text>
-    <defs><marker id="ah-f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--fg)"/></marker></defs>
+  <div class="fig"><svg viewBox="0 0 720 210" width="720" height="210" class="dia" role="img" aria-label="意図・世界・解釈の三つの台地と、その間の実行の深淵と評価の深淵">
+    <path d="M0 80 H200 L228 205 H272 L300 80 H420 L448 205 H492 L520 80 H720 V210 H0 Z" fill="var(--main-soft)"/>
+    <defs><linearGradient id="deep" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--fg);stop-opacity:.04"/><stop offset="1" style="stop-color:var(--fg);stop-opacity:.45"/></linearGradient></defs>
+    <path d="M200 80 L228 205 H272 L300 80 Z M420 80 L448 205 H492 L520 80 Z" fill="url(#deep)"/>
+    <path d="M200 80 L228 205 M272 205 L300 80 M420 80 L448 205 M492 205 L520 80" stroke="var(--fg)" stroke-width="2" fill="none"/>
+    <path d="M0 80 H200 M300 80 H420 M520 80 H720" stroke="var(--fg)" stroke-width="2"/>
+    <text x="100" y="110" text-anchor="middle">意図</text><text x="100" y="128" text-anchor="middle" class="mu">こうしたい</text>
+    <text x="360" y="110" text-anchor="middle">世界（画面）</text><text x="360" y="128" text-anchor="middle" class="mu">許された操作と状態</text>
+    <text x="620" y="110" text-anchor="middle">解釈</text><text x="620" y="128" text-anchor="middle" class="mu">うまくいったか</text>
+    <text x="250" y="28" text-anchor="middle" class="ac">実行の深淵</text><text x="250" y="46" text-anchor="middle" class="mu">意図と、許された操作との差</text>
+    <text x="470" y="28" text-anchor="middle" class="ac">評価の深淵</text><text x="470" y="46" text-anchor="middle" class="mu">状態を解釈するのに要る労力</text>
   </svg></div>
+  <p><b>例 1　ドア</b>　Norman は、押して開けるドアの平らな押し板と、手でつかむ棒状の取っ手を、シグニファイアの例に挙げている。実行の深淵が深いと、押すのか引くのかが分からない。評価の深淵が深いと、開かなかったときに、その理由が分からない。</p>
+  <div class="gulf">
+    <span></span><b class="hd">深い</b><b class="hd">浅い</b>
+    <b class="rh">実行の深淵</b>
+    <div class="door"><svg viewBox="0 0 120 150" role="img"><rect x="20" y="10" width="80" height="135" fill="var(--panel)" stroke="var(--fg)" stroke-width="2"/><rect x="80" y="55" width="6" height="40" fill="var(--fg)"/></svg><span class="st muted">引き手の形だが、押して開ける</span></div>
+    <div class="door"><svg viewBox="0 0 120 150" role="img"><rect x="20" y="10" width="80" height="135" fill="var(--panel)" stroke="var(--fg)" stroke-width="2"/><rect x="76" y="60" width="16" height="30" fill="var(--line)"/></svg><span class="st muted">押し板だけなので、押すと分かる</span></div>
+    <b class="rh">評価の深淵</b>
+    <div class="door"><svg viewBox="0 0 120 150" role="img"><rect x="20" y="10" width="80" height="135" fill="var(--panel)" stroke="var(--fg)" stroke-width="2"/><rect x="80" y="55" width="6" height="40" fill="var(--fg)"/></svg><span class="st muted">押しても引いても動かない。鍵か、向きの間違いか分からない</span></div>
+    <div class="door"><svg viewBox="0 0 120 150" role="img"><rect x="20" y="10" width="80" height="135" fill="var(--panel)" stroke="var(--fg)" stroke-width="2"/><rect x="80" y="55" width="6" height="40" fill="var(--fg)"/><rect x="72" y="100" width="20" height="10" fill="var(--err)"/><text x="82" y="122" text-anchor="middle" font-size="9" fill="var(--err)">使用中</text></svg><span class="st muted">表示が「使用中」。開かない理由が分かる</span></div>
+  </div>
+  <p><b>例 2　画面での保存</b>　書きかけの文書を保存したい利用者を置く。実行の深淵が深いと、保存する操作にたどり着けない。評価の深淵が深いと、操作の後に、保存できたのかが分からない。</p>
+  <div class="gulf">
+    <span></span><b class="hd">深い</b><b class="hd">浅い</b>
+    <b class="rh">実行の深淵</b>
+    <div class="nm"><span class="tb"><b>報告書.docx</b><span class="mono">≡</span></span><span class="st muted">保存は ≡ › その他 › 書き出し の奥にある</span></div>
+    <div class="nm"><span class="tb"><b>報告書.docx</b><span><b class="btn-s">保存</b> <span class="mono muted">⌘S</span></span></span><span class="st muted">保存ボタンと近道のキーが見えている</span></div>
+    <b class="rh">評価の深淵</b>
+    <div class="nm"><span class="tb"><b>報告書.docx</b><span class="mono muted">●</span></span><span class="st muted">押しても画面が変わらず、未保存の印も残ったまま</span></div>
+    <div class="nm"><span class="tb"><b>報告書.docx</b><span class="mono muted">14:32 に保存</span></span><span class="st">保存しました</span></div>
+  </div>
+  <p class="cap">どちらの例でも、実行の深淵はできる操作を見せると浅くなり、評価の深淵は状態や結果を見せると浅くなる。</p>
 
   <h3>NN/g の 10 ユーザビリティ・ヒューリスティック</h3>
   <p>Nielsen が Molich と 1990 年に作り、1994 年に 249 件のユーザビリティの問題の因子分析をもとに整えた。具体的なガイドラインではなく、ヒューリスティック評価に使う大まかな経験則である。共通原則の章はこの番号で引用する。カードを押すと、良い例と悪い例が切り替わる。</p>
   <div class="gest laws" id="nng">
     <div class="card on" tabindex="0"><h4>1 システム状態の可視化</h4><p class="d">適切なフィードバックで、何が起きているかを妥当な時間内に常に知らせる。</p>
-      <div class="after"><div class="nm"><span class="f">関東大震災 1923</span><span class="st">検索中… 1,249 件のうち 20 件を表示</span><i class="bar"></i></div></div>
-      <div class="before"><div class="nm"><span class="f">関東大震災 1923</span><span class="st muted">　</span></div></div></div>
+      <div class="after"><div class="nm"><span>写真をアップロード中　3 / 5 枚</span><i class="bar"></i><span class="st muted">残り約 10 秒</span></div></div>
+      <div class="before"><div class="nm"><span>写真をアップロード中</span><span class="st muted">　</span></div></div></div>
     <div class="card on" tabindex="0"><h4>2 システムと現実世界の一致</h4><p class="d">内部の用語ではなく、利用者の言葉と慣れた概念を使う。現実の慣習に従い、自然で論理的な順に示す。</p>
-      <div class="after"><div class="nm"><span class="k">紙面</span><span>朝刊　夕刊　号外</span><span class="k">年</span><span>1923　1924</span></div></div>
-      <div class="before"><div class="nm"><span class="k">DB</span><span class="mono">np_asahi_v2</span><span class="k">fld</span><span class="mono">pg_type=M|E|X</span></div></div></div>
+      <div class="after"><div class="nm"><span class="k">ストレージ</span><span>残り 12 GB</span></div></div>
+      <div class="before"><div class="nm"><span class="k">ストレージ</span><span class="mono">free=12884901888</span></div></div></div>
     <div class="card on" tabindex="0"><h4>3 ユーザーの制御と自由</h4><p class="d">誤って始めた操作から、長い手順を踏まずに抜けられる、はっきり示された非常口を用意する。</p>
-      <div class="after"><div class="nm"><span class="toast">検索履歴を削除しました <b>元に戻す</b></span></div></div>
-      <div class="before"><div class="nm"><span class="toast">検索履歴を削除しました</span></div></div></div>
+      <div class="after"><div class="nm"><span class="toast">メールを削除しました <b>元に戻す</b></span></div></div>
+      <div class="before"><div class="nm"><span class="toast">メールを削除しました</span></div></div></div>
     <div class="card on" tabindex="0"><h4>4 一貫性と標準</h4><p class="d">違う言葉・状況・操作が同じ意味かを迷わせない。プラットフォームと業界の慣習に従う。</p>
-      <div class="after"><div class="nm"><span>新聞 <b class="btn-s">検索</b></span><span>図書 <b class="btn-s">検索</b></span><span>雑誌 <b class="btn-s">検索</b></span></div></div>
-      <div class="before"><div class="nm"><span>新聞 <b class="btn-s">検索</b></span><span>図書 <b class="btn-s">照会</b></span><span>雑誌 <b class="btn-s">Go</b></span></div></div></div>
+      <div class="after"><div class="nm"><span>保存しますか？ <b class="btn-s">キャンセル</b><b class="btn-s">保存</b></span><span>削除しますか？ <b class="btn-s">キャンセル</b><b class="btn-s">削除</b></span></div></div>
+      <div class="before"><div class="nm"><span>保存しますか？ <b class="btn-s">キャンセル</b><b class="btn-s">保存</b></span><span>削除しますか？ <b class="btn-s">はい</b><b class="btn-s">戻る</b></span></div></div></div>
     <div class="card on" tabindex="0"><h4>5 エラー防止</h4><p class="d">よいエラー表示より、問題が起きない設計がよい。起きやすい条件をなくすか、実行の前に確認を出す。</p>
-      <div class="after"><div class="nm"><span>開始 <b class="mono">1923-09-01</b></span><span>終了 <b class="mono">1923-09-30</b></span><span class="st muted">開始より前の日は選べない</span></div></div>
-      <div class="before"><div class="nm"><span>開始 <b class="mono">1923-09-01</b></span><span>終了 <b class="mono">1923-08-01</b></span><span class="st err">検索後に「期間が不正です」</span></div></div></div>
+      <div class="after"><div class="nm"><span>本文に「添付」とありますが、ファイルがありません。</span><span><b class="btn-s">戻る</b><b class="btn-s">このまま送信</b></span></div></div>
+      <div class="before"><div class="nm"><span>送信しました</span><span class="st muted">添付を忘れたまま送られた</span></div></div></div>
     <div class="card on" tabindex="0"><h4>6 想起より再認</h4><p class="d">要素・操作・選択肢を見せて、記憶の負担を減らす。必要な情報は、要るときに見えるか、すぐ取り出せるようにする。</p>
-      <div class="after"><div class="nm"><span class="f">｜</span><span class="k">最近の検索</span><span>関東大震災 1923</span><span>帝都復興院</span></div></div>
-      <div class="before"><div class="nm"><span class="f muted">検索語を入力</span></div></div></div>
+      <div class="after"><div class="nm"><span class="k">最近使ったファイル</span><span>報告書.docx</span><span>見積書.xlsx</span></div></div>
+      <div class="before"><div class="nm"><span class="k">開くファイル名を入力</span><span class="f">｜</span></div></div></div>
     <div class="card on" tabindex="0"><h4>7 柔軟性と効率</h4><p class="d">初心者には見えない近道で、熟練者の操作を速くする。よく使う操作を利用者が調整できるようにする。</p>
-      <div class="after"><div class="nm"><span class="f">関東大震災 1923 <kbd>/</kbd></span><span><b class="chip">保存した条件：震災 1923 朝刊</b></span></div></div>
-      <div class="before"><div class="nm"><span class="f">関東大震災 1923</span><span class="st muted">条件は毎回 詳細検索 › 条件 › 追加 で入れ直す</span></div></div></div>
+      <div class="after"><div class="nm"><span class="mono">コピー　　⌘C</span><span class="mono">貼り付け　⌘V</span></div></div>
+      <div class="before"><div class="nm"><span class="mono">コピー</span><span class="mono">貼り付け</span></div></div></div>
     <div class="card on" tabindex="0"><h4>8 美的で最小限のデザイン</h4><p class="d">無関係な情報や、まれにしか要らない情報を置かない。余計な情報は、必要な情報と競って見えにくくする。</p>
-      <div class="after"><div class="nm"><span><b>帝都の火災、三日に及ぶ</b></span><span class="mono muted">1923-09-04　朝刊 1 面</span></div></div>
-      <div class="before"><div class="nm"><span><b>帝都の火災、三日に及ぶ</b></span><span class="mono muted">ID 000184522　登録 2019-03-02　更新者 batch01　2.4MB　1923-09-04　朝刊 1 面</span></div></div></div>
+      <div class="after"><div class="nm"><span><b>報告書.docx</b></span><span class="mono muted">今日 14:32</span></div></div>
+      <div class="before"><div class="nm"><span><b>報告書.docx</b></span><span class="mono muted">24,576 bytes　rw-r--r--　inode 9921　2026-10-24T14:32:08+09:00</span></div></div></div>
     <div class="card on" tabindex="0"><h4>9 エラーの認識・診断・回復の支援</h4><p class="d">エラーは平易な言葉で（エラーコードなしに）示し、問題を正確に伝え、解決策を示す。</p>
-      <div class="after"><div class="nm"><span>「関東大震災 1932」は 0 件でした。</span><span><b class="chip">1923 年で検索する</b></span></div></div>
-      <div class="before"><div class="nm"><span class="err mono">Error 0x80040E14</span></div></div></div>
+      <div class="after"><div class="nm"><span>パスワードは 8 文字以上にしてください（今は 6 文字）</span></div></div>
+      <div class="before"><div class="nm"><span class="err mono">Error E-1021</span></div></div></div>
     <div class="card on" tabindex="0"><h4>10 ヘルプとドキュメント</h4><p class="d">説明が要らないのが最善だが、必要なら、検索しやすく、作業に沿い、具体的な手順を示す説明を用意する。</p>
-      <div class="after"><div class="nm"><span class="f">関東大震災 date:1923..1924</span><span class="st muted">期間は date:開始..終了 で指定できます</span></div></div>
-      <div class="before"><div class="nm"><span class="f">関東大震災</span><span class="st"><u>ヘルプ（PDF、84 ページ）</u></span></div></div></div>
+      <div class="after"><div class="nm"><span>自動保存　<b class="chip">？</b></span><span class="st muted">5 分ごとに保存します</span></div></div>
+      <div class="before"><div class="nm"><span>自動保存</span><span class="st"><u>ヘルプ（PDF、84 ページ）</u></span></div></div></div>
   </div>
 
   <h3>法則</h3>
   <p>カードを押すと、良い例と悪い例が切り替わる。</p>
   <div class="gest laws" id="laws">
     <div class="card on" tabindex="0"><h4>フィッツの法則</h4><p class="d">Fitts, 1954。対象に届くまでの時間は、対象までの距離と大きさで決まる。対象は正確に選べる大きさにし、間を空け、届きやすい場所に置く。</p>
-      <div class="after"><div class="fitts"><span class="q">関東大震災 1923<i></i></span><span class="go big">検索</span></div></div>
-      <div class="before"><div class="fitts"><span class="q">関東大震災 1923<i></i></span><span class="go small">検索</span></div></div></div>
+      <div class="after"><div class="fitts"><span class="q">メッセージを入力<i></i></span><span class="go big">送信</span></div></div>
+      <div class="before"><div class="fitts"><span class="q">メッセージを入力<i></i></span><span class="go small">送信</span></div></div></div>
     <div class="card on" tabindex="0"><h4>ヒックの法則</h4><p class="d">Hick, 1952、Hyman, 1953。決めるまでの時間は、選択肢の数と複雑さで増える。応答の速さが要るときは選択肢を減らし、複雑な作業は小さな段階に分ける。</p>
-      <div class="after"><ul class="hick"><li>▾ 新聞</li><li class="sub">朝刊</li><li class="sub">夕刊</li><li class="sub">号外</li><li class="sub">地方版</li><li>▸ 図書</li><li>▸ 雑誌</li><li>すべて</li></ul></div>
-      <div class="before"><ul class="hick flat"><li>朝刊</li><li>夕刊</li><li>号外</li><li>地方版</li><li>単行本</li><li>文庫</li><li>新書</li><li>全集</li><li>月刊誌</li><li>週刊誌</li><li>季刊</li><li>紀要</li></ul></div></div>
+      <div class="after"><ul class="hick"><li>▾ 画面</li><li class="sub">明るさ</li><li class="sub">文字の大きさ</li><li class="sub">ダークモード</li><li>▸ 通知</li><li>▸ サウンド</li><li>▸ プライバシー</li></ul></div>
+      <div class="before"><ul class="hick flat"><li>明るさ</li><li>文字の大きさ</li><li>ダークモード</li><li>通知音</li><li>バナー</li><li>バッジ</li><li>音量</li><li>着信音</li><li>位置情報</li><li>カメラ</li><li>マイク</li><li>連絡先</li></ul></div></div>
     <div class="card on" tabindex="0"><h4>ミラーの法則</h4><p class="d">Miller, 1956。人が作業記憶に保てるのは平均 7±2 項目。内容を小さな塊に分ける（チャンク化）。「7」を不要な制限の根拠にはしない。</p>
       <div class="after"><div class="miller"><span class="num">090-1234-5678</span><span class="num">4512-0034-7781-2290</span><span class="num">2026-10-01</span></div></div>
       <div class="before"><div class="miller"><span class="num">09012345678</span><span class="num">4512003477812290</span><span class="num">20261001</span></div></div></div>
@@ -538,7 +563,7 @@
       <div class="after"><div class="jakob"><div class="mw"><i class="logo"></i><span class="srch"><svg viewBox="0 0 16 16" class="ic"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 10l4.5 4.5" stroke="currentColor" stroke-width="2"/></svg></span><span class="ava"><svg viewBox="0 0 16 16" class="ic"><circle cx="8" cy="5" r="3"/><path d="M2 15c0-3.5 2.7-5.5 6-5.5s6 2 6 5.5z"/></svg></span><i class="nav"></i></div></div></div>
       <div class="before"><div class="jakob"><div class="mw odd"><i class="nav"></i><span class="srch"><svg viewBox="0 0 16 16" class="ic"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 10l4.5 4.5" stroke="currentColor" stroke-width="2"/></svg></span><i class="logo"></i><span class="ava"><svg viewBox="0 0 16 16" class="ic"><circle cx="8" cy="5" r="3"/><path d="M2 15c0-3.5 2.7-5.5 6-5.5s6 2 6 5.5z"/></svg></span></div></div></div></div>
     <div class="card static"><h4>ポステルの法則</h4><p class="d">Postel。受け取るものには寛容に、送るものには保守的に。利用者のさまざまな入力を受け入れ、要件に合う形に変換する。</p>
-      <div class="postel"><span>１９２３</span><span>1923</span><span>ｶﾝﾄｳ 大震災</span><span>関東 大震災</span><span>Kanto daishinsai</span><span>関東大震災</span></div></div>
+      <div class="postel"><span>０９０１２３４５６７８</span><span>090-1234-5678</span><span>090 1234 5678</span><span>090-1234-5678</span><span>09012345678</span><span>090-1234-5678</span></div></div>
     <div class="card static"><h4>ドエルティのしきい値</h4><p class="d">Doherty & Thadani, 1982。コンピュータと利用者が互いを待たない速さ（400ms 未満）でやり取りすると、生産性が大きく上がる。</p>
       <div class="doherty"><button type="button" class="btn" data-ms="120">120ms で反応</button><button type="button" class="btn" data-ms="900">900ms で反応</button><span class="out"></span></div></div>
   </div>
