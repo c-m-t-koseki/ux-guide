@@ -128,7 +128,7 @@
 
 
   /* ---------- gestalt ---------- */
-  document.querySelectorAll('#gest .card, #skr .card:not(.static), #skr2 .card, #laws .card:not(.static)').forEach(function(c){function f(){c.classList.toggle('on');}c.addEventListener('click',function(e){if(e.target.closest('input,button,label,a,[data-tip]'))return;f();});c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();f();}});});
+  document.querySelectorAll('#skr .card:not(.static), #skr2 .card, #laws .card:not(.static), #nng .card').forEach(function(c){function f(){c.classList.toggle('on');}c.addEventListener('click',function(e){if(e.target.closest('input,button,label,a,[data-tip]'))return;f();});c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();f();}});});
 
   /* ---------- color wheel ---------- */
   var BASE=205, wheel=document.getElementById('wheel');

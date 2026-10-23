@@ -469,68 +469,88 @@
 <section class="slide" data-title="古典と法則" id="classics">
   <div class="eyebrow">第2部 振る舞いの規範</div>
   <h2>使いやすさの古典と法則</h2>
-  <p>見た目の規則だけでは使いやすさは決まらない。使いやすさは、操作の前後で人が何を知り、何を思い出し、どう間違えるかで決まる。これを扱う規範は 1980 年代以降に古典として定着し、現行のガイドラインはすべてその翻訳である。この章は、枠組み（Norman）、評価の物差し（NN/g と古典）、個々の法則の順に見る。</p>
-  <h3>Norman の二つの深淵</h3>
-  <div class="fig"><svg viewBox="0 0 720 170" width="720" height="170" class="dia" role="img" aria-label="実行の深淵と評価の深淵">
-    <rect x="10" y="60" width="120" height="50" fill="var(--main-soft)"/><text x="70" y="90" text-anchor="middle">目標</text>
-    <rect x="300" y="60" width="120" height="50" fill="var(--main-soft)"/><text x="360" y="90" text-anchor="middle">世界（画面）</text>
-    <rect x="590" y="60" width="120" height="50" fill="var(--main-soft)"/><text x="650" y="90" text-anchor="middle">評価</text>
-    <path d="M130 75 H300" stroke="var(--fg)" stroke-width="2" marker-end="url(#ah-f)"/><text x="215" y="62" text-anchor="middle" class="ac">実行の深淵</text><text x="215" y="128" text-anchor="middle" class="mu">どう操作すればいいか分からない</text><text x="215" y="144" text-anchor="middle" class="mu">→ シグニファイア・制約・対応付け</text>
-    <path d="M420 95 H590" stroke="var(--fg)" stroke-width="2" marker-end="url(#ah-f)"/><text x="505" y="62" text-anchor="middle" class="ac">評価の深淵</text><text x="505" y="128" text-anchor="middle" class="mu">何が起きたか分からない</text><text x="505" y="144" text-anchor="middle" class="mu">→ フィードバック・状態の可視化</text>
-    <path d="M650 60 C 650 10, 70 10, 70 60" fill="none" stroke="var(--line)" stroke-dasharray="4 4"/><text x="360" y="22" text-anchor="middle" class="mu">評価が次の目標を作る</text>
+  <p>見た目の規則だけでは使いやすさは決まらない。この章は、古典（Rams、Shneiderman、Norman）、評価の物差しである NN/g の 10 ヒューリスティック、個々の法則の順に見る。</p>
+  <h3>古典</h3>
+  <div class="tbl"><table>
+    <tr><th>原典</th><th>著者・年</th><th>要点</th></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Dieter_Rams">Ten Principles for Good Design</a></td><td>Rams, 1970 年代</td><td>よいデザインは、革新的で、役に立ち、美しく、分かりやすく、控えめで、正直で、長持ちし、細部まで徹底し、環境に配慮し、できるだけ少ない。Less, but better。Apple の Ive に影響した</td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">Eight Golden Rules</a></td><td>Shneiderman, 1986</td><td>一貫性・頻繁な利用者への近道・情報のあるフィードバック・終わりのある対話・簡単なエラー処理・取り消しやすさ・利用者が主導する感覚・短期記憶の負荷を減らす</td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">The Design of Everyday Things</a></td><td>Norman, 1988 / 2013</td><td>アフォーダンスを設計の語として持ち込み、2013 年版でシグニファイアを加えた。見えること・よい概念モデル・よい対応付け・フィードバック。制約を活かし、エラーを見越して設計する。実行の深淵と評価の深淵</td></tr>
+  </table></div>
+  <h4>Norman の二つの深淵</h4>
+  <div class="fig"><svg viewBox="0 0 720 150" width="720" height="150" class="dia" role="img" aria-label="実行の深淵と評価の深淵">
+    <rect x="10" y="40" width="120" height="50" fill="var(--main-soft)"/><text x="70" y="70" text-anchor="middle">意図</text>
+    <rect x="300" y="40" width="120" height="50" fill="var(--main-soft)"/><text x="360" y="70" text-anchor="middle">世界（画面）</text>
+    <rect x="590" y="40" width="120" height="50" fill="var(--main-soft)"/><text x="650" y="70" text-anchor="middle">解釈</text>
+    <path d="M130 55 H300" stroke="var(--fg)" stroke-width="2" marker-end="url(#ah-f)"/><text x="215" y="42" text-anchor="middle" class="ac">実行の深淵</text><text x="215" y="110" text-anchor="middle" class="mu">意図と、許された操作との差</text>
+    <path d="M420 75 H590" stroke="var(--fg)" stroke-width="2" marker-end="url(#ah-f)"/><text x="505" y="42" text-anchor="middle" class="ac">評価の深淵</text><text x="505" y="110" text-anchor="middle" class="mu">状態を解釈するのに要る労力</text>
     <defs><marker id="ah-f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--fg)"/></marker></defs>
   </svg></div>
 
   <h3>NN/g の 10 ユーザビリティ・ヒューリスティック</h3>
-  <p>Nielsen と Molich が 1990 年に作り 1994 年に整理した。ヒューリスティック評価の物差しで、デザインレビューの共通語になっている。共通原則の章ではこの番号で引用する。</p>
-  <div class="prin">
-    <b>1</b><span>システム状態の可視化。今何が起きているかを、適切な時間内にフィードバックする</span>
-    <b>2</b><span>システムと現実世界の一致。内部用語ではなく利用者の言葉を使う</span>
-    <b>3</b><span>ユーザーの制御と自由。非常口（取り消し・戻る）を明示する</span>
-    <b>4</b><span>一貫性と標準。同じ言葉・同じ操作は同じ意味にする</span>
-    <b>5</b><span>エラー防止。よいエラー表示より、エラーが起きない設計</span>
-    <b>6</b><span>想起より再認。選択肢を見せて記憶の負担を減らす</span>
-    <b>7</b><span>柔軟性と効率。初心者には見えない近道を熟練者に与える</span>
-    <b>8</b><span>美的で最小限のデザイン。無関係でまれにしか要らない情報を置かない</span>
-    <b>9</b><span>エラーの認識・診断・回復。平易な言葉で問題と解決策を示す</span>
-    <b>10</b><span>ヘルプとドキュメント。説明不要が最善だが、必要なら作業に即したヘルプを</span>
+  <p>Nielsen が Molich と 1990 年に作り、1994 年に 249 件のユーザビリティの問題の因子分析をもとに整えた。具体的なガイドラインではなく、ヒューリスティック評価に使う大まかな経験則である。共通原則の章はこの番号で引用する。カードを押すと、良い例と悪い例が切り替わる。</p>
+  <div class="gest laws" id="nng">
+    <div class="card on" tabindex="0"><h4>1 システム状態の可視化</h4><p class="d">適切なフィードバックで、何が起きているかを妥当な時間内に常に知らせる。</p>
+      <div class="after"><div class="nm"><span class="f">関東大震災 1923</span><span class="st">検索中… 1,249 件のうち 20 件を表示</span><i class="bar"></i></div></div>
+      <div class="before"><div class="nm"><span class="f">関東大震災 1923</span><span class="st muted">　</span></div></div></div>
+    <div class="card on" tabindex="0"><h4>2 システムと現実世界の一致</h4><p class="d">内部の用語ではなく、利用者の言葉と慣れた概念を使う。現実の慣習に従い、自然で論理的な順に示す。</p>
+      <div class="after"><div class="nm"><span class="k">紙面</span><span>朝刊　夕刊　号外</span><span class="k">年</span><span>1923　1924</span></div></div>
+      <div class="before"><div class="nm"><span class="k">DB</span><span class="mono">np_asahi_v2</span><span class="k">fld</span><span class="mono">pg_type=M|E|X</span></div></div></div>
+    <div class="card on" tabindex="0"><h4>3 ユーザーの制御と自由</h4><p class="d">誤って始めた操作から、長い手順を踏まずに抜けられる、はっきり示された非常口を用意する。</p>
+      <div class="after"><div class="nm"><span class="toast">検索履歴を削除しました <b>元に戻す</b></span></div></div>
+      <div class="before"><div class="nm"><span class="toast">検索履歴を削除しました</span></div></div></div>
+    <div class="card on" tabindex="0"><h4>4 一貫性と標準</h4><p class="d">違う言葉・状況・操作が同じ意味かを迷わせない。プラットフォームと業界の慣習に従う。</p>
+      <div class="after"><div class="nm"><span>新聞 <b class="btn-s">検索</b></span><span>図書 <b class="btn-s">検索</b></span><span>雑誌 <b class="btn-s">検索</b></span></div></div>
+      <div class="before"><div class="nm"><span>新聞 <b class="btn-s">検索</b></span><span>図書 <b class="btn-s">照会</b></span><span>雑誌 <b class="btn-s">Go</b></span></div></div></div>
+    <div class="card on" tabindex="0"><h4>5 エラー防止</h4><p class="d">よいエラー表示より、問題が起きない設計がよい。起きやすい条件をなくすか、実行の前に確認を出す。</p>
+      <div class="after"><div class="nm"><span>開始 <b class="mono">1923-09-01</b></span><span>終了 <b class="mono">1923-09-30</b></span><span class="st muted">開始より前の日は選べない</span></div></div>
+      <div class="before"><div class="nm"><span>開始 <b class="mono">1923-09-01</b></span><span>終了 <b class="mono">1923-08-01</b></span><span class="st err">検索後に「期間が不正です」</span></div></div></div>
+    <div class="card on" tabindex="0"><h4>6 想起より再認</h4><p class="d">要素・操作・選択肢を見せて、記憶の負担を減らす。必要な情報は、要るときに見えるか、すぐ取り出せるようにする。</p>
+      <div class="after"><div class="nm"><span class="f">｜</span><span class="k">最近の検索</span><span>関東大震災 1923</span><span>帝都復興院</span></div></div>
+      <div class="before"><div class="nm"><span class="f muted">検索語を入力</span></div></div></div>
+    <div class="card on" tabindex="0"><h4>7 柔軟性と効率</h4><p class="d">初心者には見えない近道で、熟練者の操作を速くする。よく使う操作を利用者が調整できるようにする。</p>
+      <div class="after"><div class="nm"><span class="f">関東大震災 1923 <kbd>/</kbd></span><span><b class="chip">保存した条件：震災 1923 朝刊</b></span></div></div>
+      <div class="before"><div class="nm"><span class="f">関東大震災 1923</span><span class="st muted">条件は毎回 詳細検索 › 条件 › 追加 で入れ直す</span></div></div></div>
+    <div class="card on" tabindex="0"><h4>8 美的で最小限のデザイン</h4><p class="d">無関係な情報や、まれにしか要らない情報を置かない。余計な情報は、必要な情報と競って見えにくくする。</p>
+      <div class="after"><div class="nm"><span><b>帝都の火災、三日に及ぶ</b></span><span class="mono muted">1923-09-04　朝刊 1 面</span></div></div>
+      <div class="before"><div class="nm"><span><b>帝都の火災、三日に及ぶ</b></span><span class="mono muted">ID 000184522　登録 2019-03-02　更新者 batch01　2.4MB　1923-09-04　朝刊 1 面</span></div></div></div>
+    <div class="card on" tabindex="0"><h4>9 エラーの認識・診断・回復の支援</h4><p class="d">エラーは平易な言葉で（エラーコードなしに）示し、問題を正確に伝え、解決策を示す。</p>
+      <div class="after"><div class="nm"><span>「関東大震災 1932」は 0 件でした。</span><span><b class="chip">1923 年で検索する</b></span></div></div>
+      <div class="before"><div class="nm"><span class="err mono">Error 0x80040E14</span></div></div></div>
+    <div class="card on" tabindex="0"><h4>10 ヘルプとドキュメント</h4><p class="d">説明が要らないのが最善だが、必要なら、検索しやすく、作業に沿い、具体的な手順を示す説明を用意する。</p>
+      <div class="after"><div class="nm"><span class="f">関東大震災 date:1923..1924</span><span class="st muted">期間は date:開始..終了 で指定できます</span></div></div>
+      <div class="before"><div class="nm"><span class="f">関東大震災</span><span class="st"><u>ヘルプ（PDF、84 ページ）</u></span></div></div></div>
   </div>
-  <div class="tbl"><table>
-    <tr><th>原典</th><th>著者・年</th><th>要点</th></tr>
-    <tr><td><a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">The Design of Everyday Things</a></td><td>Norman, 1988 / 2013</td><td>アフォーダンス・シグニファイア・フィードバック・対応付け・制約・概念モデル。実行の深淵と評価の深淵。強制機能。人のミスは設計のミスとして扱う</td></tr>
-    <tr><td><a href="https://en.wikipedia.org/wiki/Dieter_Rams">Ten Principles for Good Design</a></td><td>Rams, 1970 年代</td><td>Less, but better。Apple の Ive に影響</td></tr>
-    <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">Eight Golden Rules</a></td><td>Shneiderman, 1986</td><td>一貫性・熟練者の近道・フィードバック・対話の区切り・簡潔なエラー処理・取り消し・利用者が主導・短期記憶の負荷を減らす</td></tr>
-  </table></div>
 
   <h3>法則</h3>
-  <p>カードを押すと、法則を外した状態と当てはめた状態が切り替わる。</p>
+  <p>カードを押すと、良い例と悪い例が切り替わる。</p>
   <div class="gest laws" id="laws">
-    <div class="card on" tabindex="0"><h4>フィッツの法則</h4><p class="d">Fitts, 1954。到達時間は距離と大きさで決まる。よく使うものは大きく、操作の起点の近くに置く。</p>
+    <div class="card on" tabindex="0"><h4>フィッツの法則</h4><p class="d">Fitts, 1954。対象に届くまでの時間は、対象までの距離と大きさで決まる。対象は正確に選べる大きさにし、間を空け、届きやすい場所に置く。</p>
       <div class="after"><div class="fitts"><span class="q">関東大震災 1923<i></i></span><span class="go big">検索</span></div></div>
       <div class="before"><div class="fitts"><span class="q">関東大震災 1923<i></i></span><span class="go small">検索</span></div></div></div>
-    <div class="card on" tabindex="0"><h4>ヒックの法則</h4><p class="d">Hick, 1952、Hyman, 1953。選択時間は選択肢の数と複雑さで増える。減らすか階層化する。</p>
+    <div class="card on" tabindex="0"><h4>ヒックの法則</h4><p class="d">Hick, 1952、Hyman, 1953。決めるまでの時間は、選択肢の数と複雑さで増える。応答の速さが要るときは選択肢を減らし、複雑な作業は小さな段階に分ける。</p>
       <div class="after"><ul class="hick"><li>▾ 新聞</li><li class="sub">朝刊</li><li class="sub">夕刊</li><li class="sub">号外</li><li class="sub">地方版</li><li>▸ 図書</li><li>▸ 雑誌</li><li>すべて</li></ul></div>
       <div class="before"><ul class="hick flat"><li>朝刊</li><li>夕刊</li><li>号外</li><li>地方版</li><li>単行本</li><li>文庫</li><li>新書</li><li>全集</li><li>月刊誌</li><li>週刊誌</li><li>季刊</li><li>紀要</li></ul></div></div>
-    <div class="card on" tabindex="0"><h4>ミラーの法則</h4><p class="d">Miller, 1956。短期記憶は 7±2 項目。区切って塊にする（チャンク化）。容量はその後 Cowan（2001）が 4±1 と見積もり直しており、要点は数ではなく区切ることにある。</p>
+    <div class="card on" tabindex="0"><h4>ミラーの法則</h4><p class="d">Miller, 1956。人が作業記憶に保てるのは平均 7±2 項目。内容を小さな塊に分ける（チャンク化）。「7」を不要な制限の根拠にはしない。</p>
       <div class="after"><div class="miller"><span class="num">090-1234-5678</span><span class="num">4512-0034-7781-2290</span><span class="num">2026-10-01</span></div></div>
       <div class="before"><div class="miller"><span class="num">09012345678</span><span class="num">4512003477812290</span><span class="num">20261001</span></div></div></div>
-    <div class="card on" tabindex="0"><h4>ジェイコブの法則</h4><p class="d">Nielsen, 2000。利用者は他のサイトで学んだ作法をそのまま期待する。ロゴは左上、検索は上、利用者は右上。</p>
+    <div class="card on" tabindex="0"><h4>ジェイコブの法則</h4><p class="d">Nielsen。利用者は時間の大半を他のサイトで過ごすので、知っている他のサイトと同じ動きを好む。既にあるメンタルモデルを使えば、利用者は新しい作法を覚えずに作業に集中できる。</p>
       <div class="after"><div class="jakob"><div class="mw"><i class="logo"></i><span class="srch"><svg viewBox="0 0 16 16" class="ic"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 10l4.5 4.5" stroke="currentColor" stroke-width="2"/></svg></span><span class="ava"><svg viewBox="0 0 16 16" class="ic"><circle cx="8" cy="5" r="3"/><path d="M2 15c0-3.5 2.7-5.5 6-5.5s6 2 6 5.5z"/></svg></span><i class="nav"></i></div></div></div>
       <div class="before"><div class="jakob"><div class="mw odd"><i class="nav"></i><span class="srch"><svg viewBox="0 0 16 16" class="ic"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 10l4.5 4.5" stroke="currentColor" stroke-width="2"/></svg></span><i class="logo"></i><span class="ava"><svg viewBox="0 0 16 16" class="ic"><circle cx="8" cy="5" r="3"/><path d="M2 15c0-3.5 2.7-5.5 6-5.5s6 2 6 5.5z"/></svg></span></div></div></div></div>
-    <div class="card static"><h4>ポステルの法則</h4><p class="d">Postel。受け取るものには寛容に、出すものは厳密に。全角・半角・かな・ローマ字のどれで打っても同じ結果に寄せる。</p>
+    <div class="card static"><h4>ポステルの法則</h4><p class="d">Postel。受け取るものには寛容に、送るものには保守的に。利用者のさまざまな入力を受け入れ、要件に合う形に変換する。</p>
       <div class="postel"><span>１９２３</span><span>1923</span><span>ｶﾝﾄｳ 大震災</span><span>関東 大震災</span><span>Kanto daishinsai</span><span>関東大震災</span></div></div>
-    <div class="card static"><h4>ドエルティのしきい値</h4><p class="d">Doherty & Thadani, 1982。応答が 400ms 以内だと作業の流れが切れず、生産性が跳ね上がる。</p>
+    <div class="card static"><h4>ドエルティのしきい値</h4><p class="d">Doherty & Thadani, 1982。コンピュータと利用者が互いを待たない速さ（400ms 未満）でやり取りすると、生産性が大きく上がる。</p>
       <div class="doherty"><button type="button" class="btn" data-ms="120">120ms で反応</button><button type="button" class="btn" data-ms="900">900ms で反応</button><span class="out"></span></div></div>
   </div>
   <h3>目で確かめにくい法則</h3>
   <div class="tbl"><table>
     <tr><th>法則</th><th>出典</th><th>要点と使いどころ</th></tr>
-    <tr><td>テスラーの法則</td><td>Tesler, 1980年代</td><td>複雑さは消せない。システム側が引き受ける</td></tr>
-    <tr><td>審美的ユーザビリティ効果</td><td>黒須・樫村, 1995</td><td>美しいものは使いやすく感じられる</td></tr>
-    <tr><td>ピークエンドの法則</td><td>Kahneman ら, 1993</td><td>体験の記憶は最高点と終わりで決まる</td></tr>
-    <tr><td>パレートの法則</td><td>Pareto</td><td>利用の8割は機能の2割。その2割を前に出す</td></tr>
+    <tr><td>テスラーの法則</td><td>Tesler, 1980 年代半ば</td><td>どのシステムにも減らせない複雑さがあり、システムか利用者のどちらかが引き受ける。できるだけ設計と開発の側で引き受ける</td></tr>
+    <tr><td>審美的ユーザビリティ効果</td><td>黒須・樫村, 1995</td><td>美しいデザインは使いやすいと受け取られやすい。小さな問題が許され、ユーザビリティテストで問題が隠れることもある</td></tr>
+    <tr><td>ピークエンドの法則</td><td>Kahneman ら, 1993</td><td>体験は、各時点の総和や平均ではなく、最も強い時点と終わりの感じ方でおおむね判断される</td></tr>
+    <tr><td>パレートの法則</td><td>Pareto</td><td>多くの事象で、結果の約 8 割は原因の約 2 割から生じる。最も多くの利用者に大きな効果をもたらす部分に力を集める</td></tr>
   </table></div>
-  <p class="note">古典の表の三つは Wikipedia の各記事で内容を確認した。Cowan の見積もり（The magical number 4 in short-term memory, 2001）は広く引かれる値で、原論文は開いていない。Krug『Don't Make Me Think』、Cooper『About Face』、Raskin『The Humane Interface』、Victor「Magic Ink」、Tufte、Garrett、WCAG も規範としてよく引かれるが、本ページの作成時には開いていないので表に載せない。法則の要点と出典は <a href="https://lawsofux.com/">Laws of UX</a> の各項で確認した。</p>
+  <p class="note">10 ヒューリスティックの名前と中身は <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">NN/g「10 Usability Heuristics for User Interface Design」</a>で、古典の表の三つは Wikipedia の各記事で、法則の要点と出典は <a href="https://lawsofux.com/">Laws of UX</a> の各項で確認した。Krug『Don't Make Me Think』、Cooper『About Face』、Raskin『The Humane Interface』、Victor「Magic Ink」、Tufte、Garrett、WCAG も規範としてよく引かれるが、本ページの作成時には開いていないので表に載せない。</p>
 </section>
 
 <!-- ============ guidelines ============ -->
@@ -1158,7 +1178,6 @@
     <tr><td>Palmer の共通領域の論文（1992）</td><td><a href="#gestalt">ゲシュタルト</a></td></tr>
     <tr><td>色の印象の出典となる書籍</td><td><a href="#color">色</a></td></tr>
     <tr><td>Cleveland と McGill、Bertin、Treisman、Tufte の原典</td><td><a href="#charts">可視化</a></td></tr>
-    <tr><td>Cowan「The magical number 4 in short-term memory」（2001）</td><td><a href="#classics">古典と法則</a></td></tr>
     <tr><td>Krug『Don&#x27;t Make Me Think』、Cooper『About Face』、Raskin『The Humane Interface』、Victor「Magic Ink」、Garrett、WCAG</td><td><a href="#classics">古典と法則</a></td></tr>
     <tr><td>Thomas と Johnston『The Illusion of Life』（1981）、Willenskomer の UX in Motion Manifesto、Head の著書、Material と Apple の Motion の本文</td><td><a href="#motion">動き</a></td></tr>
     <tr><td>Bates の原論文</td><td><a href="#seeking">情報探索</a></td></tr>
