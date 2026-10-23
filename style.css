@@ -661,3 +661,4 @@ table.claims svg{display:block;width:100%;max-width:220px;height:auto}
 @media (max-width:640px){.gulf{grid-template-columns:1fr 1fr}.gulf>span:first-child{display:none}.gulf .rh{grid-column:1/-1}}
 .door{display:grid;gap:4px;background:var(--panel);padding:8px}.door svg{width:96px;height:auto}
 .nm .tb{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:4px 8px;box-shadow:inset 0 -1px 0 var(--line)}
+.nm .btn-s.go{background:var(--main);color:#fff;box-shadow:none}.nm .btn-s.go.del{background:var(--err)}
