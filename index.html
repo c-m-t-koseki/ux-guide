@@ -621,13 +621,14 @@
   <div class="cols">
     <div><h3>Apple HIG</h3>
       <ul><li>Liquid Glass と三つの原則は Liquid Glass の章で扱った</li><li>システム標準の部品・ジェスチャ・ショートカットを優先。Dynamic Type、VoiceOver、タッチ領域 44pt</li></ul>
-      <p><a href="https://developer.apple.com/design/human-interface-guidelines/searching">Searching</a>（2026-06-08 更新）：検索欄はアプリ内で一か所。スコープを常に示す。入力前に最近の検索、入力中に候補。履歴は消せるように。</p>
+      <p><a href="https://developer.apple.com/design/human-interface-guidelines/searching">Searching</a>（2026-06-08 更新）が求めること。丸数字は右の図に対応する。</p>
+      <ol class="mkl"><li>検索欄はアプリ内で一か所</li><li>スコープを常に示す</li><li>入力前に最近の検索を出す</li><li>履歴は消せるように</li><li>入力中に候補を出す</li></ol>
 </div>
-    <div><h4>Searching が求める検索欄</h4>
-    <div><div class="mockui sfield"><div class="sf"><span class="scope">新聞 ▾</span><span class="q">関東大しん<i></i></span><span class="clear">×</span></div>
-      <div class="grp">最近の検索 <a>消去</a></div><div class="it">帝都復興院</div><div class="it">1923 横浜</div>
-      <div class="grp">候補</div><div class="it"><span><b>関東大震</b>災</span><span class="n">1,249</span></div><div class="it"><span><b>関東大震</b>災 復興</span><span class="n">312</span></div></div>
-    <p class="cap">一か所、スコープを常に表示、入力前に履歴、履歴は消せる、入力中に候補。</p></div>
+    <div><h4>Apple HIG の検索欄</h4>
+    <div><div class="mockui sfield"><div class="sf mkh"><span class="mk tl">1</span><span class="scope mkh">新聞 ▾<span class="mk">2</span></span><span class="q">関東大しん<i></i></span><span class="clear">×</span></div>
+      <div class="grp"><span class="mkh">最近の検索<span class="mk out">3</span></span><span class="mkh"><a>消去</a><span class="mk out">4</span></span></div><div class="it">帝都復興院</div><div class="it">1923 横浜</div>
+      <div class="grp"><span class="mkh">候補<span class="mk out">5</span></span></div><div class="it"><span><b>関東大震</b>災</span><span class="n">1,249</span></div><div class="it"><span><b>関東大震</b>災 復興</span><span class="n">312</span></div></div>
+    <p class="cap">入力中の状態。①〜⑤を一つの画面に重ねて示した。</p></div>
     <div><div class="mockui sfield"><div class="sf"><span class="scope">図書 ▾</span><span class="q">帝都復興院<i></i></span><span class="clear">×</span></div>
       <div class="grp">最近の検索 <a>消去</a></div><div class="it">帝都復興院 設置</div>
       <div class="grp">候補</div><div class="it"><span>関東大震災 復興</span><span class="n">312</span></div></div>
@@ -637,17 +638,18 @@
   <div class="cols">
     <div><h3>Google Material Design 3</h3>
       <ul><li>2014 年の三原則と 2021 年の Material You の三つは Material の章で扱った</li><li>コントラスト 4.5:1、タッチ 48dp</li></ul>
-      <p><a href="https://m3.material.io/components/search/guidelines">Search</a>：検索欄を選ぶと focused search。入力前は履歴、入力中は候補か結果。候補にはカテゴリ見出し・先頭アイコン・絞り込みチップ。実行後も入力語は見えたまま。広い画面ではドッキング、狭い画面では全画面。</p></div>
-    <div><h4>Search が求める検索欄</h4>
-    <div><div class="mockui sfield m3"><div class="sf"><span class="mi"><svg viewBox="0 0 16 16" class="ic"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 10l4.5 4.5" stroke="currentColor" stroke-width="2"/></svg></span><span class="q">関東大しん<i></i></span><span class="clear">×</span></div>
-      <div class="chips"><span class="chip on">すべて</span><span class="chip">新聞</span><span class="chip">図書</span><span class="chip">1923 年</span></div>
-      <div class="grp">見出し</div><div class="it"><span><span class="mi">≡</span><b>関東大震</b>災、三日に及ぶ火災</span><span class="n">新聞</span></div><div class="it"><span><span class="mi">≡</span><b>関東大震</b>災と帝都復興</span><span class="n">図書</span></div>
+      <p><a href="https://m3.material.io/components/search/guidelines">Search</a> が求めること。丸数字は右の図に対応する。</p>
+      <ol class="mkl"><li>検索欄を選ぶと focused search に切り替わる</li><li>入力前は履歴、入力中は候補か結果を出す</li><li>候補はカテゴリ見出しで分ける</li><li>候補に先頭アイコンを付ける</li><li>絞り込みチップを置く</li><li>実行後も入力語は見えたまま</li><li>広い画面では欄の下にドッキング、狭い画面では全画面（図にない）</li></ol></div>
+    <div><h4>Google Material Design 3 の検索欄</h4>
+    <div><div class="mockui sfield m3"><div class="sf mkh"><span class="mk tl">1</span><span class="mi"><svg viewBox="0 0 16 16" class="ic"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 10l4.5 4.5" stroke="currentColor" stroke-width="2"/></svg></span><span class="q">関東大しん<i></i></span><span class="clear">×</span></div>
+      <div class="chips mkh"><span class="mk tl">5</span><span class="chip on">すべて</span><span class="chip">新聞</span><span class="chip">図書</span><span class="chip">1923 年</span></div>
+      <div class="grp"><span class="mkh">見出し<span class="mk out">2</span><span class="mk out m2">3</span></span></div><div class="it"><span class="mkh"><span class="mk tl">4</span><span class="mi">≡</span><b>関東大震</b>災、三日に及ぶ火災</span><span class="n">新聞</span></div><div class="it"><span><span class="mi">≡</span><b>関東大震</b>災と帝都復興</span><span class="n">図書</span></div>
       <div class="grp">場所</div><div class="it"><span><span class="mi">◎</span>横浜</span><span class="n">1,020</span></div></div>
-    <p class="cap">検索欄を選ぶと全画面（狭い画面）か欄の下に展開（広い画面）。絞り込みチップ、カテゴリ見出し、先頭アイコン、マッチ箇所の強調。実行後も入力語は残る。</p></div>
-    <div><div class="mockui sfield m3 done"><div class="sf"><span class="mi">←</span><span class="q">関東大震災</span><span class="clear">×</span></div>
+    <p class="cap">入力中の状態。マッチ箇所は太字で強調している。</p></div>
+    <div><div class="mockui sfield m3 done"><div class="sf"><span class="mi">←</span><span class="q mkh">関東大震災<span class="mk">6</span></span><span class="clear">×</span></div>
       <div class="chips"><span class="chip">すべて</span><span class="chip on">新聞</span><span class="chip">図書</span><span class="chip">1923 年</span></div>
       <div class="grp">1,249 件</div><div class="it"><span>帝都の火災、三日に及ぶ</span><span class="n">1923-09-04</span></div><div class="it"><span>救護班、横浜へ</span><span class="n">1923-09-05</span></div><div class="it"><span>復興院の設置決まる</span><span class="n">1923-09-27</span></div></div>
-    <p class="cap">実行後。入力語と選んだチップが見えたままで、戻れば入力に戻る。</p></div>
+    <p class="cap">実行後。入力語と選んだチップが見えたままで（⑥）、戻れば入力に戻る。</p></div>
     </div>
   </div>
   <div class="cols">
@@ -661,12 +663,14 @@
     <b>4</b><span>安心して利用できる。前へ戻る・キャンセルができ、ブラウザの「戻る」で入力が消えず、古い情報が検索にかからない</span>
     <b>5</b><span>問題が起きたときに困らない。エラーは状態と対処を示し、0件なら他の探し方を示し、FAQ と問合せに全ページから行ける</span>
   </div>
+  <p>右の図は原則 5 の三つの求めを示す。丸数字は図に対応する。</p>
+  <ol class="mkl"><li>エラーは状態と対処を示す</li><li>0件なら他の探し方を示す</li><li>FAQ と問合せに全ページから行ける</li></ol>
     </div>
     <div><h4>0件の画面</h4><div class="mockui zero"><div class="sf"><span class="scope">新聞 ▾</span><span class="q">帝都復興院 1922</span></div>
-      <div class="msg">条件に一致する情報が見つかりませんでした</div>
+      <div class="msg mkh">条件に一致する情報が見つかりませんでした<span class="mk">1</span></div>
       <div class="hint">検索のヒント<br>・条件に間違いがないか確認する<br>・他のキーワードを試す</div>
-      <div class="alt">期間を外した結果 <span class="n">18 件</span> →</div><div class="alt">「復興院」だけの結果 <span class="n">207 件</span> →</div><div class="alt">司書に相談する →</div></div>
-    <p class="cap">東京都の原則 5 に沿った0件の例。検索欄を残し、ヒントと「条件を変えて絞り込む」導線を置く。本資料はそこに緩めた結果と相談導線を足す。</p></div>
+      <div class="alt mkh">期間を外した結果 <span class="n">18 件</span> →<span class="mk">2</span></div><div class="alt">「復興院」だけの結果 <span class="n">207 件</span> →</div><div class="alt mkh">司書に相談する →<span class="mk">3</span></div></div>
+    <p class="cap">0件の画面。①は状態とヒント、②は条件を緩めた結果、③は問合せの代わりの相談導線。緩めた結果と相談導線は本資料が足したもの。</p></div>
   </div>
 </section>
 
