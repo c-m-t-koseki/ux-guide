@@ -204,11 +204,11 @@
   document.querySelectorAll('.doherty .btn').forEach(function(b){b.addEventListener('click',function(){var out=b.parentNode.querySelector('.out');out.textContent='…';var t0=Date.now();setTimeout(function(){b.classList.add('pressed');out.textContent=(Date.now()-t0)+'ms 後に反応';setTimeout(function(){b.classList.remove('pressed')},300);},+b.dataset.ms);});});
   document.querySelectorAll('.wait-btn').forEach(function(b){b.addEventListener('click',function(){
     var box=document.getElementById(b.dataset.mode==='slow'?'wd-slow':'wd-fast');
-    var rows='<div class="row">帝都の火災、三日に及ぶ <span class="num">1923-09-04</span></div><div class="row">救護班、横浜へ <span class="num">1923-09-05</span></div><div class="row">復興院の設置決まる <span class="num">1923-09-27</span></div>';
-    if(b.dataset.mode==='slow'){box.innerHTML='<div class="spin">検索しています</div>';setTimeout(function(){box.innerHTML='<div class="cnt">1,249 件</div>'+rows;},2500);}
+    var rows='<div class="row">ランニングシューズ <span class="num">¥8,900</span></div><div class="row">トレイルシューズ <span class="num">¥12,800</span></div><div class="row">ウォーキングシューズ <span class="num">¥6,500</span></div>';
+    if(b.dataset.mode==='slow'){box.innerHTML='<div class="spin">読み込んでいます</div>';setTimeout(function(){box.innerHTML='<div class="cnt">128 件</div>'+rows;},2500);}
     else{box.innerHTML='<div class="cnt">候補から 3 件</div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';
       setTimeout(function(){box.innerHTML='<div class="cnt">上位 3 件（集計中）</div>'+rows;},180);
-      setTimeout(function(){box.querySelector('.cnt').textContent='1,249 件';},1100);}
+      setTimeout(function(){box.querySelector('.cnt').textContent='128 件';},1100);}
   });});
   var undo=document.getElementById('undo'),toast=document.getElementById('toast'),uTimer=null,uRow=null;
   undo.querySelectorAll('.del').forEach(function(b){b.addEventListener('click',function(){if(uRow){uRow.remove();}uRow=b.parentNode;uRow.classList.add('gone');var n=5;toast.hidden=false;toast.querySelector('.cd').textContent=n+'s';clearInterval(uTimer);uTimer=setInterval(function(){n--;toast.querySelector('.cd').textContent=n+'s';if(n<=0){clearInterval(uTimer);toast.hidden=true;if(uRow){uRow.remove();uRow=null;}}},1000);});});
@@ -276,8 +276,8 @@
   var jb=document.getElementById('jrplay');if(jb)jb.addEventListener('click',function(){var p=jr.classList.toggle('paused');jb.textContent=p?'動かす':'動きを止める';});
   /* ---------- 桜井: リセット、HUD ---------- */
   document.querySelectorAll('.ckreset,.ckall').forEach(function(b){b.addEventListener('click',function(){var on=b.classList.contains('ckall');b.parentNode.querySelectorAll('input').forEach(function(c){c.checked=on;});});});
-  document.querySelectorAll('.btn.nr').forEach(function(b){b.addEventListener('click',function(){var out=b.nextElementSibling;if(b.classList.contains('ng'))return;out.textContent='検索中…';setTimeout(function(){out.textContent='1,249 件';setTimeout(function(){out.textContent='';},1200);},400);});});
-  document.querySelectorAll('input.tut').forEach(function(inp){var h=inp.nextElementSibling;if(!h||!h.classList.contains('tuthint'))return;inp.addEventListener('input',function(){var v=inp.value;h.textContent=!v?'語を空白で区切ると AND 検索':/\s/.test(v.trim())?'両方の語を含む結果を探します。除外は語の前に -':/^\d{4}$/.test(v.trim())?'年だけなら、その年の記事に絞ります':'そのまま Enter で見出しを検索。全文は「全文」を選ぶ';});});
+  document.querySelectorAll('.btn.nr').forEach(function(b){b.addEventListener('click',function(){var out=b.nextElementSibling;if(b.classList.contains('ng'))return;out.textContent='送信中…';setTimeout(function(){out.textContent='送信しました';setTimeout(function(){out.textContent='';},1200);},400);});});
+  document.querySelectorAll('input.tut').forEach(function(inp){var h=inp.nextElementSibling;if(!h||!h.classList.contains('tuthint'))return;inp.addEventListener('input',function(){var v=inp.value;h.textContent=!v?'8 文字以上で入力する':v.length<8?'あと '+(8-v.length)+' 文字':!/\d/.test(v)?'数字を 1 つ含めると強くなる':'十分な強さです';});});
   var huds=document.querySelectorAll('.hud'),hudDown=false;
   setInterval(function(){hudDown=!hudDown;huds.forEach(function(h){h.scrollTo({top:hudDown?70:0,behavior:'smooth'});});},2200);
   /* ---------- 共通原則: 前の章の図をポップアップで ---------- */

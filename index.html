@@ -674,73 +674,73 @@
 <section class="slide" data-title="桜井の UI" id="sakurai">
   <div class="eyebrow">第2部 振る舞いの規範</div>
   <h2>桜井政博のゲーム作るには ― UI の 15 テーマ</h2>
-  <p>ゲームの UI の規範は、利用者の時間と注意を奪わない点で、前章までの規範より厳しい。ここでは <a href="https://www.youtube.com/playlist?list=PLi8SA3sbzYVTl4FV0rLnSsf6ElOh-_Cv1">【J: UI】</a> の 15 本を検索画面に訳し、続けて仕様・ゲーム性・企画の回から待ち時間と反応に関わる 5 本を扱う。見出しは動画へのリンクで、要旨は動画の説明文と要約記事で確認したものに限る。カードを押すと、主張を外した状態と当てはめた状態が切り替わる。</p>
+  <p>ゲームの UI の規範は、利用者の時間と注意を奪わない点で、前章までの規範より厳しい。ここでは <a href="https://www.youtube.com/playlist?list=PLi8SA3sbzYVTl4FV0rLnSsf6ElOh-_Cv1">【J: UI】</a> の 15 本を一般のアプリの画面で示し、続けて仕様・ゲーム性・企画の回から待ち時間と反応に関わる 5 本を扱う。見出しは動画へのリンクで、要旨は動画の説明文と要約記事で確認したものに限る。カードを押すと、主張を外した状態と当てはめた状態が切り替わる。</p>
 
   <h3>UI の 15 テーマ</h3>
   <div class="gest skr" id="skr">
-    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=0Va3ue6Qk-0">わかりやすさとスタイル性</a></h4><p class="d">分かりやすさとスタイル性は相反することがある。正解はなく、世界観に合わせて決める。検索画面の世界観は「読める」ことと決め、結果一覧に装飾を足さない。</p>
-      <div class="after"><div class="mini list"><div>帝都の火災、三日に及ぶ <span>1923-09-04</span></div><div>救護班、横浜へ <span>1923-09-05</span></div></div></div>
-      <div class="before"><div class="mini list fancy"><div>帝都の火災、三日に及ぶ <span>1923-09-04</span></div><div>救護班、横浜へ <span>1923-09-05</span></div></div></div></div>
+    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=0Va3ue6Qk-0">わかりやすさとスタイル性</a></h4><p class="d">分かりやすさとスタイル性は相反することがある。正解はなく、世界観に合わせて決める。</p>
+      <div class="after"><div class="mini list"><div>バッテリー <span>72%</span></div><div>ストレージ <span>30 / 64 GB</span></div></div></div>
+      <div class="before"><div class="mini list fancy"><div>バッテリー <span>72%</span></div><div>ストレージ <span>30 / 64 GB</span></div></div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=5JRzM5vaRI0">文字の大きさ</a></h4><p class="d">妥当な文字の大きさは言語で違う。漢字は一文字に情報が詰まるので大きく、行は短くする。英語前提の寸法に日本語を流すと小さすぎる。</p>
-      <div class="after"><div class="mini txt">救護班、横浜へ。医療班の派遣を決定した。</div></div>
-      <div class="before"><div class="mini txt small">救護班、横浜へ。医療班の派遣を決定した。Rescue teams head for Yokohama.</div></div></div>
+      <div class="after"><div class="mini txt">このファイルを削除しますか？元に戻せません。</div></div>
+      <div class="before"><div class="mini txt small">このファイルを削除しますか？元に戻せません。Delete this file? This cannot be undone.</div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=7iLDVKItxjk">いまどきの親切設計</a></h4><p class="d">設定は丁寧に作る。文字の大きさ、色の調整、動きの抑制のようなアクセシビリティ項目を揃える。</p>
       <div class="after"><div class="mini menu"><div>文字の大きさ <small>標準 ▾</small></div><div>コントラスト <small>高 ▾</small></div><div>動きを減らす <small>ON</small></div><div>色覚に配慮した配色 <small>OFF</small></div></div></div>
       <div class="before"><div class="mini menu"><div>テーマ <small>明 ▾</small></div></div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=PbK_j-Ot4qc">ローディング画面</a></h4><p class="d">ローディングはなくせない。無いかのように振る舞うか、あることを明示して余裕を持たせるか。演出に依存すると最適化のたびにずれるので、素直に「読み込み中」と示すのが無難。待ちを削る方法は後述の「遅さは罪」で、削っても残る待ちの見せ方は「いただく時間を意識する」で扱う。</p>
-      <div class="after"><div class="mini"><div class="sub">見出しの結果 <span class="num">1,249 件</span>　全文を照合中 <span class="num">62%</span></div><div class="bar62"><i></i></div><div class="sub">帝都の火災、三日に及ぶ</div><div class="sub">救護班、横浜へ</div></div></div>
+      <div class="after"><div class="mini"><div class="sub">読み込み中 <span class="num">62%</span></div><div class="bar62"><i></i></div></div></div>
       <div class="before"><div class="mini"><div class="spinonly"></div></div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=TX3TRGfceKA">文字強調</a></h4><p class="d">文字は大きさ・色・動きで量感を制御できる。言語によって有効な強調が違うので、翻訳者が調整できるようにする。</p>
-      <div class="after"><div class="mini txt"><b class="hl">1,249</b> 件が見つかりました</div></div>
-      <div class="before"><div class="mini txt">1249件が見つかりました</div></div></div>
-    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=hjIGxUHEokY">メニューは世界を語る</a></h4><p class="d">書体と UI だけで対象層と世界観が変わる。見やすさを保ったまま、積極的に設計する。最初のテーマで決めた「読める」世界観に合わせ、書体は本文と同じゴシックにする。</p>
-      <div class="after"><div class="mini fonts"><div class="f1">蔵書検索 <span>1,249 件</span></div><div class="f1 row">帝都の火災、三日に及ぶ <span>1923-09-04</span></div></div></div>
-      <div class="before"><div class="mini fonts"><div class="f9">蔵書検索 <span>1,249 件</span></div><div class="f9 row">帝都の火災、三日に及ぶ <span>1923-09-04</span></div></div></div></div>
+      <div class="after"><div class="mini txt">新着メッセージが <b class="hl">3</b> 件あります</div></div>
+      <div class="before"><div class="mini txt">新着メッセージが3件あります</div></div></div>
+    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=hjIGxUHEokY">メニューは世界を語る</a></h4><p class="d">書体と UI だけで対象層と世界観が変わる。見やすさを保ったまま、積極的に設計する。</p>
+      <div class="after"><div class="mini fonts"><div class="f1">新規作成</div><div class="f1 row">最近使ったファイル</div></div></div>
+      <div class="before"><div class="mini fonts"><div class="f9">新規作成</div><div class="f9 row">最近使ったファイル</div></div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=LCVRzehsoxs">色による区分</a></h4><p class="d">色分けは便利だが万能ではない。同じ画面で色を混ぜすぎるとごちゃつく。トーン＆マナーを優先し、色は少数に絞る。</p>
-      <div class="after"><div class="mini list"><div><i class="dot np"></i>新聞　帝都の火災</div><div><i class="dot bk"></i>図書　震災誌</div><div><i class="dot np"></i>新聞　救護班、横浜へ</div><div><i class="dot bk"></i>図書　復興院史</div></div></div>
-      <div class="before"><div class="mini list"><div><i class="dot" style="background:#d1232a"></i>朝刊　帝都の火災</div><div><i class="dot" style="background:#2e7d32"></i>単行本　震災誌</div><div><i class="dot" style="background:#f2b71b"></i>夕刊　救護班、横浜へ</div><div><i class="dot" style="background:#7b4fa0"></i>全集　復興院史</div></div></div></div>
-    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=An29jZOqyGY">大事なものをより大きく</a></h4><p class="d">縦に並べる以外の方法として、重要度に応じてアイコンの大きさを変えて導く。汎用性は下がるので、狙いがあるときに使う。検索欄は画面で最大の入力要素にする。</p>
-      <div class="after"><div class="mini big"><div class="q">検索<i></i></div><div class="sub">詳細条件</div></div></div>
-      <div class="before"><div class="mini big"><div class="q sm">検索</div><div class="sub lg">詳細条件</div></div></div></div>
+      <div class="after"><div class="mini list"><div><i class="dot np"></i>仕事　会議の日程</div><div><i class="dot bk"></i>個人　週末の予定</div><div><i class="dot np"></i>仕事　請求書</div><div><i class="dot bk"></i>個人　旅行の写真</div></div></div>
+      <div class="before"><div class="mini list"><div><i class="dot" style="background:#d1232a"></i>仕事　会議の日程</div><div><i class="dot" style="background:#2e7d32"></i>個人　週末の予定</div><div><i class="dot" style="background:#f2b71b"></i>経理　請求書</div><div><i class="dot" style="background:#7b4fa0"></i>写真　旅行の写真</div></div></div></div>
+    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=An29jZOqyGY">大事なものをより大きく</a></h4><p class="d">縦に並べる以外の方法として、重要度に応じてアイコンの大きさを変えて導く。汎用性は下がるので、狙いがあるときに使う。</p>
+      <div class="after"><div class="mini big"><div class="q">購入手続きへ</div><div class="sub">買い物を続ける</div></div></div>
+      <div class="before"><div class="mini big"><div class="q sm">購入手続きへ</div><div class="sub lg">買い物を続ける</div></div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=i74FMmw4Kgk">高速に選びたい</a></h4><p class="d">ホイールのような素早い選択手段は手応えがあって便利だが、慣れた人しか使えない操作だけにすると一般性が下がる。近道と普通の操作を両方置く。</p>
-      <div class="after"><div class="mini menu"><div class="cur">帝都の火災、三日に及ぶ</div><div>救護班、横浜へ</div><div><small>↑↓ で移動、Enter で開く。マウスでも選べる</small></div></div></div>
-      <div class="before"><div class="mini menu"><div class="cur">帝都の火災、三日に及ぶ</div><div>救護班、横浜へ</div><div><small>j / k で移動</small></div></div></div></div>
+      <div class="after"><div class="mini menu"><div>編集 › <b>コピー</b> <small>⌘C</small></div><div>編集 › <b>貼り付け</b> <small>⌘V</small></div><div><small>メニューからも選べ、慣れたらキーで速く</small></div></div></div>
+      <div class="before"><div class="mini menu"><div><small>コピーは ⌘C、貼り付けは ⌘V</small></div><div><small>メニューには無く、キーを知らないと使えない</small></div></div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=asLjhZEvkF4">必ず飛ばせるように、止められるように</a></h4><p class="d">ゲーム外の映像は必ず飛ばせるように、途中で止められるようにする。初見でないことが多い。ツアーや確認も同じ。</p>
-      <div class="after"><div class="mini tour"><div class="bubble">ここで絞り込めます <b>スキップ</b></div></div></div>
-      <div class="before"><div class="mini tour"><div class="bubble">ここで絞り込めます <span>次へ 1/7</span></div></div></div></div>
+      <div class="after"><div class="mini tour"><div class="bubble">ここでファイルを共有できます <b>スキップ</b></div></div></div>
+      <div class="before"><div class="mini tour"><div class="bubble">ここでファイルを共有できます <span>次へ 1/7</span></div></div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=Z5zdNEmNoxo">ボタン設定</a></h4><p class="d">キーコンフィグは必須。設定を名前で記録し、選ぶだけで反映する。ショートカットの割り当ても同じ。</p>
-      <div class="after"><div class="mini menu"><div>ショートカット <small>Vim 風 ▾</small></div><div><small>/ 検索欄へ　j k 移動　o 開く</small></div></div></div>
+      <div class="after"><div class="mini menu"><div>保存 <small>⌘S ▾</small></div><div>検索 <small>⌘F ▾</small></div><div><small>設定「Windows 風」に保存</small></div></div></div>
       <div class="before"><div class="mini menu"><div>ショートカット <small>固定</small></div></div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=evu4I64e5pU">テキストの読み進め</a></h4><p class="d">演技付きのデモは進めにくい。早送りと、セリフ単位で飛ばせる操作を用意する。長い案内文は一括で表示できるようにする。</p>
       <div class="after"><div class="mini steps"><b>▶▶</b> すべて表示　<b>→</b> 次の段落</div></div>
       <div class="before"><div class="mini steps"><b>→</b> 次へ 1/9</div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=hICO4_Fp718">メニューにヘルプを</a></h4><p class="d">メニュー項目の説明は必須。「オプション＝オプションへ行く」のように同じ言葉で説明しない。噛み砕いて書く。項目に触れるとその場で出す。</p>
-      <div class="after"><div class="mini menu tips"><div class="cur" tabindex="0" data-tip="「震災」と「震灾」のような表記ゆれを別の語として扱います">厳密一致 <small>?</small></div><div tabindex="0" data-tip="入力した語で始まる見出しだけを探します">前方一致 <small>?</small></div></div></div>
-      <div class="before"><div class="mini menu"><div class="cur">厳密一致</div><div>前方一致</div><div><small><a href="#intro">? 検索オプションのヘルプ（別ページ）</a></small></div></div></div></div>
-    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=6NpEbaU0S3s">言語がなくてもわかるように</a></h4><p class="d">アイコンに絵を入れて、言葉が読めなくても分かるようにする。適用中のファセットは形と色で伝える。</p>
-      <div class="after"><div class="mini chips"><span class="chip on">▣ 新聞</span><span class="chip">▢ 図書</span><span class="chip on">▣ 1923</span></div></div>
-      <div class="before"><div class="mini chips"><span class="chip">新聞（適用中）</span><span class="chip">図書</span><span class="chip">1923（適用中）</span></div></div></div>
-    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=dVVSH6lVqpI">HUD</a></h4><p class="d">HUD は操作対象に付いて回るほうがそれらしい。日本の作品は情報が多く、海外は没入を優先する傾向。検索では、条件と件数を結果に付いて回らせる。</p>
-      <div class="after"><div class="mini hud"><div class="top">新聞 · 関東大震災 <span class="num">1,249 件</span></div><div>帝都の火災、三日に及ぶ</div><div>救護班、横浜へ</div><div>復興院の設置決まる</div><div>義援金の募集始まる</div><div>仮設住宅の建設</div><div>鉄道の復旧見通し</div><div>市場の再開</div><div>学校の再開</div><div>避難所の様子</div></div><div class="cap">結果を送っても、条件と件数は上に付いて回る</div></div>
-      <div class="before"><div class="mini hud nost"><div class="top">新聞 · 関東大震災 <span class="num">1,249 件</span></div><div>帝都の火災、三日に及ぶ</div><div>救護班、横浜へ</div><div>復興院の設置決まる</div><div>義援金の募集始まる</div><div>仮設住宅の建設</div><div>鉄道の復旧見通し</div><div>市場の再開</div><div>学校の再開</div><div>避難所の様子</div></div><div class="cap">送ると条件と件数が見えなくなる</div></div></div>
+      <div class="after"><div class="mini menu tips"><div class="cur" tabindex="0" data-tip="グラフィックの処理を GPU に任せます。表示が乱れるときは切ってください">ハードウェアアクセラレーション <small>?</small></div><div tabindex="0" data-tip="変更を数分ごとに他の端末へ送ります">自動同期 <small>?</small></div></div></div>
+      <div class="before"><div class="mini menu"><div class="cur">ハードウェアアクセラレーション</div><div>自動同期</div><div><small><a href="#intro">? 設定のヘルプ（別ページ）</a></small></div></div></div></div>
+    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=6NpEbaU0S3s">言語がなくてもわかるように</a></h4><p class="d">アイコンに絵を入れて、言葉が読めなくても分かるようにする。</p>
+      <div class="after"><div class="mini chips"><span class="chip on">✎ 編集</span><span class="chip">⤴ 共有</span><span class="chip">✕ 削除</span></div></div>
+      <div class="before"><div class="mini chips"><span class="chip">編集（選択中）</span><span class="chip">共有</span><span class="chip">削除</span></div></div></div>
+    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=dVVSH6lVqpI">HUD</a></h4><p class="d">HUD は操作対象に付いて回るほうがそれらしい。日本の作品は情報が多く、海外は没入を優先する傾向。</p>
+      <div class="after"><div class="mini hud"><div class="top">受信トレイ · 未読 <span class="num">12 件</span></div><div>会議の日程について</div><div>請求書をお送りします</div><div>週末のご予定は</div><div>資料の修正版</div><div>新製品のご案内</div><div>パスワード変更のお知らせ</div><div>打ち合わせのお礼</div><div>配送状況のお知らせ</div><div>来月のシフト</div></div><div class="cap">一覧を送っても、場所と未読数は上に付いて回る</div></div>
+      <div class="before"><div class="mini hud nost"><div class="top">受信トレイ · 未読 <span class="num">12 件</span></div><div>会議の日程について</div><div>請求書をお送りします</div><div>週末のご予定は</div><div>資料の修正版</div><div>新製品のご案内</div><div>パスワード変更のお知らせ</div><div>打ち合わせのお礼</div><div>配送状況のお知らせ</div><div>来月のシフト</div></div><div class="cap">送ると場所と未読数が見えなくなる</div></div></div>
   </div>
 
   <h3>待ち時間と反応 ― 仕様・ゲーム性・企画の回から</h3>
   <div class="gest skr" id="skr2">
-    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=yu7BDkENnNM">遅さは罪</a></h4><p class="d">「遊び手は忙しい。さっさと進めてほしいと思っている」。同じ 1,249 件を返す検索でも、候補と上位結果を先に出して集計を後から差し替えれば待たせない。</p>
+    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=yu7BDkENnNM">遅さは罪</a></h4><p class="d">「遊び手は忙しい。さっさと進めてほしいと思っている」。同じ結果を返すにしても、出せるものから先に出し、残りを後から差し替えれば待たせない。</p>
       <div class="after"><button type="button" class="btn small wait-btn" data-mode="fast">検索</button><div class="mockui waitdemo" id="wd-fast"><div class="row st0">結果はここに出る</div></div></div>
       <div class="before"><button type="button" class="btn small wait-btn" data-mode="slow">検索</button><div class="mockui waitdemo" id="wd-slow"><div class="row st0">結果はここに出る</div></div></div></div>
-    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=xmQeUoKpTqg">リトライは迅速に</a></h4><p class="d">ミスをした瞬間から急速に冷めていく。冷めないうちに操作のバトンを渡す。絞り込みの解除は一回で済ませる。</p>
-      <div class="after"><div class="mini"><div class="cks"><label><input type="checkbox" checked> 新聞</label><label><input type="checkbox" checked> 1923</label><label><input type="checkbox" checked> 横浜</label><label><input type="checkbox" checked> 朝刊</label><label><input type="checkbox" checked> 9 月</label><label><input type="checkbox" checked> 社説</label></div><button type="button" class="btn small ckreset">条件をリセット</button> <button type="button" class="btn small ckall">元に戻す</button></div></div>
-      <div class="before"><div class="mini"><div class="cks"><label><input type="checkbox" checked> 新聞</label><label><input type="checkbox" checked> 1923</label><label><input type="checkbox" checked> 横浜</label><label><input type="checkbox" checked> 朝刊</label><label><input type="checkbox" checked> 9 月</label><label><input type="checkbox" checked> 社説</label></div><div class="sub">一つずつ外すしかない</div></div></div></div>
+    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=xmQeUoKpTqg">リトライは迅速に</a></h4><p class="d">ミスをした瞬間から急速に冷めていく。冷めないうちに操作のバトンを渡す。やり直しは一回で済ませる。</p>
+      <div class="after"><div class="mini"><div class="cks"><label><input type="checkbox" checked> 送料無料</label><label><input type="checkbox" checked> 在庫あり</label><label><input type="checkbox" checked> 評価 4 以上</label><label><input type="checkbox" checked> 1 万円以下</label><label><input type="checkbox" checked> 新品</label><label><input type="checkbox" checked> 翌日配送</label></div><button type="button" class="btn small ckreset">条件をリセット</button> <button type="button" class="btn small ckall">元に戻す</button></div></div>
+      <div class="before"><div class="mini"><div class="cks"><label><input type="checkbox" checked> 送料無料</label><label><input type="checkbox" checked> 在庫あり</label><label><input type="checkbox" checked> 評価 4 以上</label><label><input type="checkbox" checked> 1 万円以下</label><label><input type="checkbox" checked> 新品</label><label><input type="checkbox" checked> 翌日配送</label></div><div class="sub">一つずつ外すしかない</div></div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=EDs5n39sRFc">ノーリアクションを排除せよ</a></h4><p class="d">「遊び手がボタンを入力したということは、何かをしてほしいということ。余すことなく拾う」。押せない理由があるなら、押したときにそれを返す。</p>
-      <div class="after"><div class="mini"><button type="button" class="btn small nr ok">検索</button><span class="out"></span></div></div>
-      <div class="before"><div class="mini"><button type="button" class="btn small nr ng">検索</button><span class="out"></span></div></div></div>
+      <div class="after"><div class="mini"><button type="button" class="btn small nr ok">送信</button><span class="out"></span></div></div>
+      <div class="before"><div class="mini"><button type="button" class="btn small nr ng">送信</button><span class="out"></span></div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=L1Su0aajYFA">自然なチュートリアル</a></h4><p class="d">「説明書がほとんど無い現在、操作を示すチュートリアルの重要性は上がっている。進めている実感を得ながら学びたい」。使い方は別紙ではなく、打ち始めた瞬間にその場で示す。下の欄は本物の入力欄で、打つと助言が変わる。</p>
-      <div class="after"><div class="mini"><input class="tut" type="text" placeholder="例：関東大震災 1923"><div class="sub tuthint">語を空白で区切ると AND 検索</div></div></div>
-      <div class="before"><div class="mini"><input class="tut" type="text" placeholder="検索"><div class="sub"><a href="#intro">使い方（PDF、12 ページ）</a></div></div></div></div>
+      <div class="after"><div class="mini"><input class="tut" type="text" placeholder="新しいパスワード"><div class="sub tuthint">8 文字以上で入力する</div></div></div>
+      <div class="before"><div class="mini"><input class="tut" type="text" placeholder="新しいパスワード"><div class="sub"><a href="#intro">パスワードの決まり（PDF、12 ページ）</a></div></div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=SpvuPyUnr2E">いただく時間を意識する</a></h4><p class="d">「プレイしているお客さんからは貴重な時間をいただいているという意識がある」。ローディング画面の「あることを明示する」を一歩進め、待たせるなら、どれだけ待つかと、待たずに済む道を示す。</p>
-      <div class="after"><div class="mini"><div class="sub lg">全文を照合中 <span class="num">約 20 秒</span></div><div class="sub">先に見出しの結果 1,249 件を表示しています。<a href="#sakurai">全文の照合を止める</a></div></div></div>
+      <div class="after"><div class="mini"><div class="sub lg">アップデートをダウンロード中 <span class="num">残り約 20 秒</span></div><div class="sub">待っている間も使えます。<a href="#sakurai">ダウンロードを止める</a></div></div></div>
       <div class="before"><div class="mini"><div class="spinonly"></div></div></div></div>
   </div>
 </section>
