@@ -3,7 +3,7 @@
 
   /* ---------- tabs / slides ---------- */
   var slides=[].slice.call(document.querySelectorAll('.slide')), tabs=document.getElementById('tabs'), cur=0;
-  var grp=null,lastPart='';slides.forEach(function(s,i){var eb=s.querySelector('.eyebrow'),part=eb&&/^第\d部/.test(eb.textContent)?eb.textContent.match(/^第\d部/)[0]:'';if(!grp||part!==lastPart){grp=document.createElement('div');grp.className='grp';var sp=document.createElement('span');sp.className='part';sp.textContent=part;grp.appendChild(sp);var row=document.createElement('div');row.className='row';grp.appendChild(row);tabs.appendChild(grp);lastPart=part;}var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.innerHTML='<span class="n">'+i+'</span>'+s.dataset.title;b.addEventListener('click',function(){go(i);});grp.querySelector('.row').appendChild(b);});
+  var grp=null,lastPart='';slides.forEach(function(s,i){var eb=s.querySelector('.eyebrow'),part=eb&&/^(第\d部|付録)/.test(eb.textContent)?eb.textContent.match(/^(第\d部|付録)/)[0]:'';if(!grp||part!==lastPart){grp=document.createElement('div');grp.className='grp';var sp=document.createElement('span');sp.className='part';sp.textContent=part;grp.appendChild(sp);var row=document.createElement('div');row.className='row';grp.appendChild(row);tabs.appendChild(grp);lastPart=part;}var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.innerHTML='<span class="n">'+i+'</span>'+s.dataset.title;b.addEventListener('click',function(){go(i);});grp.querySelector('.row').appendChild(b);});
   var tabBtns=[].slice.call(tabs.querySelectorAll('button'));
   /* 章の移動は履歴に積み、各履歴にスクロール位置を持たせる。ブラウザの戻る（Mac の2本指スワイプ、Cmd+[）でも元の位置に戻すため */
   var scrollPos={};
@@ -295,6 +295,28 @@
   document.querySelectorAll('.keep .pane').forEach(function(pn){var f=pn.querySelector('.f'),r=pn.querySelector('.res'),inp=pn.querySelector('input');
     pn.querySelector('.go').addEventListener('click',function(){f.hidden=true;r.hidden=false;});
     pn.querySelector('.back').addEventListener('click',function(){r.hidden=true;f.hidden=false;if(pn.dataset.keep==='0')inp.value='';});});
+  /* ---------- Hearst: ファセットとパラメトリック ----------
+     ファセットは選ぶたびに他の選択肢の件数を数え直し、0 件の選択肢を押せなくする。
+     パラメトリックは全項目を先に選ばせるので、0 件になっても外す条件が分からない */
+  var FC=[['帝都の火災、三日に及ぶ','1923','朝刊','東京'],['救護班、横浜へ','1923','朝刊','横浜'],['復興院の設置決まる','1923','夕刊','東京'],['一周年、慰霊祭','1924','朝刊','東京'],['後藤新平、復興計画を語る','1923','朝刊','東京'],['帝都復興計画の縮小','1924','朝刊','東京'],['震災誌','1925 以降','図書','東京'],['関東大震災と横浜','1925 以降','図書','横浜'],['大正大震火災誌','1924','図書','東京'],['流言と震災','1924','夕刊','東京'],['避難民、上野公園に','1923','朝刊','東京'],['義援金の募集','1923','朝刊','東京'],['電車、一部で運転再開','1923','夕刊','東京'],['横浜港の復旧進む','1924','夕刊','横浜'],['隅田川に新橋','1925 以降','朝刊','東京'],['横浜市震災誌','1925 以降','図書','横浜'],['鎌倉の震災','1923','朝刊','鎌倉'],['鎌倉大仏の被害','1923','夕刊','鎌倉']];
+  var FN=['年','種別','地域'],FV=[['1923','1924','1925 以降'],['朝刊','夕刊','図書'],['東京','横浜','鎌倉']];
+  var fct=document.getElementById('fct');
+  if(fct){var fside=document.getElementById('fctside'),flist=document.getElementById('fctlist'),fcnt=document.getElementById('fctcnt'),fmode='facet',fsel=[null,null,null],psel=['1924','図書','横浜'];
+    function fmatch(it,sel,skip){for(var k=0;k<3;k++){if(k!==skip&&sel[k]&&it[k+1]!==sel[k])return false;}return true;}
+    function fshow(items,zeroMsg){fcnt.textContent=items.length?items.length+' 件':zeroMsg;fcnt.classList.toggle('zero',!items.length);
+      flist.innerHTML=items.map(function(it){return '<li>'+it[0]+'<span>'+it[1]+' '+it[2]+' '+it[3]+'</span></li>';}).join('');}
+    function frender(){
+      if(fmode==='facet'){var h='';FN.forEach(function(nm,k){h+='<h5>'+nm+'</h5>';FV[k].forEach(function(v){
+          var n=FC.filter(function(it){return it[k+1]===v&&fmatch(it,fsel,k);}).length,on=fsel[k]===v;
+          h+='<button type="button" class="fct-opt'+(on?' on':'')+'" data-k="'+k+'" data-v="'+v+'"'+(n||on?'':' disabled')+' aria-pressed="'+on+'">'+v+'<span class="n">'+n+'</span></button>';});});
+        fside.innerHTML=h;fshow(FC.filter(function(it){return fmatch(it,fsel,-1);}),'');}
+      else{var p='';FN.forEach(function(nm,k){p+='<h5>'+nm+'</h5><select data-k="'+k+'">'+FV[k].map(function(v){return '<option'+(psel[k]===v?' selected':'')+'>'+v+'</option>';}).join('')+'</select>';});
+        p+='<button type="button" class="btn small go">検索</button>';fside.innerHTML=p;fcnt.textContent='条件を選んで検索';fcnt.classList.remove('zero');flist.innerHTML='';}}
+    fside.addEventListener('click',function(e){var b=e.target.closest('.fct-opt');if(b){var k=+b.dataset.k;fsel[k]=fsel[k]===b.dataset.v?null:b.dataset.v;frender();return;}
+      if(e.target.closest('.go'))fshow(FC.filter(function(it){return fmatch(it,psel,-1);}),'0 件。どの条件を外せばよいかは表示されない');});
+    fside.addEventListener('change',function(e){var s=e.target.closest('select');if(s)psel[+s.dataset.k]=s.value;});
+    fct.querySelectorAll('.fct-mode .btn').forEach(function(b){b.addEventListener('click',function(){fmode=b.dataset.mode;fct.querySelectorAll('.fct-mode .btn').forEach(function(x){x.classList.toggle('on',x===b);});frender();});});
+    frender();}
   /* ---------- 章番号 ---------- */
   slides.forEach(function(sl,i){var eb=sl.querySelector('.eyebrow');if(!eb)return;var n=document.createElement('span');n.className='chno';n.textContent=String(i).padStart(2,'0');eb.appendChild(n);});
 })();

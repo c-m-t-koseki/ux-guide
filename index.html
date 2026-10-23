@@ -40,8 +40,10 @@
     <tr><td><a href="https://www.youtube.com/@sora_sakurai_jp">桜井政博のゲーム作るには</a></td><td>桜井の UI、適用</td><td>UI の 15 テーマ、待たせない、手応えを返す</td></tr>
     <tr><td>わたしのデザイン原則</td><td>スイス、ゲシュタルト、色、適用</td><td>グリッド・色の配分・文字組み</td></tr>
     <tr><td>Shneiderman、Bates、Marchionini</td><td>情報探索の理論、共通原則、適用</td><td>全体像から詳細へ、往復する探索、探索の種類</td></tr>
+    <tr><td><a href="https://searchuserinterfaces.com/book/">Hearst『Search User Interfaces』</a></td><td>検索 UI の定本、共通原則、適用</td><td>検索 UI の実証研究の総覧。語彙問題、ファセット、0件の回避</td></tr>
     <tr><td>fzf と端末ツール</td><td>fzf、適用</td><td>インクリメンタル検索の実装例</td></tr>
   </table></div>
+  <p>全資料の一覧と、それぞれをどこまで確認したかは、付録の<a href="#refs">参考資料</a>にまとめた。</p>
 </section>
 
 <!-- ============ history ============ -->
@@ -419,6 +421,34 @@
   <h4>使った原則</h4>
   <div class="tbl"><table><tr><th>何をしたか</th><th>原則</th></tr><tr><td>時間を長さと位置で示す</td><td>位置と長さ（Cleveland と McGill）、データインク比</td></tr><tr><td>候補を同じ尺度の上に並べる</td><td>スモールマルチプル</td></tr><tr><td>乗換を切れ目、路線を色で</td><td>色と位置と形の併用</td></tr><tr><td>文字を減らし、詳細はタップで</td><td>全体を先に、詳細は求めに応じて（第 3 部の Shneiderman）</td></tr></table></div>
   <p class="note">JR の画面は <a href="https://k-tai.watch.impress.co.jp/docs/column/teppan/1634024.html">ケータイ Watch</a> と Appliv の画面写真、NAVITIME の札は <a href="https://note.com/navitime_app_tr/n/n5acf2992d460">NAVITIME の公式 note</a> で確認した。斜めのスクロールは画面写真から読み取ったもので、公式の説明は確認していない。順位は <a href="https://www.textbookofusability.com/references/clevelandmcgill1984.html">Cleveland &amp; McGill, Graphical Perception, JASA 79(387), 1984</a> の紹介、視覚変数は <a href="https://en.wikipedia.org/wiki/Visual_variable">Wikipedia「Visual variable」</a>、前注意的属性は <a href="https://link.springer.com/rwe/10.1007/978-3-319-55065-7_1588">Feature Integration Theory の解説</a>、データインク比は <a href="https://en.wikipedia.org/wiki/Chartjunk">Wikipedia「Chartjunk」</a>、スモールマルチプルは <a href="https://en.wikipedia.org/wiki/Small_multiple">Wikipedia「Small multiple」</a>で確認した。原典はいずれも開いていない。</p>
+
+  <h3>見比べるものの並べ方 ― 横に並べる根拠はどこまであるか</h3>
+  <p>JR の図は候補を横に並べた。見比べるものを横に並べるのは妥当そうだが、「横並びのほうが比較が速く正確」と直接確かめた研究は見つからなかった。根拠は、目の性質と、比べやすさの一般則からの推論である。根拠の強さの順に見る。</p>
+  <h4>目の動きと視野（よく確かめられている）</h4>
+  <ul>
+    <li>見て探す課題では、一度に情報を取れる範囲が縦より横に広く、横方向に走査するほうが速いと報告されている。差は目の跳躍（サッケード）の側から来る（<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2712349/">Najemnik と Geisler の系統の視覚探索研究</a>）。</li>
+    <li>視野の水平方向（水平子午線）は、垂直方向より見え方の成績が良いと、多くの課題で繰り返し報告されている（<a href="https://link.springer.com/article/10.1007/s00221-025-07152-2">2025 年の研究</a>、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9012886">総説</a>）。</li>
+    <li>縦方向のサッケードは横より遅いという報告もあるが、振幅をそろえた比較は確認できなかった。</li>
+  </ul>
+  <h4>見比べやすさ（一部は確かめられ、一部は推論）</h4>
+  <ul>
+    <li>Cleveland と McGill（1984）は、共通の軸の上で位置を比べるのが最も正確で、比べるものが離れるほど精度が落ちると示した（<a href="https://vis.arc.vt.edu/%7Enpolys/projects/safas/science.pdf">論文</a>）。上の「正確に読める順」と同じ出典である。</li>
+    <li>比べるものを近くに並べ、軸をそろえるほど比較が楽になる。Tufte のスモールマルチプルと、Matlen ら（2020）の<a href="https://groups.psych.northwestern.edu/gentner/papers/MatlenEtAl_2020-SpatialAlign.pdf">空間整合の枠組み</a>がこの考え方である。</li>
+    <li>二つの刺激を横並びと縦並びで直接比べた、人の反応時間の研究は見つからなかった。</li>
+  </ul>
+  <h4>道具の慣習（研究の根拠は弱い）</h4>
+  <ul>
+    <li>放射線科で前回と今回の画像を比べるときは、横に並べるのが一般的である（<a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">ハンギングプロトコルの解説</a>）。</li>
+    <li>全体と詳細を別々に見せる画面（overview+detail）の総説（<a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/01/cockburn-ComputingSurveys09.pdf">Cockburn ら、2009</a>）も、全体図（ミニマップ）を左右どちらに置くかは扱っていない。コードエディタのミニマップが右にあるのも慣習である。</li>
+    <li>左から右に読む人は、左から見始め、右側を見落としやすいとされる（<a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">NN/g</a>）。主に見るもの（拡大画像）を左、補助（ミニマップ）を右に置くのは、この点では筋が通る。</li>
+  </ul>
+  <h4>縦書きの文脈帯</h4>
+  <ul>
+    <li>縦書きの日本語は、横書きより注視の回数が多くなるという報告と、読む速さは変わらないという報告がある（<a href="https://researchmap.jp/kojimiwa/published_papers/3501775">Miwa ら</a>）。</li>
+    <li>紙面に添える文脈帯を紙面と同じ縦の列にしておくのは自然だが、比較の精度を示す研究ではない。</li>
+  </ul>
+  <p>本資料はこれを次のように扱う。比べさせたいものは横に並べ、軸をそろえる（<a href="#principles" data-prin="4">原則 4</a>）。拡大画像とミニマップの左右、文脈帯の向きは研究ではなく慣習で決まる問題として、主に見るものを左に置く。</p>
+  <p class="note">この節の研究は、各論文の要旨と解説で確かめた範囲で、原典は通読していない。</p>
 </section>
 
 <!-- ============ classics ============ -->
@@ -742,9 +772,180 @@
     <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">The Eyes Have It</a></td><td>Shneiderman, 1996</td><td>まず全体像、次に拡大と絞り込み、そして求めに応じて詳細</td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Information_foraging">Information Foraging</a></td><td>Pirolli & Card, 1990 年代</td><td>利用者は「情報の匂い」をたどる。リンク文言やスニペットが匂い</td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Exploratory_search">Exploratory Search: From Finding to Understanding</a></td><td>Marchionini, 2006</td><td>探す・学ぶ・調べる。後の二つが探索的検索</td></tr>
-    <tr><td><a href="https://searchuserinterfaces.com/book/">Search User Interfaces</a></td><td>Hearst, 2009</td><td>検索 UI の定本。著者サイトで全 12 章を無償公開している（目次ページで確認。本文は未読）</td></tr>
+    <tr><td><a href="https://searchuserinterfaces.com/book/">Search User Interfaces</a></td><td>Hearst, 2009</td><td>検索 UI の定本。著者サイトで全 12 章を無償公開している。要点は次の章にまとめた</td></tr>
   </table></div>
-  <p class="note">Bates は ERIC の要旨（Online Review 13(5), 1989）で確認した。原論文は開いていない。Rosenfeld と Morville の Information Architecture、Hearst らの Flamenco、Russell-Rose と Tate の Designing the Search Experience、Baymard の調査もこの分野でよく引かれるが、本ページの作成時には開いていない。</p>
+  <p class="note">Bates は ERIC の要旨（Online Review 13(5), 1989）で確認した。原論文は開いていない。Rosenfeld と Morville の Information Architecture、Russell-Rose と Tate の Designing the Search Experience、Baymard の調査もこの分野でよく引かれるが、本ページの作成時には開いていない。Hearst らの Flamenco は、次の章で Hearst の本の記述を通して扱う。</p>
+</section>
+
+<!-- ============ hearst ============ -->
+<section class="slide" data-title="検索 UI の定本" id="hearst">
+  <div class="eyebrow">第3部 探す行為</div>
+  <h2>Hearst『Search User Interfaces』― 検索 UI の 12 章</h2>
+  <p>Marti Hearst の <a href="https://searchuserinterfaces.com/book/">Search User Interfaces</a>（Cambridge University Press、2009）は、検索 UI について行われた実証研究を 12 章に整理した本で、全文が著者のサイトで無償公開されている。前の章の理論は人がどう探すかを述べた。この本は、どの画面の作りが実験で使いやすかったか、使われなかったかを集めている。この章では各章の主張を順に取り出し、本文に出てくる数値を図にする。数値の多くは 2000 年代のウェブ検索のログと実験から得たものなので、絶対値より大小と傾向を読む。</p>
+  <div class="fig"><svg viewBox="0 0 560 318" class="hmap" role="img" aria-label="12 章の位置。中央に クエリの指定・結果の提示・再構成 の循環、左に過程の支援、右にナビゲーションと個人化、上に理論、下に可視化、土台に設計・評価・新しい潮流"><defs><marker id="hm-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--main)"/></marker></defs><rect x="8" y="4" width="544" height="50" fill="var(--main-soft)" stroke="none"/><text x="16" y="19" class="hmno">3</text><text x="16" y="35" class="hmnm">情報探索のモデル</text><text x="16" y="50" class="hmsub">標準モデル・ベリーピッキング・段階・戦略・センスメイキング・意図の分類</text><rect x="8" y="66" width="120" height="146" fill="var(--panel)" stroke="var(--line)"/><text x="16" y="81" class="hmno">7</text><text x="16" y="97" class="hmnm">過程の支援</text><text x="16" y="112" class="hmsub">開始点・履歴・</text><text x="16" y="128" class="hmsub">センスメイキング</text><rect x="160" y="66" width="112" height="54" fill="var(--panel)" stroke="var(--main)"/><text x="168" y="81" class="hmno">4</text><text x="168" y="97" class="hmnm">クエリの指定</text><text x="168" y="112" class="hmsub">入力欄・候補・演算子</text><rect x="300" y="66" width="112" height="54" fill="var(--panel)" stroke="var(--main)"/><text x="308" y="81" class="hmno">5</text><text x="308" y="97" class="hmnm">結果の提示</text><text x="308" y="112" class="hmsub">代理・KWIC・順位</text><rect x="230" y="158" width="112" height="54" fill="var(--panel)" stroke="var(--main)"/><text x="238" y="173" class="hmno">6</text><text x="238" y="189" class="hmnm">再構成</text><text x="238" y="204" class="hmsub">綴り・用語・関連記事</text><path d="M272 93 L298 93" stroke="var(--main)" stroke-width="2" fill="none" marker-end="url(#hm-ah)"/><path d="M356 122 L320 156" stroke="var(--main)" stroke-width="2" fill="none" marker-end="url(#hm-ah)"/><path d="M252 156 L218 122" stroke="var(--main)" stroke-width="2" fill="none" marker-end="url(#hm-ah)"/><text x="286" y="140" text-anchor="middle" class="hmsub">標準の循環</text><rect x="432" y="66" width="120" height="68" fill="var(--panel)" stroke="var(--line)"/><text x="440" y="81" class="hmno">8</text><text x="440" y="97" class="hmnm">ナビゲーション</text><text x="440" y="112" class="hmsub">ファセット・クラスタ</text><rect x="432" y="144" width="120" height="68" fill="var(--panel)" stroke="var(--line)"/><text x="440" y="159" class="hmno">9</text><text x="440" y="175" class="hmnm">個人化</text><text x="440" y="190" class="hmsub">明示・暗黙・協調</text><rect x="8" y="224" width="268" height="40" fill="var(--panel)" stroke="var(--line)"/><text x="16" y="239" class="hmno">10</text><text x="16" y="255" class="hmnm">検索の可視化</text><text x="108" y="255" class="hmsub">ヒット位置・ファセット・星図・3D</text><rect x="284" y="224" width="268" height="40" fill="var(--panel)" stroke="var(--line)"/><text x="292" y="239" class="hmno">11</text><text x="292" y="255" class="hmnm">テキスト分析の可視化</text><text x="436" y="255" class="hmsub">分析者のための図</text><rect x="8" y="276" width="176" height="36" fill="none" stroke="var(--fg)"/><text x="16" y="298" class="hmno">1</text><text x="40" y="298" class="hmnm">設計の指針</text><rect x="192" y="276" width="176" height="36" fill="none" stroke="var(--fg)"/><text x="200" y="298" class="hmno">2</text><text x="224" y="298" class="hmnm">評価の方法</text><rect x="376" y="276" width="176" height="36" fill="none" stroke="var(--fg)"/><text x="384" y="298" class="hmno">12</text><text x="408" y="298" class="hmnm">新しい潮流</text></svg></div>
+  <p class="cap">12 章の位置。中央の三つ（第 4〜6 章）が、クエリを書き、結果を見て、書き直す標準の循環である。その前後と周りを第 7〜9 章が、図による支援を第 10・11 章が扱い、第 1・2・12 章は全体に関わる。</p>
+
+  <h3>第 1 章 設計 ― 検索画面はなぜ単純なままなのか</h3>
+  <p>1997 年の Infoseek と 2007 年の Google の結果画面は、ほぼ同じ形をしている。Hearst は理由を三つ挙げる。検索はより大きな作業の手段であって目的ではない。読みながら別のことは考えられないので、気を散らす要素は少ないほどよい。そして利用者があらゆる年齢と背景にわたる。高齢者の調査では、すでに簡素な結果一覧をさらに簡素にしただけで誤りが大きく減った。</p>
+  <p>本書は Shneiderman らの要件を出発点に、検索 UI の指針を七つ挙げる。</p>
+  <div class="tbl"><table>
+    <tr><th>指針</th><th>本文の具体例</th></tr>
+    <tr><td>効率よく情報を返す</td><td>結果をすぐ出す。ヒット語を文脈ごと見せる。並べ替えは列見出しで。関連度の数値や星は出さない（縦の位置が順位をすでに示すため）</td></tr>
+    <tr><td>利用者の制御と自動化の釣り合い</td><td>全語を含む結果だけを返す AND は、統計的な順位付けより利用者に理解されやすい。綴りの修正は押し付けず提案する</td></tr>
+    <tr><td>短期記憶の負荷を減らす</td><td>欄の中に検索対象を書く。履歴を出す。1 年間のクリックの 40% は以前開いたページで、その 71% は前と同じクエリだった</td></tr>
+    <tr><td>近道を用意する</td><td>サイトリンク。天気や現地時刻の答えを結果に直接出す</td></tr>
+    <tr><td>誤りを減らす</td><td>0 件を出さない。ファセットに件数を添え、0 件になる組み合わせを選ぶ前に見せる</td></tr>
+    <tr><td>小さな細部を軽んじない</td><td>Google の綴りの提案は、当初「探しているものが見つからなければ…」という文で上に出ていて、気付かれなかった。文言を「Did you mean」に縮め、ページの下にも繰り返して解決した</td></tr>
+    <tr><td>見た目の美しさを軽んじない</td><td>まとまり・密度・揃え・大きさの良し悪しだけを変えた 16 版の比較で、最悪の版の作業時間は最良の版の 2 倍だった（75 人）</td></tr>
+  </table></div>
+  <div class="vp"><div><div class="fig"><svg viewBox="0 0 300 124" class="vps" role="img" aria-label="二人が同じ語を選ぶ確率。各自の命名では 11% と 12%、最頻の一語に揃えると 22% と 28%、上位三語を同義に扱うと 49% と 48%"><rect x="0" y="4" width="10" height="10" fill="var(--main)"/><text x="14" y="13" class="vpl">編集操作</text><rect x="70" y="4" width="10" height="10" fill="color-mix(in srgb,var(--main) 40%,var(--panel))"/><text x="84" y="13" class="vpl">物の名前</text><line x1="112" y1="22" x2="112" y2="112" stroke="var(--fg)"/><text x="0" y="38" class="vpl">各自が自由に命名</text><rect x="112" y="24" width="27.1" height="10" fill="var(--main)"/><text x="143.1" y="33" class="vps-s num">11%</text><rect x="112" y="36" width="29.6" height="10" fill="color-mix(in srgb,var(--main) 40%,var(--panel))"/><text x="145.6" y="45" class="vps-s num">12%</text><text x="0" y="70" class="vpl">最頻の 1 語に揃える</text><rect x="112" y="56" width="54.3" height="10" fill="var(--main)"/><text x="170.3" y="65" class="vps-s num">22%</text><rect x="112" y="68" width="69.1" height="10" fill="color-mix(in srgb,var(--main) 40%,var(--panel))"/><text x="185.1" y="77" class="vps-s num">28%</text><text x="0" y="102" class="vpl">上位 3 語を同義に</text><rect x="112" y="88" width="120.9" height="10" fill="var(--main)"/><text x="236.9" y="97" class="vps-s num">49%</text><rect x="112" y="100" width="118.4" height="10" fill="color-mix(in srgb,var(--main) 40%,var(--panel))"/><text x="234.4" y="109" class="vps-s num">48%</text></svg></div><h4>語彙問題 ― 二人が同じ語を選ぶ確率</h4><p class="src">Furnas ら、1987。本書 1.9 節</p><p>48 人のタイピストに 25 の編集操作を、337 人の学生に 50 の物を名付けさせた。二人の語が一致する確率は 1 割強しかない。最頻の語を正式名にしても 2〜3 割、上位 3 語を同義に扱ってようやく 5 割に届く。検索語と文書の語の食い違いは利用者の努力では埋まらないので、表記ゆれの同一視と用語の提案が要る</p></div><div><div class="fig"><div class="dym"><div class="q">帝都<b>腹興</b>計画</div><div class="old">探しているものが見つからなければ、「帝都復興計画」で検索してください</div><div class="new">もしかして: <a>帝都復興計画</a></div></div></div><h4>「もしかして」の文言</h4><p class="src">本書 1.10 節</p><p>同じ提案でも、長い条件文は読まれずに飛ばされた。利用者は結果を下まで見て、関係のない結果しか出ないと不満を送っていた。短い文言に変え、結果の下にも同じ提案を置いて解決した</p></div></div>
+
+  <h3>第 2 章 評価 ― 何をどう測るか</h3>
+  <p>測るのは ISO 9241-11 の有効さ・効率・満足の三つである。三つの相関は低いので、一つで残りを代用できない。満足は見落とされやすいが、好まれない画面は選べる場面では使われない。順位付けの評価で標準の TREC は、利用者を介さずに適合文書の順位だけを測るので、画面の評価には使えない。</p>
+  <div class="vp"><div><div class="fig"><svg viewBox="0 0 300 196" class="vps" role="img" aria-label="評価の方法を、参加者の数と期間の二軸に置いた図。紙の試作は少人数・一回、ラボ実験は数十人・一回、縦断研究は数十から数百人・数週から数か月、バケットテストは数万人・数日から二週間"><line x1="40" y1="156" x2="292" y2="156" stroke="var(--fg)"/><line x1="40" y1="12" x2="40" y2="156" stroke="var(--fg)"/><text x="52" y="168" text-anchor="middle" class="vps-s">数人</text><text x="128" y="168" text-anchor="middle" class="vps-s">数十人</text><text x="204" y="168" text-anchor="middle" class="vps-s">数百人</text><text x="280" y="168" text-anchor="middle" class="vps-s">数万人</text><text x="166" y="184" text-anchor="middle" class="vpl">参加者の数</text><text x="36" y="145" text-anchor="end" class="vps-s">一回</text><text x="36" y="89" text-anchor="end" class="vps-s">数日〜</text><text x="36" y="33" text-anchor="end" class="vps-s">数か月</text><circle cx="52" cy="142" r="5" fill="var(--main)"/><text x="46" y="132" text-anchor="start" class="vpl">紙の試作・専門家評価</text><circle cx="128" cy="142" r="5" fill="var(--main)"/><text x="136" y="146" text-anchor="start" class="vpl">ラボ実験</text><circle cx="170" cy="30" r="5" fill="var(--main)"/><text x="178" y="34" text-anchor="start" class="vpl">縦断研究</text><circle cx="280" cy="86" r="5" fill="var(--main)"/><text x="272" y="76" text-anchor="end" class="vpl">バケットテスト</text><line x1="100" y1="12" x2="236" y2="156" stroke="var(--line)" stroke-dasharray="3 3"/><text x="112" y="16" text-anchor="end" class="vps-s">← 課題と主観を聞ける</text><text x="120" y="16" class="vps-s">聞けない →</text></svg></div><h4>評価の方法の地図</h4><p class="src">本書 2.2〜2.6 節</p><p>紙の試作と専門家による評価で早く大きな問題を見つけ、ラボ実験で案を比べ、縦断研究で慣れた後の使われ方を見る。バケットテスト（A/B テスト）は実利用の一部を新しい版に振り分ける。数は稼げるが課題を与えられず、主観も聞けない。新しい画面には最初は慣れた旧版が有利で、物珍しさの偏りもあるので、数週間は回す</p></div><div><div class="fig"><svg viewBox="0 0 300 52" class="vps" role="img" aria-label="5 人の参加者で見つかる問題の割合。Nielsen は 85%、Spool と Schroeder は 35%"><line x1="128" y1="4" x2="128" y2="42" stroke="var(--fg)"/><text x="0" y="16" class="vpl">Nielsen 2000</text><rect x="128" y="7" width="108.8" height="12" fill="var(--main)"/><text x="240.8" y="16" class="vpl num">85%</text><text x="0" y="36" class="vpl">Spool ら 2001</text><rect x="128" y="27" width="44.8" height="12" fill="var(--main)"/><text x="176.8" y="36" class="vpl num">35%</text></svg></div><h4>5 人で問題の何割が見つかるか</h4><p class="src">Nielsen 2000、Spool と Schroeder 2001。本書 2.2 節</p><p>二つの主張は食い違う。その後、Lindgaard と Chattratichart が 5〜15 人の評価チームを比べると、見つかった問題の数は人数ではなく、課題の種類の数と相関した。少人数でよいが、課題は多様にする</p></div></div>
+  <h4>検索 UI の評価で偏りが入る七つの所</h4>
+  <ul>
+    <li><b>実験者の期待。</b>「新しく作った画面です」と言わず「いくつかの案を比べています」と言う。案には山脈や色の名前のような中立の名前を付ける。</li>
+    <li><b>参加者の意欲。</b>関心のない話題では手を抜く。AltaVista の調査では回答の 55% を捨てた。参加者に合う集合を選ぶ（料理好きにレシピ、美術史の学生に美術画像）。</li>
+    <li><b>個人差。</b>速い人はどの画面でも速く、成績の差の多くが画面ではなく人から来た研究がある。人数が少ないときは条件ごとに人を揃える。</li>
+    <li><b>課題とクエリ。</b>実際の使われ方に合わせる。視覚化の評価で「この語を K 回含む文書は何件か」を問うのは、検索では稀な課題を選んだ偏りである。同じ課題を二度させず、提示順はラテン方格で入れ替える。</li>
+    <li><b>集合の大きさ。</b>数百件で評価しない。10 件で描ける図が 1 万件で描けるとは限らない。比べる画面は同じ集合を検索させる。</li>
+    <li><b>時間の測り方。</b>長く使ったことが、迷ったことではなく、深く探したことを示す場合がある。キャッシュの有無でも時間が変わる。</li>
+    <li><b>比べる相手。</b>強い基準と比べる。要約を隠した検索画面を基準にしない。見た目の出来も揃える。</li>
+  </ul>
+
+  <h3>第 3 章 情報探索のモデル ― 前の章に足す三つ</h3>
+  <p>前の章で見た Bates のベリーピッキング、Pirolli と Card の情報の匂い、Marchionini の探索の種類は、この本の第 3 章でも中心にある。ここでは前の章で扱わなかった三つを足す。</p>
+  <ul>
+    <li><b>実行と評価の隔たり（Norman）。</b>欲しい情報をクエリに直す難しさと、結果が目的を満たしたかを判断する難しさである。隔たりが小さいほど使いやすい。課題をよく知らない人ほど、どちらも難しくなる。</li>
+    <li><b>段階（Kuhlthau）。</b>長い調べものは六つの段階を経て、段階ごとに感情も変わる（下の図）。</li>
+    <li><b>少しずつ近づく（O'Day と Jeffries、Teevan ら）。</b>長いクエリで一度に飛ぶより、知っている場所から小さな歩幅で近づく人が多い。自分の PC のファイル探しでは、デスクトップ検索は 10〜15% しか使われず、フォルダを辿るほうが好まれた（714 人）。</li>
+  </ul>
+  <div class="vp"><div><div class="fig"><svg viewBox="0 0 300 170" class="vps" role="img" aria-label="Kuhlthau の六段階と確信の推移の模式図。探索で最も下がり、定式化で上向きに転じる"><line x1="10" y1="128" x2="296" y2="128" stroke="var(--fg)"/><text x="20" y="142" text-anchor="middle" class="vpl">開始</text><text x="74" y="142" text-anchor="middle" class="vpl">選択</text><text x="128" y="142" text-anchor="middle" class="vpl">探索</text><text x="182" y="142" text-anchor="middle" class="vpl">定式化</text><text x="236" y="142" text-anchor="middle" class="vpl">収集</text><text x="290" y="142" text-anchor="middle" class="vpl">提示</text><polyline points="20,95 74,67.5 128,111.5 182,73 236,42.2 290,31.2" fill="none" stroke="var(--main)" stroke-width="2"/><circle cx="20" cy="95" r="4" fill="var(--main)"/><circle cx="74" cy="67.5" r="4" fill="var(--main)"/><circle cx="128" cy="111.5" r="4" fill="var(--main)"/><circle cx="182" cy="73" r="4" fill="var(--accent)"/><circle cx="236" cy="42.2" r="4" fill="var(--main)"/><circle cx="290" cy="31.2" r="4" fill="var(--main)"/><text x="136" y="119.5" class="vps-s">混乱・不安が最も強い</text><text x="190" y="85" class="vps-s">焦点が定まる転回点</text><text x="0" y="12" class="vps-s">確信 ↑（模式）</text><text x="0" y="164" class="vps-s">作業の進行 →  数か月にわたる</text></svg></div><h4>Kuhlthau の六段階</h4><p class="src">Kuhlthau 1991。本書 3.4 節</p><p>21 か所の図書館の 385 人を調べた。期末レポートのために数か月探す学生に、作業と感情の両方を尋ねた。探索の段階で混乱と不安が最も強くなり、焦点が定まる定式化が転回点になる。参加者の半数は最後まで焦点に到達しなかった。図の高さは本文の記述から描いた模式で、測定値ではない</p></div><div><div class="fig"><svg viewBox="0 0 300 124" class="vps" role="img" aria-label="Broder の意図の分類。ナビゲーションは調査 24.5%、ログ 20%。情報は 39% と 48%。取引は 36% と 30%"><rect x="0" y="4" width="10" height="10" fill="var(--main)"/><text x="14" y="13" class="vpl">調査</text><rect x="50" y="4" width="10" height="10" fill="color-mix(in srgb,var(--main) 40%,var(--panel))"/><text x="64" y="13" class="vpl">ログ</text><line x1="112" y1="22" x2="112" y2="112" stroke="var(--fg)"/><text x="0" y="38" class="vpl">ナビゲーション</text><rect x="112" y="24" width="60.4" height="10" fill="var(--main)"/><text x="176.4" y="33" class="vps-s num">24.5%</text><rect x="112" y="36" width="49.3" height="10" fill="color-mix(in srgb,var(--main) 40%,var(--panel))"/><text x="165.3" y="45" class="vps-s num">20%</text><text x="0" y="70" class="vpl">情報</text><rect x="112" y="56" width="96.2" height="10" fill="var(--main)"/><text x="212.2" y="65" class="vps-s num">39%</text><rect x="112" y="68" width="118.4" height="10" fill="color-mix(in srgb,var(--main) 40%,var(--panel))"/><text x="234.4" y="77" class="vps-s num">48%</text><text x="0" y="102" class="vpl">取引</text><rect x="112" y="88" width="88.8" height="10" fill="var(--main)"/><text x="204.8" y="97" class="vps-s num">36%</text><rect x="112" y="100" width="74" height="10" fill="color-mix(in srgb,var(--main) 40%,var(--panel))"/><text x="190" y="109" class="vps-s num">30%</text></svg></div><h4>クエリの裏にある意図</h4><p class="src">Broder 2002。本書 3.7 節</p><p>ウェブ以前の検索は、情報を求める意図だけを想定していた。Broder は 3,200 件の調査と 1,000 件のログで、特定のサイトへ行くナビゲーションが 2 割、何かを行う取引が 3 割を占めると見積もった。Rose と Levinson の再分類では情報型が約 6 割になり、比率は標本で動く。意味が曖昧なクエリは推定で 16% にとどまる（Song ら）</p></div></div>
+
+  <h3>第 4 章 クエリの指定 ― 何を、どこに書かせるか</h3>
+  <p>利用者が渡す情報（自然文・キーワード・演算子・コマンド）と、渡す仕組み（入力欄・フォーム・リンク）の二つの軸で整理する。ウェブで主流になったのはキーワードを入力欄に書く方式である。</p>
+  <div class="vp"><div><div class="fig"><svg viewBox="0 0 300 150" class="vps" role="img" aria-label="クエリの語数の分布。1 語 18.5%、2 語 32.3%、3 語 24.5%、4 語 12.7%、5 語以上は 1 割強"><line x1="8" y1="120" x2="292" y2="120" stroke="var(--fg)"/><rect x="14" y="66.6" width="19.6" height="53.4" fill="var(--main)"/><text x="23.8" y="62.6" text-anchor="middle" class="vps-s num">18.5</text><text x="23.8" y="133" text-anchor="middle" class="vpl num">1</text><rect x="45.6" y="26.7" width="19.6" height="93.3" fill="var(--accent)"/><text x="55.3" y="22.7" text-anchor="middle" class="vps-s num">32.3</text><text x="55.3" y="133" text-anchor="middle" class="vpl num">2</text><rect x="77.1" y="49.2" width="19.6" height="70.8" fill="var(--main)"/><text x="86.9" y="45.2" text-anchor="middle" class="vps-s num">24.5</text><text x="86.9" y="133" text-anchor="middle" class="vpl num">3</text><rect x="108.7" y="83.3" width="19.6" height="36.7" fill="var(--main)"/><text x="118.4" y="79.3" text-anchor="middle" class="vps-s num">12.7</text><text x="118.4" y="133" text-anchor="middle" class="vpl num">4</text><rect x="140.2" y="101.8" width="19.6" height="18.2" fill="var(--main)"/><text x="150" y="97.8" text-anchor="middle" class="vps-s num">6.3</text><text x="150" y="133" text-anchor="middle" class="vpl num">5</text><rect x="171.8" y="111.3" width="19.6" height="8.7" fill="var(--main)"/><text x="181.6" y="107.3" text-anchor="middle" class="vps-s num">3.0</text><text x="181.6" y="133" text-anchor="middle" class="vpl num">6</text><rect x="203.3" y="115.7" width="19.6" height="4.3" fill="var(--main)"/><text x="213.1" y="111.7" text-anchor="middle" class="vps-s num">1.5</text><text x="213.1" y="133" text-anchor="middle" class="vpl num">7</text><rect x="234.9" y="117.7" width="19.6" height="2.3" fill="var(--main)"/><text x="244.7" y="113.7" text-anchor="middle" class="vps-s num">0.8</text><text x="244.7" y="133" text-anchor="middle" class="vpl num">8</text><rect x="266.4" y="118.8" width="19.6" height="1.2" fill="var(--main)"/><text x="276.2" y="114.8" text-anchor="middle" class="vps-s num">0.4</text><text x="276.2" y="133" text-anchor="middle" class="vpl num">9</text><text x="8" y="147" class="vps-s">語数（%）</text></svg></div><h4>クエリの語数</h4><p class="src">Jansen ら 2007（Dogpile、2005 年の 150 万件）。本書 4.1 節</p><p>平均は 2.8 語で、2 語が最も多い。1 語のクエリは 1997 年の 31% から 18.5% に減った。入力中の候補は、この短い断片を前提に作る</p></div><div><div class="fig"><svg viewBox="0 0 300 92" class="vps" role="img" aria-label="入力欄の作りと平均語数。短い欄 2.81、長い欄 3.43、見出し検索語 4.19、困りごとを詳しくの見出し 6.02"><line x1="140" y1="4" x2="140" y2="82" stroke="var(--fg)"/><text x="0" y="16" class="vpl">短い欄（18 字分）</text><rect x="140" y="7" width="46.6" height="12" fill="var(--main)"/><text x="190.6" y="16" class="vpl num">2.81</text><text x="0" y="36" class="vpl">長い欄（6 行）</text><rect x="140" y="27" width="56.8" height="12" fill="var(--main)"/><text x="200.8" y="36" class="vpl num">3.43</text><text x="0" y="56" class="vpl">見出し「検索語」</text><rect x="140" y="47" width="69.4" height="12" fill="var(--main)"/><text x="213.4" y="56" class="vpl num">4.19</text><text x="0" y="76" class="vpl">見出し「困りごと」と説明</text><rect x="140" y="67" width="99.8" height="12" fill="var(--accent)"/><text x="243.8" y="76" class="vpl num">6.02</text></svg></div><h4>入力欄の作りで語数が変わる</h4><p class="src">Franzen と Karlgren 2000、Belkin ら 2003。本書 4.2 節</p><p>欄を長くすると語数が増えた（19 人）。大きな欄の上の見出しを「検索語」から「あなたの困りごとを詳しく」に替えると、語数は 6 語に増え、書き直しの回数は減った（32 人）。ただし語数と正解率の関係は見つからなかった</p></div></div>
+  <ul>
+    <li><b>自然文で尋ねるのは初心者の自然な傾向である。</b>7 年生の 35%、5〜6 年生の 63% が文で質問した。当時の検索エンジンは答えられず、子どもは質問をキーワードに直すことを覚え直した。</li>
+    <li><b>演算子はほとんど使われない。</b>クエリの 1.1%、利用者の 8.7% にとどまる（約 60 万人、13 週間）。使う人も誤解する。日常語の and は範囲を広げる意味に、or は二者択一の意味に読まれる。全部の語を引用符で囲み、0 件にしてしまった参加者もいた。</li>
+    <li><b>黙って行う変換は、説明できるかどうかで分かれる。</b>「to be or not to be」が 0 件になった理由を、14 人中 9 人はストップワードの除去として説明できなかった。語順と近さを順位に使う変換は、気付かれなくても混乱を生まなかった。</li>
+    <li><b>入力欄の前に選択を強制しない。</b>Windows XP の検索は、ファイルの種類を選ぶまで入力欄を出さなかった。既定は全体を対象にし、絞り込みは後で出す。</li>
+    <li><b>入力中の候補は急速に標準になった。</b>Yahoo の 10 万人を 17 週見た調査では、30〜37% が候補を使った。ただし結果を見る前の提案は誤った方向へ導くことがある。「最初の女性宇宙飛行士」で Sally Ride の「ride」が候補に出て、正解のテレシコワから遠ざかった参加者がいた。</li>
+  </ul>
+
+  <h3>第 5 章 結果の提示 ― 一件の代理と並び順</h3>
+  <div class="vp"><div><div class="fig"><div class="anat">
+  <div class="arow"><span class="atag">タイトル</span><div><span class="at"><b>帝都復興</b>計画の縮小、予算半減へ</span></div></div>
+  <div class="arow"><span class="atag">URL・出所</span><div><span class="au">新聞 1924-02-14 朝刊 2 面</span></div></div>
+  <div class="arow"><span class="atag">要約</span><div><span class="as">…議会は<b>帝都復興</b>院の当初案を退け、幹線道路の幅員を…区画整理は<b>計画</b>どおり続け…</span></div></div>
+</div></div><h4>結果の一件は文書の代理である</h4><p class="src">Clarke ら 2007。本書 5.1〜5.3 節</p><p>代理の質が適合の判断を決める。Clarke らは、上の結果を飛ばして下の結果が押された 1 万組を比べ、押された側の特徴を取り出した。要約がある、要約が長い、タイトルにクエリ語が多くクエリの句で始まる、URL が短い、要約が読みやすい。要約はクエリ語を含む文を文脈ごと抜き出す（KWIC）。文書の冒頭を出すより精度・再現率・好みのどれも上回り、全文を開く回数が減った</p></div><div><div class="fig"><svg viewBox="0 0 300 150" class="vps" role="img" aria-label="順位ごとのクリックの割合。1 位 43%、2 位 15%、3 位 10%、4 位以下は各 5% 以下"><line x1="8" y1="120" x2="292" y2="120" stroke="var(--fg)"/><rect x="13.4" y="26.8" width="17.6" height="93.2" fill="var(--accent)"/><text x="22.2" y="22.8" text-anchor="middle" class="vps-s num">43</text><text x="22.2" y="133" text-anchor="middle" class="vpl num">1</text><rect x="41.8" y="87.5" width="17.6" height="32.5" fill="var(--main)"/><text x="50.6" y="83.5" text-anchor="middle" class="vps-s num">15</text><text x="50.6" y="133" text-anchor="middle" class="vpl num">2</text><rect x="70.2" y="98.3" width="17.6" height="21.7" fill="var(--main)"/><text x="79" y="94.3" text-anchor="middle" class="vps-s num">10</text><text x="79" y="133" text-anchor="middle" class="vpl num">3</text><text x="107.4" y="133" text-anchor="middle" class="vpl num">4</text><text x="135.8" y="133" text-anchor="middle" class="vpl num">5</text><text x="164.2" y="133" text-anchor="middle" class="vpl num">6</text><text x="192.6" y="133" text-anchor="middle" class="vpl num">7</text><text x="221" y="133" text-anchor="middle" class="vpl num">8</text><text x="249.4" y="133" text-anchor="middle" class="vpl num">9</text><text x="277.8" y="133" text-anchor="middle" class="vpl num">10</text><rect x="95.2" y="109.2" width="194.8" height="10.8" fill="var(--main-soft)"/><line x1="95.2" y1="109.2" x2="290" y2="109.2" stroke="var(--main)" stroke-dasharray="4 3"/><text x="193.6" y="105.2" text-anchor="middle" class="vps-s">各 5% 以下</text><text x="8" y="147" class="vps-s">順位（クリックの %）</text></svg></div><h4>順位とクリック</h4><p class="src">Joachims ら 2005（視線計測、29 人）。本書 5.5 節</p><p>1 位と 2 位はほぼ同じだけ見られるが、押されるのは 1 位が圧倒的に多い。上位 10 件の順を逆にすると下まで読む量は増えたが、上寄りを押す傾向は残り、選んだ文書の適合度は下がった。別の実験では、正解が 1〜2 位にあれば約 84% が正しく選び、8 位では約 11% に落ちた</p></div></div>
+  <ul>
+    <li><b>要約の長さは課題で変わる。</b>情報を求める課題では長い要約ほど速く、特定のサイトへ行く課題では遅くなった。長い要約が URL から視線を逸らしたためである（22 人）。答えを含む段落を返す仕組みでは、段落の長さが最も好まれた。</li>
+    <li><b>件数より速さ。</b>1 ページの件数を 10 から 30 に増やすと利用が 20% 減った。利用者は件数を増やしたいと答えていたが、生成時間が 0.4 秒から 0.9 秒に延びたことが原因だった。</li>
+    <li><b>長い文書ではヒット位置の縮図。</b>色分けしたヒット語を縮図に示す版を、13 人中 10 人が好んだ。</li>
+    <li><b>関連度の数値や棒は消えた。</b>意味が利用者に分からず、縦の位置が順位をすでに示すからである。結果をサムネイルで示す試みも、テキストより良いという証拠がない。</li>
+  </ul>
+
+  <h3>第 6 章 クエリの再構成 ― 書き直しを助ける</h3>
+  <p>検索セッションの約半分で、利用者はクエリを書き直す。AltaVista の 300 万件のログでは 52% が書き直し、32% が 3 回以上クエリを打った。書き直しには係留が付きまとう。最初の語に引きずられ、少しずつしか変えられない。</p>
+  <div class="vp"><div><div class="fig"><ol class="anch"><li><span class="num">1</span><span class="bk">〔書名〕</span> <i>sales</i></li><li><span class="num">2</span><span class="bk">〔書名〕</span> <i>amount</i> sales</li><li><span class="num">3</span><span class="bk">〔書名〕</span> <i>quantity</i> sales</li><li><span class="num">4</span><span class="bk">〔書名〕</span> <i>actual</i> quantity sales</li><li><span class="num">5</span><span class="bk">〔書名〕</span> sales actual quantity</li><li><span class="num">6</span><span class="bk">〔書名〕</span> <i>all</i> sales actual quantity</li><li><span class="num">7</span><i>all sales</i> <span class="bk">〔書名〕</span></li><li><span class="num">8</span><i>worldwide sales</i> <span class="bk">〔書名〕</span></li></ol></div><h4>係留 ― 同じ語の並べ替えを繰り返す</h4><p class="src">Russell 2006 が示した Google のログ。本書 6.1 節</p><p>「新しい Harry Potter の本が何冊売れたか」を探す一人の 8 回のクエリ。〔書名〕は Harry Potter and the Half-Blood Prince、色の付いた語が前のクエリから変えた語である。5 回目は語順だけを変えた。書名を最後まで動かさず、sales の言い換えと語順だけを変え続けた。最初の語を離れる手がかりは、利用者の外から与える必要がある</p></div><div><div class="fig"><svg viewBox="0 0 300 112" class="vps" role="img" aria-label="書き直しの種類。修飾語 25%、情報を足す 24%、主要語 15%、別の語で 12%、その他 24%"><line x1="136" y1="4" x2="136" y2="102" stroke="var(--fg)"/><text x="0" y="16" class="vpl">修飾語を足す・変える</text><rect x="136" y="7" width="100" height="12" fill="var(--main)"/><text x="240" y="16" class="vpl num">25%</text><text x="0" y="36" class="vpl">情報を足して言い換える</text><rect x="136" y="27" width="96" height="12" fill="var(--main)"/><text x="236" y="36" class="vpl num">24%</text><text x="0" y="56" class="vpl">主要語を足す</text><rect x="136" y="47" width="60" height="12" fill="var(--main)"/><text x="200" y="56" class="vpl num">15%</text><text x="0" y="76" class="vpl">同じ概念を別の語で</text><rect x="136" y="67" width="48" height="12" fill="var(--main)"/><text x="188" y="76" class="vpl num">12%</text><text x="0" y="96" class="vpl">その他</text><rect x="136" y="87" width="96" height="12" fill="var(--main)"/><text x="236" y="96" class="vpl num">24%</text></svg></div><h4>書き直しの種類</h4><p class="src">Anick 2003（AltaVista の Prisma）。本書 6.3 節</p><p>「buckets wholesale」から「plastic buckets」のように修飾語を足す・変えるものが最も多い。Prisma は上位の結果から語を 12 個に絞って示し、1 回のクリックでクエリに足して検索し直す。書き直しのあるセッションの 25% で使われ、2 週間後には 38% に上がった</p></div></div>
+  <ul>
+    <li><b>用語の提案は、出したときの約 35% で使われる。</b>1 回のクリックで足せることが条件で、40 語を並べて複数選ばせ、選ぶまで結果を見せない作りは負担が大きく、使われなかった。</li>
+    <li><b>綴りの修正は、ログから学ぶ。</b>クエリの 10〜15% に誤りがある。誤りと次の修正の組をログから学ぶと、誤りの約半数を 88〜90% の正確さで直せる。ただし、母集団を代表する 100 人の調査では、Google で誤りを犯した 37 人の誰も修正のリンクを押さなかった。</li>
+    <li><b>古典的な関連性フィードバックは、実際の画面にほぼ残っていない。</b>適合文書に印を付けさせてクエリを作り直す方式で、人工的な実験では強い。しかし適合の判断は手間がかかって誤りやすく、改善も安定しない。一件だけを起点にする関連記事は使われ、PubMed では 18.5% のセッションで押された。</li>
+    <li><b>人気の行き先。</b>同じクエリの利用者が最終的に着いたサイトを示すと、探索的な課題で語の提案より高く評価された（利用 35.2%）。</li>
+  </ul>
+
+  <h3>第 7 章 探す過程の支援 ― 始め方、履歴、全体</h3>
+  <p>クエリの前後、つまりどこから始めるか、どこまで来たか、集めたものをどう組み立てるかを扱う。本書は、この領域が第 4〜6 章ほど成熟していないと認める。</p>
+  <div class="vp"><div><div class="fig"><svg viewBox="0 0 300 200" class="vps" role="img" aria-label="検索画面の模式図に、アジャイルビューの六つのビューを重ねた図"><rect x="4" y="4" width="292" height="22" fill="var(--panel)" stroke="var(--line)"/><text x="10" y="18" class="vpl"></text><text x="10" y="19" class="vps-s">検索欄</text><rect x="4" y="32" width="74" height="124" fill="var(--panel)" stroke="var(--line)"/><text x="10" y="46" class="vpl">概要</text><text x="10" y="59" class="vps-s">ファセット</text><text x="10" y="74" class="vps-s">件数の分布</text><rect x="84" y="32" width="132" height="124" fill="var(--panel)" stroke="var(--line)"/><text x="90" y="46" class="vpl">主ビュー</text><text x="90" y="59" class="vps-s">結果の一覧</text><rect x="92" y="70" width="116" height="12" fill="var(--main-soft)"/><rect x="92" y="90" width="116" height="12" fill="var(--main-soft)"/><rect x="92" y="110" width="116" height="12" fill="var(--main-soft)"/><rect x="92" y="130" width="116" height="12" fill="var(--main-soft)"/><text x="96" y="148" class="vps-s">行の要約 ＝ プレビュー</text><rect x="222" y="32" width="74" height="60" fill="var(--panel)" stroke="var(--line)"/><text x="228" y="46" class="vpl">レビュー</text><text x="228" y="59" class="vps-s">履歴</text><rect x="222" y="96" width="74" height="60" fill="var(--panel)" stroke="var(--line)"/><text x="228" y="110" class="vpl">周辺</text><text x="228" y="123" class="vps-s">保存した一件</text><rect x="4" y="162" width="292" height="32" fill="color-mix(in srgb,var(--main) 12%,var(--panel))" stroke="var(--line)"/><text x="10" y="176" class="vpl">共有</text><text x="10" y="189" class="vps-s">他の人の検索と選択</text></svg></div><h4>アジャイルビューの六つのビュー</h4><p class="src">Marchionini ら 2000。本書 7.3 節</p><p>主ビュー（結果と開いた文書）、概要（何から選べるか）、プレビュー（選ぶと何が起きるか。要約や件数）、レビュー（履歴）、周辺（いま見ていないが後で要るもの）、共有（他の人の操作）の六つを、行き来しやすく配置する。全部を備えた画面はまだ少ない</p></div><div><div class="fig"><div class="crumbs"><div><span class="ct">経路型</span><span class="cp">検索 › 2 ページ目 › 戻る › 「横浜」 › 1 件目</span></div><div><span class="ct">位置型</span><span class="cp">新聞 › 1923 年 › 9 月 › 朝刊 1 面</span></div><div><span class="ct">ファセット</span><span class="cp"><span class="ck">年: 1923 ×</span><span class="ck">種別: 朝刊 ×</span><span class="ck">地域: 横浜 ×</span></span></div></div></div><h4>パンくずは位置を示す</h4><p class="src">Nielsen 2007、Rogers ら 2003、Hearst 2006。本書 7.2 節</p><p>辿った順を示す経路型より、構造上の位置を示す位置型がよい。検索エンジンから深いページに直接来た人にも使え、戻るボタンが経路の役をすでに果たすからである。位置型は構造の理解も助けた（45 人）。ファセットでは条件ごとに分けて示し、一つずつ外せるようにする</p></div></div>
+  <ul>
+    <li><b>開始点。</b>Yahoo のディレクトリは 1996 年 5 月時点で推定 50 万サイトのうち 20 万を収めていたが、ウェブの成長に追いつけず、検索エンジンに置き換わった。図書館の目録は、コレクションを先に選ばせる方式から、一度の検索で横断してファセットで出所を絞る方式へ移った。全項目を先に選ばせるフォームは 0 件を生みやすい。</li>
+    <li><b>情報源の質。</b>検索結果の代理は、情報源の信頼性を判断する手がかりをほとんど持たない。図書館員が担っていた選別を、検索は取り除いてしまった。</li>
+    <li><b>センスメイキング。</b>分析者は集めた断片を並べ替え、まとめ、名前を付けながら考える。道具には、分類を後回しにして置くだけで始められること、出所へのリンクを保つこと、足りない情報を示すことが求められる（Aquanet、VIKI、Sandbox）。旅行の計画のように部品が互いに依存する作業は、まだうまく支援されていない。</li>
+  </ul>
+
+  <h3>第 8 章 ナビゲーションと検索の統合 ― ファセット</h3>
+  <p>検索はその場限りの集合を作り、ナビゲーションはあらかじめ定めた集合へ導く。カテゴリは平坦・階層・ファセットのどれかで、絞り込み・グループ化・並べ替えに使う。階層は大きな集合で破綻した。Yahoo のディレクトリでは内容・地域・商業の区分が混ざり、同じカヤックのサイトへ着く道筋が一つに決まらなかった。ファセットは、互いに独立した複数の分類（年、種別、地域など）を一件に何個でも付け、どの分類からでも始められるようにする。</p>
+  <div class="fig"><div class="fct" id="fct">
+  <div class="fct-mode" role="tablist"><button type="button" class="btn small on" data-mode="facet">ファセット</button><button type="button" class="btn small" data-mode="param">パラメトリック</button></div>
+  <div class="fct-body">
+    <div class="fct-side" id="fctside"></div>
+    <div class="fct-res"><div class="fct-cnt" id="fctcnt"></div><ul id="fctlist"></ul></div>
+  </div>
+</div></div><p class="cap"><b>同じ 18 件を二つの方式で絞る</b> ファセットでは、選ぶたびに他の選択肢の件数が変わり、0 件になる選択肢は押せない。パラメトリックでは全項目を先に選んでから検索するので、0 件になっても、どの条件を外せばよいかが分からない。架空の新聞記事と図書の例</p>
+  <div class="vp one"><div><div class="fig"><svg viewBox="0 0 300 72" class="vps" role="img" aria-label="Flamenco を選んだ割合。単純なバラの課題では約半数、普段の探し方に役立つ 88%、全体として好む 91%"><line x1="118" y1="4" x2="118" y2="62" stroke="var(--fg)"/><text x="0" y="16" class="vpl">バラの画像を探す</text><rect x="118" y="7" width="69" height="12" fill="var(--main)"/><text x="191" y="16" class="vpl num">約 50%</text><text x="0" y="36" class="vpl">普段の探し方に役立つ</text><rect x="118" y="27" width="121.4" height="12" fill="var(--main)"/><text x="243.4" y="36" class="vpl num">88%</text><text x="0" y="56" class="vpl">全体として好む</text><rect x="118" y="47" width="125.6" height="12" fill="var(--main)"/><text x="247.6" y="56" class="vpl num">91%</text></svg></div><p class="cap"><b>Flamenco を選んだ割合</b> 美術史の学生 32 人が約 3.5 万点の美術画像で、ファセットの Flamenco と、検索欄だけの画像検索を比べた。一つの条件で済む課題だけは半々に分かれた。Flamenco は一桁遅かったが、それでも 91% が好んだ。キーワード派を自認した参加者も、慣れるとリンクから始めるようになった。Yee ら 2003。本書 8.6 節</p></div></div>
+  <ul>
+    <li><b>時間を縮めたのは、ラベルではなくグループである。</b>Dumais らの実験では、結果をカテゴリごとにまとめると速くなり、一覧の各行にカテゴリ名を添えるだけでは差が出なかった。ただし実験のクエリは「giants」のように曖昧に作られていて、差は実際より大きく出た可能性がある。</li>
+    <li><b>件数の表示（クエリプレビュー）がファセットを支える。</b>選ぶ前に結果の数が分かるので、0 件の袋小路に入らない。</li>
+    <li><b>群は少ないほどよい。</b>10・20・40 群を比べると、40 群は多すぎると評された。</li>
+  </ul>
+  <div class="tbl"><table>
+    <tr><th></th><th>カテゴリ（ファセット）</th><th>クラスタリング</th></tr>
+    <tr><td>作り方</td><td>分類を設計し、一件ずつ付ける。自動の付与は平均 75% 程度の正確さ</td><td>全自動。どの集合にもすぐ使える</td></tr>
+    <tr><td>分かりやすさ</td><td>意味の単位が予測でき、毎回同じ</td><td>ラベルの粒度がばらつき、毎回変わる。単一の共通語でまとめると理解しやすい</td></tr>
+    <tr><td>多面性</td><td>一件を複数の分類から辿れる</td><td>一件を一つの群に押し込む</td></tr>
+    <tr><td>向く場面</td><td>絞り込み、横への移動、構造の理解</td><td>曖昧なクエリの意味の分離、不要な群を除くこと、その時々の話題の発見</td></tr>
+    <tr><td>実験の結果</td><td>比べた研究では一覧にもクラスタにも勝った</td><td>共通語でまとめる Findex は、2 か月で使われる割合が 26% から 39% に増えた</td></tr>
+  </table></div>
+
+  <h3>第 9 章 個人化 ― どこまで効くか</h3>
+  <p>個人化は、利用者が明示した好みを使うか行動から推し量るかと、一人の情報を使うか多数の情報を使うかの二軸で分けられる。</p>
+  <div class="vp"><div><div class="fig"><div class="quad">
+  <div></div><div class="qh">一人の情報</div><div class="qh">多数の情報</div>
+  <div class="qh">明示</div><div class="qc">ポータルのカスタマイズ、アラート、プロフィールの編集<span>続かない。設定を変える人は少数</span></div><div class="qc">ソーシャルブックマーク、協調フィルタリング<span>映画や音楽など好みの領域で働く</span></div>
+  <div class="qh">暗黙</div><div class="qc">検索・閲覧の履歴、読んだ時間<span>繰り返す曖昧なクエリでだけ差が出る</span></div><div class="qc on">多数の人のクリック、「これを買った人は」<span>一度でも引かれたクエリなら順位を改善できる</span></div>
+</div></div><h4>個人化の四象限</h4><p class="src">本書 9 章の表 9.1 を簡略化</p><p>明示は続かない。MyYahoo の利用者の多くはページをカスタマイズせず、Google の技術者 18 人のうちアラートを使っていたのは 3 人だった。機械が作ったプロフィールを編集させると結果はかえって悪くなり、語を消す操作は足す操作の約 4 倍の害を生んだ。暗黙の信号のうち、多数の人のクリックは順位の改善に使える</p></div><div><div class="fig"><svg viewBox="0 0 300 72" class="vps" role="img" aria-label="クリック履歴による並べ替えの改善率。全クエリで 1.4%、一位が選ばれなかったクエリで 3.6%、押す結果が散るクエリで 23.7%"><line x1="150" y1="4" x2="150" y2="62" stroke="var(--fg)"/><text x="0" y="16" class="vpl">全クエリ</text><rect x="150" y="7" width="5.3" height="12" fill="var(--main)"/><text x="159.3" y="16" class="vpl num">1.4%</text><text x="0" y="36" class="vpl">1 位が選ばれなかったクエリ</text><rect x="150" y="27" width="13.6" height="12" fill="var(--main)"/><text x="167.6" y="36" class="vpl num">3.6%</text><text x="0" y="56" class="vpl">押す結果が人で散るクエリ</text><rect x="150" y="47" width="89.7" height="12" fill="var(--accent)"/><text x="243.7" y="56" class="vpl num">23.7%</text></svg></div><h4>個人のクリック履歴で並べ替えた改善</h4><p class="src">Dou ら 2007（1 万人、5.6 万クエリ）。本書 9.2 節</p><p>改善が大きいのは、人によって押す結果が散るクエリ（クリックのエントロピーが 2.5 以上）だけである。押す結果が揃うクエリでは、検索エンジンの順位と同じか悪かった。曖昧なクエリはもともと少数で、語を一つ足せば利用者自身が解決できる</p></div></div>
+  <p>本書の結論は、自動の個人化はまだ大きな影響を持っていない、である。理由は予測の難しさ、プライバシー、そして「静かに記録してほしいが、何を足すかは自分で決めたい」という利用者の矛盾した要望にある。Google の個人化は 5 回に 1 回のクエリで、1 ページ 10 件のうち最大 2 件を動かすだけだと説明された。順位を動かすことには損もある。検索の約 40% は以前見た情報の探し直しで、順位が変わると探し直しに時間がかかった。自分の情報（メール、予定、ファイル）の検索では、関連度順より日付順が好まれ、人の名前での並べ替えが重要だった（Stuff I've Seen）。</p>
+
+  <h3>第 10 章 検索の可視化 ― なぜ図が検索を助けないか</h3>
+  <p>人の知覚は図に強い。それでも Chen と Yu のメタ分析は、可視化が検索の成績を改善した統計的な証拠を見つけなかった。成績を最も左右したのは画面ではなく参加者の認知能力で、能力を揃えると単純な図のほうが成績がよかった。難しさの根は、テキストが名義尺度であることにある。語や名前には順序がないので、軸に並べるとアルファベット順の山と谷が意味のない傾向に見える。文書を点として 2 次元に配置する星図も、隣り合うことが何を意味するかを利用者が読めない。</p>
+  <div class="vp"><div><div class="fig"><svg viewBox="0 0 300 179" class="vps" role="img" aria-label="TileBars の模式図。文書ごとに長さを横幅、段落ごとの各語の出現を濃さで示す。一つ目は中ほどで三語がそろい、三つ目は計画しか出てこない"><text x="0" y="17" class="vpl">震災後の都市計画を論じる長文</text><text x="0" y="30" class="vps-s">震災</text><rect x="30" y="22" width="168" height="9" fill="none" stroke="var(--line)"/><rect x="55" y="23" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><rect x="67" y="23" width="10" height="7" fill="var(--main)" fill-opacity="1"/><rect x="79" y="23" width="10" height="7" fill="var(--main)" fill-opacity="1"/><rect x="91" y="23" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><rect x="103" y="23" width="10" height="7" fill="var(--main)" fill-opacity="1"/><rect x="115" y="23" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><rect x="151" y="23" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><text x="0" y="39" class="vps-s">復興</text><rect x="30" y="31" width="168" height="9" fill="none" stroke="var(--line)"/><rect x="67" y="32" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><rect x="79" y="32" width="10" height="7" fill="var(--main)" fill-opacity="1"/><rect x="91" y="32" width="10" height="7" fill="var(--main)" fill-opacity="1"/><rect x="103" y="32" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><text x="0" y="48" class="vps-s">計画</text><rect x="30" y="40" width="168" height="9" fill="none" stroke="var(--line)"/><rect x="31" y="41" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><rect x="67" y="41" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><rect x="79" y="41" width="10" height="7" fill="var(--main)" fill-opacity="1"/><rect x="91" y="41" width="10" height="7" fill="var(--main)" fill-opacity="1"/><rect x="103" y="41" width="10" height="7" fill="var(--main)" fill-opacity="1"/><rect x="115" y="41" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><rect x="163" y="41" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><text x="0" y="74" class="vpl">復興院の設置を報じる短信</text><text x="0" y="87" class="vps-s">震災</text><rect x="30" y="79" width="60" height="9" fill="none" stroke="var(--line)"/><rect x="31" y="80" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><rect x="43" y="80" width="10" height="7" fill="var(--main)" fill-opacity="1"/><rect x="55" y="80" width="10" height="7" fill="var(--main)" fill-opacity="1"/><rect x="67" y="80" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><rect x="79" y="80" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><text x="0" y="96" class="vps-s">復興</text><rect x="30" y="88" width="60" height="9" fill="none" stroke="var(--line)"/><rect x="31" y="89" width="10" height="7" fill="var(--main)" fill-opacity="1"/><rect x="43" y="89" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><rect x="55" y="89" width="10" height="7" fill="var(--main)" fill-opacity="1"/><rect x="67" y="89" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><rect x="79" y="89" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><text x="0" y="105" class="vps-s">計画</text><rect x="30" y="97" width="60" height="9" fill="none" stroke="var(--line)"/><rect x="31" y="98" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><rect x="43" y="98" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><rect x="55" y="98" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><rect x="67" y="98" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><text x="0" y="131" class="vpl">予算審議の議事録</text><text x="0" y="144" class="vps-s">震災</text><rect x="30" y="136" width="144" height="9" fill="none" stroke="var(--line)"/><text x="0" y="153" class="vps-s">復興</text><rect x="30" y="145" width="144" height="9" fill="none" stroke="var(--line)"/><rect x="43" y="146" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><rect x="79" y="146" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><rect x="115" y="146" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><text x="0" y="162" class="vps-s">計画</text><rect x="30" y="154" width="144" height="9" fill="none" stroke="var(--line)"/><rect x="31" y="155" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><rect x="43" y="155" width="10" height="7" fill="var(--main)" fill-opacity="1"/><rect x="55" y="155" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><rect x="67" y="155" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><rect x="79" y="155" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><rect x="91" y="155" width="10" height="7" fill="var(--main)" fill-opacity="1"/><rect x="103" y="155" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><rect x="115" y="155" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><rect x="127" y="155" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><rect x="139" y="155" width="10" height="7" fill="var(--main)" fill-opacity="0.8"/><rect x="151" y="155" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/><rect x="163" y="155" width="10" height="7" fill="var(--main)" fill-opacity="0.5"/></svg></div><h4>TileBars ― ヒットの位置と重なり</h4><p class="src">Hearst 1995。本書 10.7 節</p><p>一件の結果ごとに、横幅で文書の長さを、行ごとに各クエリ語を、列ごとに段落を示し、出現の多さを濃さで描く。一つ目は中ほどで三語がそろう。三つ目は長いが「計画」しか出てこないので、読まずに外せる。Reiterer らの比較では、並べ替えのできる表に次いで好まれた。図の語と文書は例</p></div><div><div class="fig"><svg viewBox="0 0 300 68" class="vps" role="img" aria-label="一度見つけたページを、もう一方の画面で見つけ直せた割合。地図から始めた人は 11 人中 8 人、Yahoo から始めた人は 14 人中 2 人"><line x1="96" y1="4" x2="96" y2="42" stroke="var(--fg)"/><text x="0" y="16" class="vpl">地図 → Yahoo</text><rect x="96" y="7" width="116.8" height="12" fill="var(--main)"/><text x="216.8" y="16" class="vpl num">8 / 11</text><text x="0" y="36" class="vpl">Yahoo → 地図</text><rect x="96" y="27" width="22.4" height="12" fill="var(--accent)"/><text x="122.4" y="36" class="vpl num">2 / 14</text><text x="96" y="62" class="vps-s">見つけ直せた人 / 最初に見つけた人</text></svg></div><h4>地図では見つけ直せない</h4><p class="src">Chen ら 1998。本書 10.9 節</p><p>Yahoo のカテゴリと、同じページを Kohonen の地図に配置した画面を比べた。地図から始めた人は Yahoo で同じページを見つけ直せたが、Yahoo から始めた人はほとんど地図で見つけ直せなかった。「BILL」という一語のラベルを人名と読んだ人もいた</p></div></div>
+  <ul>
+    <li><b>うまくいった図は小さい。</b>文書内のヒット位置をスクロールバーや縮図に示す、クエリ語を色で強調する、の二つである。色は前注意的に目に入るので、少量なら注意を引ける。</li>
+    <li><b>件数を棒にしても数字以上ではない。</b>ファセットの件数を棒で示す版と数字だけの版で、時間にも好みにも差が出なかった（48 人）。</li>
+    <li><b>3D は 2D より、2D はテキストより遅かった。</b>魚眼表示も多くの研究で嫌われた。</li>
+    <li><b>サムネイルは見覚えの確認に向く。</b>結果一覧では、短い学習の後は空白の四角と同じ成績だった。ヒット語を大きく重ねた縮図は誤って開く回数を減らした。</li>
+  </ul>
+
+  <h3>第 11 章 テキスト分析の可視化 ― 検索とは別の目的</h3>
+  <p>可視化がテキストで成果を挙げるのは、検索ではなく分析である。読み手は専門家で、全体の傾向や関係を見ることそのものが目的になる。本書は、検索の課題と分析の課題を混同する研究を批判する。クエリ語が集合全体にどう分布するかは言語学者には面白いが、探している人がそれを見たい理由はない。</p>
+  <div class="vp"><div><div class="fig"><svg viewBox="0 0 300 150" class="vps" role="img" aria-label="同じ十語を、左はタグクラウド、右は頻度順の一覧と棒で示した図"><text x="70" y="70" font-size="17" fill="var(--fg)" style="font-weight:400">予算</text><text x="22" y="40" font-size="12.4" fill="var(--fg)" style="font-weight:400">橋梁</text><text x="100" y="108" font-size="26.6" fill="var(--fg)" style="font-weight:700">復興</text><text x="16" y="112" font-size="14" fill="var(--fg)" style="font-weight:400">区画</text><text x="104" y="34" font-size="20.3" fill="var(--fg)" style="font-weight:700">計画</text><text x="40" y="90" font-size="11.1" fill="var(--fg)" style="font-weight:400">病院</text><text x="12" y="66" font-size="15.3" fill="var(--fg)" style="font-weight:400">道路</text><text x="110" y="72" font-size="25" fill="var(--fg)" style="font-weight:700">震災</text><text x="60" y="128" font-size="11.5" fill="var(--fg)" style="font-weight:400">学校</text><text x="80" y="18" font-size="12.8" fill="var(--fg)" style="font-weight:400">公園</text><line x1="150" y1="6" x2="150" y2="132" stroke="var(--line)"/><text x="160" y="16" class="vps-s">復興</text><rect x="186" y="9" width="84" height="7" fill="var(--main)"/><text x="274" y="16" class="vps-s num">42</text><text x="160" y="28.4" class="vps-s">震災</text><rect x="186" y="21.4" width="76" height="7" fill="var(--main)"/><text x="266" y="28.4" class="vps-s num">38</text><text x="160" y="40.8" class="vps-s">計画</text><rect x="186" y="33.8" width="54" height="7" fill="var(--main)"/><text x="244" y="40.8" class="vps-s num">27</text><text x="160" y="53.2" class="vps-s">予算</text><rect x="186" y="46.2" width="38" height="7" fill="var(--main)"/><text x="228" y="53.2" class="vps-s num">19</text><text x="160" y="65.6" class="vps-s">道路</text><rect x="186" y="58.6" width="30" height="7" fill="var(--main)"/><text x="220" y="65.6" class="vps-s num">15</text><text x="160" y="78" class="vps-s">区画</text><rect x="186" y="71" width="24" height="7" fill="var(--main)"/><text x="214" y="78" class="vps-s num">12</text><text x="160" y="90.4" class="vps-s">公園</text><rect x="186" y="83.4" width="18" height="7" fill="var(--main)"/><text x="208" y="90.4" class="vps-s num">9</text><text x="160" y="102.8" class="vps-s">橋梁</text><rect x="186" y="95.8" width="16" height="7" fill="var(--main)"/><text x="206" y="102.8" class="vps-s num">8</text><text x="160" y="115.2" class="vps-s">学校</text><rect x="186" y="108.2" width="12" height="7" fill="var(--main)"/><text x="202" y="115.2" class="vps-s num">6</text><text x="160" y="127.6" class="vps-s">病院</text><rect x="186" y="120.6" width="10" height="7" fill="var(--main)"/><text x="200" y="127.6" class="vps-s num">5</text><text x="0" y="146" class="vpl">タグクラウド</text><text x="160" y="146" class="vpl">頻度順の一覧</text></svg></div><h4>タグクラウドより一覧</h4><p class="src">Rivadeneira ら 2007、Halvey と Keane 2007。本書 11.2 節</p><p>同じ 10 語を二通りに描いた。タグクラウドは、個々の語を探す課題でも全体の要旨をつかむ課題でも、単純な一覧に劣った。大きさは面積で量を示すので比べにくく、位置に意味がないので目が迷う。人が集まっている目印としては役に立つ。語と頻度は例</p></div><div><div class="fig"><div class="tbl"><table class="sys"><tr><th>道具</th><th>見せるもの</th></tr>
+<tr><td>TAKMI</td><td>コールセンターの苦情から、増えている話題を時系列の棒で</td></tr>
+<tr><td>Jigsaw</td><td>文書に出る人物・組織・場所の関係</td></tr>
+<tr><td>TRIST</td><td>複数のクエリの結果を並べ、国と時期で並べ直す</td></tr>
+<tr><td>SeeSoft</td><td>本の形のまま、語の出る行を色で</td></tr>
+<tr><td>Word Tree</td><td>ある語の後に続く句を木で</td></tr>
+<tr><td>NameVoyager</td><td>名前の流行を積み重ねた帯で</td></tr>
+<tr><td>PaperLens</td><td>学会の論文の引用と話題を年ごとに</td></tr></table></div></div><h4>分析のための道具</h4><p class="src">本書 11.1〜11.3 節</p><p>共通するのは、ある見方で選んだものを別の見方でも強調するブラッシングとリンキングである。積み重ねた帯は、各帯の形が下の帯に左右されるので値を読み誤らせる</p></div></div>
+
+  <h3>第 12 章 新しい潮流 ― 2009 年からの予測</h3>
+  <p>本書は 2009 年の時点で、モバイル、マルチメディア、ソーシャル、コマンドと自然文の混合の四つを挙げる。</p>
+  <div class="vp"><div><div class="fig"><svg viewBox="0 0 300 108" class="vps" role="img" aria-label="小さな画面での 1 クエリあたりの秒数。主要部分だけ 9.4 秒、重要度順の一列 11.0 秒、元のページ 31.3 秒、区画のサムネイル 33.3 秒"><line x1="110" y1="4" x2="110" y2="82" stroke="var(--fg)"/><text x="0" y="16" class="vpl">主要部分だけ</text><rect x="110" y="7" width="36.1" height="12" fill="var(--accent)"/><text x="150.1" y="16" class="vpl num">9.4</text><text x="0" y="36" class="vpl">重要度順に 1 列</text><rect x="110" y="27" width="42.3" height="12" fill="var(--main)"/><text x="156.3" y="36" class="vpl num">11.0</text><text x="0" y="56" class="vpl">元のページ</text><rect x="110" y="47" width="120.3" height="12" fill="var(--main)"/><text x="234.3" y="56" class="vpl num">31.3</text><text x="0" y="76" class="vpl">区画のサムネイル</text><rect x="110" y="67" width="127.9" height="12" fill="var(--main)"/><text x="241.9" y="76" class="vpl num">33.3</text><text x="110" y="102" class="vps-s">1 クエリあたりの秒数</text></svg></div><h4>小さな画面では、ページを並べ直す</h4><p class="src">Xie ら 2005（25 人、Pocket PC）。本書 12.1 節</p><p>ページを区画に分けて重要度を判定し、主要な区画だけを示すと、元のページの 3 分の 1 以下の時間で済んだ。携帯電話のクエリはデスクトップより短く、上位 1,000 クエリが全体の 22% を占めた（デスクトップは 6%）。日記調査では、移動中の情報要求の 72% が場所・時刻・会話などの文脈に依存した</p></div><div><div class="fig"><svg viewBox="0 0 300 172" class="vps" role="img" aria-label="協同で検索した課題。旅行の計画 28%、買い物 26%、文献 20%、技術情報 17%、事実確認 17%、人との予定 13%、医療 6%、不動産 6%"><line x1="86" y1="4" x2="86" y2="162" stroke="var(--fg)"/><text x="0" y="16" class="vpl">旅行の計画</text><rect x="86" y="7" width="148.8" height="12" fill="var(--main)"/><text x="238.8" y="16" class="vpl num">28%</text><text x="0" y="36" class="vpl">買い物</text><rect x="86" y="27" width="138.1" height="12" fill="var(--main)"/><text x="228.1" y="36" class="vpl num">26%</text><text x="0" y="56" class="vpl">文献の調査</text><rect x="86" y="47" width="106.2" height="12" fill="var(--main)"/><text x="196.2" y="56" class="vpl num">20%</text><text x="0" y="76" class="vpl">技術情報</text><rect x="86" y="67" width="90.3" height="12" fill="var(--main)"/><text x="180.3" y="76" class="vpl num">17%</text><text x="0" y="96" class="vpl">事実の確認</text><rect x="86" y="87" width="90.3" height="12" fill="var(--main)"/><text x="180.3" y="96" class="vpl num">17%</text><text x="0" y="116" class="vpl">人との予定</text><rect x="86" y="107" width="69.1" height="12" fill="var(--main)"/><text x="159.1" y="116" class="vpl num">13%</text><text x="0" y="136" class="vpl">医療情報</text><rect x="86" y="127" width="31.9" height="12" fill="var(--main)"/><text x="121.9" y="136" class="vpl num">6%</text><text x="0" y="156" class="vpl">不動産</text><rect x="86" y="147" width="31.9" height="12" fill="var(--main)"/><text x="121.9" y="156" class="vpl num">6%</text></svg></div><h4>人と一緒に探す課題</h4><p class="src">Morris 2008（技術系企業の 109 人）。本書 12.3 節</p><p>204 人のうち 53.4% が、他人と一緒にウェブを検索したことがあった。多いのは、肩越しに覗いて語を提案することと、リンクをメールで送ることである。事実の確認を除けば、どれも比較と統合が要る課題である</p></div></div>
+  <ul>
+    <li><b>マルチメディア。</b>画像認識は未解決で、画像の検索は周辺のテキストとタグに頼る。動画は、人が大量のキーフレームを素早く見て選ぶ対話型のほうが、アルゴリズム単独より成績がよい。画像やニュースを別のタブ（垂直検索）に分けると使われにくく、35% は使わなかった。通常の結果に混ぜると、81% が押したことがあると答えた。</li>
+    <li><b>ソーシャル。</b>人のクリックや印を順位に使う。韓国では、人が答える Q&amp;A サイトが通常の検索より使われた。</li>
+    <li><b>コマンドと自然文の混合。</b>書き方の揺れを許す「いい加減なコマンド」（Inky、Chickenfoot）と、打つたびに候補を絞って見せる Quicksilver を挙げる。次の章の fzf と同じ考え方である。</li>
+  </ul>
+
+  <h3>本資料への反映</h3>
+  <p>本書の主張のうち、共通原則と適用の章が拠っているものを対応させた。</p>
+  <div class="tbl"><table>
+    <tr><th>本書の主張</th><th>章</th><th>本資料での形</th></tr>
+    <tr><td>結果をすぐ出し、ヒット語を文脈ごと見せる</td><td class="num">1, 5</td><td><a href="#principles" data-prin="6">原則 6</a>、適用 3 のスニペット</td></tr>
+    <tr><td>語彙問題。同じ物を二人が同じ語で呼ぶのは 1 割強</td><td class="num">1</td><td><a href="#principles" data-prin="7">原則 7</a>、適用 2 の表記ゆれの同一視</td></tr>
+    <tr><td>0 件を出さない。件数付きのファセットで先に見せる</td><td class="num">1, 8</td><td><a href="#principles" data-prin="11">原則 11</a>、<a href="#principles" data-prin="12">原則 12</a>、適用 3 のファセット</td></tr>
+    <tr><td>入力欄の前に選択を強制しない</td><td class="num">4, 7</td><td>適用 1 の空クエリとスコープ</td></tr>
+    <tr><td>綴りは提案し、黙って置き換えない</td><td class="num">1, 6, 9</td><td>適用 7 の「もしかして」</td></tr>
+    <tr><td>演算子は少数の熟練者のもの</td><td class="num">4</td><td><a href="#principles" data-prin="9">原則 9</a></td></tr>
+    <tr><td>一件から次の一件へ（関連記事、人気の行き先）</td><td class="num">6</td><td>適用 5 の「同じ著者」「同じ日の紙面」</td></tr>
+    <tr><td>位置型のパンくず、条件ごとに外せる表示</td><td class="num">7, 8</td><td>適用 4 のチップ</td></tr>
+    <tr><td>速さを件数や飾りより優先する</td><td class="num">5, 10</td><td><a href="#principles" data-prin="6">原則 6</a>、<a href="#principles" data-prin="2">原則 2</a></td></tr>
+    <tr><td>自分の情報と時事は日付順が好まれる</td><td class="num">1, 9</td><td>適用 3 の「新聞は日付降順に一回で切替」</td></tr>
+  </table></div>
+  <p>本書は個人化と可視化に慎重で、どちらも曖昧なクエリや分析者の作業に限って成果を認める。本資料が検索結果に順位の個人化や星図を置かないのは、この評価による。</p>
+  <p class="note">本文は著者のサイトで公開されている全 12 章（<a href="https://searchuserinterfaces.com/book/sui_ch1_design.html">第 1 章</a>〜<a href="https://searchuserinterfaces.com/book/sui_ch12_emerging.html">第 12 章</a>）で確認した。数値は本書の記述から取り、元の論文は開いていない。図のうち、Kuhlthau の確信の高さ、TileBars・タグクラウド・パンくず・ファセットの語と件数、結果の一件の文面は説明のための例で、測定値ではない。</p>
 </section>
 
 <!-- ============ fzf ============ -->
@@ -781,15 +982,15 @@
     <tr tabindex="0" data-demo="#skr .card:nth-child(14)|#gest .card:nth-child(6)"><td class="num">3</td><td>色や形だけで伝えない</td><td>色・形・文字・位置のうち二つ以上で伝え、コントラスト 4.5:1</td><td>色、ゲシュタルト（図と地）、WCAG、Apple、Material、桜井「言語がなくてもわかるように」</td></tr>
     <tr tabindex="0" data-demo="#charts .vp > div:nth-child(5)|#charts .vp > div:nth-child(4)"><td class="num">4</td><td>量は位置と長さで示す</td><td>比べさせたい量は共通の尺度の上に置き、色は区別に使う。データでないインクは消す</td><td>Cleveland と McGill、Bertin、Tufte、JR 東日本アプリ</td></tr>
     <tr class="sep"><td colspan="4">第 2 部 振る舞い</td></tr>
-    <tr tabindex="0" data-demo="#guidelines .sfield|#skr .card:nth-child(9)"><td class="num">5</td><td>想起させず、見せて選ばせる</td><td>選択肢・候補・履歴・ショートカットを画面に出す</td><td>NN/g 6、黄金律 8、ミラー、Apple、Material、fzf</td></tr>
-    <tr tabindex="0" data-demo="#skr .card:nth-child(15)|#skr2 .card:nth-child(1)|#laws .card:nth-child(6)"><td class="num">6</td><td>状態を常に見せ、即座に返す</td><td>件数・進捗・スコープ・選択中・ON/OFF を隔てなく表示し、400ms 以内に反応する。押されたら必ず何かを返す</td><td>Norman（評価の深淵）、NN/g 1、Doherty、東京都 3、桜井 HUD・ローディング画面・「遅さは罪」「ノーリアクションを排除せよ」、fzf</td></tr>
+    <tr tabindex="0" data-demo="#guidelines .sfield|#skr .card:nth-child(9)"><td class="num">5</td><td>想起させず、見せて選ばせる</td><td>選択肢・候補・履歴・ショートカットを画面に出す</td><td>NN/g 6、黄金律 8、ミラー、Apple、Material、fzf、Hearst</td></tr>
+    <tr tabindex="0" data-demo="#skr .card:nth-child(15)|#skr2 .card:nth-child(1)|#laws .card:nth-child(6)"><td class="num">6</td><td>状態を常に見せ、即座に返す</td><td>件数・進捗・スコープ・選択中・ON/OFF を隔てなく表示し、400ms 以内に反応する。押されたら必ず何かを返す</td><td>Norman（評価の深淵）、NN/g 1、Doherty、東京都 3、桜井 HUD・ローディング画面・「遅さは罪」「ノーリアクションを排除せよ」、fzf、Hearst</td></tr>
     <tr tabindex="0" data-demo="#skr .card:nth-child(13)|#guidelines .zero"><td class="num">7</td><td>利用者の言葉で語る</td><td>内部用語・正式名称・コードを出さない</td><td>NN/g 2・9、東京都 2・5、桜井「メニューにヘルプを」</td></tr>
     <tr tabindex="0" data-demo="#laws .card:nth-child(4)|#guidelines .m3"><td class="num">8</td><td>慣習に従う</td><td>プラットフォーム標準と他サイトの作法を裏切らない</td><td>NN/g 4、ジェイコブの法則、東京都 3、Apple、Material</td></tr>
     <tr tabindex="0" data-demo="#skr .card:nth-child(9)|#skr .card:nth-child(11)"><td class="num">9</td><td>初心者には見せず、熟練者には近道を</td><td>キー操作・演算子・コマンドパレットを同じ欄に</td><td>NN/g 7、黄金律 2、桜井「高速に選びたい」「ボタン設定」、fzf</td></tr>
     <tr tabindex="0" data-demo="#motion .mdemo:nth-child(6)|#motion .mdemo:nth-child(5)"><td class="num">10</td><td>変化は動きでつなぐ</td><td>どこから来てどこへ行ったかを動きで示す。動きを減らす設定でもフェードで変化の合図を残す。何も変わらない動きは置かない</td><td>12 原則、UX in Motion Manifesto、Material と Apple の Motion</td></tr>
-    <tr tabindex="0" data-demo="#foolproof .demo:nth-child(5)|#foolproof .demo:nth-child(3)|#skr2 .card:nth-child(2)"><td class="num">11</td><td>間違えても戻れる</td><td>取り返しのつかない操作は間違えようのない形にし、それ以外は確認より取り消しで守る。壊れたら安全な側へ倒す</td><td>Norman（強制機能）、NN/g 3・5、黄金律 6、東京都 4、ポカヨケ、桜井「リトライは迅速に」</td></tr>
+    <tr tabindex="0" data-demo="#foolproof .demo:nth-child(5)|#foolproof .demo:nth-child(3)|#skr2 .card:nth-child(2)"><td class="num">11</td><td>間違えても戻れる</td><td>取り返しのつかない操作は間違えようのない形にし、それ以外は確認より取り消しで守る。壊れたら安全な側へ倒す</td><td>Norman（強制機能）、NN/g 3・5、黄金律 6、東京都 4、ポカヨケ、桜井「リトライは迅速に」、Hearst（0 件の回避）</td></tr>
     <tr class="sep"><td colspan="4">第 3 部 探す行為</td></tr>
-    <tr tabindex="0" data-demo="#seeking .mantra|#seeking svg.berry"><td class="num">12</td><td>全体像から詳細へ、往復を軽く</td><td>まず分布を見せ、絞り、求めに応じて一件を開く。一件から次のクエリへ一歩で戻れるようにする</td><td>Shneiderman、Bates、Marchionini、Pirolli と Card、fzf</td></tr>
+    <tr tabindex="0" data-demo="#seeking .mantra|#seeking svg.berry"><td class="num">12</td><td>全体像から詳細へ、往復を軽く</td><td>まず分布を見せ、絞り、求めに応じて一件を開く。一件から次のクエリへ一歩で戻れるようにする</td><td>Shneiderman、Bates、Marchionini、Pirolli と Card、fzf、Hearst</td></tr>
   </table></div>
   <h3>資料の間で対立する点</h3>
   <p>規範同士の食い違いは、序で述べたとおり信じるものの側で決める。本資料の決め方は次のとおりである。</p>
@@ -811,11 +1012,141 @@
       <h4>2 入力中</h4><ul><li>一文字ごとに候補、400ms 以内（6。fzf、Doherty）</li><li>表記ゆれを既定で同一視：新字旧字、異体字、かなカナ、全角半角、長音、ローマ字（11。ポステル）</li><li>曖昧一致は候補にのみ。本検索の既定は単語単位の AND（5。fzf の章）</li><li>候補をカテゴリで区切り、マッチ箇所を太字に（5。Material）</li><li>件数を入力中から出す（6。fzf）</li><li>Enter 連打で二度走らせない（11）</li></ul>
       <h4>3 結果一覧</h4><ul><li>年代別ヒストグラムを上に置き、ドラッグで期間を絞る（12。Shneiderman）</li><li>同じ事件の記事は日付を、同じ書名の版と巻は刊行年を縦軸に並べる（4。JR の乗換結果）</li><li>ファセットを左に、件数付き。0件になる選択肢はグレー（11。NN/g 5）</li><li>密度の高い左揃えの表。列はタイトル・著者・日付・所在（1。スイス）</li><li>スニペットはヒット語の前後、ヒット語だけアクセント色（3・12。Pirolli と Card）</li><li>古い・重複・非公開は既定で除き「含めて再検索」を用意（2。ripgrep）</li><li>遅い全文検索は見出しの結果を先に出し、残りの進捗と止める道を示す（6。桜井）</li><li>既定は関連度、新聞は日付降順に一回で切替</li></ul></div>
     <div><h4>4 絞り込みと往復</h4><ul><li>検索語・ファセット・並び順・ページを URL に（11。東京都 4、NN/g 3）</li><li>適用中の条件をチップで、× で外せる。全部外すのも一回で（11。Apple tokens、桜井「リトライは迅速に」）</li><li>無効な期間は入力できない（11）</li><li>AND / OR / NOT / <code>title:</code> <code>date:1923..1924</code> を同じ欄で（9。fzf）</li><li>検索欄は結果画面でも入力語を保ったまま上に（12。Bates、Material）</li><li>絞り込みで結果が変わるときは、消える行と残る行を動きでつなぐ（10）</li></ul>
-      <h4>5 詳細</h4><ul><li>広い画面では一覧と詳細の 2 ペイン。幅の判断は Material のウィンドウサイズクラス（1・12。fzf --preview、lazygit）</li><li>j/k で移動、Enter で開く、Esc で戻る。位置を保つ（9）</li><li>「同じ著者」「同じ日の紙面」へ一回で（12。Bates）</li><li>新聞は紙面全体を見せてヒット箇所を枠で</li></ul>
+      <h4>5 詳細</h4><ul><li>広い画面では一覧と詳細の 2 ペイン。幅の判断は Material のウィンドウサイズクラス（1・12。fzf --preview、lazygit）</li><li>j/k で移動、Enter で開く、Esc で戻る。位置を保つ（9）</li><li>「同じ著者」「同じ日の紙面」へ一回で（12。Bates）</li><li>新聞は紙面全体を見せてヒット箇所を枠で</li><li>紙面は拡大画像を左、紙面全体のミニマップを右に置き、文脈帯は紙面と同じ縦の列にする（4。可視化の章。左右は研究ではなく慣習による）</li></ul>
       <h4>6 持ち出しと保存</h4><ul><li>書誌の書き出しと検索条件の保存（12。Shneiderman の「取り出し」）</li><li>エクスポートは件数を先に見せ、上限超過時だけ確認（11）</li><li>保存した検索の削除は即時実行して数秒の「元に戻す」（11）</li></ul>
       <h4>7 0件と失敗（どの段でも）</h4><ul><li>0件画面に検索欄を残し、緩めた結果と「もしかして」を自動で（7。東京都 5、NN/g 9）</li><li>タイポは「もしかして」で提案し、勝手に置換しない（11）</li><li>司書への相談導線を全ページに（7。東京都 5）</li><li>全文検索の索引が落ちても見出し検索の結果は出し、部分結果であることを示す（11。フェイルセーフ）</li></ul></div>
   </div>
 
+</section>
+
+<!-- ============ refs ============ -->
+<section class="slide" data-title="参考資料" id="refs">
+  <div class="eyebrow">付録</div>
+  <h2>参考資料 ― 出典と確認の範囲</h2>
+  <p>本資料が引いた資料を種類ごとにまとめた。章の名前を押すとその章へ移る。各章の末尾の注記は、数値や主張のすぐ近くで出典を確かめるために残してあり、このページはその索引に当たる。</p>
+  <p>右端の列は、各章の注記に書いた確認の範囲を四段階に分けたものである。同じ主張でも、原典を読んだのか、紹介記事で確かめたのかで信頼の度合いが変わるので、引用するときはこの列を見る。</p>
+  <div class="tbl"><table class="lvkey">
+    <tr><th>表記</th><th>意味</th></tr>
+    <tr><td><span class="lv lv-src">原典</span></td><td>資料そのものを開いて確認した</td></tr>
+    <tr><td><span class="lv lv-abs">要旨</span></td><td>論文の要旨、動画の説明文や要約記事で確認した。本体は読んでいない</td></tr>
+    <tr><td><span class="lv lv-sec">二次</span></td><td>Wikipedia・解説・報道で確認した。主張の出どころである原典は開いていない</td></tr>
+    <tr><td><span class="lv lv-no">記載なし</span></td><td>本文で引いているが、確認の範囲を注記に書いていない</td></tr>
+  </table></div>
+  <h3>ガイドラインと規範</h3>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
+    <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/">Human Interface Guidelines</a></td><td>Apple</td><td><a href="#intro">はじめに</a>、<a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
+    <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/searching">HIG「Searching」</a></td><td>Apple</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
+    <tr><td><a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a></td><td>Apple、2025</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://m3.material.io/">Material Design 3</a></td><td>Google</td><td><a href="#intro">はじめに</a>、<a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://m3.material.io/foundations/layout/breakpoints">Material Design 3「Breakpoints」</a></td><td>Google</td><td><a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://m3.material.io/components/search/guidelines">Material Design 3「Search」</a></td><td>Google</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
+    <tr><td><a href="https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/uidesign_guide_v100">UI設計実践ガイド v1.0.0</a></td><td>東京都</td><td><a href="#intro">はじめに</a>、<a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
+    <tr><td><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">10 Usability Heuristics</a></td><td>Nielsen Norman Group</td><td><a href="#intro">はじめに</a>、<a href="#classics">古典と法則</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
+    <tr><td><a href="https://lawsofux.com/">Laws of UX</a></td><td>Jon Yablonski</td><td><a href="#classics">古典と法則</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">The Design of Everyday Things</a></td><td>Norman</td><td><a href="#classics">古典と法則</a>、<a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Dieter_Rams">Ten Principles for Good Design</a></td><td>Rams</td><td><a href="#classics">古典と法則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">Eight Golden Rules</a></td><td>Shneiderman、1986</td><td><a href="#classics">古典と法則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+  </table></div>
+  <h3>情報探索と検索 UI の研究</h3>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
+    <tr><td><a href="https://eric.ed.gov/?id=EJ404172">The Design of Browsing and Berrypicking Techniques for the Online Search Interface</a></td><td>Bates、1989</td><td><a href="#seeking">情報探索</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">The Eyes Have It</a></td><td>Shneiderman、1996</td><td><a href="#seeking">情報探索</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Information_foraging">Information Foraging</a></td><td>Pirolli と Card、1990 年代</td><td><a href="#seeking">情報探索</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Exploratory_search">Exploratory Search: From Finding to Understanding</a></td><td>Marchionini、2006</td><td><a href="#seeking">情報探索</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://searchuserinterfaces.com/book/">Search User Interfaces</a></td><td>Hearst、2009</td><td><a href="#intro">はじめに</a>、<a href="#seeking">情報探索</a>、<a href="#hearst">検索 UI の定本</a></td><td><span class="lv lv-src">原典</span></td></tr>
+  </table></div>
+  <h3>知覚・可視化・好みの研究</h3>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
+    <tr><td><a href="https://www.textbookofusability.com/references/clevelandmcgill1984.html">Graphical Perception</a></td><td>Cleveland と McGill、1984</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Visual_variable">Visual variable</a></td><td>Bertin</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://link.springer.com/rwe/10.1007/978-3-319-55065-7_1588">Feature Integration Theory の解説</a></td><td>Treisman の理論</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Chartjunk">Chartjunk</a></td><td>Tufte、1983</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Small_multiple">Small multiple</a></td><td>Tufte、1990</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2712349/">視覚探索とサッケードの研究</a></td><td>Najemnik と Geisler の系統</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://link.springer.com/article/10.1007/s00221-025-07152-2">視野の水平・垂直の差の研究</a></td><td>Experimental Brain Research、2025</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9012886">視野の非対称性の総説</a></td><td>PMC</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://vis.arc.vt.edu/%7Enpolys/projects/safas/science.pdf">Graphical Perception（論文）</a></td><td>Cleveland と McGill、1984</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://groups.psych.northwestern.edu/gentner/papers/MatlenEtAl_2020-SpatialAlign.pdf">Spatial alignment</a></td><td>Matlen ら、2020</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/01/cockburn-ComputingSurveys09.pdf">A review of overview+detail, zooming, and focus+context interfaces</a></td><td>Cockburn ら、2009</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">Hanging Protocol Overview</a></td><td>LEADTOOLS</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">Text Scanning Patterns: Eyetracking Evidence</a></td><td>Nielsen Norman Group</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://researchmap.jp/kojimiwa/published_papers/3501775">縦書きと横書きの読みの研究</a></td><td>Miwa ら</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://www.researchgate.net/publication/6873629_Humans_prefer_curved_visual_objects">Humans prefer curved visual objects</a></td><td>Bar と Neta、2006</td><td><a href="#swiss">スイス</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://link.springer.com/article/10.1186/s41235-023-00499-6">Cognitive Research: Principles and Implications の論文</a></td><td>Bellaiche ら、2023</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://www.researchgate.net/publication/222427507_The_effort_heuristic">The effort heuristic</a></td><td>Kruger ら、2004</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://online.ucpress.edu/collabra/article/9/1/87489/197632/The-Effort-Heuristic-Revisited-Mixed-Results-for">The Effort Heuristic Revisited</a></td><td>Collabra、2023</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
+  </table></div>
+  <h3>様式・心理・工学の解説</h3>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/International_Typographic_Style">International Typographic Style</a></td><td>Wikipedia</td><td><a href="#swiss">スイス</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://dev.to/sgbp/the-concentric-border-radius-rule-why-nested-rounded-corners-look-slightly-wrong-3hog">The concentric border-radius rule</a></td><td>DEV Community</td><td><a href="#swiss">スイス</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://ja.wikipedia.org/wiki/ゲシュタルト心理学">ゲシュタルト心理学</a></td><td>Wikipedia</td><td><a href="#gestalt">ゲシュタルト</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Rubin_vase">Rubin vase</a></td><td>Wikipedia</td><td><a href="#gestalt">ゲシュタルト</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Principles_of_grouping">Principles of grouping</a></td><td>Wikipedia</td><td><a href="#gestalt">ゲシュタルト</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Color_scheme">Color scheme</a></td><td>Wikipedia</td><td><a href="#color">色</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Johannes_Itten">Johannes Itten</a></td><td>Wikipedia</td><td><a href="#color">色</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://ja.wikipedia.org/wiki/PCCS">PCCS</a></td><td>Wikipedia</td><td><a href="#color">色</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation">Twelve basic principles of animation</a></td><td>Wikipedia</td><td><a href="#motion">動き</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://ja.wikipedia.org/wiki/ポカヨケ">ポカヨケ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://ja.wikipedia.org/wiki/フェイルセーフ">フェイルセーフ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+  </table></div>
+  <h3>動画</h3>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
+    <tr><td><a href="https://www.youtube.com/playlist?list=PLi8SA3sbzYVTl4FV0rLnSsf6ElOh-_Cv1">桜井政博のゲーム作るには【J: UI】（本文では 20 本を個別に引く）</a></td><td>桜井政博</td><td><a href="#intro">はじめに</a>、<a href="#sakurai">桜井の UI</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+  </table></div>
+  <h3>事例・報道・記事</h3>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
+    <tr><td><a href="https://ascii.jp/elem/000/004/229/4229563/">JR 東日本アプリの紹介</a></td><td>ASCII.jp</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://app-liv.jp/articles/153120/">JR 東日本アプリの紹介</a></td><td>Appliv</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://k-tai.watch.impress.co.jp/docs/column/teppan/1634024.html">JR 東日本アプリの画面</a></td><td>ケータイ Watch</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://note.com/navitime_app_tr/n/n5acf2992d460">早・楽・安の札</a></td><td>NAVITIME 公式 note</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://www.makewordart.com/blog/the_history_of_microsoft_wordart/">The History of Microsoft WordArt</a></td><td>WordArt Blog</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://office-watch.com/2025/retro-wordart-modern-microsoft-word/">レトロな WordArt</a></td><td>Office Watch、2025</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://knowyourmeme.com/memes/wordart-image-macros">WordArt Image Macros</a></td><td>Know Your Meme</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://ja.wikipedia.org/wiki/%E3%81%84%E3%82%89%E3%81%99%E3%81%A8%E3%82%84">いらすとや</a></td><td>Wikipedia</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://media-innovation.jp/article/2021/01/25/53858.html">いらすとやの更新停止</a></td><td>Media Innovation、2021</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://hashout.jp/ai/2298/">いらすとやと生成 AI</a></td><td>hashout</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://kurokumasoft.com/2023/05/09/howto-remove-ai-like-style/">AI らしさを消す方法</a></td><td>くろくまそふと、2023</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
+    <tr><td><a href="https://ai.watch.impress.co.jp/docs/serial/glossary/2122362.html">AI slop の用語解説</a></td><td>Impress Watch</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://togetter.com/li/2229909">マスピ顔のまとめ</a></td><td>Togetter</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://news.livedoor.com/topics/detail/12370065/">WordArt の流行</a></td><td>ライブドアニュース、2016</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://www.gakken.jp/kyouikusouken/whitepaper/30history/chapter2/02.html">パソコンの普及率</a></td><td>学研</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://time.com/6253615/chatgpt-fastest-growing/">ChatGPT の利用者数</a></td><td>TIME</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://the-decoder.com/chatgpts-image-generation-explodes-with-700m-creations-in-first-week/">画像生成の枚数</a></td><td>The Decoder</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://www.marketingprofs.com/charts/2023/49890/surge-of-ai-generated-images-online">AI 生成画像の推計</a></td><td>Everypixel</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://www.itmedia.co.jp/news/articles/2212/23/news154.html">mimic</a></td><td>ITmedia</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+  </table></div>
+  <h3>図版と道具</h3>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
+    <tr><td><a href="https://www.irasutoya.com/2026/08/frenemywoman.html">フレネミーのイラスト（女性）</a></td><td>いらすとや</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://www.irasutoya.com/2015/02/blog-post_744.html">新聞を読むビジネスマンのイラスト</a></td><td>いらすとや</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://www.irasutoya.com/2018/08/blog-post_2.html">会議でプレゼンをする人のイラスト（男性）</a></td><td>いらすとや</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://commons.wikimedia.org/wiki/File:Girl,_impressionism,_(faint_light),_looking_at_hand,business_suit,Rectangular_glasses_s-1226632615.webp">生成画像の例</a></td><td>Wikimedia Commons</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://github.com/junegunn/fzf">fzf</a></td><td>junegunn、2013</td><td><a href="#fzf">fzf と TUI</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
+  </table></div>
+  <h3>名前を挙げたが開いていない資料</h3>
+  <p>本文で触れたが、作成時に開いていないものである。主張の根拠には使っていない。</p>
+  <div class="tbl"><table class="refs">
+    <tr><th>資料</th><th>挙げた章</th></tr>
+    <tr><td>Tschichold『新しいタイポグラフィ』、Gerstner『Designing Programmes』、Müller-Brockmann『Grid Systems in Graphic Design』、Ruder『Typographie』</td><td><a href="#swiss">スイス</a></td></tr>
+    <tr><td>Palmer の共通領域の論文（1992）</td><td><a href="#gestalt">ゲシュタルト</a></td></tr>
+    <tr><td>色の印象の出典となる書籍</td><td><a href="#color">色</a></td></tr>
+    <tr><td>Cleveland と McGill、Bertin、Treisman、Tufte の原典</td><td><a href="#charts">可視化</a></td></tr>
+    <tr><td>Cowan「The magical number 4 in short-term memory」（2001）</td><td><a href="#classics">古典と法則</a></td></tr>
+    <tr><td>Krug『Don&#x27;t Make Me Think』、Cooper『About Face』、Raskin『The Humane Interface』、Victor「Magic Ink」、Garrett、WCAG</td><td><a href="#classics">古典と法則</a></td></tr>
+    <tr><td>Thomas と Johnston『The Illusion of Life』（1981）、Willenskomer の UX in Motion Manifesto、Head の著書、Material と Apple の Motion の本文</td><td><a href="#motion">動き</a></td></tr>
+    <tr><td>Bates の原論文</td><td><a href="#seeking">情報探索</a></td></tr>
+    <tr><td>Rosenfeld と Morville『Information Architecture』、Russell-Rose と Tate『Designing the Search Experience』、Baymard の調査</td><td><a href="#seeking">情報探索</a></td></tr>
+    <tr><td>Hearst が引く個々の研究の原論文</td><td><a href="#hearst">検索 UI の定本</a></td></tr>
+  </table></div>
+  <p>本資料の著者自身のデザイン原則（グリッド、色の配分、文字組み）は公開資料ではないので、この一覧には載せていない。</p>
 </section>
 
 <div class="slidefoot"><button class="navlink" id="prev2" type="button"></button><span id="footl"></span><button class="navlink" id="next2" type="button"></button></div>
