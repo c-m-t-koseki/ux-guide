@@ -28,7 +28,7 @@
   <h1>なぜ流儀を一つに決めるのか</h1>
   <p class="lead">デザインは信仰だと思っている。ここに書く決まりは万人にとって最適なものではなく、わたしにとって美しいものである。見た目の決まりは証明された真理ではなく、信じて守るから意味を持つ。</p>
   <p>実際、規範同士は食い違う。Apple の Liquid Glass は中身に合わせて見た目を変え、スイスデザインは見た目を固定して中身だけを流し込む。どちらにも筋があり、どちらが正しいかは実験では決まらない。</p>
-  <p>測れるものもある。フィッツの法則、400ms のしきい値、コントラスト比 4.5:1 は実験で確かめられた事実で、本資料はそれを曲げない。ただし、事実は「どれを優先するか」までは決めない。Liquid Glass の上の文字は、背後に何が来るかで対比が変わる。これは測れる事実だが、対比の揺れを承知で奥行きと一体感を取る人もいる。わたしは読めることを取る。測った値をどこまで重く見るかは、やはり信じるものの側にある。</p>
+  <p>測れるものもある。フィッツの法則は実験で確かめられた関係で、400ms のしきい値とコントラスト比 4.5:1 は研究や規格が定めた基準値である。本資料はそれを曲げない。ただし、事実は「どれを優先するか」までは決めない。Liquid Glass の上の文字は、背後に何が来るかで対比が変わる。これは測れる事実だが、対比の揺れを承知で奥行きと一体感を取る人もいる。わたしは読めることを取る。測った値をどこまで重く見るかは、やはり信じるものの側にある。</p>
   <p>それでも一つを信じて守る理由は一貫性にある。全画面で同じ決まりを守れば、同じ見た目が同じ意味を持ち、利用者は一度覚えれば次の画面でもそのまま使える。画面ごとに信じるものが変わると、覚えたことが次の画面で通用しない。</p>
   <p>元になったのは、わたしが経験則として持っていた UI と UX の項目と、どこかで読んで覚えていた話である。それらを思い出しながら出典を調べ直し、互いに矛盾しないように整えたのがこの資料で、出典を確認できなかった項目は各章でそう書いた。見た目はスイスデザインと Material の構造に、並べ方はゲシュタルトに、振る舞いは使いやすさの古典に、探し方は情報探索の理論に拠り、新聞・蔵書・図書の検索 UI に当てはめる。写実の様式や Liquid Glass は採らない。第 1 部は見た目の規範、第 2 部は振る舞いの規範、第 3 部は探す行為、第 4 部は 12 行の共通原則と適用である。</p>
   <div class="tbl"><table>
@@ -42,6 +42,21 @@
     <tr><td>Shneiderman、Bates、Marchionini</td><td>情報探索の理論、共通原則、適用</td><td>全体像から詳細へ、往復する探索、探索の種類</td></tr>
     <tr><td><a href="https://searchuserinterfaces.com/book/">Hearst『Search User Interfaces』</a></td><td>検索 UI の定本、共通原則、適用</td><td>検索 UI の実証研究の総覧。語彙問題、ファセット、0件の回避</td></tr>
     <tr><td>fzf と端末ツール</td><td>fzf、適用</td><td>インクリメンタル検索の実装例</td></tr>
+  </table></div>
+  <h3>用語</h3>
+  <div class="tbl"><table>
+    <tr><th>用語</th><th>本資料での意味</th></tr>
+    <tr><td>クエリ</td><td>検索欄に打つ語</td></tr>
+    <tr><td>スコープ</td><td>検索する対象の範囲。新聞か図書か、のような区別</td></tr>
+    <tr><td>ファセット</td><td>年・種別のように件数付きの分類を並べ、選ぶと結果が絞られる部品</td></tr>
+    <tr><td>チップ</td><td>適用中の条件などを示す小さな札。× で外せることが多い</td></tr>
+    <tr><td>スニペット</td><td>結果一覧に出す本文の抜粋</td></tr>
+    <tr><td>ミニマップ</td><td>全体の縮小図。いまどこを見ているかを示す</td></tr>
+    <tr><td>HUD</td><td>画面の端に常に重ねて出す状態の表示</td></tr>
+    <tr><td>FAB</td><td>画面の右下に浮かぶ、主な操作の丸いボタン（Material）</td></tr>
+    <tr><td>dp</td><td>画面の密度によらない長さの単位（Android と Material）</td></tr>
+    <tr><td>NN/g</td><td>Nielsen Norman Group。使いやすさの調査と助言をする会社</td></tr>
+    <tr><td>HIG</td><td>Human Interface Guidelines。Apple のデザインの指針</td></tr>
   </table></div>
   <p>全資料の一覧と、それぞれをどこまで確認したかは、付録の<a href="#refs">参考資料</a>にまとめた。</p>
 </section>
@@ -257,7 +272,7 @@
   <div class="tbl" id="gest"><table class="claims">
     <tr><th>法則</th><th>中身</th><th>図</th></tr>
     <tr class="g-prox"><td><b>近接</b><br><span class="note">Wertheimer</span></td><td>近いものは同じ群に見える。<br><b>使い方</b>　群の内側の間隔を、群の間の間隔より狭くする。ラベルと入力欄、見出しと本文の距離がこれで決まる</td><td><svg viewBox="0 0 220 90"><g fill="var(--main)"><circle cx="20" cy="30" r="7"/><circle cx="44" cy="30" r="7"/><circle cx="68" cy="30" r="7"/><circle cx="20" cy="60" r="7"/><circle cx="44" cy="60" r="7"/><circle cx="68" cy="60" r="7"/><circle cx="140" cy="30" r="7"/><circle cx="164" cy="30" r="7"/><circle cx="188" cy="30" r="7"/><circle cx="140" cy="60" r="7"/><circle cx="164" cy="60" r="7"/><circle cx="188" cy="60" r="7"/></g></svg></td></tr>
-    <tr class="g-sim"><td><b>類同</b><br><span class="note">Wertheimer</span></td><td>同じ見た目のものは同じ群に見え、図では縦の列としてまとまる。<br><b>使い方</b>　同じ役割には同じ見た目を、違う役割には違う見た目を与える。見た目の差は必ず意味の差に対応させる</td><td><svg viewBox="0 0 220 90"><g><circle cx="24" cy="30" r="8" fill="var(--main)"/><rect x="48" y="22" width="16" height="16" fill="var(--accent)"/><circle cx="88" cy="30" r="8" fill="var(--main)"/><rect x="112" y="22" width="16" height="16" fill="var(--accent)"/><circle cx="152" cy="30" r="8" fill="var(--main)"/><rect x="176" y="22" width="16" height="16" fill="var(--accent)"/><circle cx="24" cy="62" r="8" fill="var(--main)"/><rect x="48" y="54" width="16" height="16" fill="var(--accent)"/><circle cx="88" cy="62" r="8" fill="var(--main)"/><rect x="112" y="54" width="16" height="16" fill="var(--accent)"/><circle cx="152" cy="62" r="8" fill="var(--main)"/><rect x="176" y="54" width="16" height="16" fill="var(--accent)"/></g></svg></td></tr>
+    <tr class="g-sim"><td><b>類同</b><br><span class="note">Wertheimer</span></td><td>同じ見た目のものは同じ群に見え、図では縦の列としてまとまる。<br><b>使い方</b>　同じ役割には同じ見た目を、違う役割には違う見た目を与える。見た目の差は必ず意味の差に対応させる</td><td><svg viewBox="0 0 220 90"><g><circle cx="24" cy="30" r="8" fill="var(--main)"/><rect x="48" y="22" width="16" height="16" fill="var(--fg)"/><circle cx="88" cy="30" r="8" fill="var(--main)"/><rect x="112" y="22" width="16" height="16" fill="var(--fg)"/><circle cx="152" cy="30" r="8" fill="var(--main)"/><rect x="176" y="22" width="16" height="16" fill="var(--fg)"/><circle cx="24" cy="62" r="8" fill="var(--main)"/><rect x="48" y="54" width="16" height="16" fill="var(--fg)"/><circle cx="88" cy="62" r="8" fill="var(--main)"/><rect x="112" y="54" width="16" height="16" fill="var(--fg)"/><circle cx="152" cy="62" r="8" fill="var(--main)"/><rect x="176" y="54" width="16" height="16" fill="var(--fg)"/></g></svg></td></tr>
     <tr class="g-region"><td><b>共通領域</b><br><span class="note">Palmer, 1992</span></td><td>同じ枠や背景の中にあるものは一つの群に見える。近接より強い。<br><b>使い方</b>　枠と背景は線と面を増やすので、余白で分けて足りないときだけ使う</td><td><svg viewBox="0 0 220 90"><rect x="8" y="12" width="96" height="66" fill="none" stroke="var(--line)"/><rect x="116" y="12" width="96" height="66" fill="none" stroke="var(--line)"/><g fill="var(--main)"><circle cx="30" cy="45" r="8"/><circle cx="56" cy="45" r="8"/><circle cx="82" cy="45" r="8"/><circle cx="138" cy="45" r="8"/><circle cx="164" cy="45" r="8"/><circle cx="190" cy="45" r="8"/></g></svg></td></tr>
     <tr class="g-cont"><td><b>連続</b><br><span class="note">Wertheimer</span></td><td>線に沿って並ぶ点は、交点で折れた二つの形ではなく交差する二本の線に見える。<br><b>使い方</b>　端を揃えた要素の列は一本の線として読まれ、視線がそれに沿って進む。揃える線を少なくする</td><td><svg viewBox="0 0 220 90"><g fill="var(--main)"><circle cx="14" cy="72" r="5"/><circle cx="38" cy="58" r="5"/><circle cx="62" cy="46" r="5"/><circle cx="86" cy="38" r="5"/><circle cx="110" cy="34" r="5"/><circle cx="134" cy="34" r="5"/><circle cx="158" cy="38" r="5"/><circle cx="182" cy="46" r="5"/><circle cx="206" cy="58" r="5"/><circle cx="14" cy="18" r="5"/><circle cx="38" cy="24" r="5"/><circle cx="62" cy="30" r="5"/><circle cx="86" cy="36" r="5"/><circle cx="134" cy="48" r="5"/><circle cx="158" cy="54" r="5"/><circle cx="182" cy="60" r="5"/><circle cx="206" cy="66" r="5"/></g></svg></td></tr>
     <tr class="g-close"><td><b>閉合</b><br><span class="note">Kanizsa</span></td><td>欠けた輪郭からも閉じた形が見える。図では描いていない三角形が見える。<br><b>使い方</b>　輪郭を全周描かなくても領域は伝わる。カードは角や背景だけで示せる</td><td><svg viewBox="0 0 220 90"><g fill="var(--main)"><path d="M122.8 29.4 A20 20 0 1 0 97.2 29.4 L110 14z"/><path d="M80 74 A20 20 0 1 1 72.8 58.6 L60 74z"/><path d="M147.2 58.6 A20 20 0 1 1 140 74 L160 74z"/></g></svg></td></tr>
@@ -294,7 +309,7 @@
 
   <h3>WordArt ― 装飾の民主化が素人の印になった</h3>
   <div class="wa-stage"><span class="wordart">関東大震災 1923</span></div>
-  <p class="cap">WordArt 風。虹の階調、3D の影、斜体、傾き。スイスデザインの章の 6「飾りを付けてみる」もこの様式で描いている。</p>
+  <p class="cap">WordArt 風。虹の階調、3D の影、斜体、傾き。</p>
   <p>WordArt は 1991 年に Microsoft のインターンが作り、Office 97 で約 30 種の既製スタイルから選ぶ形になって普及の頂点を迎えた。2007 年のリボンで既定のツールバーから外れ、2013 年の平面デザイン以降は時代遅れの記号になり、2010 年代の懐古で皮肉として使われている。</p>
   <h4>なぜ広まったか</h4>
   <ul>
@@ -354,7 +369,7 @@
 
   <h3>三つを比べる ― 記号になる速さ</h3>
   <div class="tbl"><table>
-    <tr><th>対象</th><th>普及の始まり</th><th>記号として語られた時期</th><th>年数</th></tr>
+    <tr><th>対象</th><th>広まった時期</th><th>記号として語られた時期</th><th>年数</th></tr>
     <tr><td>WordArt</td><td>1997 年、Office 97</td><td>2010 年代半ば、皮肉のミーム</td><td>十年以上</td></tr>
     <tr><td>いらすとや</td><td>2012 年、開設</td><td>2016 年、「日本がいらすとやだらけ」</td><td>約 4 年</td></tr>
     <tr><td>生成 AI</td><td>2022 年 10 月、NovelAI</td><td>2023 年、「マスピ顔」が揶揄の語に</td><td>1 年足らず</td></tr>
@@ -409,7 +424,7 @@
   <p>色相を変えずに明度と彩度を動かす配色は、UI で最も出番が多い。ボタンの通常・ホバー・押下、表の地と行の交互、ダークモードの各面は、すべてメインかベースのトーン違いで作る。Material 3 のトーナルパレットは、一つの色相を明度 0〜100 の 13 段に割ったもので、この考え方をそのまま部品に割り当てている。</p>
   <div class="tones" id="tones"></div>
 
-<h3>このページのパレットの決め方</h3>
+<h3>本資料のパレットの決め方</h3>
   <p>面積の配分はベース 70・メイン 25・アクセント 5 とする。インテリアで慣用されてきた 60-30-10 を、情報量の多い画面向けにベース寄りにしたものである。ダークモードは PCCS のトーンの考えで、色相を保って明度だけ入れ替える。各色の選び方と、この設計での値は表にまとめた。</p>
   <div class="tbl"><table class="ratio">
     <tr><th>配分</th><th>役割</th><th>選び方</th><th>この設計での値と理由</th></tr>
@@ -449,7 +464,7 @@
   <p>件数・日付・所要時間のような量は、数字を並べるより図にしたほうが比べやすい。ただし図にも、正確に読める描き方と読めない描き方がある。この章では、その原則を五つ挙げ、一つの事例で確かめる。</p>
   <h3>図示の原則</h3>
   <div class="vp">
-    <div><div class="fig"><svg viewBox="0 0 300 162" class="vps" role="img" aria-label="同じ二つの値を位置・長さ・角度・面積・濃さで描いた比較。下の帯が左ほど濃く、左ほど正確に読める"><text x="30" y="128" text-anchor="middle" class="vpl">位置</text><line x1="6" y1="108" x2="54" y2="108" stroke="var(--line)"/><line x1="6" y1="28" x2="6" y2="108" stroke="var(--line)"/><circle cx="22" cy="64.0" r="4" fill="var(--main)"/><circle cx="40" cy="52.0" r="4" fill="var(--main)"/><text x="90" y="128" text-anchor="middle" class="vpl">長さ</text><rect x="74" y="38" width="12" height="38.5" fill="var(--main)"/><rect x="94" y="24" width="12" height="49.0" fill="var(--main)"/><text x="150" y="128" text-anchor="middle" class="vpl">角度</text><circle cx="150" cy="68" r="22" fill="var(--line)"/><path d="M150 68L150 46A22 22 0 0 1 158.1 88.5Z" fill="var(--main)"/><text x="210" y="128" text-anchor="middle" class="vpl">面積</text><circle cx="200" cy="68" r="12.4" fill="var(--main)"/><circle cx="222" cy="68" r="14" fill="var(--main)"/><text x="270" y="128" text-anchor="middle" class="vpl">濃さ</text><rect x="250" y="54" width="18" height="28" fill="var(--main)" fill-opacity="0.55"/><rect x="272" y="54" width="18" height="28" fill="var(--main)" fill-opacity="0.7"/><defs><linearGradient id="vpgrad"><stop offset="0" style="stop-color:var(--main)"/><stop offset="1" style="stop-color:var(--main);stop-opacity:.06"/></linearGradient></defs><rect x="6" y="138" width="288" height="8" fill="url(#vpgrad)"/><text x="8" y="156" text-anchor="start" class="vpl">正確に読める</text><text x="292" y="156" text-anchor="end" class="vpl">読み誤りやすい</text></svg></div><h4>正確に読める順</h4><p class="src">Cleveland と McGill、1984</p><p>共通の尺度上の位置、揃っていない尺度上の位置、長さ、角度と傾き、面積、体積・濃さ・彩度、色相の順に正確に読める。図の五つはどれも同じ 55 と 70 を描いている。左の位置なら差がそのまま読めるが、右へ行くほど差が小さく見えたり、読み違えたりする。量は位置と長さで示し、色は区別に使う</p></div>
+    <div><div class="fig"><svg viewBox="0 0 300 162" class="vps" role="img" aria-label="同じ二つの値を位置・長さ・角度・面積・濃さで描いた比較。下の帯が左ほど濃く、左ほど正確に読める"><text x="30" y="128" text-anchor="middle" class="vpl">位置</text><line x1="6" y1="108" x2="54" y2="108" stroke="var(--line)"/><line x1="6" y1="28" x2="6" y2="108" stroke="var(--line)"/><circle cx="22" cy="64.0" r="4" fill="var(--main)"/><circle cx="40" cy="52.0" r="4" fill="var(--main)"/><text x="90" y="128" text-anchor="middle" class="vpl">長さ</text><rect x="74" y="38" width="12" height="38.5" fill="var(--main)"/><rect x="94" y="24" width="12" height="49.0" fill="var(--main)"/><text x="150" y="128" text-anchor="middle" class="vpl">角度</text><circle cx="150" cy="68" r="22" fill="var(--line)"/><path d="M150 68L150 46A22 22 0 0 1 158.1 88.5Z" fill="var(--main)"/><text x="210" y="128" text-anchor="middle" class="vpl">面積</text><circle cx="200" cy="68" r="12.4" fill="var(--main)"/><circle cx="222" cy="68" r="14" fill="var(--main)"/><text x="270" y="128" text-anchor="middle" class="vpl">濃さ</text><rect x="250" y="54" width="18" height="28" fill="var(--main)" fill-opacity="0.55"/><rect x="272" y="54" width="18" height="28" fill="var(--main)" fill-opacity="0.7"/><defs><linearGradient id="vpgrad"><stop offset="0" style="stop-color:var(--main)"/><stop offset="1" style="stop-color:var(--main);stop-opacity:.06"/></linearGradient></defs><rect x="6" y="138" width="288" height="8" fill="url(#vpgrad)"/><text x="8" y="156" text-anchor="start" class="vpl">正確に読める</text><text x="292" y="156" text-anchor="end" class="vpl">読み誤りやすい</text></svg></div><h4>正確に読める順</h4><p class="src">Cleveland と McGill、1984</p><p>共通の尺度上の位置、揃っていない尺度上の位置、長さ・方向・角度、面積、体積・曲率、濃淡・彩度の順に正確に読める。色相はこの順位に含まれず、区別に使う変数として後の研究で扱われた。図の五つはどれも同じ 55 と 70 を描いている。左の位置なら差がそのまま読めるが、右へ行くほど差が小さく見えたり、読み違えたりする。量は位置と長さで示し、色は区別に使う</p></div>
     <div><div class="fig"><svg viewBox="0 0 300 136" class="vps" role="img" aria-label="Bertin の視覚変数。大きさと明度は量に、色相・形・向き・きめは区別に向く"><text x="25" y="112" text-anchor="middle" class="vpl">大きさ</text><circle cx="25" cy="24" r="3" fill="var(--main)"/><circle cx="25" cy="50" r="6" fill="var(--main)"/><circle cx="25" cy="76" r="9" fill="var(--main)"/><text x="75" y="112" text-anchor="middle" class="vpl">明度</text><circle cx="75" cy="24" r="8" fill="var(--fg)" fill-opacity="0.2"/><circle cx="75" cy="50" r="8" fill="var(--fg)" fill-opacity="0.55"/><circle cx="75" cy="76" r="8" fill="var(--fg)" fill-opacity="0.8999999999999999"/><text x="125" y="112" text-anchor="middle" class="vpl">色相</text><circle cx="125" cy="24" r="8" fill="var(--main)"/><circle cx="125" cy="50" r="8" fill="var(--accent)"/><circle cx="125" cy="76" r="8" fill="var(--ok)"/><text x="175" y="112" text-anchor="middle" class="vpl">形</text><circle cx="175" cy="24" r="8" fill="var(--main)"/><rect x="168" y="43" width="14" height="14" fill="var(--main)"/><path d="M175 68L183 83L167 83Z" fill="var(--main)"/><text x="225" y="112" text-anchor="middle" class="vpl">向き</text><line x1="216" y1="24" x2="234" y2="24" stroke="var(--main)" stroke-width="3" transform="rotate(0 225 24)"/><line x1="216" y1="50" x2="234" y2="50" stroke="var(--main)" stroke-width="3" transform="rotate(45 225 50)"/><line x1="216" y1="76" x2="234" y2="76" stroke="var(--main)" stroke-width="3" transform="rotate(90 225 76)"/><text x="275" y="112" text-anchor="middle" class="vpl">きめ</text><line x1="267.0" y1="16" x2="267.0" y2="32" stroke="var(--main)" stroke-width="1.5"/><line x1="283.0" y1="16" x2="283.0" y2="32" stroke="var(--main)" stroke-width="1.5"/><line x1="267.0" y1="42" x2="267.0" y2="58" stroke="var(--main)" stroke-width="1.5"/><line x1="272.3" y1="42" x2="272.3" y2="58" stroke="var(--main)" stroke-width="1.5"/><line x1="277.7" y1="42" x2="277.7" y2="58" stroke="var(--main)" stroke-width="1.5"/><line x1="283.0" y1="42" x2="283.0" y2="58" stroke="var(--main)" stroke-width="1.5"/><line x1="267.0" y1="68" x2="267.0" y2="84" stroke="var(--main)" stroke-width="1.5"/><line x1="269.7" y1="68" x2="269.7" y2="84" stroke="var(--main)" stroke-width="1.5"/><line x1="272.3" y1="68" x2="272.3" y2="84" stroke="var(--main)" stroke-width="1.5"/><line x1="275.0" y1="68" x2="275.0" y2="84" stroke="var(--main)" stroke-width="1.5"/><line x1="277.7" y1="68" x2="277.7" y2="84" stroke="var(--main)" stroke-width="1.5"/><line x1="280.3" y1="68" x2="280.3" y2="84" stroke="var(--main)" stroke-width="1.5"/><line x1="283.0" y1="68" x2="283.0" y2="84" stroke="var(--main)" stroke-width="1.5"/><line x1="6" y1="122" x2="94" y2="122" stroke="var(--main)" stroke-width="2"/><text x="50" y="131" text-anchor="middle" class="vpl">量・順序</text><line x1="106" y1="122" x2="294" y2="122" stroke="var(--muted)" stroke-width="2"/><text x="200" y="131" text-anchor="middle" class="vpl">種類の区別</text></svg></div><h4>視覚変数</h4><p class="src">Bertin『Sémiologie graphique』、1967</p><p>大きさと明度は量や順序に、色相・形・向き・きめは種類の区別に向く</p></div>
     <div><div class="fig"><svg viewBox="0 0 300 132" class="vps" role="img" aria-label="左は色だけが違う一つがすぐ見つかる。右は橙の丸を、橙の四角と灰の丸の中から一つずつ探す"><circle cx="12" cy="14" r="6" fill="var(--muted)"/><circle cx="12" cy="34" r="6" fill="var(--muted)"/><circle cx="12" cy="54" r="6" fill="var(--muted)"/><circle cx="12" cy="74" r="6" fill="var(--muted)"/><circle cx="12" cy="94" r="6" fill="var(--muted)"/><circle cx="34" cy="14" r="6" fill="var(--muted)"/><circle cx="34" cy="34" r="6" fill="var(--muted)"/><circle cx="34" cy="54" r="6" fill="var(--muted)"/><circle cx="34" cy="74" r="6" fill="var(--muted)"/><circle cx="34" cy="94" r="6" fill="var(--muted)"/><circle cx="56" cy="14" r="6" fill="var(--muted)"/><circle cx="56" cy="34" r="6" fill="var(--muted)"/><circle cx="56" cy="54" r="6" fill="var(--muted)"/><circle cx="56" cy="74" r="6" fill="var(--muted)"/><circle cx="56" cy="94" r="6" fill="var(--muted)"/><circle cx="78" cy="14" r="6" fill="var(--muted)"/><circle cx="78" cy="34" r="6" fill="var(--muted)"/><circle cx="78" cy="54" r="6" fill="var(--muted)"/><circle cx="78" cy="74" r="6" fill="var(--muted)"/><circle cx="78" cy="94" r="6" fill="var(--muted)"/><circle cx="100" cy="14" r="6" fill="var(--muted)"/><circle cx="100" cy="34" r="6" fill="var(--accent)"/><circle cx="100" cy="54" r="6" fill="var(--muted)"/><circle cx="100" cy="74" r="6" fill="var(--muted)"/><circle cx="100" cy="94" r="6" fill="var(--muted)"/><circle cx="122" cy="14" r="6" fill="var(--muted)"/><circle cx="122" cy="34" r="6" fill="var(--muted)"/><circle cx="122" cy="54" r="6" fill="var(--muted)"/><circle cx="122" cy="74" r="6" fill="var(--muted)"/><circle cx="122" cy="94" r="6" fill="var(--muted)"/><rect x="162" y="8" width="12" height="12" fill="var(--accent)"/><circle cx="168" cy="34" r="6" fill="var(--muted)"/><rect x="162" y="48" width="12" height="12" fill="var(--accent)"/><circle cx="168" cy="74" r="6" fill="var(--muted)"/><rect x="162" y="88" width="12" height="12" fill="var(--accent)"/><circle cx="190" cy="14" r="6" fill="var(--muted)"/><rect x="184" y="28" width="12" height="12" fill="var(--accent)"/><circle cx="190" cy="54" r="6" fill="var(--muted)"/><rect x="184" y="68" width="12" height="12" fill="var(--accent)"/><circle cx="190" cy="94" r="6" fill="var(--muted)"/><rect x="206" y="8" width="12" height="12" fill="var(--accent)"/><circle cx="212" cy="34" r="6" fill="var(--muted)"/><rect x="206" y="48" width="12" height="12" fill="var(--accent)"/><circle cx="212" cy="74" r="6" fill="var(--accent)"/><rect x="206" y="88" width="12" height="12" fill="var(--accent)"/><circle cx="234" cy="14" r="6" fill="var(--muted)"/><rect x="228" y="28" width="12" height="12" fill="var(--accent)"/><circle cx="234" cy="54" r="6" fill="var(--muted)"/><rect x="228" y="68" width="12" height="12" fill="var(--accent)"/><circle cx="234" cy="94" r="6" fill="var(--muted)"/><rect x="250" y="8" width="12" height="12" fill="var(--accent)"/><circle cx="256" cy="34" r="6" fill="var(--muted)"/><rect x="250" y="48" width="12" height="12" fill="var(--accent)"/><circle cx="256" cy="74" r="6" fill="var(--muted)"/><rect x="250" y="88" width="12" height="12" fill="var(--accent)"/><circle cx="278" cy="14" r="6" fill="var(--muted)"/><rect x="272" y="28" width="12" height="12" fill="var(--accent)"/><circle cx="278" cy="54" r="6" fill="var(--muted)"/><rect x="272" y="68" width="12" height="12" fill="var(--accent)"/><circle cx="278" cy="94" r="6" fill="var(--muted)"/><text x="67" y="124" text-anchor="middle" class="vpl">色だけ違う：すぐ見つかる</text><text x="223" y="124" text-anchor="middle" class="vpl">色と形の組：一つずつ探す</text></svg></div><h4>前注意的属性</h4><p class="src">Treisman と Gelade、1980</p><p>色・向き・大きさが一つだけ違うものは、数が増えても瞬時に見つかる。二つの特徴の組み合わせで探すと、一つずつ見ることになる。一画面に一か所だけアクセント色を置くのはこれを使っている</p></div>
     <div><div class="fig"><svg viewBox="0 0 300 132" class="vps" role="img" aria-label="左は棒と値だけの棒グラフ、右は罫線・枠・影・凡例の多い棒グラフ"><rect x="16" y="54.0" width="18" height="40.0" fill="var(--main)"/><text x="25" y="50.0" text-anchor="middle" class="vps-s">50</text><rect x="46" y="30.0" width="18" height="64.0" fill="var(--main)"/><text x="55" y="26.0" text-anchor="middle" class="vps-s">80</text><rect x="76" y="42.0" width="18" height="52.0" fill="var(--main)"/><text x="85" y="38.0" text-anchor="middle" class="vps-s">65</text><rect x="106" y="66.0" width="18" height="28.0" fill="var(--main)"/><text x="115" y="62.0" text-anchor="middle" class="vps-s">35</text><line x1="10" y1="94" x2="136" y2="94" stroke="var(--fg)"/><rect x="158" y="4" width="138" height="104" fill="var(--line)" fill-opacity=".5" stroke="var(--fg)"/><line x1="168" y1="18" x2="288" y2="18" stroke="var(--muted)" stroke-dasharray="2 2"/><line x1="168" y1="32" x2="288" y2="32" stroke="var(--muted)" stroke-dasharray="2 2"/><line x1="168" y1="46" x2="288" y2="46" stroke="var(--muted)" stroke-dasharray="2 2"/><line x1="168" y1="60" x2="288" y2="60" stroke="var(--muted)" stroke-dasharray="2 2"/><line x1="168" y1="74" x2="288" y2="74" stroke="var(--muted)" stroke-dasharray="2 2"/><line x1="168" y1="88" x2="288" y2="88" stroke="var(--muted)" stroke-dasharray="2 2"/><rect x="179" y="57.0" width="16" height="40.0" fill="var(--fg)" fill-opacity=".35"/><rect x="176" y="54.0" width="16" height="40.0" fill="var(--main)" stroke="var(--fg)"/><rect x="207" y="33.0" width="16" height="64.0" fill="var(--fg)" fill-opacity=".35"/><rect x="204" y="30.0" width="16" height="64.0" fill="var(--main)" stroke="var(--fg)"/><rect x="235" y="45.0" width="16" height="52.0" fill="var(--fg)" fill-opacity=".35"/><rect x="232" y="42.0" width="16" height="52.0" fill="var(--main)" stroke="var(--fg)"/><rect x="263" y="69.0" width="16" height="28.0" fill="var(--fg)" fill-opacity=".35"/><rect x="260" y="66.0" width="16" height="28.0" fill="var(--main)" stroke="var(--fg)"/><rect x="254" y="10" width="36" height="14" fill="var(--panel)" stroke="var(--fg)"/><text x="272" y="20" text-anchor="middle" class="vps-s">凡例</text><text x="73" y="124" text-anchor="middle" class="vpl">良い例：棒と値だけ</text><text x="227" y="124" text-anchor="middle" class="vpl">悪い例：罫線・枠・影・凡例</text></svg></div><h4>データインク比</h4><p class="src">Tufte『The Visual Display of Quantitative Information』、1983</p><p>図のインクのうち、データを表す部分の割合を上げる。消してもデータが失われない罫線・枠・影・凡例は消し、値は棒に直接書く</p></div>
@@ -467,33 +482,6 @@
   <div class="tbl"><table><tr><th>何をしたか</th><th>原則</th></tr><tr><td>時間を長さと位置で示す</td><td>位置と長さ（Cleveland と McGill）、データインク比</td></tr><tr><td>候補を同じ尺度の上に並べる</td><td>スモールマルチプル</td></tr><tr><td>乗換を切れ目、路線を色で</td><td>色と位置と形の併用</td></tr><tr><td>文字を減らし、詳細はタップで</td><td>全体を先に、詳細は求めに応じて（第 3 部の Shneiderman）</td></tr></table></div>
   <p class="note">JR の画面は <a href="https://k-tai.watch.impress.co.jp/docs/column/teppan/1634024.html">ケータイ Watch</a> と Appliv の画面写真、NAVITIME の札は <a href="https://note.com/navitime_app_tr/n/n5acf2992d460">NAVITIME の公式 note</a> で確認した。斜めのスクロールは画面写真から読み取ったもので、公式の説明は確認していない。順位は <a href="https://www.textbookofusability.com/references/clevelandmcgill1984.html">Cleveland &amp; McGill, Graphical Perception, JASA 79(387), 1984</a> の紹介、視覚変数は <a href="https://en.wikipedia.org/wiki/Visual_variable">Wikipedia「Visual variable」</a>、前注意的属性は <a href="https://link.springer.com/rwe/10.1007/978-3-319-55065-7_1588">Feature Integration Theory の解説</a>、データインク比は <a href="https://en.wikipedia.org/wiki/Chartjunk">Wikipedia「Chartjunk」</a>、スモールマルチプルは <a href="https://en.wikipedia.org/wiki/Small_multiple">Wikipedia「Small multiple」</a>で確認した。原典はいずれも開いていない。</p>
 
-  <h3>見比べるものの並べ方 ― 横に並べる根拠はどこまであるか</h3>
-  <p>JR の図は候補を横に並べた。見比べるものを横に並べるのは妥当そうだが、「横並びのほうが比較が速く正確」と直接確かめた研究は見つからなかった。根拠は、目の性質と、比べやすさの一般則からの推論である。根拠の強さの順に見る。</p>
-  <h4>目の動きと視野（よく確かめられている）</h4>
-  <ul>
-    <li>見て探す課題では、一度に情報を取れる範囲が縦より横に広く、横方向に走査するほうが速いと報告されている。差は目の跳躍（サッケード）の側から来る（<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2712349/">Najemnik と Geisler の系統の視覚探索研究</a>）。</li>
-    <li>視野の水平方向（水平子午線）は、垂直方向より見え方の成績が良いと、多くの課題で繰り返し報告されている（<a href="https://link.springer.com/article/10.1007/s00221-025-07152-2">2025 年の研究</a>、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9012886">総説</a>）。</li>
-    <li>縦方向のサッケードは横より遅いという報告もあるが、振幅をそろえた比較は確認できなかった。</li>
-  </ul>
-  <h4>見比べやすさ（一部は確かめられ、一部は推論）</h4>
-  <ul>
-    <li>Cleveland と McGill（1984）は、共通の軸の上で位置を比べるのが最も正確で、比べるものが離れるほど精度が落ちると示した（<a href="https://vis.arc.vt.edu/%7Enpolys/projects/safas/science.pdf">論文</a>）。上の「正確に読める順」と同じ出典である。</li>
-    <li>比べるものを近くに並べ、軸をそろえるほど比較が楽になる。Tufte のスモールマルチプルと、Matlen ら（2020）の<a href="https://groups.psych.northwestern.edu/gentner/papers/MatlenEtAl_2020-SpatialAlign.pdf">空間整合の枠組み</a>がこの考え方である。</li>
-    <li>二つの刺激を横並びと縦並びで直接比べた、人の反応時間の研究は見つからなかった。</li>
-  </ul>
-  <h4>道具の慣習（研究の根拠は弱い）</h4>
-  <ul>
-    <li>放射線科で前回と今回の画像を比べるときは、横に並べるのが一般的である（<a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">ハンギングプロトコルの解説</a>）。</li>
-    <li>全体と詳細を別々に見せる画面（overview+detail）の総説（<a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/01/cockburn-ComputingSurveys09.pdf">Cockburn ら、2009</a>）も、全体図（ミニマップ）を左右どちらに置くかは扱っていない。コードエディタのミニマップが右にあるのも慣習である。</li>
-    <li>左から右に読む人は、左から見始め、右側を見落としやすいとされる（<a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">NN/g</a>）。主に見るもの（拡大画像）を左、補助（ミニマップ）を右に置くのは、この点では筋が通る。</li>
-  </ul>
-  <h4>縦書きの文脈帯</h4>
-  <ul>
-    <li>縦書きの日本語は、横書きより注視の回数が多くなるという報告と、読む速さは変わらないという報告がある（<a href="https://researchmap.jp/kojimiwa/published_papers/3501775">Miwa ら</a>）。</li>
-    <li>紙面に添える文脈帯を紙面と同じ縦の列にしておくのは自然だが、比較の精度を示す研究ではない。</li>
-  </ul>
-  <p>本資料はこれを次のように扱う。比べさせたいものは横に並べ、軸をそろえる（<a href="#principles" data-prin="4">原則 4</a>）。拡大画像とミニマップの左右、文脈帯の向きは研究ではなく慣習で決まる問題として、主に見るものを左に置く。</p>
-  <p class="note">この節の研究は、各論文の要旨と解説で確かめた範囲で、原典は通読していない。</p>
 </section>
 
 <!-- ============ classics ============ -->
@@ -556,8 +544,8 @@
       <div class="after"><div class="nm"><span class="toast">メールを削除しました <b>元に戻す</b></span></div></div>
       <div class="before"><div class="nm"><span class="toast">メールを削除しました</span></div></div></div>
     <div class="card on" tabindex="0"><h4>4 一貫性と標準</h4><p class="d">違う言葉・状況・操作が同じ意味かを迷わせない。プラットフォームと業界の慣習に従う。</p>
-      <div class="after"><div class="nm"><span>保存しますか？ <b class="btn-s">キャンセル</b><b class="btn-s go">保存</b></span><span>削除しますか？ <b class="btn-s">キャンセル</b><b class="btn-s go del">削除</b></span><span>閉じますか？ <b class="btn-s">キャンセル</b><b class="btn-s go">閉じる</b></span></div></div>
-      <div class="before"><div class="nm"><span>保存しますか？ <b class="btn-s" style="background:#2e7d32;color:#fff;box-shadow:none">キャンセル</b><b class="btn-s" style="color:#e67e22;box-shadow:inset 0 0 0 1px #e67e22">保存</b></span><span>削除しますか？ <b class="btn-s" style="background:#9e9e9e;color:#fff;box-shadow:none">はい</b><b class="btn-s" style="background:#c62828;color:#fff;box-shadow:none">戻る</b></span><span>閉じますか？ <b class="btn-s" style="background:#7b1fa2;color:#fff;box-shadow:none">OK</b><b class="btn-s" style="color:#1565c0;box-shadow:inset 0 0 0 1px #1565c0">いいえ</b></span></div></div></div>
+      <div class="after"><div class="nm"><span>設定 <b class="btn-s">キャンセル</b><b class="btn-s go">保存</b></span><span>プロフィール <b class="btn-s">キャンセル</b><b class="btn-s go">保存</b></span><span>通知 <b class="btn-s">キャンセル</b><b class="btn-s go">保存</b></span></div></div>
+      <div class="before"><div class="nm"><span>設定 <b class="btn-s" style="background:#2e7d32;color:#fff;box-shadow:none">キャンセル</b><b class="btn-s" style="color:#e67e22;box-shadow:inset 0 0 0 1px #e67e22">保存</b></span><span>プロフィール <b class="btn-s" style="background:#9e9e9e;color:#fff;box-shadow:none">登録</b><b class="btn-s" style="background:#c62828;color:#fff;box-shadow:none">戻る</b></span><span>通知 <b class="btn-s" style="background:#7b1fa2;color:#fff;box-shadow:none">OK</b><b class="btn-s" style="color:#1565c0;box-shadow:inset 0 0 0 1px #1565c0">やめる</b></span></div></div></div>
     <div class="card static"><h4>5 エラー防止</h4><p class="d">よいエラー表示より、問題が起きない設計がよい。起きやすい条件をなくすか、実行の前に確認を出す。</p>
       <div class="zipdemo">
         <label><span class="k ok">○ 良い例</span><input type="text" inputmode="numeric" autocomplete="postal-code" class="zip-good" placeholder="100-0001" aria-label="郵便番号（良い例）"></label>
@@ -683,7 +671,7 @@
 <section class="slide" data-title="桜井の UI" id="sakurai">
   <div class="eyebrow">第2部 振る舞いの規範</div>
   <h2>桜井政博のゲーム作るには ― UI の 15 テーマ</h2>
-  <p>ゲームの UI の規範は、利用者の時間と注意を奪わない点で、前章までの規範より厳しい。ここでは <a href="https://www.youtube.com/playlist?list=PLi8SA3sbzYVTl4FV0rLnSsf6ElOh-_Cv1">【J: UI】</a> の 15 本を一般のアプリの画面で示し、続けて仕様・ゲーム性・企画の回から待ち時間と反応に関わる 5 本を扱う。見出しは動画へのリンクで、要旨は動画の説明文と要約記事で確認したものに限る。カードを押すと、主張を外した状態と当てはめた状態が切り替わる。</p>
+  <p>ゲームの UI は、利用者の時間と注意を奪わないことを強く求められる。ここでは <a href="https://www.youtube.com/playlist?list=PLi8SA3sbzYVTl4FV0rLnSsf6ElOh-_Cv1">【J: UI】</a> の 15 本を一般のアプリの画面で示し、続けて仕様・ゲーム性・企画の回から待ち時間と反応に関わる 5 本を扱う。見出しは動画へのリンクで、要旨は動画の説明文と要約記事で確認したものに限る。カードを押すと、主張を外した状態と当てはめた状態が切り替わる。</p>
 
   <h3>UI の 15 テーマ</h3>
   <div class="gest skr" id="skr">
@@ -746,8 +734,8 @@
       <div class="after"><div class="mini"><button type="button" class="btn small nr ok">送信</button><span class="out"></span></div></div>
       <div class="before"><div class="mini"><button type="button" class="btn small nr ng">送信</button><span class="out"></span></div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=L1Su0aajYFA">自然なチュートリアル</a></h4><p class="d">「説明書がほとんど無い現在、操作を示すチュートリアルの重要性は上がっている。進めている実感を得ながら学びたい」。使い方は別紙ではなく、打ち始めた瞬間にその場で示す。下の欄は本物の入力欄で、打つと助言が変わる。</p>
-      <div class="after"><div class="mini"><input class="tut" type="text" placeholder="新しいパスワード"><div class="sub tuthint">8 文字以上で入力する</div></div></div>
-      <div class="before"><div class="mini"><input class="tut" type="text" placeholder="新しいパスワード"><div class="sub"><a href="#intro">パスワードの決まり（PDF、12 ページ）</a></div></div></div></div>
+      <div class="after"><div class="mini"><input class="tut" type="password" autocomplete="new-password" placeholder="新しいパスワード" aria-label="新しいパスワード（良い例）"><div class="sub tuthint">8 文字以上で入力する</div></div></div>
+      <div class="before"><div class="mini"><input class="tut" type="password" autocomplete="new-password" placeholder="新しいパスワード" aria-label="新しいパスワード（悪い例）"><div class="sub"><a href="#intro">パスワードの決まり（PDF、12 ページ）</a></div></div></div></div>
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=SpvuPyUnr2E">いただく時間を意識する</a></h4><p class="d">「プレイしているお客さんからは貴重な時間をいただいているという意識がある」。ローディング画面の「あることを明示する」を一歩進め、待たせるなら、どれだけ待つかと、待たずに済む道を示す。</p>
       <div class="after"><div class="mini"><div class="sub lg">アップデートをダウンロード中 <span class="num">残り約 20 秒</span></div><div class="sub">待っている間も使えます。<a href="#sakurai">ダウンロードを止める</a></div></div></div>
       <div class="before"><div class="mini"><div class="spinonly"></div></div></div></div>
@@ -759,7 +747,7 @@
   <div class="eyebrow">第2部 振る舞いの規範</div>
   <h2>動きの原則 ― 緩急と時間</h2>
   <p>画面の動きの規範は、ディズニーのアニメーターが 1981 年に定式化した「アニメーションの 12 原則」（Thomas & Johnston『The Illusion of Life』）を UI に翻訳したものである。UI で使うのはそのうち「スローイン・スローアウト」「予備動作」「フォロースルー」「演出（staging）」「タイミング」の五つで、残りはキャラクターの描写に属する。翻訳の代表は Willenskomer の「UX in Motion Manifesto」（2017）、Val Head『Designing Interface Animation』（2016）、Material の Motion、Apple HIG の Motion である。</p>
-  <p>UI の動きは飾りではなく、変化の前後をつなぐ情報である。変遷の図の様式や章の中身を一コマで切り替えると、何がどこへ変わったのかを見比べて探すことになる。同じ変化を動きでつなぐと、どこから来てどこへ行ったか、何が残り何が入れ替わったかが目で追える。消してよいのは、何も変わっていないのに動く動きだけである。</p>
+  <p>UI の動きは、変化の前後をつなぐ情報である。変遷の図の様式や章の中身を一コマで切り替えると、何がどこへ変わったのかを見比べて探すことになる。同じ変化を動きでつなぐと、どこから来てどこへ行ったか、何が残り何が入れ替わったかが目で追える。消してよいのは、何も変わっていないのに動く動きだけである。</p>
 
   <h3>同じ移動を、緩急を変えて見る</h3>
   <p>線形の動きは機械的に見え、終点で止まる衝撃が残る。減速して止まる動き（スローイン・スローアウト）は物の慣性に合い、目が追える。ばねは行き過ぎて戻る「フォロースルー」で手応えを作る。往復のあいだに止まる時間を置いているのは、動きは止まりがあって初めて読めるからである（演出の原則）。</p>
@@ -768,7 +756,7 @@
     <div class="erow"><div class="lab"><b>線形</b>linear</div><div class="track lin"><i></i></div><div class="cv" data-cv="0,0,1,1"></div></div>
     <div class="erow"><div class="lab"><b>標準</b>cubic-bezier(.2,0,0,1)<br>Material 3 standard</div><div class="track std"><i></i></div><div class="cv" data-cv=".2,0,0,1"></div></div>
     <div class="erow"><div class="lab"><b>強調</b>cubic-bezier(.05,.7,.1,1)<br>Material 3 emphasized</div><div class="track emph"><i></i></div><div class="cv" data-cv=".05,.7,.1,1"></div></div>
-    <div class="erow"><div class="lab"><b>ばね</b>cubic-bezier(.34,1.56,.64,1)<br>Apple の spring に近い</div><div class="track spring"><i></i></div><div class="cv" data-cv=".34,1.56,.64,1"></div></div>
+    <div class="erow"><div class="lab"><b>ばね</b>cubic-bezier(.34,1.56,.64,1)<br>行き過ぎて戻る曲線</div><div class="track spring"><i></i></div><div class="cv" data-cv=".34,1.56,.64,1"></div></div>
     <div class="erow"><div class="lab"><b>短すぎ</b>150ms・標準</div><div class="track std fast"><i></i></div><div class="cv" data-cv=".2,0,0,1"></div></div>
     <div class="erow"><div class="lab"><b>長すぎ</b>1600ms・標準</div><div class="track std slow"><i></i></div><div class="cv" data-cv=".2,0,0,1"></div></div>
   </div>
@@ -783,7 +771,7 @@
     <div class="mdemo"><h4>タイミング<span class="src">タイミング</span></h4><div class="stage tim"><i class="big"></i><i class="small"></i></div><p>大きいものはゆっくり、小さいものは速く。距離と大きさに時間を合わせる。</p></div>
     <div class="mdemo"><h4>親子関係<span class="src">Manifesto</span></h4><div class="stage par"><i class="p"></i><i class="c1"></i><i class="c2"></i></div><p>親が動くと子が少し遅れて従う。カードを開くと中身が一緒に動く。何が何に属しているかが動きで分かる。</p></div>
     <div class="mdemo"><h4>変形<span class="src">Manifesto</span></h4><div class="stage mor"><i class="b"></i><i class="d"></i></div><p>ボタンがそのまま広がってダイアログになる。どこから来たか、閉じればどこへ戻るかが分かる。</p></div>
-    <div class="mdemo"><h4>動かさない自由<span class="src">prefers-reduced-motion</span></h4><div class="stage red"><i class="mv"></i><b class="l1">移動</b><i class="fd"></i><b class="l2">フェード</b></div><p>上は通常の移動、下は同じ変化をフェードだけで表したもの。動きを減らす設定の利用者には下を出す。動きは情報であって装飾ではないので、消してよいのは移動であって変化の合図ではない。</p></div>
+    <div class="mdemo"><h4>動かさない自由<span class="src">prefers-reduced-motion</span></h4><div class="stage red"><i class="mv"></i><b class="l1">移動</b><i class="fd"></i><b class="l2">フェード</b></div><p>上は通常の移動、下は同じ変化をフェードだけで表したもの。動きを減らす設定の利用者には下を出す。消してよいのは移動であって、変化の合図ではない。</p></div>
   </div>
 
   <p class="note">12 原則と出典（Thomas & Johnston, The Illusion of Life, 1981）は <a href="https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation">Wikipedia「Twelve basic principles of animation」</a>で確認した。Willenskomer の Manifesto、Head の著書、Material と Apple の Motion の本文は開いていない。</p>
@@ -793,7 +781,7 @@
 <section class="slide" data-title="フールプルーフ" id="foolproof">
   <div class="eyebrow">第2部 振る舞いの規範</div>
   <h2>フールプルーフとフェイルセーフ</h2>
-  <p>フールプルーフは、誤操作や誤設定をしても、使う人や周りに危険が及ばないように作る設計である。前提は「人は往々にして間違いを犯す」という考えにある。全自動洗濯機は蓋が開いたままでは回り始めず、オートマ車はシフトが P か N で、ブレーキを踏んでいないとエンジンがかからない。製造業の「ポカヨケ」も同じ考えで、1961 年に新郷重夫が受けた相談をきっかけに始まり、当初の「バカヨケ」から 1963 年に改名された。</p>
+  <p>フールプルーフは、誤操作や誤設定をしても、使う人や周りに危険が及ばないように作る設計である。前提は、人は往々にして間違えるという考えである。全自動洗濯機は蓋が開いたままでは回り始めず、オートマ車はシフトが P か N で、ブレーキを踏んでいないとエンジンがかからない。製造業の「ポカヨケ」も同じ考えで、1961 年に新郷重夫が受けた相談をきっかけに始まり、当初の「バカヨケ」から 1963 年に改名された。</p>
   <div class="cols">
     <div><div class="tbl"><table>
       <tr><th>概念</th><th>何から守るか</th><th>例</th></tr>
@@ -808,24 +796,24 @@
   <h3>目で確かめる</h3>
   <p>対策を 5 原理の番号順に並べた。代替の例（表記ゆれの正規化）は古典と法則の章のポステルの法則で見せている。</p>
   <div class="demos">
-    <div class="demo"><h4>戻っても消さない<span>排除</span></h4><div class="keep"><div class="pane" data-keep="1"><div class="ttl">条件を URL に持つ</div><div class="f"><input type="text" value="関東大震災 1923" aria-label="検索語"><button type="button" class="btn small go">検索</button></div><div class="res" hidden><span class="num">1,249 件</span><button type="button" class="btn small back">← 戻る</button></div></div><div class="pane" data-keep="0"><div class="ttl">画面を作り直す</div><div class="f"><input type="text" value="関東大震災 1923" aria-label="検索語"><button type="button" class="btn small go">検索</button></div><div class="res" hidden><span class="num">1,249 件</span><button type="button" class="btn small back">← 戻る</button></div></div></div><p>検索して戻ったとき、左は入力が残り、右は空になる。検索語・ファセット・並び順・ページを URL に持たせ、戻るで同じ URL に戻れば入力も結果も再現できる。ブラウザの復元（bfcache、autocomplete）だけに頼ると、画面を作り直す実装では消える。</p></div>
+    <div class="demo"><h4>戻っても消さない<span>排除</span></h4><div class="keep"><div class="pane" data-keep="1"><div class="ttl">入力を保つ</div><div class="f"><input type="text" value="配送の遅れ" aria-label="お問い合わせ内容"><button type="button" class="btn small go">確認へ</button></div><div class="res" hidden><span>確認画面</span><button type="button" class="btn small back">← 戻る</button></div></div><div class="pane" data-keep="0"><div class="ttl">画面を作り直す</div><div class="f"><input type="text" value="配送の遅れ" aria-label="お問い合わせ内容"><button type="button" class="btn small go">確認へ</button></div><div class="res" hidden><span>確認画面</span><button type="button" class="btn small back">← 戻る</button></div></div></div><p>問い合わせを書いて確認画面へ進み、戻ったとき、左は入力が残り、右は空になる。入力は画面の外に保ち、検索なら条件を URL に持たせれば、戻っても再現できる。ブラウザの復元に頼るだけでは足りない。戻るときにページをそのまま凍結して戻す仕組み（bfcache）は、no-store の指定や unload の処理があると使われず、画面を自前で描き直す実装ではフォームの値も戻らない。</p></div>
     <div class="demo"><h4>二重実行を防ぐ<span>排除</span></h4><div class="dbl"><button type="button" class="btn" id="dblbtn">送信</button><span class="out" id="dblout"></span></div><p>押した直後にボタンを無効化する。連打しても一回しか送られない。</p></div>
-    <div class="demo"><h4>選べなくする<span>容易化</span></h4><div class="datepick"><div>開始 <span class="sel">1923-09-01</span></div><div>終了 <span class="grey">1923-08-30</span> <span class="grey">1923-08-31</span> <span>1923-09-01</span> <span>1923-09-02</span></div></div><p>開始より前の終了日は選べない。エラー画面が存在しなくなる。</p></div>
-    <div class="demo"><h4>失う前に見せる<span>異常検出</span></h4><div class="mockui bulk"><div class="row">選択中 <b class="num">1,204 件</b></div><div class="row">この 1,204 件を削除します。元に戻せません。</div><div class="row"><button type="button" class="btn">キャンセル</button> <button type="button" class="btn danger">1,204 件を削除</button></div></div><p>確認はここにだけ使う。件数と結果を数字で示し、ボタンにも件数を書く。</p></div>
-    <div class="demo"><h4>取り消せるようにする<span>影響緩和</span></h4><div class="undo" id="undo"><div class="row" data-id="1">保存した検索：帝都復興院 <button type="button" class="del">削除</button></div><div class="row" data-id="2">保存した検索：1923 横浜 <button type="button" class="del">削除</button></div><div class="toast" id="toast" hidden>削除しました <button type="button" class="undo-btn">元に戻す</button> <span class="cd"></span></div></div><p>削除は即時に実行し、数秒の「元に戻す」を出す。確認ダイアログは使わない。</p></div>
+    <div class="demo"><h4>選べなくする<span>容易化</span></h4><div class="datepick"><div>到着日 <span class="sel">10-24</span></div><div>出発日 <span class="grey">10-23</span> <span class="grey">10-24</span> <span>10-25</span> <span>10-26</span></div></div><p>到着日以前の出発日は選べない。エラー画面が存在しなくなる。</p></div>
+    <div class="demo"><h4>失う前に見せる<span>異常検出</span></h4><div class="mockui bulk"><div class="row">選択中のメール <b class="num">1,204 通</b></div><div class="row">この 1,204 通を完全に削除します。元に戻せません。</div><div class="row"><button type="button" class="btn">キャンセル</button> <button type="button" class="btn danger">1,204 通を削除</button></div></div><p>確認はここにだけ使う。件数と結果を数字で示し、ボタンにも件数を書く。</p></div>
+    <div class="demo"><h4>取り消せるようにする<span>影響緩和</span></h4><div class="undo" id="undo"><div class="row" data-id="1">下書き：見積もりの件 <button type="button" class="del">削除</button></div><div class="row" data-id="2">下書き：週次報告 <button type="button" class="del">削除</button></div><div class="toast" id="toast" hidden>削除しました <button type="button" class="undo-btn">元に戻す</button> <span class="cd"></span></div></div><p>削除は即時に実行し、数秒の「元に戻す」を出す。確認ダイアログは使わない。</p></div>
   </div>
 
   <h3>ソフトウェアの UI での具体策</h3>
   <div class="tbl"><table>
     <tr><th>階層</th><th>具体策</th></tr>
-    <tr><td>1 排除</td><td><b>入力を消さない。</b>ブラウザの戻る、セッション切れ、エラーの後も入力とスクロール位置を保つ<br><b>二重実行を防ぐ。</b>送信直後にボタンを無効化し、サーバー側は冪等に</td></tr>
+    <tr><td>1 排除</td><td><b>入力を消さない。</b>ブラウザの戻る、セッション切れ、エラーの後も入力とスクロール位置を保つ<br><b>二重実行を防ぐ。</b>送信直後にボタンを無効化し、サーバー側は冪等（同じ要求が二度届いても結果は一度分）にする</td></tr>
     <tr><td>2 代替</td><td><b>受け入れて直す。</b>全角・半角・ハイフン・空白・新字旧字は拒否せず正規化する（ポステルの法則）。正規化してよいのは意味が変わらない差だけで、意味が変わりうるタイポの修正は提案にとどめ、勝手に置換しない</td></tr>
     <tr><td>3 容易化</td><td><b>選べなくする。</b>無効な組み合わせは消すかグレーに。日付はピッカー、数値は範囲付き</td></tr>
-    <tr><td>4 異常検出</td><td><b>エラーはその場で、</b>直し方と一緒に<br><b>失う前に見せる。</b>影響範囲（「1,204 件を削除します」）を数字で示す。確認ダイアログはここにだけ</td></tr>
+    <tr><td>4 異常検出</td><td><b>エラーはその場で、</b>直し方と一緒に<br><b>失う前に見せる。</b>影響範囲（「1,204 通を削除します」）を数字で示す。確認ダイアログはここにだけ</td></tr>
     <tr><td>5 影響緩和</td><td><b>取り消せるようにする。</b>削除はゴミ箱へ、送信は数秒の猶予</td></tr>
   </table></div>
   <h3>フェイルセーフ ― 壊れたら安全な側へ倒す</h3>
-  <p>フールプルーフが人の誤りに備えるのに対し、フェイルセーフはシステムの故障に備える。踏切が停電で閉まるように、壊れたときに利用者が失うものが最も少ない状態へ倒す。検索 UI では、全文検索の索引が落ちても見出し検索の結果は出す、通信が切れても入力と条件は保つ、部分結果で返したときはそう明示する、の三つになる。</p>
+  <p>フールプルーフが人の誤りに備えるのに対し、フェイルセーフはシステムの故障に備える。踏切が停電で閉まるように、壊れたときに利用者が失うものが最も少ない状態へ倒す。画面では、一部の機能が落ちても残りは使えるようにする（通販サイトのおすすめ表示が落ちても、検索と購入はできる）、通信が切れても入力は保つ、一部だけ返したときはそう明示する、の三つになる。</p>
   <p>ここからは本資料の判断である。防げるのは想定したミスだけで、1〜3 の対策ほど利用者の操作の自由を減らす。そこで 1〜3 は取り返しのつかない操作に集中して使い、それ以外は自由を奪わない 5 の取り消しで守る。専門家向けの道具では 1〜3 を緩め、5 を強くする。</p>
   <p class="note">ポカヨケの起源と改称は <a href="https://ja.wikipedia.org/wiki/ポカヨケ">Wikipedia「ポカヨケ」</a>、フェイルセーフとフォールトトレラントの区別は <a href="https://ja.wikipedia.org/wiki/フェイルセーフ">Wikipedia「フェイルセーフ」</a>、フールプルーフの定義と例は <a href="https://ja.wikipedia.org/wiki/フールプルーフ">Wikipedia「フールプルーフ」</a>、フォールトトレラントの例は <a href="https://ja.wikipedia.org/wiki/フォールトトレラント設計">Wikipedia「フォールトトレラント設計」</a>で確認した。5 原理は <a href="https://www.qualitydigest.com/june00/html/godfrey.html">Godfrey「Error-Proofing」（Quality Digest、2000）</a>が中條・久米の分類として紹介するもので、中條・久米の原論文は開いていない。確認ダイアログについては <a href="https://www.nngroup.com/articles/confirmation-dialog/">NN/g「Confirmation Dialogs」</a>に拠る。</p>
 </section>
@@ -969,7 +957,7 @@
   <h3>第 8 章 ナビゲーションと検索の統合 ― ファセット</h3>
   <p>検索はその場限りの集合を作り、ナビゲーションはあらかじめ定めた集合へ導く。カテゴリは平坦・階層・ファセットのどれかで、絞り込み・グループ化・並べ替えに使う。階層は大きな集合で破綻した。Yahoo のディレクトリでは内容・地域・商業の区分が混ざり、同じカヤックのサイトへ着く道筋が一つに決まらなかった。ファセットは、互いに独立した複数の分類（年、種別、地域など）を一件に何個でも付け、どの分類からでも始められるようにする。</p>
   <div class="fig"><div class="fct" id="fct">
-  <div class="fct-mode" role="tablist"><button type="button" class="btn small on" data-mode="facet">ファセット</button><button type="button" class="btn small" data-mode="param">パラメトリック</button></div>
+  <div class="fct-mode"><button type="button" class="btn small on" data-mode="facet">ファセット</button><button type="button" class="btn small" data-mode="param">パラメトリック</button></div>
   <div class="fct-body">
     <div class="fct-side" id="fctside"></div>
     <div class="fct-res"><div class="fct-cnt" id="fctcnt"></div><ul id="fctlist"></ul></div>
@@ -1055,7 +1043,7 @@
   <p><a href="https://github.com/junegunn/fzf">fzf</a>（2013）は、Bates の往復をキーストローク単位で実装したものである。入力するたびに全件から絞り込まれた候補を即座に見せて選ばせるので、検索と選択の区別がなく、クエリを確定させる操作もない。源流は Raskin の LEAP、Emacs の Ido と Helm、Quicksilver にあり、現在は GUI のコマンドパレット（Cmd+K）にまで広がっている。</p>
   <h3>打って確かめる</h3>
   <p>下の欄に断片を打つ。全 24 件から順に絞られ、当たった文字が強調され、件数が変わり、右に選択中の中身が出る。↑↓ で移動できる。丸数字は下の表の行に対応する。</p>
-  <div class="fz" id="fz"><div class="fzl"><div class="fzin"><b class="mk">1</b><span class="pr">&gt;</span><input type="text" id="fzq" placeholder="例: 1923、fukko、横浜" autocomplete="off"><span class="cnt" id="fzcnt"></span></div><ul id="fzlist"></ul><b class="mk mk2">2</b></div><div class="fzp" id="fzprev"></div><b class="mk mk3">3</b></div>
+  <div class="fz" id="fz"><div class="fzl"><div class="fzin"><b class="mk">1</b><span class="pr">&gt;</span><input type="text" id="fzq" aria-label="絞り込む語" placeholder="例: 1923、fukko、横浜" autocomplete="off"><span class="cnt" id="fzcnt"></span></div><ul id="fzlist"></ul><b class="mk mk2">2</b></div><div class="fzp" id="fzprev"></div><b class="mk mk3">3</b></div>
   <h3>fzf が決めた四つのことと、その後の端末ツール</h3>
   <p>fzf の設計は四つに要約でき、以後の端末ツールはそれぞれを一段ずつ進めた。検索 UI への翻訳も四行で足りる。</p>
   <div class="tbl"><table class="fztbl">
@@ -1086,7 +1074,7 @@
     <tr tabindex="0" data-demo="#skr .card:nth-child(15)|#skr2 .card:nth-child(1)|#laws .card:nth-child(6)"><td class="num">6</td><td>状態を常に見せ、即座に返す</td><td>件数・進捗・スコープ・選択中・ON/OFF を隔てなく表示し、400ms 以内に反応する。押されたら必ず何かを返す</td><td>Norman（評価の深淵）、NN/g 1、Doherty、東京都 3、桜井 HUD・ローディング画面・「遅さは罪」「ノーリアクションを排除せよ」、fzf、Hearst</td></tr>
     <tr tabindex="0" data-demo="#skr .card:nth-child(13)|#guidelines .zero"><td class="num">7</td><td>利用者の言葉で語る</td><td>内部用語・正式名称・コードを出さない</td><td>NN/g 2・9、東京都 2・5、桜井「メニューにヘルプを」</td></tr>
     <tr tabindex="0" data-demo="#laws .card:nth-child(4)|#guidelines .m3"><td class="num">8</td><td>慣習に従う</td><td>プラットフォーム標準と他サイトの作法を裏切らない</td><td>NN/g 4、ジェイコブの法則、東京都 3、Apple、Material</td></tr>
-    <tr tabindex="0" data-demo="#skr .card:nth-child(9)|#skr .card:nth-child(11)"><td class="num">9</td><td>初心者には見せず、熟練者には近道を</td><td>キー操作・演算子・コマンドパレットを同じ欄に</td><td>NN/g 7、黄金律 2、桜井「高速に選びたい」「ボタン設定」、fzf</td></tr>
+    <tr tabindex="0" data-demo="#skr .card:nth-child(9)|#skr .card:nth-child(11)"><td class="num">9</td><td>近道は初心者の邪魔にならない形で</td><td>キー操作・演算子・コマンドパレットを同じ欄に</td><td>NN/g 7、黄金律 2、桜井「高速に選びたい」「ボタン設定」、fzf</td></tr>
     <tr tabindex="0" data-demo="#motion .mdemo:nth-child(6)|#motion .mdemo:nth-child(5)"><td class="num">10</td><td>変化は動きでつなぐ</td><td>どこから来てどこへ行ったかを動きで示す。動きを減らす設定でもフェードで変化の合図を残す。何も変わらない動きは置かない</td><td>12 原則、UX in Motion Manifesto、Material と Apple の Motion</td></tr>
     <tr tabindex="0" data-demo="#foolproof .demo:nth-child(5)|#foolproof .demo:nth-child(3)|#skr2 .card:nth-child(2)"><td class="num">11</td><td>間違えても戻れる</td><td>取り返しのつかない操作は間違えようのない形にし、それ以外は確認より取り消しで守る。壊れたら安全な側へ倒す</td><td>Norman（強制機能）、NN/g 3・5、黄金律 6、東京都 4、ポカヨケ、桜井「リトライは迅速に」、Hearst（0 件の回避）</td></tr>
     <tr class="sep"><td colspan="4">第 3 部 探す行為</td></tr>
@@ -1112,18 +1100,36 @@
       <h4>2 入力中</h4><ul><li>一文字ごとに候補、400ms 以内（6。fzf、Doherty）</li><li>表記ゆれを既定で同一視：新字旧字、異体字、かなカナ、全角半角、長音、ローマ字（11。ポステル）</li><li>曖昧一致は候補にのみ。本検索の既定は単語単位の AND（5。fzf の章）</li><li>候補をカテゴリで区切り、マッチ箇所を太字に（5。Material）</li><li>件数を入力中から出す（6。fzf）</li><li>Enter 連打で二度走らせない（11）</li></ul>
       <h4>3 結果一覧</h4><ul><li>年代別ヒストグラムを上に置き、ドラッグで期間を絞る（12。Shneiderman）</li><li>同じ事件の記事は日付を、同じ書名の版と巻は刊行年を縦軸に並べる（4。JR の乗換結果）</li><li>ファセットを左に、件数付き。0件になる選択肢はグレー（11。NN/g 5）</li><li>密度の高い左揃えの表。列はタイトル・著者・日付・所在（1。スイス）</li><li>スニペットはヒット語の前後、ヒット語だけアクセント色（3・12。Pirolli と Card）</li><li>古い・重複・非公開は既定で除き「含めて再検索」を用意（2。ripgrep）</li><li>遅い全文検索は見出しの結果を先に出し、残りの進捗と止める道を示す（6。桜井）</li><li>既定は関連度、新聞は日付降順に一回で切替</li></ul></div>
     <div><h4>4 絞り込みと往復</h4><ul><li>検索語・ファセット・並び順・ページを URL に（11。東京都 4、NN/g 3）</li><li>適用中の条件をチップで、× で外せる。全部外すのも一回で（11。Apple tokens、桜井「リトライは迅速に」）</li><li>無効な期間は入力できない（11）</li><li>AND / OR / NOT / <code>title:</code> <code>date:1923..1924</code> を同じ欄で（9。fzf）</li><li>検索欄は結果画面でも入力語を保ったまま上に（12。Bates、Material）</li><li>絞り込みで結果が変わるときは、消える行と残る行を動きでつなぐ（10）</li></ul>
-      <h4>5 詳細</h4><ul><li>広い画面では一覧と詳細の 2 ペイン。幅の判断は Material のウィンドウサイズクラス（1・12。fzf --preview、lazygit）</li><li>j/k で移動、Enter で開く、Esc で戻る。位置を保つ（9）</li><li>「同じ著者」「同じ日の紙面」へ一回で（12。Bates）</li><li>新聞は紙面全体を見せてヒット箇所を枠で</li><li>紙面は拡大画像を左、紙面全体のミニマップを右に置き、文脈帯は紙面と同じ縦の列にする（4。可視化の章。左右は研究ではなく慣習による）</li></ul>
+      <h4>5 詳細</h4><ul><li>広い画面では一覧と詳細の 2 ペイン。幅の判断は Material のウィンドウサイズクラス（1・12。fzf --preview、lazygit）</li><li>j/k で移動、Enter で開く、Esc で戻る。位置を保つ（9）</li><li>「同じ著者」「同じ日の紙面」へ一回で（12。Bates）</li><li>新聞は紙面全体を見せてヒット箇所を枠で</li><li>紙面は拡大画像を左、紙面全体のミニマップを右に置き、文脈帯は紙面と同じ縦の列にする（4。下の「詳細画面の配置」）</li></ul>
       <h4>6 持ち出しと保存</h4><ul><li>書誌の書き出しと検索条件の保存（12。Shneiderman の「取り出し」）</li><li>エクスポートは件数を先に見せ、上限超過時だけ確認（11）</li><li>保存した検索の削除は即時実行して数秒の「元に戻す」（11）</li></ul>
       <h4>7 0件と失敗（どの段でも）</h4><ul><li>0件画面に検索欄を残し、緩めた結果と「もしかして」を自動で（7。東京都 5、NN/g 9）</li><li>タイポは「もしかして」で提案し、勝手に置換しない（11）</li><li>司書への相談導線を全ページに（7。東京都 5）</li><li>全文検索の索引が落ちても見出し検索の結果は出し、部分結果であることを示す（11。フェイルセーフ）</li></ul></div>
   </div>
 
+  <h3>詳細画面の配置 ― 主に見るものを左、補助を右</h3>
+  <p>上の「5 詳細」では、比べさせたいものを横に並べて軸をそろえ（<a href="#principles" data-prin="4">原則 4</a>）、紙面の拡大画像を左、紙面全体のミニマップを右に置き、文脈帯は紙面と同じ縦の列にすると決めた。ここではその理由と限界を示す。</p>
+  <h4>理由</h4>
+  <ul>
+    <li>見て探す課題では、一度に情報を取れる範囲が縦より横に広く、横方向に走査するほうが速いと報告されている。差は目の跳躍（サッケード）の側から来る（<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2712349/">Najemnik と Geisler の系統の視覚探索研究</a>）。</li>
+    <li>視野の水平方向（水平子午線）は、垂直方向より見え方の成績が良いと、多くの課題で繰り返し報告されている（<a href="https://link.springer.com/article/10.1007/s00221-025-07152-2">2025 年の研究</a>、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9012886">総説</a>）。</li>
+    <li>縦方向のサッケードは横より遅いという報告もあるが、振幅をそろえた比較は確認できなかった。</li>
+    <li>Cleveland と McGill（1984）は、共通の軸の上で位置を比べるのが最も正確で、比べるものが離れるほど精度が落ちると示した（<a href="https://vis.arc.vt.edu/%7Enpolys/projects/safas/science.pdf">論文</a>）。可視化の章の「正確に読める順」と同じ出典である。</li>
+    <li>比べるものを近くに並べ、軸をそろえるほど比較が楽になる。Tufte のスモールマルチプルと、Matlen ら（2020）の<a href="https://groups.psych.northwestern.edu/gentner/papers/MatlenEtAl_2020-SpatialAlign.pdf">空間整合の枠組み</a>がこの考え方である。</li>
+    <li>放射線科で前回と今回の画像を比べるときは、横に並べるのが一般的である（<a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">ハンギングプロトコルの解説</a>）。</li>
+    <li>全体と詳細を別々に見せる画面（overview+detail）の総説（<a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/01/cockburn-ComputingSurveys09.pdf">Cockburn ら、2009</a>）も、全体図（ミニマップ）を左右どちらに置くかは扱っていない。コードエディタのミニマップが右にあるのも慣習である。</li>
+    <li>左から右に読む人は、左から見始め、右側を見落としやすいとされる（<a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">NN/g</a>）。主に見るもの（拡大画像）を左、補助（ミニマップ）を右に置くのは、この点では筋が通る。</li>
+    <li>縦書きの日本語は、横書きより注視の回数が多くなるという報告と、読む速さは変わらないという報告がある（<a href="https://researchmap.jp/kojimiwa/published_papers/3501775">Miwa ら</a>）。</li>
+    <li>紙面に添える文脈帯を紙面と同じ縦の列にしておくのは自然だが、比較の精度を示す研究ではない。</li>
+  </ul>
+  <h4>限界</h4>
+  <p>横並びと縦並びの比較を、人の反応時間で直接確かめた研究は見つからなかった。拡大画像とミニマップの左右、文脈帯の向きは、研究ではなく慣習で決まる問題である。</p>
+  <p class="note">この節の研究は、各論文の要旨と解説で確かめた範囲で、原典は通読していない。</p>
 </section>
 
 <!-- ============ refs ============ -->
 <section class="slide" data-title="参考資料" id="refs">
   <div class="eyebrow">付録</div>
   <h2>参考資料 ― 出典と確認の範囲</h2>
-  <p>本資料が引いた資料を種類ごとにまとめた。章の名前を押すとその章へ移る。各章の末尾の注記は、数値や主張のすぐ近くで出典を確かめるために残してあり、このページはその索引に当たる。</p>
+  <p>本資料が引いた資料を種類ごとにまとめた。章の名前を押すとその章へ移る。各章の末尾の注記は、数値や主張のすぐ近くで出典を確かめるために残してあり、本資料ではその索引に当たる。</p>
   <p>右端の列は、各章の注記に書いた確認の範囲を四段階に分けたものである。同じ主張でも、原典を読んだのか、紹介記事で確かめたのかで信頼の度合いが変わるので、引用するときはこの列を見る。</p>
   <div class="tbl"><table class="lvkey">
     <tr><th>表記</th><th>意味</th></tr>
@@ -1173,15 +1179,15 @@
     <tr><td><a href="https://link.springer.com/rwe/10.1007/978-3-319-55065-7_1588">Feature Integration Theory の解説</a></td><td>Treisman の理論</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Chartjunk">Chartjunk</a></td><td>Tufte、1983</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Small_multiple">Small multiple</a></td><td>Tufte、1990</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2712349/">視覚探索とサッケードの研究</a></td><td>Najemnik と Geisler の系統</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://link.springer.com/article/10.1007/s00221-025-07152-2">視野の水平・垂直の差の研究</a></td><td>Experimental Brain Research、2025</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9012886">視野の非対称性の総説</a></td><td>PMC</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://vis.arc.vt.edu/%7Enpolys/projects/safas/science.pdf">Graphical Perception（論文）</a></td><td>Cleveland と McGill、1984</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://groups.psych.northwestern.edu/gentner/papers/MatlenEtAl_2020-SpatialAlign.pdf">Spatial alignment</a></td><td>Matlen ら、2020</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/01/cockburn-ComputingSurveys09.pdf">A review of overview+detail, zooming, and focus+context interfaces</a></td><td>Cockburn ら、2009</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">Hanging Protocol Overview</a></td><td>LEADTOOLS</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">Text Scanning Patterns: Eyetracking Evidence</a></td><td>Nielsen Norman Group</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://researchmap.jp/kojimiwa/published_papers/3501775">縦書きと横書きの読みの研究</a></td><td>Miwa ら</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2712349/">視覚探索とサッケードの研究</a></td><td>Najemnik と Geisler の系統</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://link.springer.com/article/10.1007/s00221-025-07152-2">視野の水平・垂直の差の研究</a></td><td>Experimental Brain Research、2025</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9012886">視野の非対称性の総説</a></td><td>PMC</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://vis.arc.vt.edu/%7Enpolys/projects/safas/science.pdf">Graphical Perception（論文）</a></td><td>Cleveland と McGill、1984</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://groups.psych.northwestern.edu/gentner/papers/MatlenEtAl_2020-SpatialAlign.pdf">Spatial alignment</a></td><td>Matlen ら、2020</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/01/cockburn-ComputingSurveys09.pdf">A review of overview+detail, zooming, and focus+context interfaces</a></td><td>Cockburn ら、2009</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">Hanging Protocol Overview</a></td><td>LEADTOOLS</td><td><a href="#apply">適用</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">Text Scanning Patterns: Eyetracking Evidence</a></td><td>Nielsen Norman Group</td><td><a href="#apply">適用</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://researchmap.jp/kojimiwa/published_papers/3501775">縦書きと横書きの読みの研究</a></td><td>Miwa ら</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
     <tr><td><a href="https://www.researchgate.net/publication/6873629_Humans_prefer_curved_visual_objects">Humans prefer curved visual objects</a></td><td>Bar と Neta、2006</td><td><a href="#swiss">スイス</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
     <tr><td><a href="https://link.springer.com/article/10.1186/s41235-023-00499-6">Cognitive Research: Principles and Implications の論文</a></td><td>Bellaiche ら、2023</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
     <tr><td><a href="https://www.researchgate.net/publication/222427507_The_effort_heuristic">The effort heuristic</a></td><td>Kruger ら、2004</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
@@ -1263,7 +1269,7 @@
 <div class="slidefoot"><button class="navlink" id="prev2" type="button"></button><span id="footl"></span><button class="navlink" id="next2" type="button"></button></div>
 <div class="pull" id="pull" aria-hidden="true"><i></i><span>さらに下へスクロールすると次の章へ</span></div>
 </main>
-  <dialog id="pop"><div class="pophead"><b id="poptitle"></b><button type="button" class="btn small" id="popclose">閉じる</button></div><div id="popbody"></div></dialog>
+  <dialog id="pop" aria-labelledby="poptitle"><div class="pophead"><b id="poptitle"></b><button type="button" class="btn small" id="popclose">閉じる</button></div><div id="popbody"></div></dialog>
 
 <script src="app.js"></script>
 </body>

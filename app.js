@@ -29,7 +29,7 @@
   }
   ['prev','prev2'].forEach(function(id){document.getElementById(id).addEventListener('click',function(){go(cur-1);});});
   ['next','next2'].forEach(function(id){document.getElementById(id).addEventListener('click',function(){go(cur+1);});});
-  document.addEventListener('keydown',function(e){if(e.target.tagName==='INPUT')return;if(e.key==='ArrowRight'){go(cur+1);}if(e.key==='ArrowLeft'){go(cur-1);}});
+  document.addEventListener('keydown',function(e){var t=e.target;if(/^(INPUT|SELECT|TEXTAREA)$/.test(t.tagName)||t.isContentEditable||document.querySelector('dialog[open]'))return;if(e.key==='ArrowRight'){go(cur+1);}if(e.key==='ArrowLeft'){go(cur-1);}});
   /* 今の位置を履歴に書き戻す。回数制限のあるブラウザがあるので間引く */
   var saveT=0;window.addEventListener('scroll',function(){clearTimeout(saveT);saveT=setTimeout(function(){setState(false,window.scrollY);},200);},{passive:true});
 
@@ -128,7 +128,7 @@
 
 
   /* ---------- gestalt ---------- */
-  document.querySelectorAll('#skr .card:not(.static), #skr2 .card, #laws .card:not(.static), #nng .card').forEach(function(c){function f(){c.classList.toggle('on');}c.addEventListener('click',function(e){if(e.target.closest('input,button,label,a,[data-tip]'))return;f();});c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();f();}});});
+  document.querySelectorAll('#skr .card:not(.static), #skr2 .card, #laws .card:not(.static), #nng .card:not(.static)').forEach(function(c){c.setAttribute('role','button');function sync(){c.setAttribute('aria-pressed',c.classList.contains('on')?'true':'false');}sync();function f(){c.classList.toggle('on');sync();}c.addEventListener('click',function(e){if(e.target.closest('input,button,label,a,[data-tip]'))return;f();});c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();f();}});});
 
   /* ---------- NN/g 5: postal code ---------- */
   var zg=document.querySelector('.zip-good'),zb=document.querySelector('.zip-bad'),zs=document.querySelector('.zip-send'),zo=document.querySelector('.zip-out');
@@ -279,7 +279,7 @@
   document.querySelectorAll('.btn.nr').forEach(function(b){b.addEventListener('click',function(){var out=b.nextElementSibling;if(b.classList.contains('ng'))return;out.textContent='送信中…';setTimeout(function(){out.textContent='送信しました';setTimeout(function(){out.textContent='';},1200);},400);});});
   document.querySelectorAll('input.tut').forEach(function(inp){var h=inp.nextElementSibling;if(!h||!h.classList.contains('tuthint'))return;inp.addEventListener('input',function(){var v=inp.value;h.textContent=!v?'8 文字以上で入力する':v.length<8?'あと '+(8-v.length)+' 文字':!/\d/.test(v)?'数字を 1 つ含めると強くなる':'十分な強さです';});});
   var huds=document.querySelectorAll('.hud'),hudDown=false;
-  setInterval(function(){hudDown=!hudDown;huds.forEach(function(h){h.scrollTo({top:hudDown?70:0,behavior:'smooth'});});},2200);
+  setInterval(function(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;hudDown=!hudDown;huds.forEach(function(h){if(h.offsetParent)h.scrollTo({top:hudDown?70:0,behavior:'smooth'});});},2200);
   /* ---------- 共通原則: 前の章の図をポップアップで ---------- */
   var pop=document.getElementById('pop'),popb=document.getElementById('popbody'),popt=document.getElementById('poptitle');
   function openPop(tr,lead){popt.textContent=(lead?'原則 '+tr.cells[0].textContent+'　':'')+tr.cells[1].textContent;popb.innerHTML='';
