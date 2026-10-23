@@ -116,7 +116,7 @@
     <tr><td><b>6 装飾を排除する</b></td><td>影・グラデーション・枠・挿絵は、情報を足さないなら付けない。区別は位置・大きさ・色で付ける</td><td><div class="sw-plain"><b>1,249 件</b><span>帝都の火災、三日に及ぶ</span><span>救護班、<em>横浜</em>へ</span><span>復興院の設置決まる</span></div></td></tr>
   </table></div>
 
-  <h3>スイスデザインでポスターを組む</h3>
+  <h3>デザイン例</h3>
   <div class="cols postercols">
     <div><div class="poster" id="poster"><div class="inner"><div class="t1">Neue<br>Grafik<br>1958</div><div class="t2">数学的なグリッド、左揃え、サンセリフ一種類、写真と幾何学的形態、余白、装飾の排除。内容が変わっても崩れない規則として画面に残った。</div><div class="sq"></div></div></div></div>
     <ul>
@@ -178,17 +178,27 @@
     <tr><td><b>幅で並びを変える</b></td><td>適応レイアウト。ウィンドウの幅を 5 クラスに分け、クラスごとにペインの数と配置を決める（下の図）</td><td><div class="mc-wsc num"><i style="flex:600">C</i><i style="flex:240">M</i><i style="flex:360">E</i><i style="flex:400">L</i><i style="flex:300">XL</i></div><p class="cap num">0 / 600 / 840 / 1200 / 1600dp</p></td></tr>
   </table></div>
 
-  <h3>Material でポスターを組む</h3>
-  <div class="cols postercols">
-    <div><div class="mposter"><span class="mp-chip">展覧会</span><div class="mp-hero">Neue Grafik 1958</div><div class="mp-card"><b>グリッドと左揃え</b><p>数学的なグリッド、左揃え、サンセリフ一種類。内容が変わっても崩れない規則として画面に残った。</p></div><div class="mp-chips"><span>グリッド</span><span>左揃え</span><span>サンセリフ</span></div><span class="mp-fab">＋ 詳しく見る</span></div></div>
-    <ul>
-      <li>題字は角を 28dp 丸めた色の面に、本文は標高 1 のカードに載せる（面は紙である）。</li>
-      <li>題字は display、本文は title と body で、ウェイトは 400 と 500 にとどめる（印刷の文法で組む）。</li>
-      <li>地・面・題字・チップの色は、すべて青一色から作ったトーンである（色は一色から生成する）。</li>
-      <li>押せるもの（チップと右下の FAB）は、形と標高で押せないものと分ける。FAB は標高 3 に置く。</li>
-    </ul>
+  <h3>デザイン例</h3>
+  <p>2014 年版は主色とアクセント色の二色をはっきり使い、2021 年の Material 3 は一色から作った淡いトーンを面に敷くので、同じ部品でもおとなしく見える。</p>
+  <div class="mver">
+    <label class="toggle"><input type="radio" name="mver" id="mv14" checked> 2014 年版</label>
+    <label class="toggle"><input type="radio" name="mver" id="mv21"> 2021 年版（Material 3）</label>
+    <div class="cols postercols">
+      <div><div class="mposter"><span class="mp-chip">展覧会</span><div class="mp-hero">Neue Grafik 1958</div><div class="mp-card"><b>グリッドと左揃え</b><p>数学的なグリッド、左揃え、サンセリフ一種類。内容が変わっても崩れない規則として画面に残った。</p></div><div class="mp-chips"><span>グリッド</span><span>左揃え</span><span>サンセリフ</span></div><span class="mp-fab">＋<span class="lb"> 詳しく見る</span></span></div></div>
+      <ul class="v14">
+        <li>題字の面は主色（Indigo 500）で、文字は白。アクセント色（Pink A200）は右下の FAB だけに使う。主色に 500 番、アクセントに A 番台の色を当てるのが 2014 年版の配色である。</li>
+        <li>面はわずかに角を丸めた紙で、カードは標高 2dp に置き、FAB はさらに高く浮かせる（面は紙である）。</li>
+        <li>FAB は直径 56dp の円。チップは両端を丸めた灰色の帯にした。</li>
+        <li>題字は大きく、本文は小さく、間の段を飛ばして差を強く付ける（印刷の文法で組む）。</li>
+      </ul>
+      <ul class="v21">
+        <li>地・面・題字・チップ・FAB の色は、すべて青一色から作ったトーンである（色は一色から生成する）。彩度の高い色は面に使わず、淡いトーンを面に、濃いトーンを文字に当てる。</li>
+        <li>題字は色の面に、本文は標高 1 のカードに載せ、FAB は標高 3 に置く（面は紙である）。</li>
+        <li>角は大きく丸める。題字の面は 28dp、カードは 12、チップは 8、FAB は 16 で、FAB は文字を添えた横長の形にした。</li>
+        <li>題字は display、本文は title と body で、ウェイトは 400 と 500 にとどめる（印刷の文法で組む）。</li>
+      </ul>
+    </div>
   </div>
-  <p class="cap">同じ内容を、スイスデザインは線と余白で区切り、Material は面と影で区切る。</p>
 
   <h3>適応レイアウト ― 幅が変わると並びが変わる</h3>
   <p>Web では 2010 年以降、画面の大きさを前提にできなくなり、グリッドを幅の関数にする方法が確立した（Marcotte の Responsive Web Design、Wroblewski の Mobile First、CSS Grid、Container Queries）。Material 3 はこれを、ウィンドウの幅で分けた五つのクラスにまとめた。compact（600dp 未満）、medium（600〜839）、expanded（840〜1199）、large（1200〜1599）、extra-large（1600 以上）である。下の図では枠の幅が伸び縮みし、検索 UI の部品が幅に応じて隠れたり列が増えたりする。下の帯が周期の進みで、色の付いた区間は幅の変化が毎フレーム 1px 未満、つまり見た目に止まっている時間である。区間は緩急の曲線から計算している。</p>
@@ -213,7 +223,7 @@
     <div class="rlab"><span>compact</span><span>medium</span><span>expanded</span><span>medium</span><span>compact</span></div>
   </div>
   <p class="cap">ブレークポイントは機種ではなく内容で決める。ファセットを左に置ける幅、詳細を右に置ける幅。内容と機能は幅で削らない。</p>
-  <p class="note">ウィンドウサイズクラスの値は <a href="https://m3.material.io/foundations/layout/breakpoints">Material Design 3「Breakpoints」</a>で確認した。成立の年と、トークン・ダイナミックカラー・状態の規則は <a href="https://m3.material.io/">m3.material.io</a> の各項に拠る。状態レイヤーの不透明度（8・12・12・16%）、標高の 6 段、タイプスケール、角の半径（28dp ほか）の値は <a href="https://github.com/material-components/material-web/tree/main/tokens">material-web のトークン定義</a>で確認した。2014 年版の三原則（紙の比喩、印刷の文法、意味のある動き）の原文は開いていない。</p>
+  <p class="note">ウィンドウサイズクラスの値は <a href="https://m3.material.io/foundations/layout/breakpoints">Material Design 3「Breakpoints」</a>で確認した。成立の年と、トークン・ダイナミックカラー・状態の規則は <a href="https://m3.material.io/">m3.material.io</a> の各項に拠る。状態レイヤーの不透明度（8・12・12・16%）、標高の 6 段、タイプスケール、2021 年版の例の角の半径（28dp ほか）の値は <a href="https://github.com/material-components/material-web/tree/main/tokens">material-web のトークン定義</a>で確認した。角の半径は 2025 年の M3 Expressive で大きい段が 20・32・48dp に改められた（<a href="https://m3.material.io/styles/shape/overview-principles">Shape</a>）。2014 年版の三原則（Material is the metaphor、Bold, graphic, intentional、Motion provides meaning）は <a href="https://m2.material.io/design/introduction">Material Design「Introduction」</a>で、500 番を主色に A 番台をアクセントにする配色、カードの標高 2dp、FAB の直径 56dp は <a href="https://material.io/archive/guidelines/">2014 年版ガイドラインのアーカイブ</a>で確認した。</p>
 </section>
 
 <!-- ============ gestalt ============ -->
@@ -1060,6 +1070,9 @@
     <tr><td><a href="https://m3.material.io/">Material Design 3</a></td><td>Google</td><td><a href="#intro">はじめに</a>、<a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://m3.material.io/foundations/layout/breakpoints">Material Design 3「Breakpoints」</a></td><td>Google</td><td><a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://github.com/material-components/material-web/tree/main/tokens">material-web のトークン定義</a></td><td>Google</td><td><a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://m2.material.io/design/introduction">Material Design「Introduction」</a></td><td>Google</td><td><a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://material.io/archive/guidelines/">Material Design 2014 年版ガイドライン（アーカイブ）</a></td><td>Google</td><td><a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://m3.material.io/styles/shape/overview-principles">Material Design 3「Shape」</a></td><td>Google</td><td><a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://m3.material.io/components/search/guidelines">Material Design 3「Search」</a></td><td>Google</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
     <tr><td><a href="https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/uidesign_guide_v100">UI設計実践ガイド v1.0.0</a></td><td>東京都</td><td><a href="#intro">はじめに</a>、<a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
     <tr><td><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">10 Usability Heuristics</a></td><td>Nielsen Norman Group</td><td><a href="#intro">はじめに</a>、<a href="#classics">古典と法則</a></td><td><span class="lv lv-no">記載なし</span></td></tr>

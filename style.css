@@ -603,14 +603,14 @@ table.claims td:last-child{width:232px;min-width:232px}
   --md-e1:0 1px 2px rgba(0,0,0,.3),0 1px 3px 1px rgba(0,0,0,.15);
   --md-e3:0 1px 3px rgba(0,0,0,.3),0 4px 8px 3px rgba(0,0,0,.15);
 }
-.mposter{position:relative;background:var(--md-surface);aspect-ratio:1/1.414;max-width:360px;padding:24px;overflow:hidden;display:flex;flex-direction:column;gap:16px}
+.mposter{position:relative;background:var(--md-surface);box-shadow:inset 0 0 0 1px var(--line);aspect-ratio:1/1.414;max-width:360px;padding:24px;overflow:hidden;display:flex;flex-direction:column;gap:16px}
 .mp-chip{align-self:flex-start;font-size:.75rem;font-weight:500;padding:4px 12px;border-radius:8px;box-shadow:inset 0 0 0 1px var(--line);color:var(--muted)}
 .mp-hero{background:var(--md-pc);color:var(--md-onpc);border-radius:28px;padding:24px;font-size:2.25rem;font-weight:400;line-height:1.1;letter-spacing:-.01em}
 .mp-card{background:var(--panel);border-radius:12px;padding:16px;box-shadow:var(--md-e1);font-size:.8rem}
 .mp-card b{font-size:1rem;font-weight:500}.mp-card p{margin:4px 0 0;color:var(--muted);line-height:1.5}
 .mp-chips{display:flex;flex-wrap:wrap;gap:8px}
 .mp-chips span{font-size:.75rem;font-weight:500;padding:4px 12px;border-radius:8px;background:var(--md-sch)}
-.mp-fab{position:absolute;right:24px;bottom:24px;background:var(--md-pc);color:var(--md-onpc);border-radius:16px;padding:16px 20px;font-size:.85rem;font-weight:500;box-shadow:var(--md-e3)}
+.mp-fab{position:absolute;display:flex;align-items:center;justify-content:center;white-space:pre;min-height:56px;right:24px;bottom:24px;background:var(--md-pc);color:var(--md-onpc);border-radius:16px;padding:16px 20px;font-size:.85rem;font-weight:500;box-shadow:var(--md-e3)}
 
 /* 適応レイアウトの図を Material の部品で描く */
 #material button.btn{border:0;border-radius:999px;background:var(--md-pc);color:var(--md-onpc);font-weight:500;padding:8px 24px}
@@ -634,3 +634,16 @@ table.claims td:last-child{width:232px;min-width:232px}
 #material .rf-width{padding:8px 16px 12px}
 #material .rprog{height:8px;border-radius:4px;margin-top:12px;box-shadow:inset 0 0 0 1px var(--line)}
 #material .rprog i{width:4px;border-radius:2px;background:var(--main)}
+
+/* デザイン例の版の切り替え。2014 年版は Indigo 500 を主色、Pink A200 をアクセントにする */
+.mver .postercols{margin-top:calc(var(--u)*2)}
+.mver .v21,.mver:has(#mv21:checked) .v14{display:none}
+.mver:has(#mv21:checked) .v21{display:block}
+.mver:has(#mv14:checked) .mposter{background:#fafafa;color:rgba(0,0,0,.87)}
+.mver:has(#mv14:checked) .mp-chip{border-radius:16px;box-shadow:none;background:#e0e0e0;color:rgba(0,0,0,.87)}
+.mver:has(#mv14:checked) .mp-hero{background:#3f51b5;color:#fff;border-radius:2px;font-size:2.8rem;line-height:1.05}
+.mver:has(#mv14:checked) .mp-card{background:#fff;border-radius:2px;box-shadow:0 2px 2px rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px rgba(0,0,0,.2)}
+.mver:has(#mv14:checked) .mp-card p{color:rgba(0,0,0,.54)}
+.mver:has(#mv14:checked) .mp-chips span{border-radius:16px;background:#e0e0e0;color:rgba(0,0,0,.87)}
+.mver:has(#mv14:checked) .mp-fab{background:#ff4081;color:#fff;width:56px;height:56px;padding:0;border-radius:50%;font-size:1.5rem;box-shadow:0 6px 10px rgba(0,0,0,.14),0 1px 18px rgba(0,0,0,.12),0 3px 5px -1px rgba(0,0,0,.2)}
+.mver:has(#mv14:checked) .mp-fab .lb{display:none}
