@@ -236,19 +236,10 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background
 
 /* ---------- Swiss poster ---------- */
 .poster{position:relative;background:var(--panel);aspect-ratio:1/1.414;max-width:360px;padding:24px;overflow:hidden}
-.poster.grid .t1{transform:rotate(-8deg) translate(26px,14px)}.poster.grid .t2{transform:rotate(5deg) translate(-6px,34px);width:92%;column-count:1}.poster.grid .sq{transform:rotate(14deg) translate(70px,-26px);width:38%}
 .poster .inner{position:relative;height:100%;display:flex;flex-direction:column}
 .poster .t1{font-size:2rem;font-weight:700;line-height:1.05;margin-top:30%}
 .poster .t2{font-size:.8rem;margin-top:16px;column-count:2;column-gap:8px;line-height:1.5;color:var(--muted)}
 .poster .sq{width:33%;aspect-ratio:1;background:var(--accent);margin-top:auto}
-.poster.centered .t1,.poster.centered .t2{text-align:center;column-count:1}.poster.centered .sq{margin-inline:auto}
-.poster.deco .t1{font-style:italic;font-weight:900;letter-spacing:.02em;transform:skewX(-12deg) rotate(-4deg);background:linear-gradient(180deg,#fff200 0%,#ff7a00 35%,#ff1a8c 65%,#4b0aff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(3px 3px 0 #1b3f8f) drop-shadow(6px 6px 0 #0a1f4a) drop-shadow(0 0 6px rgba(255,255,255,.8))}
-.poster.deco .t2{color:#1b3f8f;font-family:"Comic Sans MS","Chalkboard SE",cursive;text-shadow:1px 1px 0 #fff,2px 2px 0 #f0c}
-.poster.deco{background:radial-gradient(circle at 20% 10%,#fff 0,#ffe6f2 40%,#dff3ff 100%)}
-.poster.deco .sq{border-radius:24%}
-.poster.deco{border:6px double var(--accent)}
-.poster.dense{padding:8px}.poster.dense .t1{margin-top:0;font-size:1.4rem}.poster.dense .t2{margin-top:4px;font-size:.7rem;line-height:1.2}.poster.dense .sq{width:20%}
-.poster.serif .t1{font-family:Georgia,"Times New Roman",serif;font-style:italic}.poster.serif .t2{font-family:Georgia,serif}
 .typespec{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;font-family:var(--mono);font-size:.75rem;color:var(--muted);align-items:baseline}
 .typespec b{font-family:var(--sans);color:var(--fg);white-space:nowrap}
 
@@ -544,3 +535,102 @@ table.sys{font-size:.78rem}table.sys td:first-child{font-family:var(--mono);whit
 .lv-src{background:var(--main);color:var(--bg)}.lv-abs{box-shadow:inset 0 0 0 1px var(--main);color:var(--main)}.lv-sec{box-shadow:inset 0 0 0 1px var(--line);color:var(--muted)}.lv-no{color:var(--muted);text-decoration:underline dotted}
 table.refs td:nth-child(2){color:var(--muted);white-space:nowrap}table.refs td:last-child{width:6em}
 table.lvkey{max-width:40em}
+
+/* 主張の表：図の列。値はトークン定義に合わせ、見た目は縮尺の図 */
+table.claims td:first-child{white-space:nowrap}
+table.claims td:last-child{width:232px;min-width:232px}
+.mc-elev{display:flex;gap:16px;padding:8px 0 12px}
+.mc-elev i{width:40px;height:40px;background:var(--panel);display:grid;place-items:center;font:500 .72rem var(--mono);font-style:normal;color:var(--muted)}
+.mc-elev i:nth-child(1){box-shadow:inset 0 0 0 1px var(--line)}
+.mc-elev i:nth-child(2){box-shadow:0 1px 2px rgba(0,0,0,.3)}
+.mc-elev i:nth-child(3){box-shadow:0 2px 6px rgba(0,0,0,.3)}
+.mc-elev i:nth-child(4){box-shadow:0 6px 12px rgba(0,0,0,.3)}
+.mc-type{display:grid;line-height:1.15;gap:2px}
+.mc-motion{position:relative;height:72px}
+.mc-motion .row{position:absolute;left:0;top:8px;width:72px;height:16px;border:1px dashed var(--muted);font-size:.7rem;line-height:14px;padding-left:4px;color:var(--muted)}
+.mc-motion .card{position:absolute;left:96px;top:0;width:120px;height:72px;background:var(--main-soft);font-size:.7rem;padding:0 4px;line-height:14px;overflow:hidden;animation:mcgrow 2.4s cubic-bezier(.2,0,0,1) infinite alternate}
+@keyframes mcgrow{from{left:0;top:8px;width:72px;height:16px}40%{left:0;top:8px;width:72px;height:16px}to{left:96px;top:0;width:120px;height:72px}}
+@media (prefers-reduced-motion:reduce){.mc-motion .card{animation:none}}
+.mc-token{display:grid;gap:4px;font-size:.72rem}
+.mc-token span{display:flex;align-items:center;gap:6px}
+.mc-token span+span::before{content:"→";color:var(--muted)}
+.mc-token i{width:12px;height:12px;flex:none}
+.mc-tone{display:flex;height:16px}.mc-tone+.mc-tone{margin-top:4px}
+.mc-tone i{flex:1}
+.mc-state{display:flex;gap:4px}
+.mc-state span{position:relative;flex:1;padding:6px 0;text-align:center;font-size:.72rem;background:var(--main-soft);color:var(--fg)}
+.mc-state span::after{content:"";position:absolute;inset:0;background:var(--fg);opacity:var(--o)}
+.mc-wsc{display:flex;gap:2px}
+.mc-wsc i{background:var(--main-soft);font:500 .72rem/24px var(--mono);font-style:normal;padding-left:4px;min-width:0}
+.mc-tone i:nth-child(1){background:color-mix(in oklab,var(--seed) 0%,black)}
+.mc-tone i:nth-child(2){background:color-mix(in oklab,var(--seed) 20%,black)}
+.mc-tone i:nth-child(3){background:color-mix(in oklab,var(--seed) 40%,black)}
+.mc-tone i:nth-child(4){background:color-mix(in oklab,var(--seed) 60%,black)}
+.mc-tone i:nth-child(5){background:color-mix(in oklab,var(--seed) 80%,black)}
+.mc-tone i:nth-child(6){background:color-mix(in oklab,var(--seed) 100%,white)}
+.mc-tone i:nth-child(7){background:color-mix(in oklab,var(--seed) 80%,white)}
+.mc-tone i:nth-child(8){background:color-mix(in oklab,var(--seed) 60%,white)}
+.mc-tone i:nth-child(9){background:color-mix(in oklab,var(--seed) 40%,white)}
+.mc-tone i:nth-child(10){background:color-mix(in oklab,var(--seed) 20%,white)}
+.mc-tone i:nth-child(11){background:color-mix(in oklab,var(--seed) 10%,white)}
+.mc-tone i:nth-child(12){background:color-mix(in oklab,var(--seed) 2%,white)}
+.mc-tone i:nth-child(13){background:color-mix(in oklab,var(--seed) 0%,white)}
+
+/* スイスの主張の図 */
+.sw-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;padding:4px 0;background:linear-gradient(90deg,var(--main-soft) calc(100% - 4px),transparent 0) 0 0/calc((100% + 4px)/6) 100%}
+.sw-grid i{height:12px;background:var(--fg)}
+.sw-left{display:grid;gap:6px;border-left:1px solid var(--accent);padding:4px 0}
+.sw-left i{height:6px;background:var(--fg)}
+.sw-geo{display:flex;align-items:center;gap:16px;height:48px}
+.sw-geo .c{width:40px;height:40px;border-radius:50%;background:var(--fg)}
+.sw-geo .s{width:40px;height:40px;background:var(--accent)}
+.sw-geo .l{width:72px;height:2px;background:var(--fg)}
+.sw-space{position:relative;height:96px;width:68px;box-shadow:inset 0 0 0 1px var(--line)}
+.sw-space i{position:absolute;left:8px;top:8px;width:32px;height:40px;background:repeating-linear-gradient(var(--fg) 0 2px,transparent 2px 6px)}
+.sw-space span{position:absolute;left:8px;bottom:8px;font-size:.7rem;color:var(--muted)}
+.sw-plain{display:grid;font-size:.8rem;line-height:1.6}
+.sw-plain b{font-family:var(--mono);font-weight:500;color:var(--muted);font-size:.72rem;margin-bottom:4px}
+.sw-plain em{font-style:normal;font-weight:700;color:var(--accent)}
+
+/* ---------- Material ---------- */
+/* トーンはメインの青一色から作る。角は M3 の形のスケール（8・12・16・28dp・全丸） */
+#material{
+  --md-surface:color-mix(in oklab,var(--main) 5%,var(--panel));
+  --md-sc:color-mix(in oklab,var(--main) 10%,var(--panel));
+  --md-sch:color-mix(in oklab,var(--main) 15%,var(--panel));
+  --md-pc:color-mix(in oklab,var(--main) 24%,var(--panel));
+  --md-onpc:color-mix(in oklab,var(--main) 55%,var(--fg));
+  --md-e1:0 1px 2px rgba(0,0,0,.3),0 1px 3px 1px rgba(0,0,0,.15);
+  --md-e3:0 1px 3px rgba(0,0,0,.3),0 4px 8px 3px rgba(0,0,0,.15);
+}
+.mposter{position:relative;background:var(--md-surface);aspect-ratio:1/1.414;max-width:360px;padding:24px;overflow:hidden;display:flex;flex-direction:column;gap:16px}
+.mp-chip{align-self:flex-start;font-size:.75rem;font-weight:500;padding:4px 12px;border-radius:8px;box-shadow:inset 0 0 0 1px var(--line);color:var(--muted)}
+.mp-hero{background:var(--md-pc);color:var(--md-onpc);border-radius:28px;padding:24px;font-size:2.25rem;font-weight:400;line-height:1.1;letter-spacing:-.01em}
+.mp-card{background:var(--panel);border-radius:12px;padding:16px;box-shadow:var(--md-e1);font-size:.8rem}
+.mp-card b{font-size:1rem;font-weight:500}.mp-card p{margin:4px 0 0;color:var(--muted);line-height:1.5}
+.mp-chips{display:flex;flex-wrap:wrap;gap:8px}
+.mp-chips span{font-size:.75rem;font-weight:500;padding:4px 12px;border-radius:8px;background:var(--md-sch)}
+.mp-fab{position:absolute;right:24px;bottom:24px;background:var(--md-pc);color:var(--md-onpc);border-radius:16px;padding:16px 20px;font-size:.85rem;font-weight:500;box-shadow:var(--md-e3)}
+
+/* 適応レイアウトの図を Material の部品で描く */
+#material button.btn{border:0;border-radius:999px;background:var(--md-pc);color:var(--md-onpc);font-weight:500;padding:8px 24px}
+#material .rframe{border:0;border-radius:16px;background:var(--md-surface);box-shadow:var(--md-e1);overflow:hidden}
+#material .rf-bar{padding:12px}
+#material .rf-search{border:0;border-radius:999px;background:var(--md-sch);padding:10px 16px 10px 40px;position:relative;color:var(--fg)}
+#material .rf-search::before{content:"";position:absolute;left:16px;top:50%;width:10px;height:10px;margin-top:-7px;border:2px solid var(--muted);border-radius:50%}
+#material .rf-scope{font-family:var(--sans);font-weight:500;border:0;border-radius:8px;box-shadow:inset 0 0 0 1px var(--line);padding:6px 12px}
+#material .rf-facets{padding:8px 12px}
+#material .rf-facets div{padding:4px 12px;border-radius:999px}
+#material .rf-facets div:nth-child(2),#material .rf-facets div:nth-child(6){background:var(--md-pc);color:var(--md-onpc);font-weight:500}
+#material .rf-facets div[style]{padding-left:12px}
+#material .rf-chip{border:0;border-radius:8px;background:var(--md-pc);color:var(--md-onpc);font-weight:500;padding:4px 12px}
+#material .rf-chip::before{content:"✓ "}
+#material .rf-list{padding:4px 12px}
+#material .rf-row{padding:12px 16px;border-radius:12px}
+#material .rf-row.sel{box-shadow:none;background:var(--md-sc);padding-left:16px}
+#material .rf-detail{margin:8px 12px 8px 0;padding:16px;border-radius:12px;background:var(--panel);box-shadow:var(--md-e1)}
+#material .rf-detail .pg{border-radius:8px}
+#material .rf-detail .pg i{border-color:var(--main);border-radius:4px}
+#material .rf-width{padding:8px 16px 12px}
+#material .rprog{height:8px;border-radius:4px;margin-top:12px;box-shadow:inset 0 0 0 1px var(--line)}
+#material .rprog i{width:4px;border-radius:2px;background:var(--main)}

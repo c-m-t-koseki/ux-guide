@@ -126,9 +126,6 @@
   })();
   rb.addEventListener('click',function(){rw.classList.toggle('paused');rb.textContent=rw.classList.contains('paused')?'動きを再開する':'動きを止める';});
 
-  /* ---------- poster ---------- */
-  var poster=document.getElementById('poster');
-  [['tg-grid','grid'],['tg-center','centered'],['tg-serif','serif'],['tg-dense','dense'],['tg-deco','deco']].forEach(function(p){document.getElementById(p[0]).addEventListener('change',function(e){poster.classList.toggle(p[1],e.target.checked);});});
 
   /* ---------- gestalt ---------- */
   document.querySelectorAll('#gest .card, #skr .card:not(.static), #skr2 .card, #laws .card:not(.static)').forEach(function(c){function f(){c.classList.toggle('on');}c.addEventListener('click',function(e){if(e.target.closest('input,button,label,a,[data-tip]'))return;f();});c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();f();}});});

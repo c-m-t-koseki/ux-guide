@@ -99,26 +99,32 @@
 <section class="slide" data-title="スイス" id="swiss">
   <div class="eyebrow">第1部 見た目の規範</div>
   <h2>スイスデザイン ― 六つの主張</h2>
-  <p>1950 年代のチューリッヒとバーゼルで確立した様式で、変遷で往復しなかった配置の規則を、画面より前に体系にしたものである。主張の中心は、情報を主役にする客観性にある。切り替えを入れると、主張を外した状態と比べられる。</p>
-  <div class="cols postercols">
-    <div><div class="poster" id="poster"><div class="inner"><div class="t1">Neue<br>Grafik<br>1958</div><div class="t2">数学的なグリッド、左揃え、サンセリフ一種類、写真と幾何学的形態、余白、装飾の排除。内容が変わっても崩れない規則として画面に残った。</div><div class="sq"></div></div></div></div>
-    <div>
-      <label class="toggle"><input type="checkbox" id="tg-grid"> 1 グリッドに従わない</label><br>
-      <label class="toggle"><input type="checkbox" id="tg-center"> 2 中央揃えにしてみる（左揃えを外す）</label><br>
-      <label class="toggle"><input type="checkbox" id="tg-serif"> 3 書体を増やしてみる（セリフを混ぜる）</label><br>
-      <label class="toggle"><input type="checkbox" id="tg-dense"> 5 余白を埋めてみる</label><br>
-      <label class="toggle"><input type="checkbox" id="tg-deco"> 6 飾りを付けてみる</label>
-      <h4>4 写真と幾何学的形態</h4>
-      <p class="note">手描きの挿絵ではなく写真か、円・正方形・直線。赤い正方形は装飾ではなく、グリッドの単位を見せる要素である。</p>
-      <h4>強弱はサイズとウェイトだけ</h4>
-      <div class="fig"><div class="typespec">
+  <p>1950 年代のチューリッヒとバーゼルで確立した様式で、変遷で往復しなかった配置の規則を、画面より前に体系にしたものである。中心は情報を主役にする客観性で、主張は次の六つにまとめられる。</p>
+  <h3>スイスデザインの主張</h3>
+  <div class="tbl"><table class="claims">
+    <tr><th>主張</th><th>中身</th><th>図</th></tr>
+    <tr><td><b>1 グリッドに載せる</b></td><td>紙面を等しい列と基準単位で割り、すべての要素の端を列の線に揃える</td><td><div class="sw-grid"><i style="grid-column:1/5"></i><i style="grid-column:1/7"></i><i style="grid-column:1/3"></i><i style="grid-column:3/7"></i></div></td></tr>
+    <tr><td><b>2 左揃えにする</b></td><td>行頭を一本の線に揃え、行末は不揃いのままにする。中央揃えは使わない</td><td><div class="sw-left"><i style="width:100%"></i><i style="width:82%"></i><i style="width:94%"></i><i style="width:56%"></i></div></td></tr>
+    <tr><td><b>3 書体は一種類</b></td><td>サンセリフ一種類で、強弱はサイズとウェイトだけで付ける。段階は 1.414 倍を 8px に丸めた 5 段</td><td><div class="typespec">
         <span>40 / 700</span><b style="font-size:40px;font-weight:700;line-height:1.1">見出し</b>
         <span>28 / 700</span><b style="font-size:28px">小見出し</b>
         <span>20 / 500</span><b style="font-size:20px;font-weight:500">項目名</b>
-        <span>15 / 400</span><b style="font-size:15px;font-weight:400">本文。行長は和文 35〜40 字</b>
-        <span>11 / 400</span><b style="font-size:11px;font-weight:400;color:var(--muted)">注記と単位</b></div>
-        <p class="cap">段階は 1.414 倍を 8px に丸めた。書体は変えない。</p></div>
-    </div>
+        <span>15 / 400</span><b style="font-size:15px;font-weight:400">本文</b>
+        <span>11 / 400</span><b style="font-size:11px;font-weight:400;color:var(--muted)">注記と単位</b></div></td></tr>
+    <tr><td><b>4 写真と幾何学的形態</b></td><td>手描きの挿絵ではなく、写真か円・正方形・直線を使う。正方形はグリッドの単位の大きさにする</td><td><div class="sw-geo"><i class="c"></i><i class="s"></i><i class="l"></i></div></td></tr>
+    <tr><td><b>5 余白を配分する</b></td><td>余白を残りではなく要素の一つとして配分する。内容は紙面の一部に集め、残りは空けておく</td><td><div class="sw-space"><i></i><span>余白</span></div></td></tr>
+    <tr><td><b>6 装飾を排除する</b></td><td>影・グラデーション・枠・挿絵は、情報を足さないなら付けない。区別は位置・大きさ・色で付ける</td><td><div class="sw-plain"><b>1,249 件</b><span>帝都の火災、三日に及ぶ</span><span>救護班、<em>横浜</em>へ</span><span>復興院の設置決まる</span></div></td></tr>
+  </table></div>
+
+  <h3>スイスデザインでポスターを組む</h3>
+  <div class="cols postercols">
+    <div><div class="poster" id="poster"><div class="inner"><div class="t1">Neue<br>Grafik<br>1958</div><div class="t2">数学的なグリッド、左揃え、サンセリフ一種類、写真と幾何学的形態、余白、装飾の排除。内容が変わっても崩れない規則として画面に残った。</div><div class="sq"></div></div></div></div>
+    <ul>
+      <li>題字と本文は同じ左の線から始まり、本文は 2 段組みで列に載る（主張 1・2）。</li>
+      <li>書体は一種類で、題字 700 と本文 400 の差だけで階層を付ける（主張 3）。</li>
+      <li>色は赤い正方形の一つだけにした（主張 4）。</li>
+      <li>中段は空けたまま残し、影も枠も付けない（主張 5・6）。</li>
+    </ul>
   </div>
   <h3>成立と継承</h3>
   <p>バウハウスと Tschichold『新しいタイポグラフィ』（1928）を受け継ぎ、中立国スイスで戦中も途切れず発展した。チューリッヒ（Müller-Brockmann）とバーゼル（Ruder、Hofmann）の二拠点があり、誌 Neue Grafik（1958 年創刊）が国外に広めた。「見た目を規則として固定し、内容だけを流し込む」方法は、寸法が決まらず内容が毎回変わる画面にそのまま合い、デザインシステムと CSS Grid になった。Gerstner『Designing Programmes』（1964）の、デザインを規則の集合として設計する考えは、デザイントークンと同じである。</p>
@@ -159,17 +165,30 @@
 <section class="slide" data-title="Material" id="material">
   <div class="eyebrow">第1部 見た目の規範</div>
   <h2>Material Design ― 規則を部品とトークンにする</h2>
-  <p>Google が 2014 年に公開した設計体系で、2021 年の Material 3（Material You）で現在の形になった。スイスデザインが紙の上で「見た目を規則として固定し、内容だけを流し込む」方法を示したのに対し、Material はその規則を、寸法が決まらない画面のための部品と値の表に置き換えた。変遷の図で Google が平面の側から動かなかったのは、質感ではなくこの規則の側に重心を置いたからと読める。</p>
-  <h3>スイスデザインとの対応</h3>
-  <div class="tbl"><table>
-    <tr><th>スイスデザイン</th><th>Material 3</th><th>本資料の扱い</th></tr>
-    <tr><td>数学的なグリッド</td><td>ウィンドウサイズクラスと、ペイン・余白・間隔の規則</td><td>採る。下の図</td></tr>
-    <tr><td>書体の段階を固定する</td><td>タイプスケール（display・headline・title・body・label の各 3 段）</td><td>採る。段階はスイスの章の 5 段に絞る</td></tr>
-    <tr><td>規則の集合としてのデザイン（Gerstner）</td><td>デザイントークン。色・書体・形・標高・動きを役割名で呼ぶ</td><td>採る。色は <code>--base</code>・<code>--main</code>・<code>--accent</code> の役割名で定義している</td></tr>
-    <tr><td>装飾の排除</td><td>平面に影で階層を示す（標高）</td><td>影は重なりを示すときだけ使う</td></tr>
-    <tr><td>固定した配色</td><td>ダイナミックカラー。壁紙やブランド色からパレットを生成</td><td>採らない。見た目が環境で変わると、同じ見た目が同じ意味を持たなくなる</td></tr>
-    <tr><td>―</td><td>インタラクション状態（ホバー・フォーカス・押下・ドラッグ）を全部品で同じ規則で重ねる</td><td>採る。状態はメインのトーン違いで作る（色の章）</td></tr>
+  <p>Google が 2014 年に公開した設計体系で、2021 年の Material 3（Material You）で現在の形になった。出発点は「画面の面を、厚みを持つ紙とインクとして扱う」という比喩で、そこから重なりの示し方、文字の段階、動きの意味、色と状態の規則を、どの部品にも同じ値で適用できる表にまとめた。主張は次の七つに整理できる。</p>
+  <h3>Material の主張</h3>
+  <div class="tbl"><table class="claims">
+    <tr><th>主張</th><th>中身</th><th>図</th></tr>
+    <tr><td><b>面は紙である</b></td><td>面は厚みのある紙で、重なりは影の濃さで示す。高さは標高として 0・1・3・6・8・12dp の 6 段に限る</td><td><div class="mc-elev"><i>0</i><i>1</i><i>3</i><i>6</i></div></td></tr>
+    <tr><td><b>印刷の文法で組む</b></td><td>グリッド・余白・文字の段階で階層を作る。タイプスケールは display・headline・title・body・label の 5 役 × 各 3 段</td><td><div class="mc-type"><b style="font-size:36px">Display S</b><b style="font-size:24px">Headline S</b><b style="font-size:22px">Title L</b><span style="font-size:16px">Body L</span><span style="font-size:14px">Label L</span></div><p class="cap num">36 / 24 / 22 / 16 / 14px</p></td></tr>
+    <tr><td><b>動きが意味を与える</b></td><td>変化はどこから来てどこへ行くかを動きで示す。押した行がそのまま詳細の面に広がる</td><td><div class="mc-motion"><div class="row">行</div><div class="card">詳細</div></div></td></tr>
+    <tr><td><b>値を役割の名前で呼ぶ</b></td><td>デザイントークン。色の値・役割・部品の 3 層に分け、部品は値ではなく役割を参照する</td><td><div class="mc-token num"><span><i style="background:#0074c8"></i>ref.palette.primary40</span><span>sys.color.primary</span><span>comp.filled-button.container</span></div></td></tr>
+    <tr><td><b>色は一色から生成する</b></td><td>ダイナミックカラー。壁紙やブランドの一色からトーン 0〜100 の 13 段のパレットを作り、役割に割り当てる。元の色が変われば全体が変わる</td><td><div class="mc-tone" style="--seed:#0074c8"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="mc-tone" style="--seed:#bf4e0c"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><p class="cap num">0 ← トーン → 100</p></td></tr>
+    <tr><td><b>状態は層を重ねて示す</b></td><td>ホバー・フォーカス・押下・ドラッグは、部品の上に文字色の層を同じ不透明度で重ねる。全部品で同じ規則</td><td><div class="mc-state num"><span style="--o:0">通常</span><span style="--o:.08">8%</span><span style="--o:.12">12%</span><span style="--o:.12">12%</span><span style="--o:.16">16%</span></div><p class="cap">通常・ホバー・フォーカス・押下・ドラッグ</p></td></tr>
+    <tr><td><b>幅で並びを変える</b></td><td>適応レイアウト。ウィンドウの幅を 5 クラスに分け、クラスごとにペインの数と配置を決める（下の図）</td><td><div class="mc-wsc num"><i style="flex:600">C</i><i style="flex:240">M</i><i style="flex:360">E</i><i style="flex:400">L</i><i style="flex:300">XL</i></div><p class="cap num">0 / 600 / 840 / 1200 / 1600dp</p></td></tr>
   </table></div>
+
+  <h3>Material でポスターを組む</h3>
+  <div class="cols postercols">
+    <div><div class="mposter"><span class="mp-chip">展覧会</span><div class="mp-hero">Neue Grafik 1958</div><div class="mp-card"><b>グリッドと左揃え</b><p>数学的なグリッド、左揃え、サンセリフ一種類。内容が変わっても崩れない規則として画面に残った。</p></div><div class="mp-chips"><span>グリッド</span><span>左揃え</span><span>サンセリフ</span></div><span class="mp-fab">＋ 詳しく見る</span></div></div>
+    <ul>
+      <li>題字は角を 28dp 丸めた色の面に、本文は標高 1 のカードに載せる（面は紙である）。</li>
+      <li>題字は display、本文は title と body で、ウェイトは 400 と 500 にとどめる（印刷の文法で組む）。</li>
+      <li>地・面・題字・チップの色は、すべて青一色から作ったトーンである（色は一色から生成する）。</li>
+      <li>押せるもの（チップと右下の FAB）は、形と標高で押せないものと分ける。FAB は標高 3 に置く。</li>
+    </ul>
+  </div>
+  <p class="cap">同じ内容を、スイスデザインは線と余白で区切り、Material は面と影で区切る。</p>
 
   <h3>適応レイアウト ― 幅が変わると並びが変わる</h3>
   <p>Web では 2010 年以降、画面の大きさを前提にできなくなり、グリッドを幅の関数にする方法が確立した（Marcotte の Responsive Web Design、Wroblewski の Mobile First、CSS Grid、Container Queries）。Material 3 はこれを、ウィンドウの幅で分けた五つのクラスにまとめた。compact（600dp 未満）、medium（600〜839）、expanded（840〜1199）、large（1200〜1599）、extra-large（1600 以上）である。下の図では枠の幅が伸び縮みし、検索 UI の部品が幅に応じて隠れたり列が増えたりする。下の帯が周期の進みで、色の付いた区間は幅の変化が毎フレーム 1px 未満、つまり見た目に止まっている時間である。区間は緩急の曲線から計算している。</p>
@@ -194,7 +213,7 @@
     <div class="rlab"><span>compact</span><span>medium</span><span>expanded</span><span>medium</span><span>compact</span></div>
   </div>
   <p class="cap">ブレークポイントは機種ではなく内容で決める。ファセットを左に置ける幅、詳細を右に置ける幅。内容と機能は幅で削らない。</p>
-  <p class="note">ウィンドウサイズクラスの値は <a href="https://m3.material.io/foundations/layout/breakpoints">Material Design 3「Breakpoints」</a>で確認した。成立の年と、トークン・ダイナミックカラー・状態の規則は <a href="https://m3.material.io/">m3.material.io</a> の各項に拠る。</p>
+  <p class="note">ウィンドウサイズクラスの値は <a href="https://m3.material.io/foundations/layout/breakpoints">Material Design 3「Breakpoints」</a>で確認した。成立の年と、トークン・ダイナミックカラー・状態の規則は <a href="https://m3.material.io/">m3.material.io</a> の各項に拠る。状態レイヤーの不透明度（8・12・12・16%）、標高の 6 段、タイプスケール、角の半径（28dp ほか）の値は <a href="https://github.com/material-components/material-web/tree/main/tokens">material-web のトークン定義</a>で確認した。2014 年版の三原則（紙の比喩、印刷の文法、意味のある動き）の原文は開いていない。</p>
 </section>
 
 <!-- ============ gestalt ============ -->
@@ -1040,6 +1059,7 @@
     <tr><td><a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a></td><td>Apple、2025</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://m3.material.io/">Material Design 3</a></td><td>Google</td><td><a href="#intro">はじめに</a>、<a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://m3.material.io/foundations/layout/breakpoints">Material Design 3「Breakpoints」</a></td><td>Google</td><td><a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://github.com/material-components/material-web/tree/main/tokens">material-web のトークン定義</a></td><td>Google</td><td><a href="#material">Material</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://m3.material.io/components/search/guidelines">Material Design 3「Search」</a></td><td>Google</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
     <tr><td><a href="https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/uidesign_guide_v100">UI設計実践ガイド v1.0.0</a></td><td>東京都</td><td><a href="#intro">はじめに</a>、<a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
     <tr><td><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">10 Usability Heuristics</a></td><td>Nielsen Norman Group</td><td><a href="#intro">はじめに</a>、<a href="#classics">古典と法則</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
