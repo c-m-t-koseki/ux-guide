@@ -643,3 +643,22 @@ table.claims td:last-child{width:232px;min-width:232px}
 .mc-a11y span{font-size:.75rem;padding:4px 12px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);color:var(--muted)}
 .mc-a11y .hi{font-size:1rem;font-weight:700;color:var(--fg);box-shadow:inset 0 0 0 2px var(--fg)}
 table.claims svg{display:block;width:100%;max-width:220px;height:auto}
+
+/* NN/g 10 の良い例・悪い例 */
+.nm{display:grid;gap:4px;background:var(--panel);padding:10px;font-size:.8rem;line-height:1.5;min-height:96px;align-content:start}
+.nm .f{box-shadow:inset 0 0 0 1px var(--fg);padding:4px 8px;background:var(--bg)}
+.nm .k{font-size:.7rem;color:var(--muted);margin-top:2px}
+.nm .st{font-size:.75rem}.nm .muted{color:var(--muted)}.nm .err{color:var(--err)}
+.nm .mono{font-family:var(--mono);font-size:.72rem}
+.nm .bar{display:block;height:3px;background:linear-gradient(90deg,var(--main) 40%,var(--main-soft) 0)}
+.nm .toast{background:var(--fg);color:var(--bg);padding:6px 10px;display:flex;justify-content:space-between;gap:8px}.nm .toast b{color:var(--main-soft)}
+.nm .btn-s{font-weight:500;padding:1px 8px;margin-left:6px;box-shadow:inset 0 0 0 1px var(--fg)}
+.nm .chip{display:inline-block;font-weight:500;padding:2px 10px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--main);color:var(--main)}
+.nm kbd{font-family:var(--mono);font-size:.7rem;padding:0 4px;box-shadow:inset 0 0 0 1px var(--line);float:right}
+.gulf{display:grid;grid-template-columns:auto 1fr 1fr;gap:8px 16px;margin-top:calc(var(--u)*2);align-items:start}
+.gulf .hd{font-size:.78rem;font-weight:500;color:var(--muted)}
+.gulf .rh{font-size:.85rem;padding-top:10px}
+.nm .chip.off{box-shadow:inset 0 0 0 1px var(--line);color:var(--muted)}
+@media (max-width:640px){.gulf{grid-template-columns:1fr 1fr}.gulf>span:first-child{display:none}.gulf .rh{grid-column:1/-1}}
+.door{display:grid;gap:4px;background:var(--panel);padding:8px}.door svg{width:96px;height:auto}
+.nm .tb{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:4px 8px;box-shadow:inset 0 -1px 0 var(--line)}
