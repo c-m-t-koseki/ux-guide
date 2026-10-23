@@ -704,7 +704,8 @@ table.claims svg{display:block;width:100%;max-width:220px;height:auto}
 .mkh{position:relative}
 .mockui .mk{position:absolute;top:-8px;right:-8px;z-index:1}.mockui .mk.tl{left:-8px;right:auto}.mockui .mk.out{top:50%;right:-20px;margin-top:-8px}.mockui .mk.m2{right:-38px}
 .mkl li::before{display:inline-block;flex:none}
-.mkl{list-style:none;padding-left:0;counter-reset:mk}.mkl li{counter-increment:mk;display:flex;gap:8px;align-items:baseline}.mkl li::before{content:counter(mk)}
+.mkl{list-style:none;padding-left:0;counter-reset:mk}.mkl li{counter-increment:mk;display:grid;grid-template-columns:16px 1fr;column-gap:8px;align-items:baseline}.mkl .where{grid-column:2;margin-left:0}.mkl li::before{content:counter(mk)}
 /* ガイドラインの三つのブロックは同じ組み：見出し・出典・概要・求めること｜図とキャプション */
 .gl{margin-top:0}.gl .src{font-size:.85rem;color:var(--muted);margin-top:var(--u)}
 .gl>div>h4:first-child{margin-top:calc(var(--u)*8)}.gfig{margin-top:var(--u)}.gfig+.gfig{margin-top:calc(var(--u)*3)}
+.where{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-left:6px;white-space:nowrap}
