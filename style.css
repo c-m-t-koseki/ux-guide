@@ -694,3 +694,8 @@ table.claims svg{display:block;width:100%;max-width:220px;height:auto}
 .lgp-chips{display:flex;flex-wrap:wrap;gap:6px}.lgp-chips span{font-size:.72rem;font-weight:500;padding:4px 10px;border-radius:999px}
 .lgp-tab{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);display:flex;gap:16px;padding:10px 20px;border-radius:999px;font-size:.75rem}
 .lgp-tab b{font-weight:500}
+.mbar .bar{display:flex;gap:2px;font-size:.75rem;box-shadow:inset 0 -1px 0 var(--line)}.mbar .bar span{padding:3px 8px}.mbar .bar .on{background:var(--main);color:#fff}
+.mbar .dd{margin-left:58px;width:150px;background:var(--bg);box-shadow:0 2px 8px rgba(0,0,0,.2);padding:4px 0;font-size:.75rem}
+.mbar .dd div{display:flex;justify-content:space-between;padding:3px 10px}.mbar .dd .cur{background:var(--main-soft)}.mbar .dd small{color:var(--muted);font-family:var(--mono)}
+.mbar .sub{margin-top:8px}
+.gbar{display:flex;gap:8px;align-items:center}.gbar .gb{display:grid;place-items:center;width:40px;height:40px;box-shadow:inset 0 0 0 1px var(--line);color:var(--fg)}.gbar svg{width:22px;height:22px}.gbar .tx{width:auto;padding:0 12px;font-size:.8rem}
