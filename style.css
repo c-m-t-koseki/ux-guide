@@ -323,7 +323,6 @@ table.pick tr.sep{cursor:default}table.pick tr.sep td{background:none;font-size:
 .hick{list-style:none;margin:0;padding:0;background:var(--panel);font-size:.8rem}.hick li{padding:3px 8px}.hick small{color:var(--muted);margin-left:6px}
 .hick .sub{padding-left:28px;color:var(--muted)}.hick.flat{columns:2;column-gap:12px}.hick.flat li{break-inside:avoid;padding:2px 8px}
 .miller{display:grid;gap:6px;font-size:1.1rem;background:var(--panel);padding:10px}
-.postel{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;font-size:.9rem}.postel span:nth-child(odd){color:var(--muted)}.postel span:nth-child(odd)::after{content:" →";color:var(--line)}
 .jakob{display:grid;grid-template-columns:1fr;gap:12px}
 .jakob .mw{height:80px;background:var(--panel);position:relative;padding:8px}
 .jakob i,.jakob span{position:absolute;background:var(--main-soft)}
@@ -662,3 +661,7 @@ table.claims svg{display:block;width:100%;max-width:220px;height:auto}
 @media (max-width:640px){.gulf{grid-template-columns:1fr 1fr}.gulf>span:first-child{display:none}.gulf .rh{grid-column:1/-1}}
 .door{display:grid;gap:4px;background:var(--panel);padding:8px}.door svg{width:96px;height:auto}
 .nm .tb{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:4px 8px;box-shadow:inset 0 -1px 0 var(--line)}
+.nm .btn-s.go{background:var(--main);color:#fff;box-shadow:none}.nm .btn-s.go.del{background:var(--err)}
+.zipdemo{display:grid;gap:6px;background:var(--panel);padding:10px;font-size:.8rem}.zipdemo label{display:grid;grid-template-columns:4.5em 1fr;align-items:center;gap:8px}.zipdemo .k{font-size:.7rem}.zipdemo input::placeholder{color:var(--muted);opacity:.6;font-size:.7rem}.zipdemo .zip-out{font-size:.75rem;min-height:1.2em;margin-left:calc(4.5em + 8px)}.zipdemo .zip-out.err{color:var(--err)}
+.zipdemo input{font:inherit;font-size:.85rem;padding:4px 8px;border:0;box-shadow:inset 0 0 0 1px var(--fg);background:var(--bg);color:var(--fg);width:100%;min-width:0}
+.zipdemo .zrow{display:flex;gap:8px}.nm .k.ok{color:var(--ok)}.nm .k.ng{color:var(--err)}

@@ -525,11 +525,14 @@
       <div class="after"><div class="nm"><span class="toast">メールを削除しました <b>元に戻す</b></span></div></div>
       <div class="before"><div class="nm"><span class="toast">メールを削除しました</span></div></div></div>
     <div class="card on" tabindex="0"><h4>4 一貫性と標準</h4><p class="d">違う言葉・状況・操作が同じ意味かを迷わせない。プラットフォームと業界の慣習に従う。</p>
-      <div class="after"><div class="nm"><span>保存しますか？ <b class="btn-s">キャンセル</b><b class="btn-s">保存</b></span><span>削除しますか？ <b class="btn-s">キャンセル</b><b class="btn-s">削除</b></span></div></div>
-      <div class="before"><div class="nm"><span>保存しますか？ <b class="btn-s">キャンセル</b><b class="btn-s">保存</b></span><span>削除しますか？ <b class="btn-s">はい</b><b class="btn-s">戻る</b></span></div></div></div>
-    <div class="card on" tabindex="0"><h4>5 エラー防止</h4><p class="d">よいエラー表示より、問題が起きない設計がよい。起きやすい条件をなくすか、実行の前に確認を出す。</p>
-      <div class="after"><div class="nm"><span>本文に「添付」とありますが、ファイルがありません。</span><span><b class="btn-s">戻る</b><b class="btn-s">このまま送信</b></span></div></div>
-      <div class="before"><div class="nm"><span>送信しました</span><span class="st muted">添付を忘れたまま送られた</span></div></div></div>
+      <div class="after"><div class="nm"><span>保存しますか？ <b class="btn-s">キャンセル</b><b class="btn-s go">保存</b></span><span>削除しますか？ <b class="btn-s">キャンセル</b><b class="btn-s go del">削除</b></span><span>閉じますか？ <b class="btn-s">キャンセル</b><b class="btn-s go">閉じる</b></span></div></div>
+      <div class="before"><div class="nm"><span>保存しますか？ <b class="btn-s" style="background:#2e7d32;color:#fff;box-shadow:none">キャンセル</b><b class="btn-s" style="color:#e67e22;box-shadow:inset 0 0 0 1px #e67e22">保存</b></span><span>削除しますか？ <b class="btn-s" style="background:#9e9e9e;color:#fff;box-shadow:none">はい</b><b class="btn-s" style="background:#c62828;color:#fff;box-shadow:none">戻る</b></span><span>閉じますか？ <b class="btn-s" style="background:#7b1fa2;color:#fff;box-shadow:none">OK</b><b class="btn-s" style="color:#1565c0;box-shadow:inset 0 0 0 1px #1565c0">いいえ</b></span></div></div></div>
+    <div class="card static"><h4>5 エラー防止</h4><p class="d">よいエラー表示より、問題が起きない設計がよい。起きやすい条件をなくすか、実行の前に確認を出す。</p>
+      <div class="zipdemo">
+        <label><span class="k ok">○ 良い例</span><input type="text" inputmode="numeric" autocomplete="postal-code" class="zip-good" placeholder="100-0001" aria-label="郵便番号（良い例）"></label>
+        <label><span class="k ng">× 悪い例</span><span class="zrow"><input type="text" class="zip-bad" placeholder="１００－ＯＯＯ１" aria-label="郵便番号（悪い例）"><button type="button" class="btn small zip-send">送信</button></span></label>
+        <span class="zip-out"></span>
+      </div></div>
     <div class="card on" tabindex="0"><h4>6 想起より再認</h4><p class="d">要素・操作・選択肢を見せて、記憶の負担を減らす。必要な情報は、要るときに見えるか、すぐ取り出せるようにする。</p>
       <div class="after"><div class="nm"><span class="k">最近使ったファイル</span><span>報告書.docx</span><span>見積書.xlsx</span></div></div>
       <div class="before"><div class="nm"><span class="k">開くファイル名を入力</span><span class="f">｜</span></div></div></div>
@@ -540,8 +543,8 @@
       <div class="after"><div class="nm"><span><b>報告書.docx</b></span><span class="mono muted">今日 14:32</span></div></div>
       <div class="before"><div class="nm"><span><b>報告書.docx</b></span><span class="mono muted">24,576 bytes　rw-r--r--　inode 9921　2026-10-24T14:32:08+09:00</span></div></div></div>
     <div class="card on" tabindex="0"><h4>9 エラーの認識・診断・回復の支援</h4><p class="d">エラーは平易な言葉で（エラーコードなしに）示し、問題を正確に伝え、解決策を示す。</p>
-      <div class="after"><div class="nm"><span>パスワードは 8 文字以上にしてください（今は 6 文字）</span></div></div>
-      <div class="before"><div class="nm"><span class="err mono">Error E-1021</span></div></div></div>
+      <div class="after"><div class="nm"><span class="k">郵便番号</span><span class="f">100-000</span><span class="st err">郵便番号は 7 桁です。今は 6 桁です</span></div></div>
+      <div class="before"><div class="nm"><span class="k">郵便番号</span><span class="f">100-000</span><span class="st err mono">Error E-1021</span></div></div></div>
     <div class="card on" tabindex="0"><h4>10 ヘルプとドキュメント</h4><p class="d">説明が要らないのが最善だが、必要なら、検索しやすく、作業に沿い、具体的な手順を示す説明を用意する。</p>
       <div class="after"><div class="nm"><span>自動保存　<b class="chip">？</b></span><span class="st muted">5 分ごとに保存します</span></div></div>
       <div class="before"><div class="nm"><span>自動保存</span><span class="st"><u>ヘルプ（PDF、84 ページ）</u></span></div></div></div>
@@ -562,8 +565,9 @@
     <div class="card on" tabindex="0"><h4>ジェイコブの法則</h4><p class="d">Nielsen。利用者は時間の大半を他のサイトで過ごすので、知っている他のサイトと同じ動きを好む。既にあるメンタルモデルを使えば、利用者は新しい作法を覚えずに作業に集中できる。</p>
       <div class="after"><div class="jakob"><div class="mw"><i class="logo"></i><span class="srch"><svg viewBox="0 0 16 16" class="ic"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 10l4.5 4.5" stroke="currentColor" stroke-width="2"/></svg></span><span class="ava"><svg viewBox="0 0 16 16" class="ic"><circle cx="8" cy="5" r="3"/><path d="M2 15c0-3.5 2.7-5.5 6-5.5s6 2 6 5.5z"/></svg></span><i class="nav"></i></div></div></div>
       <div class="before"><div class="jakob"><div class="mw odd"><i class="nav"></i><span class="srch"><svg viewBox="0 0 16 16" class="ic"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 10l4.5 4.5" stroke="currentColor" stroke-width="2"/></svg></span><i class="logo"></i><span class="ava"><svg viewBox="0 0 16 16" class="ic"><circle cx="8" cy="5" r="3"/><path d="M2 15c0-3.5 2.7-5.5 6-5.5s6 2 6 5.5z"/></svg></span></div></div></div></div>
-    <div class="card static"><h4>ポステルの法則</h4><p class="d">Postel。受け取るものには寛容に、送るものには保守的に。利用者のさまざまな入力を受け入れ、要件に合う形に変換する。</p>
-      <div class="postel"><span>０９０１２３４５６７８</span><span>090-1234-5678</span><span>090 1234 5678</span><span>090-1234-5678</span><span>09012345678</span><span>090-1234-5678</span></div></div>
+    <div class="card on" tabindex="0"><h4>ポステルの法則</h4><p class="d">Postel。受け取るものには寛容に、送るものには保守的に。利用者のさまざまな入力を受け入れ、要件に合う形に変換する。</p>
+      <div class="after"><div class="nm"><span class="k">郵便番号</span><span class="f">１００－０００１</span><span>〒100-0001　東京都千代田区千代田</span><span class="st muted">全角やハイフンを含んでも受け付け、半角に直して住所を補う</span><span class="k">フリガナ</span><span class="f">やまだ たろう</span><span>ヤマダ タロウ</span><span class="st muted">ひらがなでも受け付け、カタカナに直す</span></div></div>
+      <div class="before"><div class="nm"><span class="k">郵便番号</span><span class="f">１００－０００１</span><span class="st err">半角数字 7 桁、ハイフンなしで入力してください</span><span class="k">フリガナ</span><span class="f">やまだ たろう</span><span class="st err">全角カタカナで入力してください</span></div></div></div>
     <div class="card static"><h4>ドエルティのしきい値</h4><p class="d">Doherty & Thadani, 1982。コンピュータと利用者が互いを待たない速さ（400ms 未満）でやり取りすると、生産性が大きく上がる。</p>
       <div class="doherty"><button type="button" class="btn" data-ms="120">120ms で反応</button><button type="button" class="btn" data-ms="900">900ms で反応</button><span class="out"></span></div></div>
   </div>
@@ -750,22 +754,20 @@
 <section class="slide" data-title="フールプルーフ" id="foolproof">
   <div class="eyebrow">第2部 振る舞いの規範</div>
   <h2>フールプルーフとフェイルセーフ</h2>
-  <p>フールプルーフは、使う人が不注意でも知識がなくても、誤った操作が成立しないように作る設計である。前提は「人は必ず間違える」で、注意や警告文に頼らず、間違える余地を構造から取り除く。電子レンジは扉を開けると止まり、ATM はカードを返してから現金を出す。製造業では新郷重夫が 1961 年に始めた「ポカヨケ」が同じ考えである。</p>
+  <p>フールプルーフは、誤操作や誤設定をしても、使う人や周りに危険が及ばないように作る設計である。前提は「人は往々にして間違いを犯す」という考えにある。全自動洗濯機は蓋が開いたままでは回り始めず、オートマ車はシフトが P か N で、ブレーキを踏んでいないとエンジンがかからない。製造業の「ポカヨケ」も同じ考えで、1961 年に新郷重夫が受けた相談をきっかけに始まり、当初の「バカヨケ」から 1963 年に改名された。</p>
   <div class="cols">
     <div><div class="tbl"><table>
       <tr><th>概念</th><th>何から守るか</th><th>例</th></tr>
-      <tr><td>フールプルーフ</td><td>使う人の誤操作</td><td>逆向きに入らないコネクタ</td></tr>
-      <tr><td>フェイルセーフ</td><td>機械の故障</td><td>停電すると閉まる踏切</td></tr>
-      <tr><td>フォールトトレラント</td><td>部分的な故障</td><td>RAID、多発エンジン</td></tr>
-      <tr><td>タンパープルーフ</td><td>意図的な改ざん</td><td>封印シール</td></tr>
-    </table></div>
-    <p class="note">フールプルーフは善意のミスを対象にする。悪意はセキュリティの領分で、混ぜると善意の利用者に過剰な制約を課す。</p></div>
-    <div><h4>対策の強さの階層</h4>
-      <ol><li>排除。操作自体をなくす（自動保存）</li><li>代替。機械がやる（郵便番号から住所）</li><li>容易化。間違えにくい形にする（選択肢を減らす）</li><li>異常検出。間違えた瞬間に止めて知らせる（即時検証）</li><li>影響緩和。取り返せる（ゴミ箱、取り消し）</li></ol>
-      <p class="note">確認ダイアログと警告文は 4 の異常検出の中で最も弱い。多用されるのは一番安く作れるからである。</p></div>
+      <tr><td>フールプルーフ</td><td>使う人の誤操作</td><td>蓋が開いたままでは回らない全自動洗濯機</td></tr>
+      <tr><td>フェイルセーフ</td><td>機械の故障</td><td>停電しても遮断棹が重力で下りたままになる踏切</td></tr>
+      <tr><td>フォールトトレラント</td><td>一部の故障（機能を縮めても動き続ける）</td><td>タイヤが一本パンクしても走れる車、一機が壊れても推力を失わない複数のエンジン</td></tr>
+    </table></div></div>
+    <div><h4>エラープルーフ化の 5 原理</h4>
+      <ol><li>排除。操作自体をなくす（自動保存）</li><li>代替化。機械がやる（郵便番号から住所）</li><li>容易化。間違えにくい形にする（選択肢を減らす）</li><li>異常検出。間違えた瞬間に止めて知らせる（即時検証）</li><li>影響緩和。取り返せる（ゴミ箱、取り消し）</li></ol>
+      <p class="note">中條武志と久米均が 1980 年代初めに約 1,000 件の事例を分類して得た五つである。番号は本資料が付けた優先の順で、原典が強さの順を述べているわけではない。括弧内の例も本資料による。確認ダイアログは 4 の異常検出に当たる。NN/g は、確認を使いすぎると利用者は問いに注意を払わなくなり、反射的に押す確認は何も守らないと指摘している。</p></div>
   </div>
   <h3>目で確かめる</h3>
-  <p>対策を上の階層の順に並べた。代替の例（表記ゆれの正規化）は古典と法則の章のポステルの法則で見せている。</p>
+  <p>対策を 5 原理の番号順に並べた。代替の例（表記ゆれの正規化）は古典と法則の章のポステルの法則で見せている。</p>
   <div class="demos">
     <div class="demo"><h4>戻っても消さない<span>排除</span></h4><div class="keep"><div class="pane" data-keep="1"><div class="ttl">条件を URL に持つ</div><div class="f"><input type="text" value="関東大震災 1923" aria-label="検索語"><button type="button" class="btn small go">検索</button></div><div class="res" hidden><span class="num">1,249 件</span><button type="button" class="btn small back">← 戻る</button></div></div><div class="pane" data-keep="0"><div class="ttl">画面を作り直す</div><div class="f"><input type="text" value="関東大震災 1923" aria-label="検索語"><button type="button" class="btn small go">検索</button></div><div class="res" hidden><span class="num">1,249 件</span><button type="button" class="btn small back">← 戻る</button></div></div></div><p>検索して戻ったとき、左は入力が残り、右は空になる。検索語・ファセット・並び順・ページを URL に持たせ、戻るで同じ URL に戻れば入力も結果も再現できる。ブラウザの復元（bfcache、autocomplete）だけに頼ると、画面を作り直す実装では消える。</p></div>
     <div class="demo"><h4>二重実行を防ぐ<span>排除</span></h4><div class="dbl"><button type="button" class="btn" id="dblbtn">送信</button><span class="out" id="dblout"></span></div><p>押した直後にボタンを無効化する。連打しても一回しか送られない。</p></div>
@@ -785,8 +787,8 @@
   </table></div>
   <h3>フェイルセーフ ― 壊れたら安全な側へ倒す</h3>
   <p>フールプルーフが人の誤りに備えるのに対し、フェイルセーフはシステムの故障に備える。踏切が停電で閉まるように、壊れたときに利用者が失うものが最も少ない状態へ倒す。検索 UI では、全文検索の索引が落ちても見出し検索の結果は出す、通信が切れても入力と条件は保つ、部分結果で返したときはそう明示する、の三つになる。</p>
-  <p>限界もある。完全なフールプルーフは存在せず、防げるのは想定したミスだけである。上の階層ほど強いが、強い対策ほど熟練者の自由を奪う。防壁が強すぎると人は外す方法を探す。専門家向けの道具は 1〜3 をあえて緩め、代わりに 5 の取り消しを強くする。したがって 1〜3 の強い対策は「取り返しのつかない操作」に集中して投入し、それ以外は自由を奪わない 5 で守る。</p>
-  <p class="note">ポカヨケの起源と改称は <a href="https://ja.wikipedia.org/wiki/ポカヨケ">Wikipedia「ポカヨケ」</a>、フェイルセーフとフォールトトレラントの区別は <a href="https://ja.wikipedia.org/wiki/フェイルセーフ">Wikipedia「フェイルセーフ」</a>、Norman の強制機能は <a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">Wikipedia「The Design of Everyday Things」</a>で確認した。</p>
+  <p>ここからは本資料の判断である。防げるのは想定したミスだけで、1〜3 の対策ほど利用者の操作の自由を減らす。そこで 1〜3 は取り返しのつかない操作に集中して使い、それ以外は自由を奪わない 5 の取り消しで守る。専門家向けの道具では 1〜3 を緩め、5 を強くする。</p>
+  <p class="note">ポカヨケの起源と改称は <a href="https://ja.wikipedia.org/wiki/ポカヨケ">Wikipedia「ポカヨケ」</a>、フェイルセーフとフォールトトレラントの区別は <a href="https://ja.wikipedia.org/wiki/フェイルセーフ">Wikipedia「フェイルセーフ」</a>、フールプルーフの定義と例は <a href="https://ja.wikipedia.org/wiki/フールプルーフ">Wikipedia「フールプルーフ」</a>、フォールトトレラントの例は <a href="https://ja.wikipedia.org/wiki/フォールトトレラント設計">Wikipedia「フォールトトレラント設計」</a>で確認した。5 原理は <a href="https://www.qualitydigest.com/june00/html/godfrey.html">Godfrey「Error-Proofing」（Quality Digest、2000）</a>が中條・久米の分類として紹介するもので、中條・久米の原論文は開いていない。確認ダイアログについては <a href="https://www.nngroup.com/articles/confirmation-dialog/">NN/g「Confirmation Dialogs」</a>に拠る。</p>
 </section>
 
 <!-- ============ seeking ============ -->
@@ -1108,7 +1110,7 @@
     <tr><td><a href="https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/uidesign_guide_v100">UI設計実践ガイド v1.0.0</a></td><td>東京都</td><td><a href="#intro">はじめに</a>、<a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
     <tr><td><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">10 Usability Heuristics</a></td><td>Nielsen Norman Group</td><td><a href="#intro">はじめに</a>、<a href="#classics">古典と法則</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
     <tr><td><a href="https://lawsofux.com/">Laws of UX</a></td><td>Jon Yablonski</td><td><a href="#classics">古典と法則</a></td><td><span class="lv lv-src">原典</span></td></tr>
-    <tr><td><a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">The Design of Everyday Things</a></td><td>Norman</td><td><a href="#classics">古典と法則</a>、<a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">The Design of Everyday Things</a></td><td>Norman</td><td><a href="#classics">古典と法則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Dieter_Rams">Ten Principles for Good Design</a></td><td>Rams</td><td><a href="#classics">古典と法則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">Eight Golden Rules</a></td><td>Shneiderman、1986</td><td><a href="#classics">古典と法則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
   </table></div>
@@ -1157,6 +1159,10 @@
     <tr><td><a href="https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation">Twelve basic principles of animation</a></td><td>Wikipedia</td><td><a href="#motion">動き</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://ja.wikipedia.org/wiki/ポカヨケ">ポカヨケ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://ja.wikipedia.org/wiki/フェイルセーフ">フェイルセーフ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://ja.wikipedia.org/wiki/フールプルーフ">フールプルーフ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://ja.wikipedia.org/wiki/フォールトトレラント設計">フォールトトレラント設計</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://www.qualitydigest.com/june00/html/godfrey.html">Error-Proofing</a></td><td>Godfrey, Quality Digest, 2000</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://www.nngroup.com/articles/confirmation-dialog/">Confirmation Dialogs</a></td><td>Nielsen Norman Group</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-src">原典</span></td></tr>
   </table></div>
   <h3>動画</h3>
   <div class="tbl"><table class="refs">
