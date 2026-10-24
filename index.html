@@ -1068,17 +1068,19 @@
   <h4>出典のある理由</h4>
   <ul>
     <li><b>入れ子は同心にしないと崩れる。</b>内側の半径は「外側の半径 − 余白」にする。Apple は 2025 年の設計でこれを同心の形として定め、内側の半径をシステムが自動で計算できるようにしている。そろえないと、角だけ隙間が太り、文字が曲線に食い込む（上の図）。</li>
-    <li><b>流行の記号になる。</b>2005 年には、角丸と階調が Web 2.0 の見た目の定番として「the new black」と書かれ、すでに目に付きすぎる雑音とも評されていた。半径の大きさは、様式の年代を示しやすい。</li>
+    <li><b>密度の高い画面では限る。</b>Apple 自身が、カプセル形は指で触る画面に向くが、密度の高いデスクトップでは目立たせたい操作に限るとしている。Mac の小さな部品には、角を少しだけ丸めた長方形を使う。</li>
+    <li><b>大きな面を大きく丸めると間延びする。</b>macOS Tahoe（2025）の窓の大きな角丸には、Gruber らの評論で「Fisher-Price 風」「滑稽なほど大きい」と批判が集まった。同心の角丸は小さな機器には合っても、大きな長方形の画面には合わないという指摘もある。いずれも評論で、擁護する声もある。</li>
+    <li><b>流行として使われすぎる。</b>2005 年には、角丸と階調が Web 2.0 の流行の定番（the new black）と書かれ、使われすぎて「visual static」、つまり目に付くだけで意味を持たない、雑音のような飾りになったとも評されていた。</li>
   </ul>
   <h4>丸めるほうに働く研究</h4>
-  <p>曲線のほうが好まれるという実験はある。Bar と Neta（2006）は、鋭角の輪郭より曲線の物体が好まれると報告し、鋭角が脅威と結び付くためと考えた。Bertamini ら（2016）は、角ばりを嫌うのではなく、曲線そのものが好まれると修正している。ただし、どちらも物体や図形の好みの実験で、画面の角を丸めると読みやすさや操作の速さが上がるという結果ではない。「角丸は目に優しい」という説明も見かけるが、実証した研究は見つからなかった。</p>
+  <p>曲線のほうが好まれるという実験はある（Bar と Neta、2006。Bertamini ら、2016）。ただし物体や図形の好みの実験で、画面の角を丸めると読みやすさや操作の速さが上がるという結果ではない。</p>
   <h4>本資料の判断</h4>
   <ul>
     <li>角丸は辺の端を削るので、グリッドの線と文字の開始位置がずれ、その分の余白が要る。</li>
     <li>押せるもの（ボタン、チップ）は丸く、押せないもの（パネル、表、本文）は角のままにして、形で役割を分ける。</li>
     <li>半径は 1〜3 段階に限り、入れ子は同心にし、本文を載せる面は角を立てる。</li>
   </ul>
-  <p class="note">同心の形は <a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a>と <a href="https://cloudfour.com/thinks/the-math-behind-nesting-rounded-corners/">Cloud Four「The math behind nesting rounded corners」</a>で、2005 年の評は <a href="https://snarkmarket.com/blog/snarkives/technosnark/the_web_20_design_aesthetic/">Snarkmarket「The "Web 2.0" Design Aesthetic」</a>で、曲線の好みは <a href="https://www.researchgate.net/publication/6873629_Humans_prefer_curved_visual_objects">Bar &amp; Neta（Psychological Science 17(8), 2006）</a>の要旨と、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4975689">Bertamini ら（British Journal of Psychology 107(1), 2016）</a>の要旨で確認した。</p>
+  <p class="note">同心の形と、密度の高い画面での限定は <a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a>で、計算は <a href="https://cloudfour.com/thinks/the-math-behind-nesting-rounded-corners/">Cloud Four「The math behind nesting rounded corners」</a>で、macOS Tahoe への批判は <a href="https://daringfireball.net/2025/11/software_update_tahoe_confusing">Daring Fireball（2025-11-10）</a>、<a href="https://mjtsai.com/blog/2025/10/16/tahoe-window-corners/">Michael Tsai「Tahoe Window Corners」</a>、<a href="https://kirby.pika.page/posts/a-time-and-a-place-for-concentricity">Keren「A Time and a Place for Concentricity」</a>で、2005 年の評は <a href="https://snarkmarket.com/blog/snarkives/technosnark/the_web_20_design_aesthetic/">Snarkmarket「The "Web 2.0" Design Aesthetic」</a>で、曲線の好みは <a href="https://www.researchgate.net/publication/6873629_Humans_prefer_curved_visual_objects">Bar &amp; Neta（Psychological Science 17(8), 2006）</a>の要旨と、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4975689">Bertamini ら（British Journal of Psychology 107(1), 2016）</a>の要旨で確認した。</p>
 </section>
 
 <!-- ============ apply ============ -->
@@ -1201,6 +1203,9 @@
     <tr><td><a href="https://m3.material.io/foundations/designing/structure">Material Design 3「Structure」</a></td><td>Google</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://cloudfour.com/thinks/the-math-behind-nesting-rounded-corners/">The math behind nesting rounded corners</a></td><td>Cloud Four</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://snarkmarket.com/blog/snarkives/technosnark/the_web_20_design_aesthetic/">The "Web 2.0" Design Aesthetic</a></td><td>Snarkmarket、2005</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://daringfireball.net/2025/11/software_update_tahoe_confusing">Software Update: Tahoe（評論）</a></td><td>Gruber、2025</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://mjtsai.com/blog/2025/10/16/tahoe-window-corners/">Tahoe Window Corners</a></td><td>Michael Tsai、2025</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://kirby.pika.page/posts/a-time-and-a-place-for-concentricity">A Time and a Place for Concentricity</a></td><td>Keren、2025</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4975689">Do observers like curvature or do they dislike angularity?</a></td><td>Bertamini ら、2016</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
     <tr><td><a href="https://ja.wikipedia.org/wiki/ポカヨケ">ポカヨケ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://ja.wikipedia.org/wiki/フェイルセーフ">フェイルセーフ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
