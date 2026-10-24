@@ -135,37 +135,8 @@
     </ul>
   </div>
   <h3>成立と継承</h3>
-  <p>バウハウスと Tschichold『新しいタイポグラフィ』（1928）を受け継ぎ、中立国スイスで戦中も途切れず発展した。チューリッヒ（Müller-Brockmann）とバーゼル（Ruder、Hofmann）の二拠点があり、誌 Neue Grafik（1958 年創刊）が国外に広めた。「見た目を規則として固定し、内容だけを流し込む」方法は、寸法が決まらず内容が毎回変わる画面にそのまま合い、デザインシステムと CSS Grid になった。Gerstner『Designing Programmes』（1964）の、デザインを規則の集合として設計する考えは、デザイントークンと同じである。</p>
-  <h3>角丸 ― なぜ既定で避け、いつ使うか</h3>
-  <div class="fig rad">
-    <div><div class="box r24"><i class="g"></i><div class="in r12 tx"><b>関東大震災 1923</b>朝刊 1 面　842 件<br>夕刊 1 面　229 件</div></div><p class="cap"><b>良い例</b> 同心の入れ子（外 24 / 内 12）。隙間は一定。ただし文字の開始位置は角から離す必要が残る</p></div>
-    <div><div class="box r24"><i class="g"></i><div class="in r24 tx"><b>関東大震災 1923</b>朝刊 1 面　842 件<br>夕刊 1 面　229 件</div></div><p class="cap"><b>悪い例</b> 同じ半径の入れ子（外 24 / 内 24）。角だけ隙間が太り、文字が曲線に食い込む。揃え線（点線）が角で宙に浮く</p></div>
-    <div><div class="box sq"><i class="g"></i><span class="chip">チップ</span><i class="ava"></i><div class="in tx"><b>関東大震災 1923</b>朝刊 1 面　842 件<br>夕刊 1 面　229 件</div></div><p class="cap"><b>良い例</b> 面は角のまま。揃え線が辺の端まで通り、丸いのはチップとアバターだけ</p></div>
-    <div><div class="box r24"><span class="chip r24">チップ</span><div class="in r24 t">本文</div></div><p class="cap"><b>悪い例</b> 面も文字の箱も丸い。押せるものが形で分からない</p></div>
-  </div>
-  <p>角丸が悪いのではなく、情報を足さないのに判断を増やすので、既定では使わない。</p>
-  <h4>使わない理由</h4>
-  <ul>
-    <li><b>揃えが崩れる。</b>グリッドは辺で揃えるが、角丸は辺の端を削る。隣の要素の端や文字の開始位置が見た目でずれ、半径の分だけ余白を足すことになって密度が下がる。</li>
-    <li><b>判断が連鎖する。</b>入れ子の内側は「外側の半径−余白」にしないと角だけ隙間が太る。大きさの違う要素に同じ半径を使うと小さいものだけ丸く見える。半径を一つ決めると全部に波及する。</li>
-    <li><b>年代の記号になる。</b>カプセルのボタン（Aqua）、連続曲率のアイコン（iOS 7）、大きな角丸（Material You、Big Sur、Liquid Glass）と、半径の大きさは様式の年代を示す。<span class="secret">飾りの章で見る WordArt と同じく、意味のない飾りはやがて年代の記号に変わる。</span></li>
-  </ul>
-  <h4>使う条件</h4>
-  <ul>
-    <li><b>形が役割を示すとき。</b>押せるもの（ボタン、チップ）は丸く、押せないもの（パネル、表、本文）は角のまま。カプセルはタグ、円はアバターと、形と役割を一対一に対応させる。<a href="#principles" data-prin="3">原則 3</a>「色や形だけで伝えない」の形の側である。</li>
-    <li><b>プラットフォームの慣習に従うとき（<a href="#principles" data-prin="8">原則 8</a>）。</b>iOS と Material では操作部品は丸く、合わせないと利用者が押せるものを見分けられない。</li>
-    <li><b>物理に合わせるとき。</b>画面の角が丸い機器では、画面の角に接する要素を画面と同心にする。</li>
-  </ul>
-  <h4>使うときの規則</h4>
-  <ul>
-    <li>半径は基準単位に基づく 1〜3 段階に限る。</li>
-    <li>入れ子は同心にする（内側の半径＝外側の半径−余白）。</li>
-    <li>本文を載せる面は角を立てたままにする。</li>
-  </ul>
-  <p>「丸いほうが好まれる」には実験の根拠がある。Bar と Neta（2006）は、鋭角の輪郭より曲線の物体が好まれ、鋭角は脅威と結び付くという仮説を支持する結果を報告した。ただしこれは物体の好みの実験で、画面の矩形を丸めると読みやすさや操作の速さが上がるという結果ではない。「目が角で止まる」「視線を内側に導く」という説明はブログに多いが、出典を確認できなかった。</p>
-  <p class="note">好みの実験は <a href="https://www.researchgate.net/publication/6873629_Humans_prefer_curved_visual_objects">Bar &amp; Neta, Humans prefer curved visual objects, Psychological Science 17(8), 2006</a> の要旨で確認した。同心の規則は <a href="https://dev.to/sgbp/the-concentric-border-radius-rule-why-nested-rounded-corners-look-slightly-wrong-3hog">The concentric border-radius rule</a>（DEV Community）ほか複数の解説で確認した。</p>
-
-  <p class="note">様式の成り立ち（バーゼルとチューリッヒの二校、Keller、Bill、Müller-Brockmann、誌 Neue Grafik）と五つの主張は <a href="https://en.wikipedia.org/wiki/International_Typographic_Style">Wikipedia「International Typographic Style」</a>で確認した。主張は同項の「Characteristics of style」（Meggs『A History of Graphic Design』を引く）に挙がる特徴に限った。Tschichold『新しいタイポグラフィ』、Gerstner『Designing Programmes』、Müller-Brockmann『Grid Systems in Graphic Design』、Ruder『Typographie』の原典は開いていない。</p>
+  <p>1920 年代のバウハウスなどのモダニズムの試みを受け継ぎ、チューリッヒ（Müller-Brockmann）とバーゼル（Ruder、Hofmann）の二拠点で発展した。誌 Neue Grafik（1958 年創刊）が国外に広めた。</p>
+  <p class="note">様式の成り立ち（バーゼルとチューリッヒの二校、Keller、Bill、Müller-Brockmann、誌 Neue Grafik）と五つの主張は <a href="https://en.wikipedia.org/wiki/International_Typographic_Style">Wikipedia「International Typographic Style」</a>で確認した。主張は同項の「Characteristics of style」（Meggs『A History of Graphic Design』を引く）に挙がる特徴に限った。Müller-Brockmann『Grid Systems in Graphic Design』、Ruder『Typographie』の原典は開いていない。</p>
 </section>
 
 <!-- ============ material ============ -->
@@ -205,7 +176,7 @@
   </div>
 
   <h3>適応レイアウト ― 幅が変わると並びが変わる</h3>
-  <p>Web では 2010 年以降、画面の大きさを前提にできなくなり、グリッドを幅の関数にする方法が確立した（Marcotte の Responsive Web Design、Wroblewski の Mobile First、CSS Grid、Container Queries）。Material 3 はこれを、ウィンドウの幅で分けた五つのクラスにまとめた。compact（600dp 未満）、medium（600〜839）、expanded（840〜1199）、large（1200〜1599）、extra-large（1600 以上）である。下の図では枠の幅が伸び縮みし、検索 UI の部品が幅に応じて隠れたり列が増えたりする。下の帯が周期の進みで、色の付いた区間は幅の変化が毎フレーム 1px 未満、つまり見た目に止まっている時間である。区間は緩急の曲線から計算している。</p>
+  <p>画面の大きさを前提にできなくなった Web で、Marcotte は 2010 年に、幅に合わせて並びを変える作り方を Responsive Web Design と名付けた。Material 3 はこれを、ウィンドウの幅で分けた五つのクラスにまとめた。compact（600dp 未満）、medium（600〜839）、expanded（840〜1199）、large（1200〜1599）、extra-large（1600 以上）である。下の図では枠の幅が伸び縮みし、検索 UI の部品が幅に応じて隠れたり列が増えたりする。下の帯の色の区間は、枠の幅が止まって見える時間である。</p>
   <div id="rwrap">
     <button class="btn" id="rplay" type="button">動きを止める</button>
     <div class="rframe">
@@ -226,8 +197,8 @@
     <div class="rprog"><i></i></div>
     <div class="rlab"><span>compact</span><span>medium</span><span>expanded</span><span>medium</span><span>compact</span></div>
   </div>
-  <p class="cap">ブレークポイントは機種ではなく内容で決める。ファセットを左に置ける幅、詳細を右に置ける幅。内容と機能は幅で削らない。</p>
-  <p class="note">2014 年の三原則は <a href="https://material.io/archive/guidelines/material-design/introduction.html">2014 年版ガイドライン「Introduction」（アーカイブ）</a>で、2021 年の三つは <a href="https://m3.material.io/blog/announcing-material-you">「Unveiling Material You」（2021-05-18）</a>で確認した。表の中身はこの二つの本文の要約に限った。ウィンドウサイズクラスの値は <a href="https://m3.material.io/foundations/layout/breakpoints">Material Design 3「Breakpoints」</a>で確認した。デザイン例のうち、2014 年版の配色（500 番を主色、A 番台をアクセント）、カードの標高 2dp、FAB の直径 56dp は <a href="https://material.io/archive/guidelines/">2014 年版ガイドラインのアーカイブ</a>で、2021 年版の標高・タイプスケール・角の半径（28dp ほか）は <a href="https://github.com/material-components/material-web/tree/main/tokens">material-web のトークン定義</a>で確認した。角の半径は 2025 年の M3 Expressive で大きい段が 20・32・48dp に改められた（<a href="https://m3.material.io/styles/shape/overview-principles">Shape</a>）。</p>
+  <p class="cap">本資料では、幅の区切りを機種ではなく内容で決める。ファセットを左に置ける幅、詳細を右に置ける幅である。内容と機能は幅で削らない。</p>
+  <p class="note">2014 年の三原則は <a href="https://material.io/archive/guidelines/material-design/introduction.html">2014 年版ガイドライン「Introduction」（アーカイブ）</a>で、2021 年の三つは <a href="https://m3.material.io/blog/announcing-material-you">「Unveiling Material You」（2021-05-18）</a>で確認した。表の中身はこの二つの本文の要約に限った。Responsive Web Design の命名は <a href="https://en.wikipedia.org/wiki/Responsive_web_design">Wikipedia「Responsive web design」</a>で、ウィンドウサイズクラスの値は <a href="https://m3.material.io/foundations/layout/breakpoints">Material Design 3「Breakpoints」</a>で確認した。デザイン例のうち、2014 年版の配色（500 番を主色、A 番台をアクセント）、カードの標高 2dp、FAB の直径 56dp は <a href="https://material.io/archive/guidelines/">2014 年版ガイドラインのアーカイブ</a>で、2021 年版の標高・タイプスケール・角の半径（28dp ほか）は <a href="https://github.com/material-components/material-web/tree/main/tokens">material-web のトークン定義</a>で確認した。角の半径は 2025 年の M3 Expressive で大きい段が 20・32・48dp に改められた（<a href="https://m3.material.io/styles/shape/overview-principles">Shape</a>）。</p>
 </section>
 
 <!-- ============ liquid glass ============ -->
@@ -257,7 +228,7 @@
   </div>
 
   <h3>本資料での扱い</h3>
-  <p>ここからは本資料の判断である。本資料は Liquid Glass を採らない。部品が背後の内容を透かすので、その上の文字の対比は背後に何が来るかで変わる。Apple は regular のぼかしと明るさの調整、clear の暗い層で読みやすさを保つよう求めているが、コントラスト比 4.5:1 を常に満たすとまでは言えない。本資料は文字の密度が高い画面を扱い、読めることを優先する。また屈折の揺らぎは、何がどこへ変わったかを伝える動き（動きの章）ではなく、素材の質感を見せる動きである。</p>
+  <p>ここからは本資料の判断である。写真や動画を見せる画面には合うが、文字を読み比べる画面では、本資料は Liquid Glass を採らない。部品が背後の内容を透かすので、その上の文字の対比は背後に何が来るかで変わる。Apple は regular のぼかしと明るさの調整、clear の暗い層で読みやすさを保つよう求めているが、コントラスト比 4.5:1 を常に満たすとまでは言えないからである。</p>
   <p class="note">三つの原則は <a href="https://developer.apple.com/documentation/technologyoverviews/liquid-glass">Apple Developer「Liquid Glass」</a>で、素材が周りを映して屈折させ、内容と文脈に応じて変わること、操作部品を機器の丸い角と同心にすること、タブバーがスクロールで縮むことは <a href="https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/">Apple Newsroom（2025-06-09）</a>で、同心の半径の計算は <a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a>で、機能の層、regular と clear、35% の暗い層は <a href="https://developer.apple.com/design/human-interface-guidelines/materials">HIG「Materials」</a>で確認した。</p>
 </section>
 
@@ -274,7 +245,7 @@
     <tr class="g-region"><td><b>共通領域</b><br><span class="note">Palmer, 1992</span></td><td>同じ枠や背景の中にあるものは一つの群に見える。近接より強い。<br><b>使い方</b>　枠と背景は線と面を増やすので、余白で分けて足りないときだけ使う</td><td><svg viewBox="0 0 220 90"><rect x="8" y="12" width="96" height="66" fill="none" stroke="var(--line)"/><rect x="116" y="12" width="96" height="66" fill="none" stroke="var(--line)"/><g fill="var(--main)"><circle cx="30" cy="45" r="8"/><circle cx="56" cy="45" r="8"/><circle cx="82" cy="45" r="8"/><circle cx="138" cy="45" r="8"/><circle cx="164" cy="45" r="8"/><circle cx="190" cy="45" r="8"/></g></svg></td></tr>
     <tr class="g-cont"><td><b>連続</b><br><span class="note">Wertheimer</span></td><td>線に沿って並ぶ点は、交点で折れた二つの形ではなく交差する二本の線に見える。<br><b>使い方</b>　端を揃えた要素の列は一本の線として読まれ、視線がそれに沿って進む。揃える線を少なくする</td><td><svg viewBox="0 0 220 90"><g fill="var(--main)"><circle cx="14" cy="72" r="5"/><circle cx="38" cy="58" r="5"/><circle cx="62" cy="46" r="5"/><circle cx="86" cy="38" r="5"/><circle cx="110" cy="34" r="5"/><circle cx="134" cy="34" r="5"/><circle cx="158" cy="38" r="5"/><circle cx="182" cy="46" r="5"/><circle cx="206" cy="58" r="5"/><circle cx="14" cy="18" r="5"/><circle cx="38" cy="24" r="5"/><circle cx="62" cy="30" r="5"/><circle cx="86" cy="36" r="5"/><circle cx="134" cy="48" r="5"/><circle cx="158" cy="54" r="5"/><circle cx="182" cy="60" r="5"/><circle cx="206" cy="66" r="5"/></g></svg></td></tr>
     <tr class="g-close"><td><b>閉合</b><br><span class="note">Kanizsa</span></td><td>欠けた輪郭からも閉じた形が見える。図では描いていない三角形が見える。<br><b>使い方</b>　輪郭を全周描かなくても領域は伝わる。カードは角や背景だけで示せる</td><td><svg viewBox="0 0 220 90"><g fill="var(--main)"><path d="M122.8 29.4 A20 20 0 1 0 97.2 29.4 L110 14z"/><path d="M80 74 A20 20 0 1 1 72.8 58.6 L60 74z"/><path d="M147.2 58.6 A20 20 0 1 1 140 74 L160 74z"/></g></svg></td></tr>
-    <tr class="g-fig"><td><b>図と地</b><br><span class="note">Rubin, 1915 頃</span></td><td>壺と二つの横顔は同時には見えず、片方が図、残りが地になる。明暗差が小さいと、どちらも図として立たない。<br><b>使い方</b>　本文のコントラスト比は 4.5:1 以上にする。半透明の地はこれを保証できない</td><td><svg viewBox="0 0 220 90"><rect width="220" height="90" fill="var(--fg)"/><path d="M80 8 C 92 12, 98 20, 100 30 C 101 38, 92 44, 88 52 C 86 60, 94 66, 96 72 C 98 78, 84 82, 76 84 L144 84 C 136 82, 122 78, 124 72 C 126 66, 134 60, 132 52 C 128 44, 119 38, 120 30 C 122 20, 128 12, 140 8 z" fill="var(--bg)"/></svg></td></tr>
+    <tr class="g-fig"><td><b>図と地</b><br><span class="note">Rubin, 1915 頃</span></td><td>壺と二つの横顔は同時には見えず、片方が図、残りが地になる。明暗差が小さいと、どちらも図として立たない。<br><b>使い方</b>　本文のコントラスト比は 4.5:1 以上にする</td><td><svg viewBox="0 0 220 90"><rect width="220" height="90" fill="var(--fg)"/><path d="M80 8 C 92 12, 98 20, 100 30 C 101 38, 92 44, 88 52 C 86 60, 94 66, 96 72 C 98 78, 84 82, 76 84 L144 84 C 136 82, 122 78, 124 72 C 126 66, 134 60, 132 52 C 128 44, 119 38, 120 30 C 122 20, 128 12, 140 8 z" fill="var(--bg)"/></svg></td></tr>
     <tr class="g-prag"><td><b>プレグナンツ</b><br><span class="note">Wertheimer</span></td><td>最も単純な解釈が選ばれる。図の輪郭は円と四角の重なりに見え、三つの不定形には見えない。<br><b>使い方</b>　部品やアイコンは基本形で作る</td><td><svg viewBox="0 0 220 90"><circle cx="85" cy="45" r="32" fill="none" stroke="var(--main)" stroke-width="3"/><rect x="100" y="20" width="66" height="50" fill="none" stroke="var(--main)" stroke-width="3"/></svg></td></tr>
   </table></div>
 
@@ -395,14 +366,14 @@
 <section class="slide" data-title="色" id="color">
   <div class="eyebrow">第1部 見た目の規範</div>
   <h2>色 ― 調和、トーン、配分、印象の地域差</h2>
-  <p>色は、色相の組を調和の型から選び、明度と彩度（トーン）で階調を作り、面積の配分を決める、の順で決める。印象は文化で変わるので、色には常に文字と形を併用する。このページ自身の色もこの順で決めた。</p>
+  <p>色は、色相の組を調和の型から選び、明度と彩度（トーン）で階調を作り、面積の配分を決める、の順で決める。印象は文化で変わるので、色には常に文字と形を併用する。本資料の色もこの順で決めた。</p>
 
   <h3>色相環と調和の型</h3>
   <p>配色の理論は「色相環の上でどの角度の組を選ぶか」（色相による調和）と「明度と彩度の組をどう揃えるか」（トーンによる調和）の二系統に分かれる。前者は Itten の 12 色相環（The Art of Color）が教育の標準で、後者は日本の PCCS（日本色研配色体系、1966）が体系化した。UI では前者でメインとアクセントの色相を決め、後者でベースとダークモードの明度を決める。</p>
 <div class="wheelwrap">
     <div>
       <svg viewBox="0 0 320 320" width="320" height="320" id="wheel" role="img" aria-label="12色相環と調和の型"></svg>
-      <p class="cap">12 色相環。◎ が morpho blue（色相 205°）。線で結んだ位置が、選んだ型で組になる色相。</p>
+      <p class="cap">12 色相環。◎ が本資料のメインの青（色相 205°）。線で結んだ位置が、選んだ型で組になる色相。</p>
     </div>
     <div>
       <div class="swatches" id="swatches"></div>
@@ -424,12 +395,12 @@
   <p>色相を変えずに明度と彩度を動かす配色は、UI で最も出番が多い。ボタンの通常・ホバー・押下、表の地と行の交互、ダークモードの各面は、すべてメインかベースのトーン違いで作る。Material 3 のトーナルパレットは、一つの色相を明度 0〜100 の 13 段に割ったもので、この考え方をそのまま部品に割り当てている。</p>
   <div class="tones" id="tones"></div>
 
-<h3>本資料のパレットの決め方</h3>
-  <p>面積の配分はベース 70・メイン 25・アクセント 5 とする。インテリアで慣用されてきた 60-30-10 を、情報量の多い画面向けにベース寄りにしたものである。ダークモードは PCCS のトーンの考えで、色相を保って明度だけ入れ替える。各色の選び方と、この設計での値は表にまとめた。</p>
+<h3>配色の決め方の例 ― 本資料の場合</h3>
+  <p>面積の配分はベース 70・メイン 25・アクセント 5 とする。ダークモードは PCCS のトーンの考えで、色相を保って明度だけ入れ替える。各色の選び方と、この設計での値は表にまとめた。</p>
   <div class="tbl"><table class="ratio">
     <tr><th>配分</th><th>役割</th><th>選び方</th><th>この設計での値と理由</th></tr>
     <tr><td class="bar b">70</td><td>ベース</td><td>低彩度の無彩色に、メインかアクセントへ僅かに寄せた色味を付ける。純白と純灰は避ける</td><td>メインの色相に僅かに寄せた冷たい近白。暗い面では同じ色相の近黒。文字との対比は 15:1</td></tr>
-    <tr><td class="bar m">25</td><td>メイン</td><td>ブランドの色相。ベース上の文字色として使えるよう対比 4.5:1 以上。アクセントと色相が離れていること</td><td>morpho blue、rgb(0,116,200)、色相 205°。白地の文字として 4.9:1。暗い面では明度を上げた同じ色相</td></tr>
+    <tr><td class="bar m">25</td><td>メイン</td><td>ブランドの色相。ベース上の文字色として使えるよう対比 4.5:1 以上。アクセントと色相が離れていること</td><td>青、rgb(0,116,200)、色相 205°。白地の文字として 4.9:1。暗い面では明度を上げた同じ色相</td></tr>
     <tr><td class="bar a">5</td><td>アクセント</td><td>一色。彩度が最も高い色。用途は注目させる一か所（検索ならヒット語と選択中の行）に限る。型は上の表のとおり補色</td><td>メインの補色（色相 25°、橙）。そのままでは白地の文字として対比が足りないので、4.8:1 になるまで暗くした。ヒット語の強調、選択タブの下線、切り替えの印にだけ使う</td></tr>
     <tr><td class="bar"></td><td>状態色</td><td>配分の外に置く。常には表示されず、表示されたときにはアクセントより目立たなければならないからである。赤・黄・緑はソフトウェアの慣習に従い、文字や形を併用する</td><td>赤は深い緋、黄は暗い金に寄せて、橙のアクセントから離す。必ず「▲」と文言を伴う</td></tr>
   </table></div>
@@ -461,7 +432,7 @@
 <section class="slide" data-title="可視化" id="charts">
   <div class="eyebrow">第1部 見た目の規範</div>
   <h2>データの可視化 ― 量は位置と長さで示す</h2>
-  <p>件数・日付・所要時間のような量は、数字を並べるより図にしたほうが比べやすい。ただし図にも、正確に読める描き方と読めない描き方がある。この章では、その原則を五つ挙げ、一つの事例で確かめる。</p>
+  <p>件数・日付・所要時間のような量は、数字を並べるより図にしたほうが比べやすい。ただし描き方によって、読み取りの正確さが変わる。</p>
   <h3>図示の原則</h3>
   <div class="vp">
     <div><div class="fig"><svg viewBox="0 0 300 162" class="vps" role="img" aria-label="同じ二つの値を位置・長さ・角度・面積・濃さで描いた比較。下の帯が左ほど濃く、左ほど正確に読める"><text x="30" y="128" text-anchor="middle" class="vpl">位置</text><line x1="6" y1="108" x2="54" y2="108" stroke="var(--line)"/><line x1="6" y1="28" x2="6" y2="108" stroke="var(--line)"/><circle cx="22" cy="64.0" r="4" fill="var(--main)"/><circle cx="40" cy="52.0" r="4" fill="var(--main)"/><text x="90" y="128" text-anchor="middle" class="vpl">長さ</text><rect x="74" y="38" width="12" height="38.5" fill="var(--main)"/><rect x="94" y="24" width="12" height="49.0" fill="var(--main)"/><text x="150" y="128" text-anchor="middle" class="vpl">角度</text><circle cx="150" cy="68" r="22" fill="var(--line)"/><path d="M150 68L150 46A22 22 0 0 1 158.1 88.5Z" fill="var(--main)"/><text x="210" y="128" text-anchor="middle" class="vpl">面積</text><circle cx="200" cy="68" r="12.4" fill="var(--main)"/><circle cx="222" cy="68" r="14" fill="var(--main)"/><text x="270" y="128" text-anchor="middle" class="vpl">濃さ</text><rect x="250" y="54" width="18" height="28" fill="var(--main)" fill-opacity="0.55"/><rect x="272" y="54" width="18" height="28" fill="var(--main)" fill-opacity="0.7"/><defs><linearGradient id="vpgrad"><stop offset="0" style="stop-color:var(--main)"/><stop offset="1" style="stop-color:var(--main);stop-opacity:.06"/></linearGradient></defs><rect x="6" y="138" width="288" height="8" fill="url(#vpgrad)"/><text x="8" y="156" text-anchor="start" class="vpl">正確に読める</text><text x="292" y="156" text-anchor="end" class="vpl">読み誤りやすい</text></svg></div><h4>正確に読める順</h4><p class="src">Cleveland と McGill、1984</p><p>共通の尺度上の位置、揃っていない尺度上の位置、長さ・方向・角度、面積、体積・曲率、濃淡・彩度の順に正確に読める。色相はこの順位に含まれず、区別に使う変数として後の研究で扱われた。図の五つはどれも同じ 55 と 70 を描いている。左の位置なら差がそのまま読めるが、右へ行くほど差が小さく見えたり、読み違えたりする。量は位置と長さで示し、色は区別に使う</p></div>
@@ -598,7 +569,7 @@
     <tr><td>ピークエンドの法則</td><td>Kahneman ら, 1993</td><td>体験は、各時点の総和や平均ではなく、最も強い時点と終わりの感じ方でおおむね判断される</td></tr>
     <tr><td>パレートの法則</td><td>Pareto</td><td>多くの事象で、結果の約 8 割は原因の約 2 割から生じる。最も多くの利用者に大きな効果をもたらす部分に力を集める</td></tr>
   </table></div>
-  <p class="note">10 ヒューリスティックの名前と中身は <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">NN/g「10 Usability Heuristics for User Interface Design」</a>で、古典の表の三つは Wikipedia の各記事で、法則の要点と出典は <a href="https://lawsofux.com/">Laws of UX</a> の各項で確認した。Laws of UX はヒックの法則を Hick と Hyman の 1952 年の研究とするが、Hyman の論文は 1953 年で、これは <a href="https://en.wikipedia.org/wiki/Hick%27s_law">Wikipedia「Hick's law」</a>で確認した。Krug『Don't Make Me Think』、Cooper『About Face』、Raskin『The Humane Interface』、Victor「Magic Ink」、Tufte、Garrett、WCAG も規範としてよく引かれるが、本ページの作成時には開いていないので表に載せない。</p>
+  <p class="note">10 ヒューリスティックの名前と中身は <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">NN/g「10 Usability Heuristics for User Interface Design」</a>で、古典の表の三つは Wikipedia の各記事で、法則の要点と出典は <a href="https://lawsofux.com/">Laws of UX</a> の各項で確認した。Laws of UX はヒックの法則を Hick と Hyman の 1952 年の研究とするが、Hyman の論文は 1953 年で、これは <a href="https://en.wikipedia.org/wiki/Hick%27s_law">Wikipedia「Hick's law」</a>で確認した。Krug『Don't Make Me Think』、Cooper『About Face』、Raskin『The Humane Interface』、Victor「Magic Ink」、Tufte、Garrett、WCAG も規範としてよく引かれるが、本資料の作成時には開いていないので表に載せない。</p>
 </section>
 
 <!-- ============ guidelines ============ -->
@@ -609,7 +580,7 @@
   <div class="cols gl">
     <div><h3>Apple HIG</h3>
       <p class="src">出典：<a href="https://developer.apple.com/design/human-interface-guidelines/searching">HIG「Searching」</a>（2026-06-08 更新）。各項目に、原典の節の名前を添えた。</p>
-      <ul><li>システム標準の部品・ジェスチャ・ショートカットを優先。Dynamic Type、VoiceOver、タッチ領域 44pt</li></ul>
+      <ul><li>押せる領域は 44×44pt 以上 <span class="where"><a href="https://developer.apple.com/design/human-interface-guidelines/buttons">HIG「Buttons」</a> › Best practices</span></li></ul>
       <h4>検索欄に求めること</h4>
       <p>丸数字は右の図に対応する。</p>
       <ol class="mkl"><li>検索欄はアプリ内で一か所 <span class="where">Best practices</span></li><li>スコープを常に示す <span class="where">Best practices</span></li><li>入力前に最近の検索を出す <span class="where">Best practices</span></li><li>履歴は消せるように <span class="where">Best practices</span></li><li>入力中に候補を出す <span class="where">Best practices</span></li></ol></div>
@@ -627,7 +598,7 @@
   <div class="cols gl">
     <div><h3>Google Material Design 3</h3>
       <p class="src">出典：<a href="https://m3.material.io/components/search/guidelines">Material Design 3「Search」</a> の Guidelines。各項目に、原典の節の名前を添えた。</p>
-      <ul><li>コントラスト 4.5:1、タッチ 48dp</li></ul>
+      <ul><li>押せる領域は 48×48dp 以上 <span class="where"><a href="https://m3.material.io/foundations/designing/structure">Structure</a> › Target sizes</span></li></ul>
       <h4>検索欄に求めること</h4>
       <p>丸数字は右の図に対応する。</p>
       <ol class="mkl"><li>検索欄を選ぶと focused search に切り替わる <span class="where">Usage › Focused search</span></li><li>入力前は履歴、入力中は候補か結果を出す <span class="where">Behavior › Focused search</span></li><li>候補はカテゴリ見出しで分ける <span class="where">Usage › Search suggestions &amp; results</span></li><li>候補に先頭アイコンを付ける <span class="where">Usage › Search suggestions &amp; results</span></li><li>絞り込みチップを置く <span class="where">Usage › Search suggestions &amp; results</span></li><li>実行後も入力語は見えたまま <span class="where">Behavior › Search results</span></li><li>広い画面では欄の下にドッキング、狭い画面では全画面（図にない） <span class="where">Adaptive design › Focused search</span></li></ol></div>
@@ -671,7 +642,7 @@
 <section class="slide" data-title="桜井の UI" id="sakurai">
   <div class="eyebrow">第2部 振る舞いの規範</div>
   <h2>桜井政博のゲーム作るには ― UI の 15 テーマ</h2>
-  <p>ゲームの UI は、利用者の時間と注意を奪わないことを強く求められる。ここでは <a href="https://www.youtube.com/playlist?list=PLi8SA3sbzYVTl4FV0rLnSsf6ElOh-_Cv1">【J: UI】</a> の 15 本を一般のアプリの画面で示し、続けて仕様・ゲーム性・企画の回から待ち時間と反応に関わる 5 本を扱う。見出しは動画へのリンクで、要旨は動画の説明文と要約記事で確認したものに限る。カードを押すと、主張を外した状態と当てはめた状態が切り替わる。</p>
+  <p>ここでは <a href="https://www.youtube.com/playlist?list=PLi8SA3sbzYVTl4FV0rLnSsf6ElOh-_Cv1">【J: UI】</a> の 15 本を一般のアプリの画面で示し、続けて仕様・ゲーム性・企画の回から待ち時間と反応に関わる 5 本を扱う。見出しは動画へのリンクである。カードを押すと、良い例と悪い例が切り替わる。</p>
 
   <h3>UI の 15 テーマ</h3>
   <div class="gest skr" id="skr">
@@ -746,7 +717,7 @@
 <section class="slide" data-title="動き" id="motion">
   <div class="eyebrow">第2部 振る舞いの規範</div>
   <h2>動きの原則 ― 緩急と時間</h2>
-  <p>画面の動きの規範は、ディズニーのアニメーターが 1981 年に定式化した「アニメーションの 12 原則」（Thomas & Johnston『The Illusion of Life』）を UI に翻訳したものである。UI で使うのはそのうち「スローイン・スローアウト」「予備動作」「フォロースルー」「演出（staging）」「タイミング」の五つで、残りはキャラクターの描写に属する。翻訳の代表は Willenskomer の「UX in Motion Manifesto」（2017）、Val Head『Designing Interface Animation』（2016）、Material の Motion、Apple HIG の Motion である。</p>
+  <p>ディズニーのアニメーターがまとめた「アニメーションの 12 原則」（Thomas &amp; Johnston『The Illusion of Life』、1981）を、UI の動きに当てはめる試みがある。Willenskomer の「UX in Motion Manifesto」（2017）はその一つで、offset &amp; delay（ずらして動かす）、parenting（親子関係）、transformation（変形）などを挙げる。本資料は 12 原則のうち「スローイン・スローアウト」「予備動作」「フォロースルー」「演出（staging）」「タイミング」の五つを使う。</p>
   <p>UI の動きは、変化の前後をつなぐ情報である。章の中身を一コマで切り替えると、何がどこへ変わったのかを見比べて探すことになる。同じ変化を動きでつなぐと、どこから来てどこへ行ったか、何が残り何が入れ替わったかが目で追える。消してよいのは、何も変わっていないのに動く動きだけである。</p>
 
   <h3>同じ移動を、緩急を変えて見る</h3>
@@ -760,7 +731,6 @@
     <div class="erow"><div class="lab"><b>短すぎ</b>150ms・標準</div><div class="track std fast"><i></i></div><div class="cv" data-cv=".2,0,0,1"></div></div>
     <div class="erow"><div class="lab"><b>長すぎ</b>1600ms・標準</div><div class="track std slow"><i></i></div><div class="cv" data-cv=".2,0,0,1"></div></div>
   </div>
-  <p class="cap">Material の章の適応レイアウトの枠は「標準」の緩急で 1 秒かけて幅を変え、章の切り替えは同じ曲線で 220ms のフェードにしている。</p>
 
   <h3>原則を一つずつ見る</h3>
   <p>スローイン・スローアウトは上の比較で見た。残る四つ（上で触れたフォロースルーと演出を含む）を単独で見て、続けて Manifesto と現代のガイドラインで加わった三つを見る。見出しの横に、元になった原則名を添えた。</p>
@@ -771,10 +741,10 @@
     <div class="mdemo"><h4>タイミング<span class="src">タイミング</span></h4><div class="stage tim"><i class="big"></i><i class="small"></i></div><p>大きいものはゆっくり、小さいものは速く。距離と大きさに時間を合わせる。</p></div>
     <div class="mdemo"><h4>親子関係<span class="src">Manifesto</span></h4><div class="stage par"><i class="p"></i><i class="c1"></i><i class="c2"></i></div><p>親が動くと子が少し遅れて従う。カードを開くと中身が一緒に動く。何が何に属しているかが動きで分かる。</p></div>
     <div class="mdemo"><h4>変形<span class="src">Manifesto</span></h4><div class="stage mor"><i class="b"></i><i class="d"></i></div><p>ボタンがそのまま広がってダイアログになる。どこから来たか、閉じればどこへ戻るかが分かる。</p></div>
-    <div class="mdemo"><h4>動かさない自由<span class="src">prefers-reduced-motion</span></h4><div class="stage red"><i class="mv"></i><b class="l1">移動</b><i class="fd"></i><b class="l2">フェード</b></div><p>上は通常の移動、下は同じ変化をフェードだけで表したもの。動きを減らす設定の利用者には下を出す。消してよいのは移動であって、変化の合図ではない。</p></div>
+    <div class="mdemo"><h4>動かさない自由<span class="src">prefers-reduced-motion</span></h4><div class="stage red"><i class="mv"></i><b class="l1">移動</b><i class="fd"></i><b class="l2">フェード</b></div><p>上は通常の移動、下は同じ変化をフェードだけで表したもの。動きを減らす設定の利用者には下を出す。移動は消しても、変化の合図はフェードで残す。</p></div>
   </div>
 
-  <p class="note">12 原則と出典（Thomas & Johnston, The Illusion of Life, 1981）は <a href="https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation">Wikipedia「Twelve basic principles of animation」</a>で確認した。Willenskomer の Manifesto、Head の著書、Material と Apple の Motion の本文は開いていない。</p>
+  <p class="note">12 原則と出典（Thomas &amp; Johnston, The Illusion of Life, 1981）は <a href="https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation">Wikipedia「Twelve basic principles of animation」</a>で、Manifesto の原則は <a href="https://uxmag.com/articles/creating-usability-with-motion-the-ux-in-motion-manifesto">UX Magazine 掲載の Manifesto</a>で確認した。</p>
 </section>
 
 <!-- ============ foolproof ============ -->
@@ -805,15 +775,15 @@
 
   <h3>ソフトウェアの UI での具体策</h3>
   <div class="tbl"><table>
-    <tr><th>階層</th><th>具体策</th></tr>
+    <tr><th>原理</th><th>具体策</th></tr>
     <tr><td>1 排除</td><td><b>入力を消さない。</b>ブラウザの戻る、セッション切れ、エラーの後も入力とスクロール位置を保つ<br><b>二重実行を防ぐ。</b>送信直後にボタンを無効化し、サーバー側は冪等（同じ要求が二度届いても結果は一度分）にする</td></tr>
-    <tr><td>2 代替</td><td><b>受け入れて直す。</b>全角・半角・ハイフン・空白・新字旧字は拒否せず正規化する（ポステルの法則）。正規化してよいのは意味が変わらない差だけで、意味が変わりうるタイポの修正は提案にとどめ、勝手に置換しない</td></tr>
+    <tr><td>2 代替化</td><td><b>受け入れて直す。</b>全角・半角・ハイフン・空白・新字旧字は拒否せず正規化する（ポステルの法則）。正規化してよいのは意味が変わらない差だけで、意味が変わりうるタイポの修正は提案にとどめ、勝手に置換しない</td></tr>
     <tr><td>3 容易化</td><td><b>選べなくする。</b>無効な組み合わせは消すかグレーに。日付はピッカー、数値は範囲付き</td></tr>
     <tr><td>4 異常検出</td><td><b>エラーはその場で、</b>直し方と一緒に<br><b>失う前に見せる。</b>影響範囲（「1,204 通を削除します」）を数字で示す。確認ダイアログはここにだけ</td></tr>
     <tr><td>5 影響緩和</td><td><b>取り消せるようにする。</b>削除はゴミ箱へ、送信は数秒の猶予</td></tr>
   </table></div>
   <h3>フェイルセーフ ― 壊れたら安全な側へ倒す</h3>
-  <p>フールプルーフが人の誤りに備えるのに対し、フェイルセーフはシステムの故障に備える。踏切が停電で閉まるように、壊れたときに利用者が失うものが最も少ない状態へ倒す。画面では、一部の機能が落ちても残りは使えるようにする（通販サイトのおすすめ表示が落ちても、検索と購入はできる）、通信が切れても入力は保つ、一部だけ返したときはそう明示する、の三つになる。</p>
+  <p>フールプルーフが人の誤りに備えるのに対し、フェイルセーフはシステムの故障に備える。停電しても遮断棹が下りたままの踏切のように、壊れたときに利用者が失うものが最も少ない状態へ倒す。本資料では、画面での当てはめとして次の三つを挙げる。一部の機能が落ちても残りは使えるようにする（通販サイトのおすすめ表示が落ちても、検索と購入はできる）、通信が切れても入力は保つ、一部だけ返したときはそう明示する。</p>
   <p>ここからは本資料の判断である。防げるのは想定したミスだけで、1〜3 の対策ほど利用者の操作の自由を減らす。そこで 1〜3 は取り返しのつかない操作に集中して使い、それ以外は自由を奪わない 5 の取り消しで守る。専門家向けの道具では 1〜3 を緩め、5 を強くする。</p>
   <p class="note">ポカヨケの起源と改称は <a href="https://ja.wikipedia.org/wiki/ポカヨケ">Wikipedia「ポカヨケ」</a>、フェイルセーフとフォールトトレラントの区別は <a href="https://ja.wikipedia.org/wiki/フェイルセーフ">Wikipedia「フェイルセーフ」</a>、フールプルーフの定義と例は <a href="https://ja.wikipedia.org/wiki/フールプルーフ">Wikipedia「フールプルーフ」</a>、フォールトトレラントの例は <a href="https://ja.wikipedia.org/wiki/フォールトトレラント設計">Wikipedia「フォールトトレラント設計」</a>で確認した。5 原理は <a href="https://www.qualitydigest.com/june00/html/godfrey.html">Godfrey「Error-Proofing」（Quality Digest、2000）</a>が中條・久米の分類として紹介するもので、中條・久米の原論文は開いていない。確認ダイアログについては <a href="https://www.nngroup.com/articles/confirmation-dialog/">NN/g「Confirmation Dialogs」</a>に拠る。</p>
 </section>
@@ -862,7 +832,7 @@
     <tr><td><a href="https://en.wikipedia.org/wiki/Exploratory_search">Exploratory Search: From Finding to Understanding</a></td><td>Marchionini, 2006</td><td>探す・学ぶ・調べる。後の二つが探索的検索</td></tr>
     <tr><td><a href="https://searchuserinterfaces.com/book/">Search User Interfaces</a></td><td>Hearst, 2009</td><td>検索 UI の定本。著者サイトで全 12 章を無償公開している。要点は次の章にまとめた</td></tr>
   </table></div>
-  <p class="note">Bates は ERIC の要旨（Online Review 13(5), 1989）で確認した。原論文は開いていない。Rosenfeld と Morville の Information Architecture、Russell-Rose と Tate の Designing the Search Experience、Baymard の調査もこの分野でよく引かれるが、本ページの作成時には開いていない。Hearst らの Flamenco は、次の章で Hearst の本の記述を通して扱う。</p>
+  <p class="note">Bates は ERIC の要旨（Online Review 13(5), 1989）で確認した。原論文は開いていない。Rosenfeld と Morville の Information Architecture、Russell-Rose と Tate の Designing the Search Experience、Baymard の調査もこの分野でよく引かれるが、本資料の作成時には開いていない。Hearst らの Flamenco は、次の章で Hearst の本の記述を通して扱う。</p>
 </section>
 
 <!-- ============ hearst ============ -->
@@ -1084,10 +1054,33 @@
   <p>規範同士の食い違いは、序で述べたとおり信じるものの側で決める。本資料の決め方は次のとおりである。</p>
   <ul>
     <li><b>見た目を内容と環境に合わせて変えるか、固定するか。</b>Liquid Glass と Material のダイナミックカラーは変える方向で、スイスデザインと Rams は固定して内容だけを変える方向である。本資料は後者を採る。検索結果のように内容が毎回変わる画面では、変わらない地があって初めて変化が図として見えるからである。</li>
-    <li><b>角を丸めるか。</b>スイスデザインは角丸を持たず、Apple と Material は操作部品を丸める。本資料は面を角のままにし、押せる部品だけを慣習に合わせて丸める（原則 <a href="#principles" data-prin="2">2</a> と <a href="#principles" data-prin="8">8</a>）。</li>
     <li><b>曖昧一致をどこまで使うか。</b>fzf は全体を曖昧一致にするが、数百万件の DB では無関係な結果が上位を埋める。曖昧一致は入力中の候補に限り、本検索は単語単位の AND にする（原則 <a href="#principles" data-prin="5">5</a> と <a href="#principles" data-prin="12">12</a>）。</li>
     <li><b>動きは飾りか。</b>飾りとしての動き（屈折の揺らぎ、意味のない跳ね）は置かず、変化をつなぐ動きは置く（原則 <a href="#principles" data-prin="2">2</a> と <a href="#principles" data-prin="10">10</a>）。</li>
   </ul>
+  <h3>角丸 ― なぜ控えめにするか</h3>
+  <p>Apple と Material は操作部品を丸め、スイスデザインの五つの主張は角丸に触れない。本資料は面を角のままにし、押せる部品だけを慣習に合わせて丸める（原則 <a href="#principles" data-prin="2">2</a> と <a href="#principles" data-prin="8">8</a>）。理由のうち、出典のあるものとないものを分けて示す。</p>
+  <div class="fig rad">
+    <div><div class="box r24"><i class="g"></i><div class="in r12 tx"><b>関東大震災 1923</b>朝刊 1 面　842 件<br>夕刊 1 面　229 件</div></div><p class="cap"><b>良い例</b> 同心の入れ子（外 24 / 内 12）。隙間は一定。ただし文字の開始位置は角から離す必要が残る</p></div>
+    <div><div class="box r24"><i class="g"></i><div class="in r24 tx"><b>関東大震災 1923</b>朝刊 1 面　842 件<br>夕刊 1 面　229 件</div></div><p class="cap"><b>悪い例</b> 同じ半径の入れ子（外 24 / 内 24）。角だけ隙間が太り、文字が曲線に食い込む。揃え線（点線）が角で宙に浮く</p></div>
+    <div><div class="box sq"><i class="g"></i><span class="chip">チップ</span><i class="ava"></i><div class="in tx"><b>関東大震災 1923</b>朝刊 1 面　842 件<br>夕刊 1 面　229 件</div></div><p class="cap"><b>良い例</b> 面は角のまま。揃え線が辺の端まで通り、丸いのはチップとアバターだけ</p></div>
+    <div><div class="box r24"><span class="chip r24">チップ</span><div class="in r24 t">本文</div></div><p class="cap"><b>悪い例</b> 面も文字の箱も丸い。押せるものが形で分からない</p></div>
+  </div>
+  <h4>出典のある理由</h4>
+  <ul>
+    <li><b>入れ子は同心にしないと崩れる。</b>内側の半径は「外側の半径 − 余白」にする。Apple は 2025 年の設計でこれを同心の形として定め、内側の半径をシステムが自動で計算できるようにしている。そろえないと、角だけ隙間が太り、文字が曲線に食い込む（上の図）。</li>
+    <li><b>密度の高い画面では限る。</b>Apple 自身が、カプセル形は指で触る画面に向くが、密度の高いデスクトップでは目立たせたい操作に限るとしている。Mac の小さな部品には、角を少しだけ丸めた長方形を使う。</li>
+    <li><b>大きな面を大きく丸めると間延びする。</b>macOS Tahoe（2025）の窓の大きな角丸には、Gruber らの評論で「Fisher-Price 風」「滑稽なほど大きい」と批判が集まった。同心の角丸は小さな機器には合っても、大きな長方形の画面には合わないという指摘もある。いずれも評論で、擁護する声もある。</li>
+    <li><b>流行として使われすぎる。</b>2005 年には、角丸と階調が Web 2.0 の流行の定番（the new black）と書かれ、使われすぎて「visual static」、つまり目に付くだけで意味を持たない、雑音のような飾りになったとも評されていた。</li>
+  </ul>
+  <h4>丸めるほうに働く研究</h4>
+  <p>曲線のほうが好まれるという実験はある（Bar と Neta、2006。Bertamini ら、2016）。ただし物体や図形の好みの実験で、画面の角を丸めると読みやすさや操作の速さが上がるという結果ではない。</p>
+  <h4>本資料の判断</h4>
+  <ul>
+    <li>角丸は辺の端を削るので、グリッドの線と文字の開始位置がずれ、その分の余白が要る。</li>
+    <li>押せるもの（ボタン、チップ）は丸く、押せないもの（パネル、表、本文）は角のままにして、形で役割を分ける。</li>
+    <li>半径は 1〜3 段階に限り、入れ子は同心にし、本文を載せる面は角を立てる。</li>
+  </ul>
+  <p class="note">同心の形と、密度の高い画面での限定は <a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a>で、計算は <a href="https://cloudfour.com/thinks/the-math-behind-nesting-rounded-corners/">Cloud Four「The math behind nesting rounded corners」</a>で、macOS Tahoe への批判は <a href="https://daringfireball.net/2025/11/software_update_tahoe_confusing">Daring Fireball（2025-11-10）</a>、<a href="https://mjtsai.com/blog/2025/10/16/tahoe-window-corners/">Michael Tsai「Tahoe Window Corners」</a>、<a href="https://kirby.pika.page/posts/a-time-and-a-place-for-concentricity">Keren「A Time and a Place for Concentricity」</a>で、2005 年の評は <a href="https://snarkmarket.com/blog/snarkives/technosnark/the_web_20_design_aesthetic/">Snarkmarket「The "Web 2.0" Design Aesthetic」</a>で、曲線の好みは <a href="https://www.researchgate.net/publication/6873629_Humans_prefer_curved_visual_objects">Bar &amp; Neta（Psychological Science 17(8), 2006）</a>の要旨と、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4975689">Bertamini ら（British Journal of Psychology 107(1), 2016）</a>の要旨で確認した。</p>
 </section>
 
 <!-- ============ apply ============ -->
@@ -1143,7 +1136,7 @@
     <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
     <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/">Human Interface Guidelines</a></td><td>Apple</td><td><a href="#intro">はじめに</a>、<a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
     <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/searching">HIG「Searching」</a></td><td>Apple</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
-    <tr><td><a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a></td><td>Apple、2025</td><td><a href="#glass">Liquid Glass</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a></td><td>Apple、2025</td><td><a href="#glass">Liquid Glass</a>、<a href="#principles">共通原則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://developer.apple.com/documentation/technologyoverviews/liquid-glass">Liquid Glass</a></td><td>Apple Developer</td><td><a href="#glass">Liquid Glass</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/">Apple introduces a delightful and elegant new software design</a></td><td>Apple Newsroom、2025</td><td><a href="#glass">Liquid Glass</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/materials">HIG「Materials」</a></td><td>Apple</td><td><a href="#glass">Liquid Glass</a></td><td><span class="lv lv-src">原典</span></td></tr>
@@ -1188,7 +1181,7 @@
     <tr><td><a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">Hanging Protocol Overview</a></td><td>LEADTOOLS</td><td><a href="#apply">適用</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">Text Scanning Patterns: Eyetracking Evidence</a></td><td>Nielsen Norman Group</td><td><a href="#apply">適用</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://researchmap.jp/kojimiwa/published_papers/3501775">縦書きと横書きの読みの研究</a></td><td>Miwa ら</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://www.researchgate.net/publication/6873629_Humans_prefer_curved_visual_objects">Humans prefer curved visual objects</a></td><td>Bar と Neta、2006</td><td><a href="#swiss">スイス</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://www.researchgate.net/publication/6873629_Humans_prefer_curved_visual_objects">Humans prefer curved visual objects</a></td><td>Bar と Neta、2006</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
     <tr class="secret"><td><a href="https://link.springer.com/article/10.1186/s41235-023-00499-6">Cognitive Research: Principles and Implications の論文</a></td><td>Bellaiche ら、2023</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
     <tr class="secret"><td><a href="https://www.researchgate.net/publication/222427507_The_effort_heuristic">The effort heuristic</a></td><td>Kruger ら、2004</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr class="secret"><td><a href="https://online.ucpress.edu/collabra/article/9/1/87489/197632/The-Effort-Heuristic-Revisited-Mixed-Results-for">The Effort Heuristic Revisited</a></td><td>Collabra、2023</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
@@ -1197,14 +1190,23 @@
   <div class="tbl"><table class="refs">
     <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/International_Typographic_Style">International Typographic Style</a></td><td>Wikipedia</td><td><a href="#swiss">スイス</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://dev.to/sgbp/the-concentric-border-radius-rule-why-nested-rounded-corners-look-slightly-wrong-3hog">The concentric border-radius rule</a></td><td>DEV Community</td><td><a href="#swiss">スイス</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://ja.wikipedia.org/wiki/ゲシュタルト心理学">ゲシュタルト心理学</a></td><td>Wikipedia</td><td><a href="#gestalt">ゲシュタルト</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+        <tr><td><a href="https://ja.wikipedia.org/wiki/ゲシュタルト心理学">ゲシュタルト心理学</a></td><td>Wikipedia</td><td><a href="#gestalt">ゲシュタルト</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Rubin_vase">Rubin vase</a></td><td>Wikipedia</td><td><a href="#gestalt">ゲシュタルト</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Principles_of_grouping">Principles of grouping</a></td><td>Wikipedia</td><td><a href="#gestalt">ゲシュタルト</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Color_scheme">Color scheme</a></td><td>Wikipedia</td><td><a href="#color">色</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Johannes_Itten">Johannes Itten</a></td><td>Wikipedia</td><td><a href="#color">色</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://ja.wikipedia.org/wiki/PCCS">PCCS</a></td><td>Wikipedia</td><td><a href="#color">色</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation">Twelve basic principles of animation</a></td><td>Wikipedia</td><td><a href="#motion">動き</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://uxmag.com/articles/creating-usability-with-motion-the-ux-in-motion-manifesto">Creating Usability with Motion: The UX in Motion Manifesto</a></td><td>Willenskomer、2017</td><td><a href="#motion">動き</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Responsive_web_design">Responsive web design</a></td><td>Wikipedia</td><td><a href="#material">Material</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/buttons">HIG「Buttons」</a></td><td>Apple</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://m3.material.io/foundations/designing/structure">Material Design 3「Structure」</a></td><td>Google</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://cloudfour.com/thinks/the-math-behind-nesting-rounded-corners/">The math behind nesting rounded corners</a></td><td>Cloud Four</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://snarkmarket.com/blog/snarkives/technosnark/the_web_20_design_aesthetic/">The "Web 2.0" Design Aesthetic</a></td><td>Snarkmarket、2005</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://daringfireball.net/2025/11/software_update_tahoe_confusing">Software Update: Tahoe（評論）</a></td><td>Gruber、2025</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://mjtsai.com/blog/2025/10/16/tahoe-window-corners/">Tahoe Window Corners</a></td><td>Michael Tsai、2025</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://kirby.pika.page/posts/a-time-and-a-place-for-concentricity">A Time and a Place for Concentricity</a></td><td>Keren、2025</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4975689">Do observers like curvature or do they dislike angularity?</a></td><td>Bertamini ら、2016</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
     <tr><td><a href="https://ja.wikipedia.org/wiki/ポカヨケ">ポカヨケ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://ja.wikipedia.org/wiki/フェイルセーフ">フェイルセーフ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://ja.wikipedia.org/wiki/フールプルーフ">フールプルーフ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
@@ -1253,12 +1255,12 @@
   <p>本文で触れたが、作成時に開いていないものである。主張の根拠には使っていない。</p>
   <div class="tbl"><table class="refs">
     <tr><th>資料</th><th>挙げた章</th></tr>
-    <tr><td>Tschichold『新しいタイポグラフィ』、Gerstner『Designing Programmes』、Müller-Brockmann『Grid Systems in Graphic Design』、Ruder『Typographie』</td><td><a href="#swiss">スイス</a></td></tr>
+    <tr><td>Müller-Brockmann『Grid Systems in Graphic Design』、Ruder『Typographie』</td><td><a href="#swiss">スイス</a></td></tr>
     <tr><td>Palmer の共通領域の論文（1992）</td><td><a href="#gestalt">ゲシュタルト</a></td></tr>
     <tr><td>色の印象の出典となる書籍</td><td><a href="#color">色</a></td></tr>
     <tr><td>Cleveland と McGill、Bertin、Treisman、Tufte の原典</td><td><a href="#charts">可視化</a></td></tr>
     <tr><td>Krug『Don&#x27;t Make Me Think』、Cooper『About Face』、Raskin『The Humane Interface』、Victor「Magic Ink」、Garrett、WCAG</td><td><a href="#classics">古典と法則</a></td></tr>
-    <tr><td>Thomas と Johnston『The Illusion of Life』（1981）、Willenskomer の UX in Motion Manifesto、Head の著書、Material と Apple の Motion の本文</td><td><a href="#motion">動き</a></td></tr>
+    <tr><td>Thomas と Johnston『The Illusion of Life』（1981）の本文</td><td><a href="#motion">動き</a></td></tr>
     <tr><td>Bates の原論文</td><td><a href="#seeking">情報探索</a></td></tr>
     <tr><td>Rosenfeld と Morville『Information Architecture』、Russell-Rose と Tate『Designing the Search Experience』、Baymard の調査</td><td><a href="#seeking">情報探索</a></td></tr>
     <tr><td>Hearst が引く個々の研究の原論文</td><td><a href="#hearst">検索 UI の定本</a></td></tr>
