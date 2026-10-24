@@ -1,4 +1,12 @@
 (function(){
+  /* 変遷と飾りの章は普段は隠す。D を 5 秒押し続けると表示を切り替える。
+     取引先に見せる版で、個別の作り手や経緯を前に出さないため。章の一覧を作る前に消す */
+  var reveal=false;try{reveal=localStorage.getItem('reveal')==='1';}catch(e){}
+  document.querySelectorAll(reveal?'.unsecret':'.secret').forEach(function(e){e.remove();});
+  var dT=0;
+  document.addEventListener('keydown',function(e){if(e.repeat||(e.key!=='d'&&e.key!=='D')||e.metaKey||e.ctrlKey||e.altKey||/^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName))return;clearTimeout(dT);dT=setTimeout(function(){try{localStorage.setItem('reveal',reveal?'0':'1');}catch(x){}location.reload();},5000);});
+  ['keyup','blur'].forEach(function(t){(t==='blur'?window:document).addEventListener(t,function(e){if(t==='blur'||e.key==='d'||e.key==='D')clearTimeout(dT);});});
+
   document.querySelectorAll('a[href^="http"]').forEach(function(a){a.target='_blank';a.rel='noopener';});
 
   /* ---------- tabs / slides ---------- */
@@ -79,7 +87,7 @@
     {c:'#7b4fa0',m:'ah-m',pts:[[1995,.58,'Windows 95','w95'],[2007,.85,'Aero','aero'],[2010,.05,'Metro','metro'],[2017,.50,'Fluent','fluent'],[2021,.45,'Windows 11','w11']]}];
   var space=document.getElementById('space'),lines=document.getElementById('spacelines'),spacesvg=document.getElementById('spacesvg');
   function drawSpace(){
-    var W=space.clientWidth;if(W<300)return;var x0=100,x1=W-120,y0=30,ymin=1917,split=1984,ymax=2028,k1=6,k2=48;
+    if(!space)return;var W=space.clientWidth;if(W<300)return;var x0=100,x1=W-120,y0=30,ymin=1917,split=1984,ymax=2028,k1=6,k2=48;
     function Y(y){return y0+(y<split?(y-ymin)*k1:(split-ymin)*k1+(y-split)*k2)}
     var y1=Y(ymax),H=y1+40;
     space.style.height=(H+60)+'px';spacesvg.setAttribute('viewBox','0 0 '+W+' '+H);spacesvg.setAttribute('width',W);spacesvg.setAttribute('height',H);
@@ -110,7 +118,7 @@
     lines.innerHTML=s;
   }
   window.drawSpace=drawSpace;drawSpace();
-  if(window.ResizeObserver){var rto;new ResizeObserver(function(){clearTimeout(rto);rto=setTimeout(drawSpace,80);}).observe(space);}else{window.addEventListener('resize',drawSpace);}
+  if(space){if(window.ResizeObserver){var rto;new ResizeObserver(function(){clearTimeout(rto);rto=setTimeout(drawSpace,80);}).observe(space);}else{window.addEventListener('resize',drawSpace);}}
 
   /* ---------- responsive ---------- */
   var rw=document.getElementById('rwrap'),rb=document.getElementById('rplay');
