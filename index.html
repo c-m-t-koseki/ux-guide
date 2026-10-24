@@ -26,12 +26,12 @@
 <section class="slide" data-title="はじめに" id="intro">
   <div class="eyebrow">序</div>
   <h1>新聞検索の UI のための参考資料</h1>
-  <p class="lead">新聞記事を探す検索エンジンの UI を作るにあたって、参考にしていただくための資料です。見た目・振る舞い・探し方の規範を、出典とともに一つの流儀としてまとめました。作成者は UI・UX の専門家ではありません。すべてを採る必要はなく、共感できる部分だけを取り入れてください。</p>
+  <p class="lead">新聞記事を探す検索エンジンの UI を作るにあたって、参考にしていただくための資料です。見た目・振る舞い・探し方の規範を、出典とともにまとめました。作成者は UI・UX の専門家ではありません。すべてを採る必要はなく、共感できる部分だけを取り入れてください。</p>
   <h3>使い方</h3>
   <ul>
     <li>結論は、12 行の<a href="#principles">共通原則</a>と、それを新聞・蔵書・図書の検索に当てはめた<a href="#apply">適用</a>にあります。時間がなければ、この二章だけをお読みください。</li>
     <li>共通原則の表は、画面を見直すときの点検表として使えます。行を押すと、その原則の例が出ます。</li>
-    <li>気になった原則は、出典の欄から根拠の章へ戻って確かめられます。各章の末尾に、どこまで原典を確認したかを書きました。</li>
+    <li>気になった原則は、出典の欄から根拠の章へ戻って確かめられます。原典をどこまで確認したかは、各章の末尾と付録の<a href="#refs">参考資料</a>に書きました。</li>
     <li>適用の章は当てはめの一例で、仕様ではありません。</li>
   </ul>
   <h3>良いデザインは何で決まるか</h3>
@@ -41,33 +41,22 @@
   <p>取り入れた部分を画面全体でそろえておくと、同じ見た目が同じ意味を持ち、利用者は一度覚えたことを次の画面でも使えます。</p>
   <p>主な参照資料は次のとおりです。</p>
   <div class="tbl"><table>
-    <tr><th>参照資料</th><th>使う章</th><th>役割</th></tr>
-    <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/">Apple HIG</a></td><td><span class="secret">変遷、</span>Liquid Glass、現行のガイドライン、適用</td><td>プラットフォームの作法。Searching と Liquid Glass の評価</td></tr>
-    <tr><td><a href="https://m3.material.io/">Material Design 3</a></td><td><span class="secret">変遷、</span>Material、現行のガイドライン、適用</td><td>デザイントークンと適応レイアウト。Search の指針</td></tr>
-    <tr><td><a href="https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/uidesign_guide_v100">東京都 UI設計実践ガイド</a></td><td>現行のガイドライン、適用</td><td>行政サービスの点検表。0件時の扱い</td></tr>
-    <tr><td><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">NN/g 10 Heuristics</a></td><td>古典、共通原則</td><td>評価の物差し</td></tr>
-    <tr><td><a href="https://www.youtube.com/@sora_sakurai_jp">桜井政博のゲーム作るには</a></td><td>桜井の UI、適用</td><td>UI の 15 テーマ、待たせない、手応えを返す</td></tr>
-    <tr><td>作成者のデザイン原則</td><td>スイス、ゲシュタルト、色、適用</td><td>グリッド・色の配分・文字組み</td></tr>
-    <tr><td>Shneiderman、Bates、Marchionini</td><td>情報探索の理論、共通原則、適用</td><td>全体像から詳細へ、往復する探索、探索の種類</td></tr>
-    <tr><td><a href="https://searchuserinterfaces.com/book/">Hearst『Search User Interfaces』</a></td><td>検索 UI の定本、共通原則、適用</td><td>検索 UI の実証研究の総覧。語彙問題、ファセット、0件の回避</td></tr>
-    <tr><td>fzf と端末ツール</td><td>fzf、適用</td><td>インクリメンタル検索の実装例</td></tr>
+    <tr><th>参照資料</th><th>内容</th></tr>
+    <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/">Apple Human Interface Guidelines（HIG）</a></td><td>Liquid Glass の原則と素材。Searching の指針</td></tr>
+    <tr><td><a href="https://m3.material.io/">Material Design 3</a></td><td>Material の主張と適応レイアウト。Search の指針</td></tr>
+    <tr><td><a href="https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/uidesign_guide_v100">東京都 UI設計実践ガイド</a></td><td>行政サービスの点検表。0件時の扱い</td></tr>
+    <tr><td><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">Nielsen Norman Group（NN/g）の 10 ユーザビリティ・ヒューリスティック</a></td><td>評価の物差し</td></tr>
+    <tr><td><a href="https://www.youtube.com/@sora_sakurai_jp">桜井政博のゲーム作るには</a></td><td>UI の 15 テーマ、待たせない、手応えを返す</td></tr>
+    <tr><td>Shneiderman、Bates、Marchionini</td><td>全体像から詳細へ、往復する探索、探索の種類</td></tr>
+    <tr><td><a href="https://searchuserinterfaces.com/book/">Hearst『Search User Interfaces』</a></td><td>検索 UI の実証研究の総覧。語彙問題、ファセット、0件の回避</td></tr>
   </table></div>
   <h3>用語</h3>
   <div class="tbl"><table>
     <tr><th>用語</th><th>本資料での意味</th></tr>
-    <tr><td>クエリ</td><td>検索欄に打つ語</td></tr>
     <tr><td>スコープ</td><td>検索する対象の範囲。新聞か図書か、のような区別</td></tr>
     <tr><td>ファセット</td><td>年・種別のように件数付きの分類を並べ、選ぶと結果が絞られる部品</td></tr>
     <tr><td>チップ</td><td>適用中の条件などを示す小さな札。× で外せることが多い</td></tr>
-    <tr><td>スニペット</td><td>結果一覧に出す本文の抜粋</td></tr>
-    <tr><td>ミニマップ</td><td>全体の縮小図。いまどこを見ているかを示す</td></tr>
-    <tr><td>HUD</td><td>画面の端に常に重ねて出す状態の表示</td></tr>
-    <tr><td>FAB</td><td>画面の右下に浮かぶ、主な操作の丸いボタン（Material）</td></tr>
-    <tr><td>dp</td><td>画面の密度によらない長さの単位（Android と Material）</td></tr>
-    <tr><td>NN/g</td><td>Nielsen Norman Group。使いやすさの調査と助言をする会社</td></tr>
-    <tr><td>HIG</td><td>Human Interface Guidelines。Apple のデザインの指針</td></tr>
   </table></div>
-  <p>全資料の一覧と、それぞれをどこまで確認したかは、付録の<a href="#refs">参考資料</a>にまとめました。</p>
 </section>
 
 <!-- ============ history ============ -->
@@ -202,9 +191,9 @@
     <div class="cols postercols">
       <div><div class="mposter"><span class="mp-chip">展覧会</span><div class="mp-hero">Neue Grafik 1958</div><div class="mp-card"><b>グリッドと左揃え</b><p>数学的なグリッド、左揃え、サンセリフ。内容が変わっても崩れない規則として画面に残った。</p></div><div class="mp-chips"><span>グリッド</span><span>左揃え</span><span>サンセリフ</span></div><span class="mp-fab">＋<span class="lb"> 詳しく見る</span></span></div></div>
       <ul class="v14">
-        <li>題字の面は主色の Indigo 500 に白い文字で、アクセント色の Pink A200 は右下の FAB だけに使う。主色に 500 番、アクセントに A 番台を当てるのが 2014 年版の配色である（主張 1、意図した色）。</li>
+        <li>題字の面は主色の Indigo 500 に白い文字で、アクセント色の Pink A200 は右下の FAB（浮かせて置く、主な操作の丸いボタン）だけに使う。主色に 500 番、アクセントに A 番台を当てるのが 2014 年版の配色である（主張 1、意図した色）。</li>
         <li>題字は大きく組み、本文との差を強く付ける（主張 1、大きな文字）。</li>
-        <li>カードは標高 2dp の紙として浮かせ、FAB はそれより高く置く（主張 2）。FAB は直径 56dp の円にした。</li>
+        <li>カードは標高 2dp（dp は画面の密度によらない長さの単位）の紙として浮かせ、FAB はそれより高く置く（主張 2）。FAB は直径 56dp の円にした。</li>
       </ul>
       <ul class="v21">
         <li>地・面・題字・チップ・FAB の色は、すべて青一色から作ったトーンである。Material You では、この一色を利用者の壁紙から取る（主張 4）。</li>
@@ -728,7 +717,7 @@
     <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=6NpEbaU0S3s">言語がなくてもわかるように</a></h4><p class="d">アイコンに絵を入れて、言葉が読めなくても分かるようにする。</p>
       <div class="after"><div class="mini gbar"><span class="gb" aria-label="編集"><svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z M14 6l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span class="gb" aria-label="共有"><svg viewBox="0 0 24 24"><path d="M12 15V4 M7 9l5-5 5 5 M5 13v7h14v-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span class="gb" aria-label="削除"><svg viewBox="0 0 24 24"><path d="M4 7h16 M9 7V4h6v3 M6 7l1 13h10l1-13 M10 11v6 M14 11v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span></div></div>
       <div class="before"><div class="mini gbar"><span class="gb tx">編集</span><span class="gb tx">共有</span><span class="gb tx">削除</span></div></div></div>
-    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=dVVSH6lVqpI">HUD</a></h4><p class="d">HUD は操作対象に付いて回るほうがそれらしい。日本の作品は情報が多く、海外は没入を優先する傾向。</p>
+    <div class="card on" tabindex="0"><h4><a href="https://www.youtube.com/watch?v=dVVSH6lVqpI">HUD</a></h4><p class="d">HUD（画面に重ねて常に出す状態の表示）は操作対象に付いて回るほうがそれらしい。日本の作品は情報が多く、海外は没入を優先する傾向。</p>
       <div class="after"><div class="mini hud"><div class="top">受信トレイ · 未読 <span class="num">12 件</span></div><div>会議の日程について</div><div>請求書をお送りします</div><div>週末のご予定は</div><div>資料の修正版</div><div>新製品のご案内</div><div>パスワード変更のお知らせ</div><div>打ち合わせのお礼</div><div>配送状況のお知らせ</div><div>来月のシフト</div></div><div class="cap">一覧を送っても、場所と未読数は上に付いて回る</div></div>
       <div class="before"><div class="mini hud nost"><div class="top">受信トレイ · 未読 <span class="num">12 件</span></div><div>会議の日程について</div><div>請求書をお送りします</div><div>週末のご予定は</div><div>資料の修正版</div><div>新製品のご案内</div><div>パスワード変更のお知らせ</div><div>打ち合わせのお礼</div><div>配送状況のお知らせ</div><div>来月のシフト</div></div><div class="cap">送ると場所と未読数が見えなくなる</div></div></div>
   </div>
@@ -1111,7 +1100,7 @@
       <h4>2 入力中</h4><ul><li>一文字ごとに候補、400ms 以内（6。fzf、Doherty）</li><li>表記ゆれを既定で同一視：新字旧字、異体字、かなカナ、全角半角、長音、ローマ字（11。ポステル）</li><li>曖昧一致は候補にのみ。本検索の既定は単語単位の AND（5。fzf の章）</li><li>候補をカテゴリで区切り、マッチ箇所を太字に（5。Material）</li><li>件数を入力中から出す（6。fzf）</li><li>Enter 連打で二度走らせない（11）</li></ul>
       <h4>3 結果一覧</h4><ul><li>年代別ヒストグラムを上に置き、ドラッグで期間を絞る（12。Shneiderman）</li><li>同じ事件の記事は日付を、同じ書名の版と巻は刊行年を縦軸に並べる（4。JR の乗換結果）</li><li>ファセットを左に、件数付き。0件になる選択肢はグレー（11。NN/g 5）</li><li>密度の高い左揃えの表。列はタイトル・著者・日付・所在（1。スイス）</li><li>スニペットはヒット語の前後、ヒット語だけアクセント色（3・12。Pirolli と Card）</li><li>古い・重複・非公開は既定で除き「含めて再検索」を用意（2。ripgrep）</li><li>遅い全文検索は見出しの結果を先に出し、残りの進捗と止める道を示す（6。桜井）</li><li>既定は関連度、新聞は日付降順に一回で切替</li></ul></div>
     <div><h4>4 絞り込みと往復</h4><ul><li>検索語・ファセット・並び順・ページを URL に（11。東京都 4、NN/g 3）</li><li>適用中の条件をチップで、× で外せる。全部外すのも一回で（11。Apple tokens、桜井「リトライは迅速に」）</li><li>無効な期間は入力できない（11）</li><li>AND / OR / NOT / <code>title:</code> <code>date:1923..1924</code> を同じ欄で（9。fzf）</li><li>検索欄は結果画面でも入力語を保ったまま上に（12。Bates、Material）</li><li>絞り込みで結果が変わるときは、消える行と残る行を動きでつなぐ（10）</li></ul>
-      <h4>5 詳細</h4><ul><li>広い画面では一覧と詳細の 2 ペイン。幅の判断は Material のウィンドウサイズクラス（1・12。fzf --preview、lazygit）</li><li>j/k で移動、Enter で開く、Esc で戻る。位置を保つ（9）</li><li>「同じ著者」「同じ日の紙面」へ一回で（12。Bates）</li><li>新聞は紙面全体を見せてヒット箇所を枠で</li><li>紙面は拡大画像を左、紙面全体のミニマップを右に置き、文脈帯は紙面と同じ縦の列にする（4。下の「詳細画面の配置」）</li></ul>
+      <h4>5 詳細</h4><ul><li>広い画面では一覧と詳細の 2 ペイン。幅の判断は Material のウィンドウサイズクラス（1・12。fzf --preview、lazygit）</li><li>j/k で移動、Enter で開く、Esc で戻る。位置を保つ（9）</li><li>「同じ著者」「同じ日の紙面」へ一回で（12。Bates）</li><li>新聞は紙面全体を見せてヒット箇所を枠で</li><li>紙面は拡大画像を左、紙面全体のミニマップ（縮小図）を右に置き、文脈帯は紙面と同じ縦の列にする（4。下の「詳細画面の配置」）</li></ul>
       <h4>6 持ち出しと保存</h4><ul><li>書誌の書き出しと検索条件の保存（12。Shneiderman の「取り出し」）</li><li>エクスポートは件数を先に見せ、上限超過時だけ確認（11）</li><li>保存した検索の削除は即時実行して数秒の「元に戻す」（11）</li></ul>
       <h4>7 0件と失敗（どの段でも）</h4><ul><li>0件画面に検索欄を残し、緩めた結果と「もしかして」を自動で（7。東京都 5、NN/g 9）</li><li>タイポは「もしかして」で提案し、勝手に置換しない（11）</li><li>司書への相談導線を全ページに（7。東京都 5）</li><li>全文検索の索引が落ちても見出し検索の結果は出し、部分結果であることを示す（11。フェイルセーフ）</li></ul></div>
   </div>
@@ -1274,7 +1263,6 @@
     <tr><td>Rosenfeld と Morville『Information Architecture』、Russell-Rose と Tate『Designing the Search Experience』、Baymard の調査</td><td><a href="#seeking">情報探索</a></td></tr>
     <tr><td>Hearst が引く個々の研究の原論文</td><td><a href="#hearst">検索 UI の定本</a></td></tr>
   </table></div>
-  <p>作成者のデザイン原則（グリッド、色の配分、文字組み）は公開資料ではないので、この一覧には載せていない。</p>
 </section>
 
 <div class="slidefoot"><button class="navlink" id="prev2" type="button"></button><span id="footl"></span><button class="navlink" id="next2" type="button"></button></div>
