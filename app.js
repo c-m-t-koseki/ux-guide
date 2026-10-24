@@ -187,7 +187,7 @@
   function lum(hex){var c=hex.replace('#','');var r=parseInt(c.substr(0,2),16)/255,g=parseInt(c.substr(2,2),16)/255,b=parseInt(c.substr(4,2),16)/255;
     function f(v){return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)}return .2126*f(r)+.7152*f(g)+.0722*f(b)}
   function cr(a,b){var x=lum(a),y=lum(b);return ((Math.max(x,y)+.05)/(Math.min(x,y)+.05)).toFixed(1)}
-  var light=[['ベース','#f3f6f9','#14202b'],['文字','#14202b','#f3f6f9'],['メイン morpho blue','#0074c8','#ffffff'],['アクセント 橙','#bf4e0c','#ffffff'],['状態 エラー','#c62828','#ffffff'],['状態 警告','#8a6d00','#ffffff'],['状態 成功','#2e7d32','#ffffff']];
+  var light=[['ベース','#f3f6f9','#14202b'],['文字','#14202b','#f3f6f9'],['メイン 青','#0074c8','#ffffff'],['アクセント 橙','#bf4e0c','#ffffff'],['状態 エラー','#c62828','#ffffff'],['状態 警告','#8a6d00','#ffffff'],['状態 成功','#2e7d32','#ffffff']];
   var dark=[['ベース','#121820','#e8edf2'],['文字','#e8edf2','#121820'],['メイン','#5aaef0','#121820'],['アクセント','#ff8c42','#121820'],['状態 エラー','#ef6b6b','#121820'],['状態 警告','#e0b84a','#121820'],['状態 成功','#6fbf73','#121820']];
   var tt=document.getElementById('themetable'),th2='<tr><th>面</th>';
   light.forEach(function(c){th2+='<th>'+c[0]+'</th>';});th2+='</tr>';
