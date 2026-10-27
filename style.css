@@ -29,6 +29,7 @@ h3{font-size:1.25rem;margin-top:calc(var(--u)*8);letter-spacing:-.01em}
 h4{font-size:1rem;margin-top:calc(var(--u)*3)}
 p{max-width:40em;margin:calc(var(--u)*2) 0 0}
 .lead{font-size:1.15rem;line-height:1.7;max-width:34em}
+.concl{font-weight:700;border-left:3px solid var(--main);padding-left:12px}
 .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;align-items:baseline;gap:16px}.eyebrow .chno{font-size:2.6rem;line-height:1;letter-spacing:-.04em;color:var(--line);font-weight:500}
 .note,.cap,small{color:var(--muted);font-size:.85rem}
 .cap{margin-top:var(--u);max-width:none}
@@ -502,7 +503,6 @@ a[data-prin]{text-decoration:underline dotted}
 .dym .old{color:var(--muted);font-size:.75rem;text-decoration:line-through}.dym .new a{color:var(--main);text-decoration:underline}
 .anch{list-style:none;margin:0;padding:10px 12px;background:var(--panel);font-family:var(--mono);font-size:.68rem;line-height:1.5;max-width:none}.anch li{margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.anch .num{display:inline-block;width:1.6em;color:var(--muted)}.anch i{font-style:normal;color:var(--accent);font-weight:700}
 .crumbs{background:var(--panel);padding:10px 12px;display:grid;gap:10px;font-size:.8rem}.crumbs>div{display:grid;grid-template-columns:72px 1fr;gap:8px;align-items:baseline}.crumbs .ct{font-family:var(--mono);font-size:.68rem;color:var(--muted)}.crumbs .ck{display:inline-block;padding:0 8px;margin:0 4px 4px 0;background:var(--main-soft);font-size:.75rem}
-.quad{display:grid;grid-template-columns:40px 1fr 1fr;gap:4px;font-size:.78rem;line-height:1.5}.quad .qh{font-family:var(--mono);font-size:.68rem;color:var(--muted);align-self:end;padding:2px 4px}.quad .qc{background:var(--panel);padding:8px}.quad .qc span{display:block;color:var(--muted);font-size:.72rem;margin-top:4px}.quad .qc.on{box-shadow:inset 3px 0 0 var(--accent)}
 table.sys{font-size:.78rem}table.sys td:first-child{font-family:var(--mono);white-space:nowrap}
 .fct{background:var(--panel);padding:10px;font-size:.8rem}
 .fct-mode{display:flex;gap:4px;margin-bottom:10px}.fct-mode .btn.on{background:var(--fg);color:var(--bg)}
@@ -518,7 +518,6 @@ table.sys{font-size:.78rem}table.sys td:first-child{font-family:var(--mono);whit
 .anch li{white-space:normal}.anch .bk{color:var(--muted)}
 #fctlist{max-height:300px;overflow:auto}
 .vp.one{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
-.quad{grid-template-columns:40px minmax(0,1fr) minmax(0,1fr)}.quad>*{min-width:0;overflow-wrap:anywhere}
 
 /* ---------- 参考資料 ---------- */
 /* 確認の程度は色だけでなく文字と枠の形で区別する。上の段ほど濃い */
