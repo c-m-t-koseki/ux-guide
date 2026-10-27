@@ -358,7 +358,7 @@
     <li>原因は品質ではなく「誰でも同じに作れる」ことにある。<span class="secret">いらすとやは品質が高くても、</span>生成 AI は精度が上がっても記号になった。WordArt の読みにくさは記号化を速めたが、原因ではない。WordArt が広まったのも、既定の一覧があったからである。飾りを既定値に頼らず、グリッド・書体・余白の規則を既定値にしておけば、誰が作っても崩れない。</li>
     <li>挿絵は情報を足すときだけ入れ（スイスデザインの主張 5）、入れるなら写真にする（主張 4）。</li>
   </ul>
-  <p class="note"><span class="secret">いらすとやの経緯は <a href="https://ja.wikipedia.org/wiki/%E3%81%84%E3%82%89%E3%81%99%E3%81%A8%E3%82%84">Wikipedia「いらすとや」</a>と <a href="https://media-innovation.jp/article/2021/01/25/53858.html">Media Innovation の更新停止の記事</a>、生成 AI との関係は <a href="https://hashout.jp/ai/2298/">hashout の記事</a>で確認した。</span>札の実験は <a href="https://link.springer.com/article/10.1186/s41235-023-00499-6">Bellaiche et al., Cognitive Research: Principles and Implications, 2023</a> の要旨、AI slop の語は <a href="https://ai.watch.impress.co.jp/docs/serial/glossary/2122362.html">Impress Watch の用語解説</a>、マスピ顔の経緯は <a href="https://togetter.com/li/2229909">Togetter のまとめ</a>に拠った。努力ヒューリスティックは <a href="https://www.researchgate.net/publication/222427507_The_effort_heuristic">Kruger et al., 2004</a> と <a href="https://online.ucpress.edu/collabra/article/9/1/87489/197632/The-Effort-Heuristic-Revisited-Mixed-Results-for">再現実験（Collabra, 2023）</a>、年数は <a href="https://knowyourmeme.com/memes/wordart-image-macros">Know Your Meme</a>、<a href="https://news.livedoor.com/topics/detail/12370065/">ライブドアニュース（2016）</a>、パソコンの普及率は <a href="https://www.gakken.jp/kyouikusouken/whitepaper/30history/chapter2/02.html">学研の資料</a>、利用者数は <a href="https://time.com/6253615/chatgpt-fastest-growing/">TIME</a>、画像の枚数は <a href="https://the-decoder.com/chatgpts-image-generation-explodes-with-700m-creations-in-first-week/">The Decoder</a> と <a href="https://www.marketingprofs.com/charts/2023/49890/surge-of-ai-generated-images-online">Everypixel の推計</a>、mimic は <a href="https://www.itmedia.co.jp/news/articles/2212/23/news154.html">ITmedia</a> に拠った。マスピ顔の出典は一次資料ではない。「二つの印」の整理は本資料による。</p>
+  <p class="note"><span class="secret">いらすとやの経緯は <a href="https://ja.wikipedia.org/wiki/%E3%81%84%E3%82%89%E3%81%99%E3%81%A8%E3%82%84">Wikipedia「いらすとや」</a>と <a href="https://media-innovation.jp/article/2021/01/25/53858.html">Media Innovation の更新停止の記事</a>、生成 AI との関係は <a href="https://hashout.jp/ai/2298/">hashout の記事</a>で確認した。</span>札の実験は <a href="https://link.springer.com/article/10.1186/s41235-023-00499-6">Bellaiche et al., Cognitive Research: Principles and Implications, 2023</a> の要旨、AI slop の語は <a href="https://ai.watch.impress.co.jp/docs/serial/glossary/2122362.html">Impress Watch の用語解説</a>、マスピ顔の経緯は <a href="https://togetter.com/li/2229909">Togetter のまとめ</a>に拠った。努力ヒューリスティックは <a href="https://doi.org/10.1016/S0022-1031(03)00065-9">Kruger et al., 2004</a> と <a href="https://online.ucpress.edu/collabra/article/9/1/87489/197632/The-Effort-Heuristic-Revisited-Mixed-Results-for">再現実験（Collabra, 2023）</a>、年数は <a href="https://knowyourmeme.com/memes/wordart-image-macros">Know Your Meme</a>、<a href="https://news.livedoor.com/topics/detail/12370065/">ライブドアニュース（2016）</a>、パソコンの普及率は <a href="https://www.env.go.jp/houdou/gazou/3204/3350/1340.pdf">環境省の資料の表 2-3</a>（出典は内閣府の消費動向調査）、利用者数は <a href="https://time.com/6253615/chatgpt-fastest-growing/">TIME</a>、画像の枚数は <a href="https://the-decoder.com/chatgpts-image-generation-explodes-with-700m-creations-in-first-week/">The Decoder</a> と <a href="https://www.marketingprofs.com/charts/2023/49890/surge-of-ai-generated-images-online">Everypixel の推計</a>、mimic は <a href="https://www.itmedia.co.jp/news/articles/2212/23/news154.html">ITmedia</a> に拠った。マスピ顔の出典は一次資料ではない。「二つの印」の整理は本資料による。</p>
 
 </section>
 
@@ -795,14 +795,41 @@
   <p>新聞や蔵書のような大きな DB で調べものをするとき、一回のクエリで目当てのものにたどり着けるとは限らない。この章では、人が情報を探すときのふるまいについての理論を三つ見る。一つ目は、人は検索結果を見ながらクエリを変えていく、という Bates の理論である。二つ目は、その繰り返しを楽にする UI の作り方として、まず全体を見せ、次に絞り込ませ、最後に一件を見せる、という Shneiderman の指針である。三つ目は、繰り返しがどれだけ必要かは何を探しているかで違う、という Marchionini の分類である。</p>
 
   <h3>ベリーピッキング（Bates, 1989）</h3>
-  <p>ベリーピッキングは、人々が情報を探すときの行動を説明するモデルのひとつである。名前は、茂みの木の実（ベリー）を一粒ずつ摘みながら歩き回る様子にたとえたものである。</p>
+  <p>ベリーピッキングは、人々が情報を探すときの行動を説明するモデルのひとつである。名前は、森で茂みに散らばるブルーベリーなどの実を、一粒ずつ摘んでいく様子にたとえたものである。</p>
   <p>それ以前の情報検索のモデルは、知りたいことを一つのクエリにまとめて一度検索すれば、答えがまとめて返ってくると考えていた。Bates は、実際の探し方はそうではないと論じた。人は検索結果から役に立つものを一件拾い、そこで知った言葉を使って次のクエリを出す。これを繰り返すうちに、知りたいことそのものも変わっていく。そのため検索 UI には、一回で正確なクエリを入力させることより、クエリを出して結果を見て出し直す、という一回ごとの手間を小さくすることが求められる。</p>
-  <div class="fig"><svg viewBox="0 0 400 200" class="dia berry" role="img" aria-label="ベリーピッキングの図">
-      <path d="M20 170 C 60 120, 80 150, 120 100 S 200 60, 240 90 S 320 40, 340 30" fill="none" stroke="var(--main)" stroke-width="2" marker-end="url(#ah-f)"/>
-      <g fill="var(--accent)"><circle cx="70" cy="128" r="6"/><circle cx="150" cy="84" r="6"/><circle cx="215" cy="78" r="6"/><circle cx="290" cy="58" r="6"/></g>
-      <text x="20" y="190" class="mu">「関東大震災」</text><text x="95" y="150" class="mu">→「復興院」</text><text x="170" y="112" class="mu">→「後藤新平 復興」</text><text x="228" y="130" class="mu">→「帝都復興計画 1924」</text>
-      <text x="330" y="22" class="mu" text-anchor="end">目的が定まる</text>
-    </svg></div><p class="cap">一回のクエリでは終わらない。見つけたもの（橙の点）を手がかりに、クエリを変えながら進む。</p>
+  <div class="fig"><svg viewBox="0 0 640 362" class="dia berry" role="img" aria-label="ベリーピッキングの図。クエリ Q0 から Q5 へ曲がりくねって進み、途中で浮かんだ考え T を受けてクエリを変え、各クエリで文献を拾い、E で終える">
+    <defs><marker id="bp-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="context-stroke"/></marker></defs>
+    <path d="M199 246 L231 257" stroke="var(--accent)" stroke-width="1"/>
+    <path d="M243 72 L205 63" stroke="var(--accent)" stroke-width="1"/>
+    <path d="M300 214 L279 243" stroke="var(--accent)" stroke-width="1"/>
+    <path d="M438 110 L477 69" stroke="var(--accent)" stroke-width="1"/>
+    <path d="M470 242 L509 263" stroke="var(--accent)" stroke-width="1"/>
+    <path d="M596 166 L616 156" stroke="var(--accent)" stroke-width="1"/>
+    <path d="M116 320 C 170 322, 200 300, 199 246 C 198 205, 150 190, 158 140 C 165 95, 210 60, 243 72 C 280 85, 290 150, 286 190 C 283 215, 312 225, 312 200 C 312 150, 325 60, 380 52 C 430 45, 445 80, 435 120 C 425 160, 420 230, 460 240 C 500 250, 550 200, 596 166" fill="none" stroke="var(--main)" stroke-width="2.5" marker-end="url(#bp-ah)"/>
+    <rect x="102" y="310" width="28" height="20" fill="var(--bg)" stroke="var(--fg)"/><text x="116" y="324" text-anchor="middle" style="font-size:11px">Q0</text><text x="116" y="352" text-anchor="middle">「関東大震災」</text>
+    <rect x="222" y="246" width="13" height="17" fill="var(--panel)" stroke="var(--accent)"/><rect x="227" y="251" width="13" height="17" fill="var(--panel)" stroke="var(--accent)"/><rect x="185" y="236" width="28" height="20" fill="var(--bg)" stroke="var(--fg)"/><text x="199" y="250" text-anchor="middle" style="font-size:11px">Q1</text><text x="180" y="251" text-anchor="end">「関東大震災 被害」</text>
+    <rect x="196" y="52" width="13" height="17" fill="var(--panel)" stroke="var(--accent)"/><rect x="201" y="57" width="13" height="17" fill="var(--panel)" stroke="var(--accent)"/><rect x="229" y="62" width="28" height="20" fill="var(--bg)" stroke="var(--fg)"/><text x="243" y="76" text-anchor="middle" style="font-size:11px">Q2</text><text x="243" y="44" text-anchor="middle">「震災 復興」</text>
+    <rect x="270" y="232" width="13" height="17" fill="var(--panel)" stroke="var(--accent)"/><rect x="275" y="237" width="13" height="17" fill="var(--panel)" stroke="var(--accent)"/><rect x="286" y="204" width="28" height="20" fill="var(--bg)" stroke="var(--fg)"/><text x="300" y="218" text-anchor="middle" style="font-size:11px">Q3</text><text x="320" y="219" text-anchor="start">「帝都復興院」</text>
+    <rect x="468" y="58" width="13" height="17" fill="var(--panel)" stroke="var(--accent)"/><rect x="473" y="63" width="13" height="17" fill="var(--panel)" stroke="var(--accent)"/><rect x="424" y="100" width="28" height="20" fill="var(--bg)" stroke="var(--fg)"/><text x="438" y="114" text-anchor="middle" style="font-size:11px">Q4</text><text x="458" y="115" text-anchor="start">「後藤新平 復興」</text>
+    <rect x="500" y="252" width="13" height="17" fill="var(--panel)" stroke="var(--accent)"/><rect x="505" y="257" width="13" height="17" fill="var(--panel)" stroke="var(--accent)"/><rect x="456" y="232" width="28" height="20" fill="var(--bg)" stroke="var(--fg)"/><text x="470" y="246" text-anchor="middle" style="font-size:11px">Q5</text><text x="470" y="290" text-anchor="middle">「復興計画 予算」</text>
+    <rect x="612" y="140" width="13" height="17" fill="var(--panel)" stroke="var(--accent)"/><rect x="617" y="145" width="13" height="17" fill="var(--panel)" stroke="var(--accent)"/>
+    <path d="M134 150 L153 150" stroke="var(--muted)" stroke-width="1" marker-end="url(#bp-ah)"/><text x="122" y="154" class="ac">T</text><text x="116" y="147" class="mu" text-anchor="end">被害より復興の</text><text x="116" y="161" class="mu" text-anchor="end">経過を知りたい</text>
+    <path d="M267 170 L286 170" stroke="var(--muted)" stroke-width="1" marker-end="url(#bp-ah)"/><text x="255" y="174" class="ac">T</text><text x="249" y="167" class="mu" text-anchor="end">帝都復興院</text><text x="249" y="181" class="mu" text-anchor="end">という役所</text>
+    <text x="372" y="14" class="mu" text-anchor="middle">総裁は後藤新平らしい</text><path d="M372 20 L372 49" stroke="var(--muted)" stroke-width="1" marker-end="url(#bp-ah)"/><text x="378" y="40" class="ac">T</text>
+    <path d="M454 160 L435 160" stroke="var(--muted)" stroke-width="1" marker-end="url(#bp-ah)"/><text x="458" y="164" class="ac">T</text><text x="472" y="157" class="mu">計画は予算を</text><text x="472" y="171" class="mu">削られたらしい</text>
+    <text x="602" y="150" class="ac" text-anchor="end">E</text><text x="596" y="186" class="mu" text-anchor="middle">終了</text>
+  </svg></div><p class="cap">一回のクエリでは終わらない。Q はクエリ、T は途中で浮かんだ考え、橙の紙の束は拾った文献、E は探索の終わりを表す。Q0 から Q1 は考えが変わらないままの絞り込みで、T はない。</p>
+  <p>Bates は同じ論文で、研究者が手作業でよく使う探し方を六つ挙げ、それぞれをオンラインの検索 UI でどう支えるかを提案した。どれも、役に立つものがまとまっていそうな場所（Bates の言う「ベリーの茂み」）を見つけ、その中で一件ずつ摘む方法である。</p>
+  <div class="tbl"><table>
+    <tr><th>手法</th><th>手作業での探し方</th><th>Bates が提案した UI の機能</th></tr>
+    <tr><td>脚注追跡</td><td>読んだ本や論文の脚注・参考文献をたどり、過去へさかのぼる</td><td>本文と参考文献リストのあいだを行き来できる。章や節の見出しで全体を見渡せる</td></tr>
+    <tr><td>引用検索</td><td>ある文献を引用している文献を引用索引で探し、新しい方へたどる</td><td>引用している文献の一覧から、その全文や参考文献へ一歩で移れる。起点に戻らず、どこまでもたどれる</td></tr>
+    <tr><td>雑誌の通読</td><td>分野の中心となる雑誌を決め、関係する年の号を順にめくる</td><td>雑誌名と開始年を簡単に指定できる。目次と論文のあいだを行き来できる</td></tr>
+    <tr><td>書架の拾い読み</td><td>見つけた本の近くの棚を眺める。分類の順に沿わず、あちこちに目を移すことが多い</td><td>分類順の蔵書目録（シェルフリスト）を順に見られる。分類の上位の階層から下位まで、好きな粒度で見られる</td></tr>
+    <tr><td>書誌・抄録索引誌での主題検索</td><td>主題の分類や索引語で並んだ書誌や抄録をたどる</td><td>多数の文献を費用を気にせず素早く見られる。分類と、各分類の抄録を見られる</td></tr>
+    <tr><td>著者検索</td><td>役に立った文献の著者が書いた、ほかの文献を探す</td><td>著者の業績一覧を出せる。本文から無作為に選んだ数段落（スナップショット）を読める</td></tr>
+  </table></div>
+  <p>Bates はさらに、六つの手法のどれでも、一つの命令でその手法に合った検索モードと画面に切り替えられるべきだとした。新聞・蔵書の検索に当てはめれば、記事から同じ事件の続報へ移る、同じ分類の棚を見る、同じ著者の本を並べる、といった移動を、クエリを打ち直さずに一歩でできるようにすることに当たる。</p>
 
   <h3>全体像 → 絞り込み → 詳細（Shneiderman, 1996）</h3>
   <p>Shneiderman は論文「The Eyes Have It」で、大量のデータを表示する UI の設計の指針を一文にまとめた。「まず全体像、次に拡大と絞り込み、そして求めに応じて詳細」（Overview first, zoom and filter, then details-on-demand）である。この一文は「情報探索のマントラ」と呼ばれる。</p>
@@ -828,13 +855,13 @@
   <h3>原典</h3>
   <div class="tbl"><table>
     <tr><th>原典</th><th>著者・年</th><th>要点</th></tr>
-    <tr><td><a href="https://eric.ed.gov/?id=EJ404172">The Design of Browsing and Berrypicking Techniques for the Online Search Interface</a></td><td>Bates, 1989</td><td>人は見つけたものを手がかりに、クエリと目的を変えながら探し続ける</td></tr>
+    <tr><td><a href="https://pages.gseis.ucla.edu/faculty/bates/berrypicking.html">The Design of Browsing and Berrypicking Techniques for the Online Search Interface</a></td><td>Bates, 1989</td><td>人は見つけたものを手がかりに、クエリと目的を変えながら探し続ける</td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">The Eyes Have It</a></td><td>Shneiderman, 1996</td><td>まず全体像、次に拡大と絞り込み、そして求めに応じて詳細</td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Information_foraging">Information Foraging</a></td><td>Pirolli & Card, 1990 年代</td><td>利用者は「情報の匂い」をたどる。リンク文言やスニペットが匂い</td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Exploratory_search">Exploratory Search: From Finding to Understanding</a></td><td>Marchionini, 2006</td><td>探す・学ぶ・調べる。後の二つが探索的検索</td></tr>
     <tr><td><a href="https://searchuserinterfaces.com/book/">Search User Interfaces</a></td><td>Hearst, 2009</td><td>検索 UI の定本。著者サイトで全 12 章を無償公開している。要点は次の章にまとめた</td></tr>
   </table></div>
-  <p class="note">Bates は ERIC の要旨（Online Review 13(5), 1989）で確認した。原論文は開いていない。Rosenfeld と Morville の Information Architecture、Russell-Rose と Tate の Designing the Search Experience、Baymard の調査もこの分野でよく引かれるが、本資料の作成時には開いていない。Hearst らの Flamenco は、次の章で Hearst の本の記述を通して扱う。</p>
+  <p class="note">Bates は、著者のサイトで公開されている原論文（Online Review 13(5), 1989）の本文で確認した。Rosenfeld と Morville の Information Architecture、Russell-Rose と Tate の Designing the Search Experience、Baymard の調査もこの分野でよく引かれるが、本資料の作成時には開いていない。Hearst らの Flamenco は、次の章で Hearst の本の記述を通して扱う。</p>
 </section>
 
 <!-- ============ hearst ============ -->
@@ -1082,7 +1109,7 @@
     <li>押せるもの（ボタン、チップ）は丸く、押せないもの（パネル、表、本文）は角のままにして、形で役割を分ける。</li>
     <li>半径は 1〜3 段階に限り、入れ子は同心にし、本文を載せる面は角を立てる。</li>
   </ul>
-  <p class="note">同心の形と、密度の高い画面での限定は <a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a>で、計算は <a href="https://cloudfour.com/thinks/the-math-behind-nesting-rounded-corners/">Cloud Four「The math behind nesting rounded corners」</a>で、macOS Tahoe への批判は <a href="https://daringfireball.net/2025/11/software_update_tahoe_confusing">Daring Fireball（2025-11-10）</a>、<a href="https://mjtsai.com/blog/2025/10/16/tahoe-window-corners/">Michael Tsai「Tahoe Window Corners」</a>、<a href="https://kirby.pika.page/posts/a-time-and-a-place-for-concentricity">Keren「A Time and a Place for Concentricity」</a>で、2005 年の評は <a href="https://snarkmarket.com/blog/snarkives/technosnark/the_web_20_design_aesthetic/">Snarkmarket「The "Web 2.0" Design Aesthetic」</a>で、曲線の好みは <a href="https://www.researchgate.net/publication/6873629_Humans_prefer_curved_visual_objects">Bar &amp; Neta（Psychological Science 17(8), 2006）</a>の要旨と、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4975689">Bertamini ら（British Journal of Psychology 107(1), 2016）</a>の要旨で確認した。</p>
+  <p class="note">同心の形と、密度の高い画面での限定は <a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a>で、計算は <a href="https://cloudfour.com/thinks/the-math-behind-nesting-rounded-corners/">Cloud Four「The math behind nesting rounded corners」</a>で、macOS Tahoe への批判は <a href="https://daringfireball.net/2025/11/software_update_tahoe_confusing">Daring Fireball（2025-11-10）</a>、<a href="https://mjtsai.com/blog/2025/10/16/tahoe-window-corners/">Michael Tsai「Tahoe Window Corners」</a>、<a href="https://kirby.pika.page/posts/a-time-and-a-place-for-concentricity">Keren「A Time and a Place for Concentricity」</a>で、2005 年の評は <a href="https://snarkmarket.com/blog/snarkives/technosnark/the_web_20_design_aesthetic/">Snarkmarket「The "Web 2.0" Design Aesthetic」</a>で、曲線の好みは <a href="https://moshebar.org/_files/ugd/a77db7_5598c791a95a4436960eb2fe671ca1e5.pdf">Bar &amp; Neta（Psychological Science 17(8), 2006）</a>の要旨と、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4975689">Bertamini ら（British Journal of Psychology 107(1), 2016）</a>の要旨で確認した。</p>
 </section>
 
 <!-- ============ apply ============ -->
@@ -1160,7 +1187,7 @@
   <h3>情報探索と検索 UI の研究</h3>
   <div class="tbl"><table class="refs">
     <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
-    <tr><td><a href="https://eric.ed.gov/?id=EJ404172">The Design of Browsing and Berrypicking Techniques for the Online Search Interface</a></td><td>Bates、1989</td><td><a href="#seeking">情報探索</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://pages.gseis.ucla.edu/faculty/bates/berrypicking.html">The Design of Browsing and Berrypicking Techniques for the Online Search Interface</a></td><td>Bates、1989</td><td><a href="#seeking">情報探索</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">The Eyes Have It</a></td><td>Shneiderman、1996</td><td><a href="#seeking">情報探索</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Information_foraging">Information Foraging</a></td><td>Pirolli と Card、1990 年代</td><td><a href="#seeking">情報探索</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Exploratory_search">Exploratory Search: From Finding to Understanding</a></td><td>Marchionini、2006</td><td><a href="#seeking">情報探索</a></td><td><span class="lv lv-sec">二次</span></td></tr>
@@ -1183,9 +1210,9 @@
     <tr><td><a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">Hanging Protocol Overview</a></td><td>LEADTOOLS</td><td><a href="#apply">適用</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">Text Scanning Patterns: Eyetracking Evidence</a></td><td>Nielsen Norman Group</td><td><a href="#apply">適用</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://researchmap.jp/kojimiwa/published_papers/3501775">縦書きと横書きの読みの研究</a></td><td>Miwa ら</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://www.researchgate.net/publication/6873629_Humans_prefer_curved_visual_objects">Humans prefer curved visual objects</a></td><td>Bar と Neta、2006</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://moshebar.org/_files/ugd/a77db7_5598c791a95a4436960eb2fe671ca1e5.pdf">Humans prefer curved visual objects</a></td><td>Bar と Neta、2006</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
     <tr class="secret"><td><a href="https://link.springer.com/article/10.1186/s41235-023-00499-6">Cognitive Research: Principles and Implications の論文</a></td><td>Bellaiche ら、2023</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr class="secret"><td><a href="https://www.researchgate.net/publication/222427507_The_effort_heuristic">The effort heuristic</a></td><td>Kruger ら、2004</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr class="secret"><td><a href="https://doi.org/10.1016/S0022-1031(03)00065-9">The effort heuristic</a></td><td>Kruger ら、2004</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr class="secret"><td><a href="https://online.ucpress.edu/collabra/article/9/1/87489/197632/The-Effort-Heuristic-Revisited-Mixed-Results-for">The Effort Heuristic Revisited</a></td><td>Collabra、2023</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
   </table></div>
   <h3>様式・心理・工学の解説</h3>
@@ -1238,7 +1265,7 @@
     <tr class="secret"><td><a href="https://ai.watch.impress.co.jp/docs/serial/glossary/2122362.html">AI slop の用語解説</a></td><td>Impress Watch</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr class="secret"><td><a href="https://togetter.com/li/2229909">マスピ顔のまとめ</a></td><td>Togetter</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr class="secret"><td><a href="https://news.livedoor.com/topics/detail/12370065/">WordArt の流行</a></td><td>ライブドアニュース、2016</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr class="secret"><td><a href="https://www.gakken.jp/kyouikusouken/whitepaper/30history/chapter2/02.html">パソコンの普及率</a></td><td>学研</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr class="secret"><td><a href="https://www.env.go.jp/houdou/gazou/3204/3350/1340.pdf">家庭におけるパソコンの普及率の推移</a></td><td>環境省（内閣府の消費動向調査を引用）</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr class="secret"><td><a href="https://time.com/6253615/chatgpt-fastest-growing/">ChatGPT の利用者数</a></td><td>TIME</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr class="secret"><td><a href="https://the-decoder.com/chatgpts-image-generation-explodes-with-700m-creations-in-first-week/">画像生成の枚数</a></td><td>The Decoder</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr class="secret"><td><a href="https://www.marketingprofs.com/charts/2023/49890/surge-of-ai-generated-images-online">AI 生成画像の推計</a></td><td>Everypixel</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-sec">二次</span></td></tr>
@@ -1263,7 +1290,6 @@
     <tr><td>Cleveland と McGill、Bertin、Treisman、Tufte の原典</td><td><a href="#charts">可視化</a></td></tr>
     <tr><td>Krug『Don&#x27;t Make Me Think』、Cooper『About Face』、Raskin『The Humane Interface』、Victor「Magic Ink」、Garrett、WCAG</td><td><a href="#classics">古典と法則</a></td></tr>
     <tr><td>Thomas と Johnston『The Illusion of Life』（1981）の本文</td><td><a href="#motion">動き</a></td></tr>
-    <tr><td>Bates の原論文</td><td><a href="#seeking">情報探索</a></td></tr>
     <tr><td>Rosenfeld と Morville『Information Architecture』、Russell-Rose と Tate『Designing the Search Experience』、Baymard の調査</td><td><a href="#seeking">情報探索</a></td></tr>
     <tr><td>Hearst が引く個々の研究の原論文</td><td><a href="#hearst">検索 UI の定本</a></td></tr>
   </table></div>

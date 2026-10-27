@@ -310,7 +310,7 @@ table.pick tr.sep{cursor:default}table.pick tr.sep td{background:none;font-size:
 
 
 /* ---------- part 2 visuals ---------- */
-.berry{width:100%;max-width:400px;height:auto}
+.berry{width:100%;max-width:640px;height:auto}
 .dia text{font-family:var(--sans);font-size:13px;fill:var(--fg)}.dia .ac{fill:var(--accent);font-weight:700}.dia .mu{fill:var(--muted);font-size:11px}
 .demos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:calc(var(--u)*4) calc(var(--u)*3);margin-top:calc(var(--u)*2)}
 .demo{min-width:0}.demo h4{margin:0 0 8px}.demo h4 span{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400;margin-left:6px}.demo p{font-size:.85rem;line-height:1.55;margin-top:8px}
