@@ -494,7 +494,7 @@
   <div class="tbl"><table>
     <tr><th>資料</th><th>著者・年</th><th>要点</th></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Dieter_Rams">Ten Principles for Good Design</a></td><td>Rams, 1970 年代</td><td>よいデザインは、革新的で、役に立ち、美しく、分かりやすく、控えめで、正直で、長持ちし、細部まで徹底し、環境に配慮し、できるだけ少ない。Less, but better。Apple の Ive に影響した</td></tr>
-    <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">Eight Golden Rules</a></td><td>Shneiderman, 1986</td><td>一貫性・頻繁な利用者への近道・情報のあるフィードバック・終わりのある対話・簡単なエラー処理・取り消しやすさ・利用者が主導する感覚・短期記憶の負荷を減らす</td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">Eight Golden Rules</a>（8 つの黄金律）</td><td>Shneiderman, 1986</td><td>1 一貫性、2 頻繁な利用者への近道、3 情報のあるフィードバック、4 終わりのある対話、5 簡単なエラー処理、6 取り消しやすさ、7 利用者が主導する感覚、8 短期記憶の負荷を減らす</td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">The Design of Everyday Things</a></td><td>Norman, 1988 / 2013</td><td>アフォーダンスを設計の語として持ち込み、2013 年版でシグニファイアを加えた。見えること・よい概念モデル・よい対応付け・フィードバック。制約を活かし、エラーを見越して設計する。実行の深淵と評価の深淵</td></tr>
   </table></div>
   <h4>Norman の二つの深淵</h4>
@@ -1049,10 +1049,10 @@
   <p>fzf の設計は四つに要約でき、以後の端末ツールはそれぞれを一段ずつ進めた。右端の列に、それぞれがなぜ良いかを添える。</p>
   <div class="tbl"><table class="fztbl">
     <tr><th></th><th>原則</th><th>fzf の形</th><th>後続の端末ツールが足したもの</th><th>なぜ良いか</th></tr>
-    <tr><td class="num">1</td><td>打つそばから見せる</td><td>一文字ごとに全件を絞り、件数（12/3480）を常に出す。Enter の前に結果がある</td><td>zoxide は入力前に「最近・よく使う」順（frecency）で候補を出し、atuin は履歴自体を検索できる DB にした</td><td>クエリを確定する前に結果が見えるので、打った語が効いているかをすぐ確かめて直せる。Bates の往復の一回が、一打鍵まで短くなる</td></tr>
-    <tr><td class="num">2</td><td>断片で届き、当たり方を見せる</td><td>曖昧一致、スコア順、マッチ箇所の強調。一番上を押せばおおむね正解</td><td>ripgrep と fd は既定値を寛容にした（smart case、無視ファイルの自動除外）</td><td>人は名前を正確には覚えていないので、断片で届けば思い出す手間が要らない。当たった箇所が見えれば、なぜその候補が出たかが分かり、一番上で良いかを自分で判断できる</td></tr>
-    <tr><td class="num">3</td><td>隣で確かめる</td><td>--preview で選択中の中身を横に出す。一覧を離れない</td><td>bat と delta がプレビューを整形し、lazygit と k9s は一覧と詳細の二ペインに ? のキー一覧を付けた</td><td>一覧を離れずに中身を確かめられるので、開いて戻る往復がなくなり、どこまで見たかを見失わない</td></tr>
-    <tr><td class="num">4</td><td>小さく広げる</td><td>演算子は接頭辞で最小（'exact ^prefix suffix$ !not）。フィルタとして他のコマンドと合成し、キーボードだけで完結する</td><td>Telescope と television は「チャンネル」で検索対象を切り替え、Raycast・Spotlight・VS Code はコマンドパレットとして GUI に持ち込んだ</td><td>初心者は打つだけで使え、慣れた人だけが演算子やキー操作で速くなる。同じ欄のまま機能が増えるので、覚え直しが要らない</td></tr>
+    <tr><td class="num">1</td><td>入力するたびに結果を出す</td><td>一文字ごとに全件を絞り、件数（12/3480）を常に出す。Enter の前に結果がある</td><td>zoxide は入力前に「最近・よく使う」順（frecency）で候補を出し、atuin は履歴自体を検索できる DB にした</td><td>打った語の効き目をすぐ確かめて直せる（Bates、NN/g 1、Doherty）</td></tr>
+    <tr><td class="num">2</td><td>語の一部だけで見つかり、一致した箇所を示す</td><td>曖昧一致、スコア順、マッチ箇所の強調。一番上を押せばおおむね正解</td><td>ripgrep と fd は既定値を寛容にした（smart case、無視ファイルの自動除外）</td><td>名前を正確に覚えていなくても届き、なぜ出たかが分かる（Furnas、NN/g 6）</td></tr>
+    <tr><td class="num">3</td><td>選んだものの中身を一覧の横に出す</td><td>--preview で選択中の中身を横に出す。一覧を離れない</td><td>bat と delta がプレビューを整形し、lazygit と k9s は一覧と詳細の二ペインに ? のキー一覧を付けた</td><td>一覧を離れずに確かめられ、どこまで見たかを見失わない（Shneiderman、黄金律 8）</td></tr>
+    <tr><td class="num">4</td><td>慣れた人向けの機能は同じ欄に足す</td><td>演算子は接頭辞で最小（'exact ^prefix suffix$ !not）。フィルタとして他のコマンドと合成し、キーボードだけで完結する</td><td>Telescope と television は「チャンネル」で検索対象を切り替え、Raycast・Spotlight・VS Code はコマンドパレットとして GUI に持ち込んだ</td><td>初心者は打つだけ、慣れた人は速く。覚え直しが要らない（NN/g 7、黄金律 2）</td></tr>
   </table></div>
   <h3>各ツールの外観</h3>
   <p>表に挙げたツールの画面を、各ツールの GitHub か公式サイトから引いた。</p>
