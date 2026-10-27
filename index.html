@@ -29,10 +29,9 @@
   <p class="lead">新聞記事を探す検索エンジンの UI を作るにあたって、参考にしていただくための資料です。見た目・振る舞い・探し方の規範を、出典とともにまとめました。作成者は UI・UX の専門家ではありません。すべてを採る必要はなく、共感できる部分だけを取り入れてください。</p>
   <h3>使い方</h3>
   <ul>
-    <li>結論は、12 行の<a href="#principles">共通原則</a>と、それを新聞・蔵書・図書の検索に当てはめた<a href="#apply">適用</a>にあります。時間がなければ、この二章だけをお読みください。</li>
-    <li>共通原則の表は、画面を見直すときの点検表として使えます。行を押すと、その原則の例が出ます。</li>
+    <li>結論は、13 項目の<a href="#principles">設計方針</a>にあります。時間がなければ、この章だけをお読みください。</li>
+    <li>設計方針の表は、画面を見直すときの点検表として使えます。行を押すと、その方針の例が出ます。</li>
     <li>気になった原則は、出典の欄から根拠の章へ戻って確かめられます。原典をどこまで確認したかは、各章の末尾と付録の<a href="#refs">参考資料</a>に書きました。</li>
-    <li>適用の章は当てはめの一例で、仕様ではありません。</li>
   </ul>
   <h3>良いデザインは何で決まるか</h3>
   <p>良いデザインの多くは、好みと TPO で変わります。写真や動画を楽しむ画面と、文字を読み比べる画面とでは、合うデザインが違います。</p>
@@ -411,7 +410,7 @@
   </div>
 
 <h3>色の印象は日本と海外で異なる</h3>
-  <p>色が何を意味するかは文化ごとに違う。<a href="#principles" data-prin="3">原則 3</a>「色や形だけで伝えない」には、色覚多様性への配慮のほかにこの理由がある。</p>
+  <p>色が何を意味するかは文化ごとに違う。<a href="#principles" data-prin="3">方針 3</a>「色や形だけで伝えない」には、色覚多様性への配慮のほかにこの理由がある。</p>
   <div class="tbl"><table class="cult">
     <tr><th>色</th><th>日本</th><th>欧米</th><th>その他の地域</th></tr>
     <tr><td><i style="background:#d1232a"></i>赤</td><td>太陽、祝い（紅白）、正しさ（赤ペン）、警告</td><td>危険、停止、情熱、赤字</td><td>中国では幸運と繁栄。株価の上昇も赤</td></tr>
@@ -441,7 +440,7 @@
     <div><div class="fig"><svg viewBox="0 0 300 132" class="vps" role="img" aria-label="左は棒と値だけの棒グラフ、右は罫線・枠・影・凡例の多い棒グラフ"><rect x="16" y="54.0" width="18" height="40.0" fill="var(--main)"/><text x="25" y="50.0" text-anchor="middle" class="vps-s">50</text><rect x="46" y="30.0" width="18" height="64.0" fill="var(--main)"/><text x="55" y="26.0" text-anchor="middle" class="vps-s">80</text><rect x="76" y="42.0" width="18" height="52.0" fill="var(--main)"/><text x="85" y="38.0" text-anchor="middle" class="vps-s">65</text><rect x="106" y="66.0" width="18" height="28.0" fill="var(--main)"/><text x="115" y="62.0" text-anchor="middle" class="vps-s">35</text><line x1="10" y1="94" x2="136" y2="94" stroke="var(--fg)"/><rect x="158" y="4" width="138" height="104" fill="var(--line)" fill-opacity=".5" stroke="var(--fg)"/><line x1="168" y1="18" x2="288" y2="18" stroke="var(--muted)" stroke-dasharray="2 2"/><line x1="168" y1="32" x2="288" y2="32" stroke="var(--muted)" stroke-dasharray="2 2"/><line x1="168" y1="46" x2="288" y2="46" stroke="var(--muted)" stroke-dasharray="2 2"/><line x1="168" y1="60" x2="288" y2="60" stroke="var(--muted)" stroke-dasharray="2 2"/><line x1="168" y1="74" x2="288" y2="74" stroke="var(--muted)" stroke-dasharray="2 2"/><line x1="168" y1="88" x2="288" y2="88" stroke="var(--muted)" stroke-dasharray="2 2"/><rect x="179" y="57.0" width="16" height="40.0" fill="var(--fg)" fill-opacity=".35"/><rect x="176" y="54.0" width="16" height="40.0" fill="var(--main)" stroke="var(--fg)"/><rect x="207" y="33.0" width="16" height="64.0" fill="var(--fg)" fill-opacity=".35"/><rect x="204" y="30.0" width="16" height="64.0" fill="var(--main)" stroke="var(--fg)"/><rect x="235" y="45.0" width="16" height="52.0" fill="var(--fg)" fill-opacity=".35"/><rect x="232" y="42.0" width="16" height="52.0" fill="var(--main)" stroke="var(--fg)"/><rect x="263" y="69.0" width="16" height="28.0" fill="var(--fg)" fill-opacity=".35"/><rect x="260" y="66.0" width="16" height="28.0" fill="var(--main)" stroke="var(--fg)"/><rect x="254" y="10" width="36" height="14" fill="var(--panel)" stroke="var(--fg)"/><text x="272" y="20" text-anchor="middle" class="vps-s">凡例</text><text x="73" y="124" text-anchor="middle" class="vpl">良い例：棒と値だけ</text><text x="227" y="124" text-anchor="middle" class="vpl">悪い例：罫線・枠・影・凡例</text></svg></div><h4>データインク比</h4><p class="src">Tufte『The Visual Display of Quantitative Information』、1983</p><p>図のインクのうち、データを表す部分の割合を上げる。消してもデータが失われない罫線・枠・影・凡例は消し、値は棒に直接書く</p></div>
     <div><div class="fig"><svg viewBox="0 0 300 132" class="vps" role="img" aria-label="同じ尺度の小さな折れ線グラフを四つ並べた図。C だけに山がある"><rect x="6" y="14" width="64" height="80" fill="none" stroke="var(--line)"/><text x="38" y="10" text-anchor="middle" class="vps-s">A</text><polyline points="12.0,66 22.4,58 32.8,58 43.2,50 53.6,50 64.0,42" fill="none" stroke="var(--main)" stroke-width="2"/><rect x="80" y="14" width="64" height="80" fill="none" stroke="var(--line)"/><text x="112" y="10" text-anchor="middle" class="vps-s">B</text><polyline points="86.0,50 96.4,50 106.8,58 117.2,58 127.6,66 138.0,66" fill="none" stroke="var(--main)" stroke-width="2"/><rect x="154" y="14" width="64" height="80" fill="none" stroke="var(--line)"/><text x="186" y="10" text-anchor="middle" class="vps-s">C</text><polyline points="160.0,74 170.4,74 180.8,66 191.2,18 201.6,58 212.0,66" fill="none" stroke="var(--accent)" stroke-width="2"/><rect x="228" y="14" width="64" height="80" fill="none" stroke="var(--line)"/><text x="260" y="10" text-anchor="middle" class="vps-s">D</text><polyline points="234.0,58 244.4,50 254.8,58 265.2,50 275.6,58 286.0,50" fill="none" stroke="var(--main)" stroke-width="2"/><text x="150" y="124" text-anchor="middle" class="vpl">同じ縦軸・横軸なので、C の山だけが目に入る</text></svg></div><h4>スモールマルチプル</h4><p class="src">Tufte『Envisioning Information』、1990</p><p>同じ尺度と軸の小さな図を並べ、比べさせる</p></div>
   </div>
-  <p><span class="secret">データインク比は、前の飾りの章の主張を図に当てはめたものである。</span>前注意的属性は、色だけで意味を伝えないという<a href="#principles" data-prin="3">原則 3</a> と組で使う。色で目を引き、文字と位置で意味を確かめさせる。</p>
+  <p><span class="secret">データインク比は、前の飾りの章の主張を図に当てはめたものである。</span>前注意的属性は、色だけで意味を伝えないという<a href="#principles" data-prin="3">方針 3</a> と組で使う。色で目を引き、文字と位置で意味を確かめさせる。</p>
 
   <h3>JR 東日本アプリの乗換検索結果に学ぶ</h3>
   <p>2024年10月に公式の投稿が4日で 594 万回表示され、「UI が天才的」と評された（<a href="https://ascii.jp/elem/000/004/229/4229563/">ASCII.jp</a>、<a href="https://app-liv.jp/articles/153120/">Appliv</a>）。縦を時間軸にし、候補を列として横に並べる。各候補は出発から到着までの縦長の枠になり、中に区間ごとの路線の色の線と路線記号が入る。出発の早い順に左から並ぶので、枠の上端が右へ行くほど下がり、画面全体が斜めの階段に見える。線の切れ目が乗換駅で、枠の上に所要時間と出発、下に乗換回数・到着・運賃と「早・楽・安」の札が付く。札は NAVITIME など従来の乗換案内にもあるので、違いは札ではなく並べ方にある。</p>
@@ -495,7 +494,7 @@
   <div class="tbl"><table>
     <tr><th>資料</th><th>著者・年</th><th>要点</th></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Dieter_Rams">Ten Principles for Good Design</a></td><td>Rams, 1970 年代</td><td>よいデザインは、革新的で、役に立ち、美しく、分かりやすく、控えめで、正直で、長持ちし、細部まで徹底し、環境に配慮し、できるだけ少ない。Less, but better。Apple の Ive に影響した</td></tr>
-    <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">Eight Golden Rules</a></td><td>Shneiderman, 1986</td><td>一貫性・頻繁な利用者への近道・情報のあるフィードバック・終わりのある対話・簡単なエラー処理・取り消しやすさ・利用者が主導する感覚・短期記憶の負荷を減らす</td></tr>
+    <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">Eight Golden Rules</a>（8 つの黄金律）</td><td>Shneiderman, 1986</td><td>1 一貫性、2 頻繁な利用者への近道、3 情報のあるフィードバック、4 終わりのある対話、5 簡単なエラー処理、6 取り消しやすさ、7 利用者が主導する感覚、8 短期記憶の負荷を減らす</td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">The Design of Everyday Things</a></td><td>Norman, 1988 / 2013</td><td>アフォーダンスを設計の語として持ち込み、2013 年版でシグニファイアを加えた。見えること・よい概念モデル・よい対応付け・フィードバック。制約を活かし、エラーを見越して設計する。実行の深淵と評価の深淵</td></tr>
   </table></div>
   <h4>Norman の二つの深淵</h4>
@@ -905,7 +904,7 @@
     <tr><td>著者検索</td><td>役に立った文献の著者が書いた、ほかの文献を探す</td><td>著者の業績一覧を出せる。本文から無作為に選んだ数段落（スナップショット）を読める</td></tr>
   </table></div>
   <p>Bates はさらに、六つの手法のどれでも、一つの命令でその手法に合った検索モードと画面に切り替えられるべきだとした。新聞・蔵書の検索に当てはめれば、記事から同じ事件の続報へ移る、同じ分類の棚を見る、同じ著者の本を並べる、といった移動を、クエリを打ち直さずに一歩でできるようにすることに当たる。</p>
-  <p>ただし、クエリの出し直しがいつも起こるわけではない。Marchionini（2006）は検索を目的で三つに分けた。既知の項目を取りに行く「探す」（蔵書検索の「この本はどこにあるか」）は、一回のクエリで済むことが多い。分野を理解する「学ぶ」と、比較・分析する「調べる」（新聞検索の「この事件はどう報じられたか」「新聞社ごとの論調の差は」）では Bates の述べた繰り返しが起こるので、全体像を見せる表示や、条件で結果を絞り込むファセットが必要になる。新聞・蔵書・図書の利用者には、探しているうちに何を探したいのかがはっきりしてくる、後の二つの場合が多い。</p>
+  <p id="marchionini">ただし、クエリの出し直しがいつも起こるわけではない。Marchionini（2006）は検索を目的で三つに分けた。既知の項目を取りに行く「探す」（蔵書検索の「この本はどこにあるか」）は、一回のクエリで済むことが多い。分野を理解する「学ぶ」と、比較・分析する「調べる」（新聞検索の「この事件はどう報じられたか」「新聞社ごとの論調の差は」）では Bates の述べた繰り返しが起こるので、全体像を見せる表示や、条件で結果を絞り込むファセットが必要になる。新聞・蔵書・図書の利用者には、探しているうちに何を探したいのかがはっきりしてくる、後の二つの場合が多い。</p>
 
   <h4>情報の匂い（Pirolli と Card）</h4>
   <p>クエリを出して結果を確かめる繰り返しのなかで、利用者が次にどの一件を開くかは、一覧に出る見出しや文言で決まる。Pirolli と Card はこの手がかりを「情報の匂い」と呼んだ。動物が匂いをたどって餌を探すように、利用者は見出しや抜粋（スニペット）の匂いをたどって次の一件を選ぶ、という考え方である。</p>
@@ -1047,30 +1046,33 @@
   <p>下の欄に断片を打つ。全 24 件から順に絞られ、当たった文字が強調され、件数が変わり、右に選択中の中身が出る。↑↓ で移動できる。丸数字は下の表の行に対応する。</p>
   <div class="fz" id="fz"><div class="fzl"><div class="fzin"><b class="mk">1</b><span class="pr">&gt;</span><input type="text" id="fzq" aria-label="絞り込む語" placeholder="例: 1923、fukko、横浜" autocomplete="off"><span class="cnt" id="fzcnt"></span></div><ul id="fzlist"></ul><b class="mk mk2">2</b></div><div class="fzp" id="fzprev"></div><b class="mk mk3">3</b></div>
   <h3>fzf が決めた四つのことと、その後の端末ツール</h3>
-  <p>fzf の設計は四つに要約でき、以後の端末ツールはそれぞれを一段ずつ進めた。検索 UI への翻訳も四行で足りる。</p>
+  <p>fzf の設計は四つに要約でき、以後の端末ツールはそれぞれを一段ずつ進めた。右端の列に、それぞれがなぜ良いかを添える。</p>
   <div class="tbl"><table class="fztbl">
-    <tr><th></th><th>原則</th><th>fzf の形</th><th>後続の端末ツールが足したもの</th><th>検索 UI での形</th></tr>
-    <tr><td class="num">1</td><td>打つそばから見せる</td><td>一文字ごとに全件を絞り、件数（12/3480）を常に出す。Enter の前に結果がある</td><td>zoxide は入力前に「最近・よく使う」順（frecency）で候補を出し、atuin は履歴自体を検索できる DB にした</td><td>入力中から候補と件数を出し、入力前には最近の検索とよく見られているものを出す（NN/g 1）</td></tr>
-    <tr><td class="num">2</td><td>断片で届き、当たり方を見せる</td><td>曖昧一致、スコア順、マッチ箇所の強調。一番上を押せばおおむね正解</td><td>ripgrep と fd は既定値を寛容にした（smart case、無視ファイルの自動除外）</td><td>表記ゆれを既定で同一視し、ヒット語をアクセント色で強調する。想起ではなく再認（NN/g 6、ポステル）</td></tr>
-    <tr><td class="num">3</td><td>隣で確かめる</td><td>--preview で選択中の中身を横に出す。一覧を離れない</td><td>bat と delta がプレビューを整形し、lazygit と k9s は一覧と詳細の二ペインに ? のキー一覧を付けた</td><td>一覧と詳細の二ペイン。スニペットはヒット語の前後。ショートカットは画面内で発見できる（NN/g 7）</td></tr>
-    <tr><td class="num">4</td><td>小さく広げる</td><td>演算子は接頭辞で最小（'exact ^prefix suffix$ !not）。フィルタとして他のコマンドと合成し、キーボードだけで完結する</td><td>Telescope と television は「チャンネル」で検索対象を切り替え、Raycast・Spotlight・VS Code はコマンドパレットとして GUI に持ち込んだ</td><td>演算子は同じ欄で。複数の DB はスコープで切り替え、/ か Cmd+K で欄へ</td></tr>
+    <tr><th></th><th>原則</th><th>fzf の形</th><th>後続の端末ツールが足したもの</th><th>なぜ良いか</th></tr>
+    <tr><td class="num">1</td><td>入力するたびに結果を出す</td><td>一文字ごとに全件を絞り、件数（12/3480）を常に出す。Enter の前に結果がある</td><td>zoxide は入力前に「最近・よく使う」順（frecency）で候補を出し、atuin は履歴自体を検索できる DB にした</td><td>打った語の効き目をすぐ確かめて直せる（Bates、NN/g 1、Doherty）</td></tr>
+    <tr><td class="num">2</td><td>語の一部だけで見つかり、一致した箇所を示す</td><td>曖昧一致、スコア順、マッチ箇所の強調。一番上を押せばおおむね正解</td><td>ripgrep と fd は既定値を寛容にした（smart case、無視ファイルの自動除外）</td><td>名前を正確に覚えていなくても届き、なぜ出たかが分かる（Furnas、NN/g 6）</td></tr>
+    <tr><td class="num">3</td><td>選んだものの中身を一覧の横に出す</td><td>--preview で選択中の中身を横に出す。一覧を離れない</td><td>bat と delta がプレビューを整形し、lazygit と k9s は一覧と詳細の二ペインに ? のキー一覧を付けた</td><td>一覧を離れずに確かめられ、どこまで見たかを見失わない（Shneiderman、黄金律 8）</td></tr>
+    <tr><td class="num">4</td><td>慣れた人向けの機能は同じ欄に足す</td><td>演算子は接頭辞で最小（'exact ^prefix suffix$ !not）。フィルタとして他のコマンドと合成し、キーボードだけで完結する</td><td>Telescope と television は「チャンネル」で検索対象を切り替え、Raycast・Spotlight・VS Code はコマンドパレットとして GUI に持ち込んだ</td><td>初心者は打つだけ、慣れた人は速く。覚え直しが要らない（NN/g 7、黄金律 2）</td></tr>
   </table></div>
-  <p>フォームでクエリを組み立ててから検索する方式は、利用者が何を探しているかを知っているとき（Marchionini の「探す」）しか成り立たない。fzf の方式は、探しながら何を探しているかが定まってくる利用者に向いている。</p>
-  <p>ただし、上の表の 2 の曖昧一致は、候補が手元の数千件で、一番上を選べば済むという前提で成り立つ。数百万件の DB で本検索まで曖昧一致にすると、断片がたまたま並んだだけの無関係な結果が上位を埋める。大規模 DB では曖昧一致を入力中の候補に限り、本検索は単語単位の AND にする（適用の章）。表記ゆれの同一視は意味を変えないので、本検索でも既定にしてよい。</p>
+  <h3>各ツールの外観</h3>
+  <p>表に挙げたツールの画面を、各ツールの GitHub か公式サイトから引いた。</p>
+  <div class="vp"><div><div class="fig shot"><img src="https://raw.githubusercontent.com/junegunn/i/master/fzf-preview.png" alt="fzf の画面" loading="lazy" referrerpolicy="no-referrer"></div><h4><a href="https://github.com/junegunn/fzf">fzf</a></h4><p>打つたびに候補を絞り、右に選択中の中身を出す</p></div><div><div class="fig shot"><img src="https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/contrib/tutorial.gif" alt="zoxide の画面" loading="lazy" referrerpolicy="no-referrer"></div><h4><a href="https://github.com/ajeetdsouza/zoxide">zoxide</a></h4><p>よく行くディレクトリへ、名前の断片で移る</p></div><div><div class="fig shot"><img src="https://raw.githubusercontent.com/atuinsh/atuin/main/demo.gif" alt="atuin の画面" loading="lazy" referrerpolicy="no-referrer"></div><h4><a href="https://github.com/atuinsh/atuin">atuin</a></h4><p>シェルの履歴を、終了コードや時刻ごと検索する</p></div><div><div class="fig shot"><img src="https://burntsushi.net/stuff/ripgrep1.png" alt="ripgrep の画面" loading="lazy" referrerpolicy="no-referrer"></div><h4><a href="https://github.com/BurntSushi/ripgrep">ripgrep</a></h4><p>ファイルの中身を検索し、当たった行を色で示す</p></div><div><div class="fig shot"><img src="https://raw.githubusercontent.com/sharkdp/fd/master/doc/screencast.svg" alt="fd の画面" loading="lazy" referrerpolicy="no-referrer"></div><h4><a href="https://github.com/sharkdp/fd">fd</a></h4><p>ファイル名を寛容な既定値で探す</p></div><div><div class="fig shot"><img src="https://i.imgur.com/rGsdnDe.png" alt="bat の画面" loading="lazy" referrerpolicy="no-referrer"></div><h4><a href="https://github.com/sharkdp/bat">bat</a></h4><p>ファイルを構文の色付きで表示する。プレビューに使われる</p></div><div><div class="fig shot"><img src="https://user-images.githubusercontent.com/52205/81058545-a5725f80-8e9c-11ea-912e-d21954586a44.png" alt="delta の画面" loading="lazy" referrerpolicy="no-referrer"></div><h4><a href="https://github.com/dandavison/delta">delta</a></h4><p>差分を整形して表示する</p></div><div><div class="fig shot"><video src="https://github.com/user-attachments/assets/031799d1-740d-4cda-90cf-689513fa9860" aria-label="lazygit の画面" muted autoplay loop playsinline preload="metadata"></video></div><h4><a href="https://github.com/jesseduffield/lazygit">lazygit</a></h4><p>Git の一覧と詳細を並べたペイン</p></div><div><div class="fig shot"><img src="https://raw.githubusercontent.com/derailed/k9s/master/assets/screen_po.png" alt="k9s の画面" loading="lazy" referrerpolicy="no-referrer"></div><h4><a href="https://github.com/derailed/k9s">k9s</a></h4><p>Kubernetes の一覧と、画面上部のキー一覧</p></div><div><div class="fig shot"><img src="https://i.imgur.com/TTTja6t.gif" alt="Telescope の画面" loading="lazy" referrerpolicy="no-referrer"></div><h4><a href="https://github.com/nvim-telescope/telescope.nvim">Telescope</a></h4><p>Neovim の中で、検索対象を切り替えて絞る</p></div><div><div class="fig shot"><img src="https://github.com/user-attachments/assets/6255d115-3490-45ee-82cb-b3a84b2e852d" alt="television の画面" loading="lazy" referrerpolicy="no-referrer"></div><h4><a href="https://github.com/alexpasmantier/television">television</a></h4><p>「チャンネル」で検索対象を切り替える</p></div><div><div class="fig shot"><img src="https://www.raycast.com/_next/static/immutable/media/quicklinks-showcase.1-5j8fsgp_l5i.png" alt="Raycast の画面" loading="lazy" referrerpolicy="no-referrer"></div><h4><a href="https://www.raycast.com">Raycast</a></h4><p>macOS のランチャー。コマンドパレットの形</p></div><div><div class="fig shot"><img src="https://ipcdn-web.apple.com/assets/v2/web/41f5b833-3bf6-480c-8010-1fd8ea421ed2" alt="Spotlight の画面" loading="lazy" referrerpolicy="no-referrer"></div><h4><a href="https://support.apple.com/guide/mac-help/mchlp1008/mac">Spotlight</a></h4><p>macOS 標準の検索。結果の下に操作が並ぶ</p></div><div><div class="fig shot"><img src="https://code.visualstudio.com/assets/docs/editing/userinterface/commands.png" alt="VS Code の画面" loading="lazy" referrerpolicy="no-referrer"></div><h4><a href="https://code.visualstudio.com/docs/getstarted/userinterface">VS Code</a></h4><p>コマンドパレット（Cmd+Shift+P）</p></div></div>
+  <p>fzf が想定しているのは、<a href="#marchionini">Marchionini の「探す」</a>、つまり既知の項目を取りに行く検索である。ファイル名やコマンドのように、何を探しているかは分かっていても、正確な名前は断片でしか覚えていない、という場面に向く。フォームでクエリを組み立てる方式は、探すものに加えて、その正確な名前や項目まで知っていないと成り立たない。</p>
+  <p>人は探す語を正確には覚えていない。表記、語順、送り仮名、一字の誤りまで合わせる完全一致を利用者に求めるのは無理がある。そのため、本検索でも曖昧一致を既定にする。ただし fzf は、候補が手元の数千件で、一番上を選べば済む前提で作られている。数百万件の DB では、断片がたまたま並んだだけの結果も拾われる。そこで、完全に一致したものほど上に並べ、当たった箇所を強調して、利用者が見て判断できるようにする。完全一致が要るときは、fzf の <code>'exact</code> のように演算子で指定させる。</p>
 </section>
 
 <!-- ============ principles ============ -->
-<section class="slide" data-title="共通原則" id="principles">
-  <div class="eyebrow">第4部 統合と適用</div>
-  <h2>全体を貫く共通原則</h2>
-  <p>資料をまたいで繰り返し現れる主張は 12 行に圧縮できる。本文の順に、見た目（第 1 部）、振る舞い（第 2 部）、探す行為（第 3 部）と並べた。設計レビューではこの 12 行を点検表に使う。行を押すと、前の章で見せた図が開く。</p>
+<section class="slide" data-title="設計方針" id="principles">
+  <div class="eyebrow">第4部 まとめ</div>
+  <h2>まとめ ― 本資料の設計方針</h2>
+  <p>ここまでの章で取り上げた主張を、本資料の設計方針として 13 項目にまとめた。多くは複数の資料に共通する主張だが、角丸を控えめにするなど、本資料の好みによるものも含む。本文の順に、見た目（第 1 部）、振る舞い（第 2 部）、探す行為（第 3 部）と並べた。画面を見直すときの点検表として使える。行を押すと、前の章で見せた図が開く。</p>
   <div class="tbl"><table class="pick" id="prin">
-    <tr><th>#</th><th>原則</th><th>内容</th><th>出典</th></tr>
+    <tr><th>#</th><th>方針</th><th>内容</th><th>出典</th></tr>
     <tr class="sep"><td colspan="4">第 1 部 見た目</td></tr>
     <tr tabindex="0" data-demo="#gest .g-prox svg|#gest .g-region svg|#skr .card:nth-child(7)"><td class="num">1</td><td>まとまりは余白と揃えで作る</td><td>近接・類同・グリッド。枠線と背景は最後の手段</td><td>スイス、Material、ゲシュタルト、桜井「色による区分」</td></tr>
-    <tr tabindex="0" data-demo="#skr .card:nth-child(1)|#poster"><td class="num">2</td><td>飾りは意味があるときだけ</td><td>情報を足さない影・半透明・角丸・挿絵を置かない。既定値を飾りに頼らない</td><td>スイス、<span class="secret">飾りと既定値、</span>Rams、NN/g 8、桜井「わかりやすさとスタイル性」</td></tr>
+    <tr tabindex="0" data-demo="#skr .card:nth-child(1)|#poster"><td class="num">2</td><td>飾りは意味があるときだけ</td><td>情報を足さない影・半透明・角丸・挿絵を置かない。既定値を飾りに頼らない</td><td>スイス、<span class="secret">飾りと既定値、</span>形と配置（角丸）、Rams、NN/g 8、桜井「わかりやすさとスタイル性」、Hearst（検索画面は単純に）</td></tr>
     <tr tabindex="0" data-demo="#skr .card:nth-child(14)|#gest .g-fig svg"><td class="num">3</td><td>色や形だけで伝えない</td><td>色・形・文字・位置のうち二つ以上で伝え、コントラスト 4.5:1</td><td>色、ゲシュタルト（図と地）、WCAG、Apple、Material、桜井「言語がなくてもわかるように」</td></tr>
-    <tr tabindex="0" data-demo="#charts .vp > div:nth-child(5)|#charts .vp > div:nth-child(4)"><td class="num">4</td><td>量は位置と長さで示す</td><td>比べさせたい量は共通の尺度の上に置き、色は区別に使う。データでないインクは消す</td><td>Cleveland と McGill、Bertin、Tufte、JR 東日本アプリ</td></tr>
+    <tr tabindex="0" data-demo="#charts .vp > div:nth-child(5)|#charts .vp > div:nth-child(4)"><td class="num">4</td><td>量は位置と長さで示す</td><td>比べさせたい量は共通の尺度の上に置き、比べるものは軸をそろえて並べる。色は区別に使う。データでないインクは消す</td><td>Cleveland と McGill、Bertin、Tufte、形と配置（並べる向き）、JR 東日本アプリ</td></tr>
     <tr class="sep"><td colspan="4">第 2 部 振る舞い</td></tr>
     <tr tabindex="0" data-demo="#guidelines .sfield|#skr .card:nth-child(9)"><td class="num">5</td><td>想起させず、見せて選ばせる</td><td>選択肢・候補・履歴・ショートカットを画面に出す</td><td>NN/g 6、黄金律 8、ミラー、Apple、Material、fzf、Hearst</td></tr>
     <tr tabindex="0" data-demo="#skr .card:nth-child(15)|#skr2 .card:nth-child(1)|#laws .card:nth-child(6)"><td class="num">6</td><td>状態を常に見せ、即座に返す</td><td>件数・進捗・スコープ・選択中・ON/OFF を隔てなく表示し、400ms 以内に反応する。押されたら必ず何かを返す</td><td>Norman（評価の深淵）、NN/g 1、Doherty、東京都 3、桜井 HUD・ローディング画面・「遅さは罪」「ノーリアクションを排除せよ」、fzf、Hearst</td></tr>
@@ -1081,32 +1083,16 @@
     <tr tabindex="0" data-demo="#foolproof .demo:nth-child(5)|#foolproof .demo:nth-child(3)|#skr2 .card:nth-child(2)"><td class="num">11</td><td>間違えても戻れる</td><td>取り返しのつかない操作は間違えようのない形にし、それ以外は確認より取り消しで守る。壊れたら安全な側へ倒す</td><td>Norman（強制機能）、NN/g 3・5、黄金律 6、東京都 4、ポカヨケ、桜井「リトライは迅速に」、Hearst（0 件の回避）</td></tr>
     <tr class="sep"><td colspan="4">第 3 部 探す行為</td></tr>
     <tr tabindex="0" data-demo="#classics .mantra|#hearst svg.berry"><td class="num">12</td><td>全体像から詳細へ、往復を軽く</td><td>まず分布を見せ、絞り、求めに応じて一件を開く。一件から次のクエリへ一歩で戻れるようにする</td><td>Shneiderman、Bates、Marchionini、Pirolli と Card、fzf、Hearst</td></tr>
+    <tr tabindex="0" data-demo="#hearst .dym"><td class="num">13</td><td>入力の揺れはシステムが受け止める</td><td>人は語を正確には覚えていない。表記ゆれを同一視し、曖昧一致を既定にする。完全に一致したものほど上に並べ、当たった箇所を強調し、完全一致は演算子で指定させる</td><td>Furnas（Hearst 第 1 章）、ポステルの法則、fzf</td></tr>
   </table></div>
   <h3>資料の間で対立する点</h3>
   <p>規範同士の食い違いは、序で述べたとおり信じるものの側で決める。本資料の決め方は次のとおりである。</p>
   <ul>
     <li><b>見た目を内容と環境に合わせて変えるか、固定するか。</b>Liquid Glass と Material のダイナミックカラーは変える方向で、スイスデザインと Rams は固定して内容だけを変える方向である。本資料は後者を採る。検索結果のように内容が毎回変わる画面では、変わらない地があって初めて変化が図として見えるからである。</li>
-    <li><b>曖昧一致をどこまで使うか。</b>fzf は全体を曖昧一致にするが、数百万件の DB では無関係な結果が上位を埋める。曖昧一致は入力中の候補に限り、本検索は単語単位の AND にする（原則 <a href="#principles" data-prin="5">5</a> と <a href="#principles" data-prin="12">12</a>）。</li>
-    <li><b>動きは飾りか。</b>飾りとしての動き（屈折の揺らぎ、意味のない跳ね）は置かず、変化をつなぐ動きは置く（原則 <a href="#principles" data-prin="2">2</a> と <a href="#principles" data-prin="10">10</a>）。</li>
+    <li><b>曖昧一致をどこまで使うか。</b>人は語を正確には覚えていないので、本検索でも曖昧一致を既定にする。数百万件の DB では無関係な結果も拾うので、完全に一致したものほど上に並べ、当たった箇所を強調し、完全一致は演算子で指定させる（方針 <a href="#principles" data-prin="13">13</a>）。</li>
+    <li><b>動きは飾りか。</b>飾りとしての動き（屈折の揺らぎ、意味のない跳ね）は置かず、変化をつなぐ動きは置く（方針 <a href="#principles" data-prin="2">2</a> と <a href="#principles" data-prin="10">10</a>）。</li>
   </ul>
   <p>角丸の扱いは、<a href="#form">形と配置</a>の章で述べた。</p>
-</section>
-
-<!-- ============ apply ============ -->
-<section class="slide" data-title="適用" id="apply">
-  <div class="eyebrow">第4部 統合と適用</div>
-  <h2>大規模 DB 検索への適用 ― 新聞・蔵書・図書</h2>
-  <p>共通するのは、利用者が断片しか覚えていないことと、ヒットが数千から数百万件になることである。設計の軸は<a href="#principles" data-prin="12">原則 12</a> の「全体像から詳細へ、往復を軽く」で、入力中は fzf の「打ちながら絞る」を使う。利用者の行動順に 1〜6 を並べ、どの段でも起きる 0件と失敗を 7 にまとめた。括弧は共通原則の番号と、主な出典である。</p>
-  <div class="cols">
-    <div><h4>1 入口</h4><ul><li>検索欄は全ページの同じ位置に一つ。DB の違いはスコープで示す（8。Apple、Telescope）</li><li>今何を検索しているかを欄の横に常に表示（6。NN/g 1）</li><li>プレースホルダに具体例（7。東京都「なんて検索すればいいんだろう？」）</li><li><code>/</code> か Cmd+K でフォーカス（9。NN/g 7）</li><li>入力前に最近の検索とよく見られているものを出す（5。Apple、Material、zoxide）</li><li>空クエリはエラーにせず、全件をファセット付きで見せる（12。Shneiderman）</li></ul>
-      <h4>2 入力中</h4><ul><li>一文字ごとに候補、400ms 以内（6。fzf、Doherty）</li><li>表記ゆれを既定で同一視：新字旧字、異体字、かなカナ、全角半角、長音、ローマ字（11。ポステル）</li><li>曖昧一致は候補にのみ。本検索の既定は単語単位の AND（5。fzf の章）</li><li>候補をカテゴリで区切り、マッチ箇所を太字に（5。Material）</li><li>件数を入力中から出す（6。fzf）</li><li>Enter 連打で二度走らせない（11）</li></ul>
-      <h4>3 結果一覧</h4><ul><li>年代別ヒストグラムを上に置き、ドラッグで期間を絞る（12。Shneiderman）</li><li>同じ事件の記事は日付を、同じ書名の版と巻は刊行年を縦軸に並べる（4。JR の乗換結果）</li><li>ファセットを左に、件数付き。0件になる選択肢はグレー（11。NN/g 5）</li><li>密度の高い左揃えの表。列はタイトル・著者・日付・所在（1。スイス）</li><li>スニペットはヒット語の前後、ヒット語だけアクセント色（3・12。Pirolli と Card）</li><li>古い・重複・非公開は既定で除き「含めて再検索」を用意（2。ripgrep）</li><li>遅い全文検索は見出しの結果を先に出し、残りの進捗と止める道を示す（6。桜井）</li><li>既定は関連度、新聞は日付降順に一回で切替</li></ul></div>
-    <div><h4>4 絞り込みと往復</h4><ul><li>検索語・ファセット・並び順・ページを URL に（11。東京都 4、NN/g 3）</li><li>適用中の条件をチップで、× で外せる。全部外すのも一回で（11。Apple tokens、桜井「リトライは迅速に」）</li><li>無効な期間は入力できない（11）</li><li>AND / OR / NOT / <code>title:</code> <code>date:1923..1924</code> を同じ欄で（9。fzf）</li><li>検索欄は結果画面でも入力語を保ったまま上に（12。Bates、Material）</li><li>絞り込みで結果が変わるときは、消える行と残る行を動きでつなぐ（10）</li></ul>
-      <h4>5 詳細</h4><ul><li>広い画面では一覧と詳細の 2 ペイン。幅の判断は Material のウィンドウサイズクラス（1・12。fzf --preview、lazygit）</li><li>j/k で移動、Enter で開く、Esc で戻る。位置を保つ（9）</li><li>「同じ著者」「同じ日の紙面」へ一回で（12。Bates）</li><li>新聞は紙面全体を見せてヒット箇所を枠で</li><li>紙面は拡大画像を左、紙面全体のミニマップ（縮小図）を右に置き、文脈帯は紙面と同じ縦の列にする（4。下の「詳細画面の配置」）</li></ul>
-      <h4>6 持ち出しと保存</h4><ul><li>書誌の書き出しと検索条件の保存（12。Shneiderman の「取り出し」）</li><li>エクスポートは件数を先に見せ、上限超過時だけ確認（11）</li><li>保存した検索の削除は即時実行して数秒の「元に戻す」（11）</li></ul>
-      <h4>7 0件と失敗（どの段でも）</h4><ul><li>0件画面に検索欄を残し、緩めた結果と「もしかして」を自動で（7。東京都 5、NN/g 9）</li><li>タイポは「もしかして」で提案し、勝手に置換しない（11）</li><li>司書への相談導線を全ページに（7。東京都 5）</li><li>全文検索の索引が落ちても見出し検索の結果は出し、部分結果であることを示す（11。フェイルセーフ）</li></ul></div>
-  </div>
-  <p>左右と上下の並べ方に関する研究は、<a href="#form">形と配置</a>の章で紹介した。</p>
 </section>
 
 <!-- ============ refs ============ -->
