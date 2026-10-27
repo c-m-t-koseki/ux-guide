@@ -47,7 +47,7 @@
     <tr><td><a href="https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/uidesign_guide_v100">東京都 UI設計実践ガイド</a></td><td>行政サービスの点検表。0件時の扱い</td></tr>
     <tr><td><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">Nielsen Norman Group（NN/g）の 10 ユーザビリティ・ヒューリスティック</a></td><td>評価の物差し</td></tr>
     <tr><td><a href="https://www.youtube.com/@sora_sakurai_jp">桜井政博のゲーム作るには</a></td><td>UI の 15 テーマ、待たせない、手応えを返す</td></tr>
-    <tr><td>Shneiderman、Bates、Marchionini</td><td>全体像から詳細へ、往復する探索、探索の種類</td></tr>
+    <tr><td><a href="https://hdl.handle.net/1903/5784">Shneiderman</a>、<a href="https://pages.gseis.ucla.edu/faculty/bates/berrypicking.html">Bates</a>、<a href="https://en.wikipedia.org/wiki/Exploratory_search">Marchionini</a></td><td>全体像から詳細へ、往復する探索、探索の種類</td></tr>
     <tr><td><a href="https://searchuserinterfaces.com/book/">Hearst『Search User Interfaces』</a></td><td>検索 UI の実証研究の総覧。語彙問題、ファセット、0件の回避</td></tr>
   </table></div>
   <h3>用語</h3>
@@ -503,7 +503,7 @@
   <p class="cap">どちらの例でも、実行の深淵はできる操作を見せると浅くなり、評価の深淵は状態や結果を見せると浅くなる。</p>
 
   <h3>全体像 → 絞り込み → 詳細（Shneiderman, 1996）</h3>
-  <p>Shneiderman は論文「The Eyes Have It」で、大量のデータを表示する UI の設計の指針を一文にまとめた。「まず全体像、次に拡大と絞り込み、そして求めに応じて詳細」（Overview first, zoom and filter, then details-on-demand）である。この一文は「情報探索のマントラ」と呼ばれる。</p>
+  <p>Shneiderman は論文「<a href="https://hdl.handle.net/1903/5784">The Eyes Have It</a>」で、大量のデータを表示する UI の設計の指針を一文にまとめた。「まず全体像、次に拡大と絞り込み、そして求めに応じて詳細」（Overview first, zoom and filter, then details-on-demand）である。Shneiderman はこの一文を「視覚的情報探索のマントラ」（Visual Information-Seeking Mantra）と呼んだ。</p>
   <div class="mantra"><div class="pane"><div class="ttl">Overview</div><div class="hist"><i style="height:20%"></i><i style="height:60%"></i><i style="height:90%"></i><i style="height:35%"></i><i style="height:15%"></i><i style="height:10%"></i></div><div class="mu">年代別の件数</div></div><div class="pane"><div class="ttl">Zoom & filter</div><div class="fac">1923 <span>842</span></div><div class="fac on">朝刊 <span>1,020</span></div><div class="fac">1面 <span>96</span></div></div><div class="pane"><div class="ttl">Details</div><div class="pg"><i></i></div></div></div><p class="cap">まず分布を見せ、絞り、最後に一件を開く。</p>
   <p>同じ論文では、利用者がデータに対して行う 7 つの作業と、データの 7 つの種類も挙げている。作業は全体像・拡大・絞り込み・詳細・関係付け・履歴・取り出しで、データの種類は一次元・二次元・三次元・時間・多次元・木・ネットワークである。新聞と蔵書の検索で扱うデータは、このうち時間（日付・刊行年）と多次元（種別・地域・著者など、いくつもの項目をもつもの）に当たる。</p>
   <div class="tbl"><table>
@@ -585,7 +585,7 @@
     <tr><td>ピークエンドの法則</td><td>Kahneman ら, 1993</td><td>体験は、各時点の総和や平均ではなく、最も強い時点と終わりの感じ方でおおむね判断される</td></tr>
     <tr><td>パレートの法則</td><td>Pareto</td><td>多くの事象で、結果の約 8 割は原因の約 2 割から生じる。最も多くの利用者に大きな効果をもたらす部分に力を集める</td></tr>
   </table></div>
-  <p class="note">10 ヒューリスティックの名前と中身は <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">NN/g「10 Usability Heuristics for User Interface Design」</a>で、設計原則の表の三つは Wikipedia の各記事で、法則の要点と出典は <a href="https://lawsofux.com/">Laws of UX</a> の各項で確認した。Laws of UX はヒックの法則を Hick と Hyman の 1952 年の研究とするが、Hyman の論文は 1953 年で、これは <a href="https://en.wikipedia.org/wiki/Hick%27s_law">Wikipedia「Hick's law」</a>で確認した。Krug『Don't Make Me Think』、Cooper『About Face』、Raskin『The Humane Interface』、Victor「Magic Ink」、Tufte、Garrett、WCAG も規範としてよく引かれるが、本資料の作成時には開いていないので表に載せない。</p>
+  <p class="note">10 ヒューリスティックの名前と中身は <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">NN/g「10 Usability Heuristics for User Interface Design」</a>で、設計原則の表の三つは Wikipedia の各記事で、マントラと 7 つの作業・データの種類はメリーランド大学が公開している原論文（技術報告版）で、法則の要点と出典は <a href="https://lawsofux.com/">Laws of UX</a> の各項で確認した。Laws of UX はヒックの法則を Hick と Hyman の 1952 年の研究とするが、Hyman の論文は 1953 年で、これは <a href="https://en.wikipedia.org/wiki/Hick%27s_law">Wikipedia「Hick's law」</a>で確認した。Krug『Don't Make Me Think』、Cooper『About Face』、Raskin『The Humane Interface』、Victor「Magic Ink」、Tufte、Garrett、WCAG も規範としてよく引かれるが、本資料の作成時には開いていないので表に載せない。</p>
 </section>
 
 <!-- ============ guidelines ============ -->
@@ -1159,7 +1159,7 @@
   <div class="tbl"><table class="refs">
     <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
     <tr><td><a href="https://pages.gseis.ucla.edu/faculty/bates/berrypicking.html">The Design of Browsing and Berrypicking Techniques for the Online Search Interface</a></td><td>Bates、1989</td><td><a href="#hearst">検索 UI の定本</a></td><td><span class="lv lv-src">原典</span></td></tr>
-    <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">The Eyes Have It</a></td><td>Shneiderman、1996</td><td><a href="#classics">設計原則と法則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://hdl.handle.net/1903/5784">The Eyes Have It</a></td><td>Shneiderman、1996</td><td><a href="#classics">設計原則と法則</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Information_foraging">Information Foraging</a></td><td>Pirolli と Card、1990 年代</td><td><a href="#hearst">検索 UI の定本</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Exploratory_search">Exploratory Search: From Finding to Understanding</a></td><td>Marchionini、2006</td><td><a href="#hearst">検索 UI の定本</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://searchuserinterfaces.com/book/">Search User Interfaces</a></td><td>Hearst、2009</td><td><a href="#intro">はじめに</a>、<a href="#hearst">検索 UI の定本</a></td><td><span class="lv lv-src">原典</span></td></tr>
