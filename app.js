@@ -295,17 +295,17 @@
   document.querySelectorAll('input.tut').forEach(function(inp){var h=inp.nextElementSibling;if(!h||!h.classList.contains('tuthint'))return;inp.addEventListener('input',function(){var v=inp.value;h.textContent=!v?'8 文字以上で入力する':v.length<8?'あと '+(8-v.length)+' 文字':!/\d/.test(v)?'数字を 1 つ含めると強くなる':'十分な強さです';});});
   var huds=document.querySelectorAll('.hud'),hudDown=false;
   setInterval(function(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;hudDown=!hudDown;huds.forEach(function(h){if(h.offsetParent)h.scrollTo({top:hudDown?70:0,behavior:'smooth'});});},2200);
-  /* ---------- 共通原則: 前の章の図をポップアップで ---------- */
+  /* ---------- 設計方針: 前の章の図をポップアップで ---------- */
   var pop=document.getElementById('pop'),popb=document.getElementById('popbody'),popt=document.getElementById('poptitle');
-  function openPop(tr,lead){popt.textContent=(lead?'原則 '+tr.cells[0].textContent+'　':'')+tr.cells[1].textContent;popb.innerHTML='';
+  function openPop(tr,lead){popt.textContent=(lead?'方針 '+tr.cells[0].textContent+'　':'')+tr.cells[1].textContent;popb.innerHTML='';
     if(lead){var d=document.createElement('div');d.innerHTML=lead;popb.appendChild(d);}
     tr.dataset.demo.split('|').forEach(function(sel){var src=document.querySelector(sel);if(!src)return;var wrap=document.createElement('div');var par=src.parentElement;wrap.className=(par&&par.classList.contains('gest'))?par.className:'';var c=src.cloneNode(true);c.querySelectorAll('[id]').forEach(function(e){e.removeAttribute('id');});c.removeAttribute('id');wrap.appendChild(c);popb.appendChild(wrap);});
     pop.showModal();}
   if(pop){document.querySelectorAll('#prin tr[data-demo]').forEach(function(tr){tr.addEventListener('click',function(){openPop(tr);});tr.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openPop(tr);}});});
     document.getElementById('popclose').addEventListener('click',function(){pop.close();});
-    /* 本文中の「原則 n」から共通原則の行をクイックビューする */
+    /* 本文中の「方針 n」から設計方針の行をクイックビューする */
     document.querySelectorAll('a[data-prin]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var tr=[].slice.call(document.querySelectorAll('#prin tr[data-demo]')).find(function(r){return r.cells[0].textContent===a.dataset.prin;});if(!tr)return;
-      openPop(tr,'<p class="lead" style="margin:0">'+tr.cells[2].textContent+'</p><p class="note">出典: '+tr.cells[3].textContent+'　<a href="#principles">共通原則の章へ</a></p>');});});
+      openPop(tr,'<p class="lead" style="margin:0">'+tr.cells[2].textContent+'</p><p class="note">出典: '+tr.cells[3].textContent+'　<a href="#principles">設計方針の章へ</a></p>');});});
     pop.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(a)pop.close();});
     pop.addEventListener('click',function(e){if(e.target===pop)pop.close();var c=e.target.closest('.card');if(c&&!e.target.closest('input,button,label,a,[data-tip]')&&!c.classList.contains('static'))c.classList.toggle('on');});}
   /* ---------- ツールの画面を拡大する ---------- */
