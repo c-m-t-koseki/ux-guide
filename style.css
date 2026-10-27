@@ -30,6 +30,8 @@ h4{font-size:1rem;margin-top:calc(var(--u)*3)}
 p{max-width:40em;margin:calc(var(--u)*2) 0 0}
 .lead{font-size:1.15rem;line-height:1.7;max-width:34em}
 .concl{font-weight:700;border-left:3px solid var(--main);padding-left:12px}
+/* 章の中の要素へ飛んだとき、上に固定したナビに隠れないようにする */
+.slide [id]{scroll-margin-top:80px}
 .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;align-items:baseline;gap:16px}.eyebrow .chno{font-size:2.6rem;line-height:1;letter-spacing:-.04em;color:var(--line);font-weight:500}
 .note,.cap,small{color:var(--muted);font-size:.85rem}
 .cap{margin-top:var(--u);max-width:none}

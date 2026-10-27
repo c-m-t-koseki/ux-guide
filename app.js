@@ -72,12 +72,15 @@
   },{passive:false});
   window.addEventListener('scroll',function(){if(lockUntil&&Date.now()<lockUntil&&Math.abs(window.scrollY-lockY)>1)window.scrollTo(0,lockY);},{passive:true});
 
-  function idxOfHash(){var h=location.hash.replace('#','');return slides.findIndex(function(s){return s.id===h;});}
+  /* 章の中の要素を指すリンク（#marchionini など）は、その章を開いてから要素まで送る */
+  function hashEl(){var el=document.getElementById(location.hash.replace('#',''));return el&&!el.classList.contains('slide')?el:null;}
+  function idxOfHash(){var h=location.hash.replace('#',''),k=slides.findIndex(function(s){return s.id===h;}),el=hashEl();return k<0&&el?slides.indexOf(el.closest('.slide')):k;}
   var st=history.state,idx=idxOfHash();
   go(idx>=0?idx:0,'init',st&&st.s===idx&&typeof st.y==='number'?st.y:0);
+  if(hashEl())hashEl().scrollIntoView();
   window.addEventListener('popstate',function(e){var s=e.state;
     if(s&&typeof s.s==='number'){go(s.s,'pop',s.y||0);return;}
-    var k=idxOfHash();if(k>=0)go(k,'hash',0);});
+    var k=idxOfHash(),el=hashEl();if(k>=0)go(k,'hash',0);if(el)el.scrollIntoView();});
 
   /* ---------- pendulum space ---------- */
   var tracks=[
