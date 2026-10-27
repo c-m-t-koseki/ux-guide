@@ -32,6 +32,7 @@ p{max-width:40em;margin:calc(var(--u)*2) 0 0}
 .concl{font-weight:700;border-left:3px solid var(--main);padding-left:12px}
 /* 章の中の要素へ飛んだとき、上に固定したナビに隠れないようにする */
 .slide [id]{scroll-margin-top:80px}
+.shot img,.shot video{display:block;width:100%;height:auto}
 .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;align-items:baseline;gap:16px}.eyebrow .chno{font-size:2.6rem;line-height:1;letter-spacing:-.04em;color:var(--line);font-weight:500}
 .note,.cap,small{color:var(--muted);font-size:.85rem}
 .cap{margin-top:var(--u);max-width:none}
@@ -456,6 +457,8 @@ table.pick tr.sep{cursor:default}table.pick tr.sep td{background:none;font-size:
 #prin tr[data-demo]{cursor:pointer}
 #pop{border:0;padding:0;background:var(--bg);color:var(--fg);max-width:min(880px,92vw);width:100%;box-shadow:0 8px 40px rgba(0,0,0,.35)}
 #pop::backdrop{background:rgba(0,0,0,.45)}
+#pop.wide{max-width:96vw}#pop.wide #popbody{grid-template-columns:1fr}#pop.wide img,#pop.wide video{display:block;width:100%;height:auto}
+.shot>*{cursor:zoom-in}
 .pophead{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:var(--main);color:var(--on-fill)}.pophead .btn{background:var(--bg);color:var(--fg)}
 #popbody{padding:24px;display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}#popbody>*{min-width:0}
 #prin td:first-child{white-space:nowrap}

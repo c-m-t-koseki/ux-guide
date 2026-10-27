@@ -81,6 +81,10 @@
   window.addEventListener('popstate',function(e){var s=e.state;
     if(s&&typeof s.s==='number'){go(s.s,'pop',s.y||0);return;}
     var k=idxOfHash(),el=hashEl();if(k>=0)go(k,'hash',0);if(el)el.scrollIntoView();});
+  /* 別の章の中の要素へのリンクは、ブラウザに任せると章が切り替わらないことがあるので、ここで章を開いてから送る */
+  document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a||a.hasAttribute('data-prin'))return;
+    var el=document.getElementById(a.getAttribute('href').slice(1)),s=el&&el.closest('.slide');if(!s||el===s)return;
+    e.preventDefault();go(slides.indexOf(s),null,0);el.scrollIntoView();});
 
   /* ---------- pendulum space ---------- */
   var tracks=[
@@ -304,6 +308,11 @@
       openPop(tr,'<p class="lead" style="margin:0">'+tr.cells[2].textContent+'</p><p class="note">出典: '+tr.cells[3].textContent+'　<a href="#principles">共通原則の章へ</a></p>');});});
     pop.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(a)pop.close();});
     pop.addEventListener('click',function(e){if(e.target===pop)pop.close();var c=e.target.closest('.card');if(c&&!e.target.closest('input,button,label,a,[data-tip]')&&!c.classList.contains('static'))c.classList.toggle('on');});}
+  /* ---------- ツールの画面を拡大する ---------- */
+  if(pop){document.querySelectorAll('.shot').forEach(function(f){var m=f.firstElementChild;m.tabIndex=0;m.setAttribute('role','button');
+      function open(){popt.textContent=f.parentElement.querySelector('h4').textContent;popb.innerHTML='';popb.appendChild(m.cloneNode(true));pop.classList.add('wide');pop.showModal();}
+      m.addEventListener('click',open);m.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});});
+    pop.addEventListener('close',function(){pop.classList.remove('wide');});}
   /* ---------- フールプルーフ: 戻っても消さない ---------- */
   document.querySelectorAll('.keep .pane').forEach(function(pn){var f=pn.querySelector('.f'),r=pn.querySelector('.res'),inp=pn.querySelector('input');
     pn.querySelector('.go').addEventListener('click',function(){f.hidden=true;r.hidden=false;});
