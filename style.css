@@ -438,9 +438,6 @@ table.pick tr.sep{cursor:default}table.pick tr.sep td{background:none;font-size:
 .mantra .hist{display:flex;align-items:flex-end;gap:3px;height:50px}.mantra .hist i{flex:1;background:var(--main)}
 .mantra .fac{display:flex;justify-content:space-between;padding:2px 4px}.mantra .fac.on{background:var(--main-soft)}.mantra .fac span{font-family:var(--mono);color:var(--muted)}
 .mantra .pg{height:56px;background:repeating-linear-gradient(var(--line) 0 1px,transparent 1px 6px);position:relative}.mantra .pg i{position:absolute;left:30%;top:30%;width:40%;height:25%;border:2px solid var(--accent)}
-.spectrum{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:8px;font-size:.8rem}
-.spectrum .seg{padding:8px 10px;min-width:0;background:var(--main-soft);line-height:1.5}.spectrum .seg:nth-child(2){background:color-mix(in srgb,var(--main) 35%,var(--panel))}.spectrum .seg:nth-child(3){background:var(--main);color:var(--on-fill)}
-.spectrum b{display:block;font-family:var(--mono)}.spectrum span{font-size:.72rem;opacity:.85}
 .fz{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px;font-family:var(--mono);font-size:.8rem;background:var(--panel);padding:10px}
 .fz>*{min-width:0}.fz{position:relative}.fz .fzl,.fz .fzin{position:relative}
 .fz .mk{position:absolute;right:-6px;top:-6px;width:18px;height:18px;border-radius:50%;background:var(--accent);color:var(--on-fill);font:700 .68rem/18px var(--sans);text-align:center;z-index:1}.fz .mk2{right:-6px;top:auto;bottom:6px}.fz .mk3{right:4px;top:4px}
@@ -450,7 +447,7 @@ table.pick tr.sep{cursor:default}table.pick tr.sep td{background:none;font-size:
 .fzin .cnt{color:var(--muted)}
 #fzlist{list-style:none;margin:0;padding:0;max-height:260px;overflow:auto}#fzlist li{padding:2px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}#fzlist li.sel{background:var(--main-soft);box-shadow:inset 3px 0 0 var(--accent)}#fzlist b{color:var(--accent);font-weight:700}
 .fzp{background:var(--bg);padding:8px 10px;font-family:var(--sans);line-height:1.6;min-height:100px}.fzp b{display:block;font-weight:700;margin-bottom:4px}.fzp .m{color:var(--muted);font-size:.72rem;font-family:var(--mono)}
-@media (max-width:640px){.fz{grid-template-columns:1fr}.mantra,.spectrum{grid-template-columns:1fr}}
+@media (max-width:640px){.fz{grid-template-columns:1fr}.mantra{grid-template-columns:1fr}}
 
 /* ---------- 共通原則のポップアップ ---------- */
 #prin tr[data-demo]{cursor:pointer}
