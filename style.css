@@ -709,3 +709,6 @@ table.claims svg{display:block;width:100%;max-width:220px;height:auto}
 .where{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-left:6px;white-space:nowrap}
 @media (max-width:640px){table.claims td:last-child{width:auto;min-width:0}table.claims td:first-child{width:auto}}
 @media (prefers-reduced-motion:reduce){.waitdemo .spin::before,.skr .spinonly{animation:none}}
+/* 用語の説明。app.js が各章の初出に付ける */
+.term{cursor:help;border-bottom:1px dotted var(--muted)}.term sup{color:var(--muted);font-size:.7em;margin-left:1px}
+.term-tip{position:fixed;z-index:50;pointer-events:none;background:var(--fg);color:var(--bg);padding:4px 8px;font-size:.75rem;font-weight:400;line-height:1.4;width:max-content;max-width:240px;white-space:normal}

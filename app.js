@@ -341,4 +341,15 @@
     frender();}
   /* ---------- 章番号 ---------- */
   slides.forEach(function(sl,i){var eb=sl.querySelector('.eyebrow');if(!eb)return;var n=document.createElement('span');n.className='chno';n.textContent=String(i).padStart(2,'0');eb.appendChild(n);});
+  /* ---------- 用語 ---------- */
+  /* 序に用語表を置かず、各章で最初に出た所にだけ ? を付ける。どの章から読み始めても引けるように */
+  var TERMS={'スコープ':'検索する対象の範囲。新聞か図書か、のような区別','ファセット':'年・種別のように件数付きの分類を並べ、選ぶと結果が絞られる部品','チップ':'適用中の条件などを示す小さな札。× で外せることが多い'};
+  var termRe=new RegExp(Object.keys(TERMS).join('|'),'g');
+  slides.forEach(function(sl){var done={};sl.querySelectorAll('p,li,td').forEach(function(el){if(el.closest('svg,a,button,.chip,.mini,.demo'))return;var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),t,hits=[];while((t=w.nextNode()))if(t.parentNode.closest('p,li,td')===el&&!t.parentNode.closest('a,b,.term'))hits.push(t);hits.forEach(function(t){var m;while(t&&(m=Array.from(t.nodeValue.matchAll(termRe)).find(function(x){return !done[x[0]];}))){done[m[0]]=1;var r=t.splitText(m.index);t=r.splitText(m[0].length);var s=document.createElement('span');s.className='term';s.tabIndex=0;s.dataset.tip=TERMS[m[0]];s.innerHTML=m[0]+'<sup>?</sup>';r.replaceWith(s);}});});});
+  /* 表は横スクロールの枠に入っていて ::after だと切れるので、吹き出しは body 直下に一つだけ置く */
+  var tip=document.createElement('div');tip.className='term-tip';tip.hidden=true;document.body.appendChild(tip);
+  function showTip(e){var t=e.target.closest&&e.target.closest('.term');if(!t)return;tip.textContent=t.dataset.tip;tip.hidden=false;var r=t.getBoundingClientRect();tip.style.left=Math.max(8,Math.min(r.left,innerWidth-tip.offsetWidth-8))+'px';tip.style.top=(r.bottom+tip.offsetHeight+4>innerHeight?r.top-tip.offsetHeight-4:r.bottom+4)+'px';}
+  function hideTip(e){if(e.target.closest&&e.target.closest('.term'))tip.hidden=true;}
+  document.addEventListener('mouseover',showTip);document.addEventListener('focusin',showTip);
+  document.addEventListener('mouseout',hideTip);document.addEventListener('focusout',hideTip);document.addEventListener('scroll',function(){tip.hidden=true;},true);
 })();
