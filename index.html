@@ -792,21 +792,22 @@
 <section class="slide" data-title="情報探索" id="seeking">
   <div class="eyebrow">第3部 探す行為</div>
   <h2>情報探索の理論</h2>
-  <p>膨大な DB を探す行為は、一回のクエリでは終わらない。この章は三つの理論を順に見る。利用者は見つけたものを手がかりにクエリを変え続ける（Bates）。UI はその往復を速くするために全体像・絞り込み・詳細の三段を用意する（Shneiderman）。どこまで往復が要るかは、探索の種類で決まる（Marchionini）。</p>
+  <p>新聞や蔵書のような大きな DB で調べものをするとき、一回のクエリで目当てのものにたどり着けるとは限らない。この章では、人が情報を探すときのふるまいについての理論を三つ見る。一つ目は、人は検索結果を見ながらクエリを変えていく、という Bates の理論である。二つ目は、その繰り返しを楽にする UI の作り方として、まず全体を見せ、次に絞り込ませ、最後に一件を見せる、という Shneiderman の指針である。三つ目は、繰り返しがどれだけ必要かは何を探しているかで違う、という Marchionini の分類である。</p>
 
   <h3>ベリーピッキング（Bates, 1989）</h3>
-  <p>情報検索の古いモデルは、一つの要求を一つのクエリにして、一度で答えの集合を返すと考えた。Bates は、実際の利用者は茂みの実を摘むように、拾った一件から次の語を得てクエリを変え、その途中で目的そのものも変わると論じた。検索 UI はクエリの精度より、往復の一歩を軽くすることを求められる。</p>
+  <p>ベリーピッキングは、人々が情報を探すときの行動を説明するモデルのひとつである。名前は、茂みの木の実（ベリー）を一粒ずつ摘みながら歩き回る様子にたとえたものである。</p>
+  <p>それ以前の情報検索のモデルは、知りたいことを一つのクエリにまとめて一度検索すれば、答えがまとめて返ってくると考えていた。Bates は、実際の探し方はそうではないと論じた。人は検索結果から役に立つものを一件拾い、そこで知った言葉を使って次のクエリを出す。これを繰り返すうちに、知りたいことそのものも変わっていく。そのため検索 UI には、一回で正確なクエリを入力させることより、クエリを出して結果を見て出し直す、という一回ごとの手間を小さくすることが求められる。</p>
   <div class="fig"><svg viewBox="0 0 400 200" class="dia berry" role="img" aria-label="ベリーピッキングの図">
       <path d="M20 170 C 60 120, 80 150, 120 100 S 200 60, 240 90 S 320 40, 340 30" fill="none" stroke="var(--main)" stroke-width="2" marker-end="url(#ah-f)"/>
       <g fill="var(--accent)"><circle cx="70" cy="128" r="6"/><circle cx="150" cy="84" r="6"/><circle cx="215" cy="78" r="6"/><circle cx="290" cy="58" r="6"/></g>
       <text x="20" y="190" class="mu">「関東大震災」</text><text x="95" y="150" class="mu">→「復興院」</text><text x="170" y="112" class="mu">→「後藤新平 復興」</text><text x="228" y="130" class="mu">→「帝都復興計画 1924」</text>
       <text x="330" y="22" class="mu" text-anchor="end">目的が定まる</text>
-    </svg></div><p class="cap">一回のクエリでは終わらない。拾ったもの（橙の点）を手がかりにクエリを変え続ける。</p>
+    </svg></div><p class="cap">一回のクエリでは終わらない。見つけたもの（橙の点）を手がかりに、クエリを変えながら進む。</p>
 
   <h3>全体像 → 絞り込み → 詳細（Shneiderman, 1996）</h3>
-  <p>Shneiderman は「The Eyes Have It」で、視覚化 UI の設計を一行に圧縮した。「まず全体像、次に拡大と絞り込み、そして求めに応じて詳細」（Overview first, zoom and filter, then details-on-demand）。</p>
+  <p>Shneiderman は論文「The Eyes Have It」で、大量のデータを表示する UI の設計の指針を一文にまとめた。「まず全体像、次に拡大と絞り込み、そして求めに応じて詳細」（Overview first, zoom and filter, then details-on-demand）である。この一文は「情報探索のマントラ」と呼ばれる。</p>
   <div class="mantra"><div class="pane"><div class="ttl">Overview</div><div class="hist"><i style="height:20%"></i><i style="height:60%"></i><i style="height:90%"></i><i style="height:35%"></i><i style="height:15%"></i><i style="height:10%"></i></div><div class="mu">年代別の件数</div></div><div class="pane"><div class="ttl">Zoom & filter</div><div class="fac">1923 <span>842</span></div><div class="fac on">朝刊 <span>1,020</span></div><div class="fac">1面 <span>96</span></div></div><div class="pane"><div class="ttl">Details</div><div class="pg"><i></i></div></div></div><p class="cap">まず分布を見せ、絞り、最後に一件を開く。</p>
-  <p>同じ論文で利用者の 7 つの作業と、データの 7 つの型を挙げている。作業は全体像・拡大・絞り込み・詳細・関係付け・履歴・取り出しで、型は一次元・二次元・三次元・時間・多次元・木・ネットワークである。新聞と蔵書の検索は、時間（日付・刊行年）と多次元（種別・地域・著者）の型に当たる。</p>
+  <p>同じ論文では、利用者がデータに対して行う 7 つの作業と、データの 7 つの種類も挙げている。作業は全体像・拡大・絞り込み・詳細・関係付け・履歴・取り出しで、データの種類は一次元・二次元・三次元・時間・多次元・木・ネットワークである。新聞と蔵書の検索で扱うデータは、このうち時間（日付・刊行年）と多次元（種別・地域・著者など、いくつもの項目をもつもの）に当たる。</p>
   <div class="tbl"><table>
     <tr><th>作業</th><th>意味</th><th>検索 UI での形</th></tr>
     <tr><td>全体像</td><td>集合全体の様子をつかむ</td><td>年代別・種別別の件数分布を結果の上に出す</td></tr>
@@ -817,16 +818,17 @@
     <tr><td>履歴</td><td>取り消し・やり直し・再現</td><td>検索の履歴と、条件の URL 化</td></tr>
     <tr><td>取り出し</td><td>部分集合や条件を持ち出す</td><td>書誌の書き出し、検索条件の保存</td></tr>
   </table></div>
-  <p>八つの黄金律（1986）と同じ著者で、マントラは黄金律の「利用者が主導する」「短期記憶の負荷を減らす」を、大きな集合を扱う画面に当てはめたものと読める。往復の一歩一歩で何を拾うかは、一覧の文言で決まる。Pirolli と Card はこれを「情報の匂い」と呼び、利用者は見出しやスニペットの匂いをたどって次の一件を選ぶとした。</p>
+  <p>Shneiderman は、使いやすい UI の原則をまとめた「八つの黄金律」（1986）の著者でもある。マントラは、黄金律のうち「利用者が主導する」「短期記憶の負荷を減らす」を、大量のデータを扱う UI に当てはめたものと読める。</p>
+  <p>検索と結果の確認を繰り返すなかで、利用者が次にどの一件を開くかは、一覧に出る見出しや文言で決まる。Pirolli と Card はこの手がかりを「情報の匂い」と呼んだ。動物が匂いをたどって餌を探すように、利用者は見出しや抜粋（スニペット）の匂いをたどって次の一件を選ぶ、という考え方である。</p>
 
   <h3>探索の種類（Marchionini, 2006）</h3>
   <div class="spectrum"><div class="seg"><b>探す（lookup）</b>既知の項目を取りに行く<br><span>「この本はどこにあるか」</span></div><div class="seg"><b>学ぶ（learn）</b>分野を理解する<br><span>「震災はどう報じられたか」</span></div><div class="seg"><b>調べる（investigate）</b>比較・分析する<br><span>「新聞社ごとの論調の差は」</span></div></div>
-  <p>蔵書検索の「この本はどこにあるか」は「探す」で、新聞検索の「この事件はどう報じられたか」は「学ぶ」か「調べる」である。「探す」は一回のクエリで済むことが多いが、後の二つは Bates の往復そのもので、全体像とファセットが要る。新聞・蔵書・図書の利用者は、探しながら何を探しているかが定まってくる後者の場合が多い。</p>
+  <p>Marchionini は、検索を目的によって三種類に分けた。蔵書検索で「この本はどこにあるか」を調べるのは「探す」に当たり、新聞検索で「この事件はどう報じられたか」を調べるのは「学ぶ」か「調べる」に当たる。「探す」は一回のクエリで済むことが多い。残りの二つでは、Bates が述べたクエリの出し直しの繰り返しが起こるので、全体像を見せる表示や、条件で結果を絞り込むファセットが必要になる。新聞・蔵書・図書の利用者には、探しているうちに何を探したいのかがはっきりしてくる、後者の場合が多い。</p>
 
   <h3>原典</h3>
   <div class="tbl"><table>
     <tr><th>原典</th><th>著者・年</th><th>要点</th></tr>
-    <tr><td><a href="https://eric.ed.gov/?id=EJ404172">The Design of Browsing and Berrypicking Techniques for the Online Search Interface</a></td><td>Bates, 1989</td><td>探索は拾ったものでクエリと目的を変え続ける往復である</td></tr>
+    <tr><td><a href="https://eric.ed.gov/?id=EJ404172">The Design of Browsing and Berrypicking Techniques for the Online Search Interface</a></td><td>Bates, 1989</td><td>人は見つけたものを手がかりに、クエリと目的を変えながら探し続ける</td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Ben_Shneiderman">The Eyes Have It</a></td><td>Shneiderman, 1996</td><td>まず全体像、次に拡大と絞り込み、そして求めに応じて詳細</td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Information_foraging">Information Foraging</a></td><td>Pirolli & Card, 1990 年代</td><td>利用者は「情報の匂い」をたどる。リンク文言やスニペットが匂い</td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Exploratory_search">Exploratory Search: From Finding to Understanding</a></td><td>Marchionini, 2006</td><td>探す・学ぶ・調べる。後の二つが探索的検索</td></tr>
