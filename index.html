@@ -455,6 +455,56 @@
 
 </section>
 
+<!-- ============ form ============ -->
+<section class="slide" data-title="形と配置" id="form">
+  <div class="eyebrow">第1部 見た目の規範</div>
+  <h2>形と配置 ― 角丸と、並べる向き</h2>
+  <p>角をどれだけ丸めるか、部品を左右と上下のどちらに並べるかは、画面を作るたびに決めなければならない。どちらも研究の裏付けは薄く、多くは慣習で決まる。この章では、出典のある理由とない理由を分けて示し、本資料の判断を述べる。</p>
+  <h3>角丸 ― なぜ控えめにするか</h3>
+  <p>Apple と Material は操作部品を丸め、スイスデザインの五つの主張は角丸に触れない。本資料は面を角のままにし、押せる部品だけを慣習に合わせて丸める（原則 <a href="#principles" data-prin="2">2</a> と <a href="#principles" data-prin="8">8</a>）。理由のうち、出典のあるものとないものを分けて示す。</p>
+  <div class="fig rad">
+    <div><div class="box r24"><i class="g"></i><div class="in r12 tx"><b>関東大震災 1923</b>朝刊 1 面　842 件<br>夕刊 1 面　229 件</div></div><p class="cap"><b>良い例</b> 同心の入れ子（外 24 / 内 12）。隙間は一定。ただし文字の開始位置は角から離す必要が残る</p></div>
+    <div><div class="box r24"><i class="g"></i><div class="in r24 tx"><b>関東大震災 1923</b>朝刊 1 面　842 件<br>夕刊 1 面　229 件</div></div><p class="cap"><b>悪い例</b> 同じ半径の入れ子（外 24 / 内 24）。角だけ隙間が太り、文字が曲線に食い込む。揃え線（点線）が角で宙に浮く</p></div>
+    <div><div class="box sq"><i class="g"></i><span class="chip">チップ</span><i class="ava"></i><div class="in tx"><b>関東大震災 1923</b>朝刊 1 面　842 件<br>夕刊 1 面　229 件</div></div><p class="cap"><b>良い例</b> 面は角のまま。揃え線が辺の端まで通り、丸いのはチップとアバターだけ</p></div>
+    <div><div class="box r24"><span class="chip r24">チップ</span><div class="in r24 t">本文</div></div><p class="cap"><b>悪い例</b> 面も文字の箱も丸い。押せるものが形で分からない</p></div>
+  </div>
+  <h4>出典のある理由</h4>
+  <ul>
+    <li><b>入れ子は同心にしないと崩れる。</b>内側の半径は「外側の半径 − 余白」にする。Apple は 2025 年の設計でこれを同心の形として定め、内側の半径をシステムが自動で計算できるようにしている。そろえないと、角だけ隙間が太り、文字が曲線に食い込む（上の図）。</li>
+    <li><b>密度の高い画面では限る。</b>Apple 自身が、カプセル形は指で触る画面に向くが、密度の高いデスクトップでは目立たせたい操作に限るとしている。Mac の小さな部品には、角を少しだけ丸めた長方形を使う。</li>
+    <li><b>大きな面を大きく丸めると間延びする。</b>macOS Tahoe（2025）の窓の大きな角丸には、Gruber らの評論で「Fisher-Price 風」「滑稽なほど大きい」と批判が集まった。同心の角丸は小さな機器には合っても、大きな長方形の画面には合わないという指摘もある。いずれも評論で、擁護する声もある。</li>
+    <li><b>流行として使われすぎる。</b>2005 年には、角丸と階調が Web 2.0 の流行の定番（the new black）と書かれ、使われすぎて「visual static」、つまり目に付くだけで意味を持たない、雑音のような飾りになったとも評されていた。</li>
+  </ul>
+  <h4>丸めるほうに働く研究</h4>
+  <p>曲線のほうが好まれるという実験はある（Bar と Neta、2006。Bertamini ら、2016）。ただし物体や図形の好みの実験で、画面の角を丸めると読みやすさや操作の速さが上がるという結果ではない。</p>
+  <h4>本資料の判断</h4>
+  <ul>
+    <li>角丸は辺の端を削るので、グリッドの線と文字の開始位置がずれ、その分の余白が要る。</li>
+    <li>押せるもの（ボタン、チップ）は丸く、押せないもの（パネル、表、本文）は角のままにして、形で役割を分ける。</li>
+    <li>半径は 1〜3 段階に限り、入れ子は同心にし、本文を載せる面は角を立てる。</li>
+  </ul>
+  <p class="note">同心の形と、密度の高い画面での限定は <a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a>で、計算は <a href="https://cloudfour.com/thinks/the-math-behind-nesting-rounded-corners/">Cloud Four「The math behind nesting rounded corners」</a>で、macOS Tahoe への批判は <a href="https://daringfireball.net/2025/11/software_update_tahoe_confusing">Daring Fireball（2025-11-10）</a>、<a href="https://mjtsai.com/blog/2025/10/16/tahoe-window-corners/">Michael Tsai「Tahoe Window Corners」</a>、<a href="https://kirby.pika.page/posts/a-time-and-a-place-for-concentricity">Keren「A Time and a Place for Concentricity」</a>で、2005 年の評は <a href="https://snarkmarket.com/blog/snarkives/technosnark/the_web_20_design_aesthetic/">Snarkmarket「The "Web 2.0" Design Aesthetic」</a>で、曲線の好みは <a href="https://moshebar.org/_files/ugd/a77db7_5598c791a95a4436960eb2fe671ca1e5.pdf">Bar &amp; Neta（Psychological Science 17(8), 2006）</a>の要旨と、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4975689">Bertamini ら（British Journal of Psychology 107(1), 2016）</a>の要旨で確認した。</p>
+
+  <h3>詳細画面の配置 ― 主に見るものを左、補助を右</h3>
+  <p>適用の章の「5 詳細」では、比べさせたいものを横に並べて軸をそろえ（<a href="#principles" data-prin="4">原則 4</a>）、紙面の拡大画像を左、紙面全体のミニマップを右に置き、文脈帯は紙面と同じ縦の列にすると決めた。ここではその理由と限界を示す。</p>
+  <h4>理由</h4>
+  <ul>
+    <li>見て探す課題では、一度に情報を取れる範囲が縦より横に広く、横方向に走査するほうが速いと報告されている。差は目の跳躍（サッケード）の側から来る（<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2712349/">Najemnik と Geisler の系統の視覚探索研究</a>）。</li>
+    <li>視野の水平方向（水平子午線）は、垂直方向より見え方の成績が良いと、多くの課題で繰り返し報告されている（<a href="https://link.springer.com/article/10.1007/s00221-025-07152-2">2025 年の研究</a>、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9012886">総説</a>）。</li>
+    <li>縦方向のサッケードは横より遅いという報告もあるが、振幅をそろえた比較は確認できなかった。</li>
+    <li>Cleveland と McGill（1984）は、共通の軸の上で位置を比べるのが最も正確で、比べるものが離れるほど精度が落ちると示した（<a href="https://vis.arc.vt.edu/%7Enpolys/projects/safas/science.pdf">論文</a>）。可視化の章の「正確に読める順」と同じ出典である。</li>
+    <li>比べるものを近くに並べ、軸をそろえるほど比較が楽になる。Tufte のスモールマルチプルと、Matlen ら（2020）の<a href="https://groups.psych.northwestern.edu/gentner/papers/MatlenEtAl_2020-SpatialAlign.pdf">空間整合の枠組み</a>がこの考え方である。</li>
+    <li>放射線科で前回と今回の画像を比べるときは、横に並べるのが一般的である（<a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">ハンギングプロトコルの解説</a>）。</li>
+    <li>全体と詳細を別々に見せる画面（overview+detail）の総説（<a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/01/cockburn-ComputingSurveys09.pdf">Cockburn ら、2009</a>）も、全体図（ミニマップ）を左右どちらに置くかは扱っていない。コードエディタのミニマップが右にあるのも慣習である。</li>
+    <li>左から右に読む人は、左から見始め、右側を見落としやすいとされる（<a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">NN/g</a>）。主に見るもの（拡大画像）を左、補助（ミニマップ）を右に置くのは、この点では筋が通る。</li>
+    <li>縦書きの日本語は、横書きより注視の回数が多くなるという報告と、読む速さは変わらないという報告がある（<a href="https://researchmap.jp/kojimiwa/published_papers/3501775">Miwa ら</a>）。</li>
+    <li>紙面に添える文脈帯を紙面と同じ縦の列にしておくのは自然だが、比較の精度を示す研究ではない。</li>
+  </ul>
+  <h4>限界</h4>
+  <p>横並びと縦並びの比較を、人の反応時間で直接確かめた研究は見つからなかった。拡大画像とミニマップの左右、文脈帯の向きは、研究ではなく慣習で決まる問題である。</p>
+  <p class="note">この節の研究は、各論文の要旨と解説で確かめた範囲で、原典は通読していない。</p>
+</section>
+
 <!-- ============ classics ============ -->
 <section class="slide" data-title="設計原則と法則" id="classics">
   <div class="eyebrow">第2部 振る舞いの規範</div>
@@ -1058,30 +1108,7 @@
     <li><b>曖昧一致をどこまで使うか。</b>fzf は全体を曖昧一致にするが、数百万件の DB では無関係な結果が上位を埋める。曖昧一致は入力中の候補に限り、本検索は単語単位の AND にする（原則 <a href="#principles" data-prin="5">5</a> と <a href="#principles" data-prin="12">12</a>）。</li>
     <li><b>動きは飾りか。</b>飾りとしての動き（屈折の揺らぎ、意味のない跳ね）は置かず、変化をつなぐ動きは置く（原則 <a href="#principles" data-prin="2">2</a> と <a href="#principles" data-prin="10">10</a>）。</li>
   </ul>
-  <h3>角丸 ― なぜ控えめにするか</h3>
-  <p>Apple と Material は操作部品を丸め、スイスデザインの五つの主張は角丸に触れない。本資料は面を角のままにし、押せる部品だけを慣習に合わせて丸める（原則 <a href="#principles" data-prin="2">2</a> と <a href="#principles" data-prin="8">8</a>）。理由のうち、出典のあるものとないものを分けて示す。</p>
-  <div class="fig rad">
-    <div><div class="box r24"><i class="g"></i><div class="in r12 tx"><b>関東大震災 1923</b>朝刊 1 面　842 件<br>夕刊 1 面　229 件</div></div><p class="cap"><b>良い例</b> 同心の入れ子（外 24 / 内 12）。隙間は一定。ただし文字の開始位置は角から離す必要が残る</p></div>
-    <div><div class="box r24"><i class="g"></i><div class="in r24 tx"><b>関東大震災 1923</b>朝刊 1 面　842 件<br>夕刊 1 面　229 件</div></div><p class="cap"><b>悪い例</b> 同じ半径の入れ子（外 24 / 内 24）。角だけ隙間が太り、文字が曲線に食い込む。揃え線（点線）が角で宙に浮く</p></div>
-    <div><div class="box sq"><i class="g"></i><span class="chip">チップ</span><i class="ava"></i><div class="in tx"><b>関東大震災 1923</b>朝刊 1 面　842 件<br>夕刊 1 面　229 件</div></div><p class="cap"><b>良い例</b> 面は角のまま。揃え線が辺の端まで通り、丸いのはチップとアバターだけ</p></div>
-    <div><div class="box r24"><span class="chip r24">チップ</span><div class="in r24 t">本文</div></div><p class="cap"><b>悪い例</b> 面も文字の箱も丸い。押せるものが形で分からない</p></div>
-  </div>
-  <h4>出典のある理由</h4>
-  <ul>
-    <li><b>入れ子は同心にしないと崩れる。</b>内側の半径は「外側の半径 − 余白」にする。Apple は 2025 年の設計でこれを同心の形として定め、内側の半径をシステムが自動で計算できるようにしている。そろえないと、角だけ隙間が太り、文字が曲線に食い込む（上の図）。</li>
-    <li><b>密度の高い画面では限る。</b>Apple 自身が、カプセル形は指で触る画面に向くが、密度の高いデスクトップでは目立たせたい操作に限るとしている。Mac の小さな部品には、角を少しだけ丸めた長方形を使う。</li>
-    <li><b>大きな面を大きく丸めると間延びする。</b>macOS Tahoe（2025）の窓の大きな角丸には、Gruber らの評論で「Fisher-Price 風」「滑稽なほど大きい」と批判が集まった。同心の角丸は小さな機器には合っても、大きな長方形の画面には合わないという指摘もある。いずれも評論で、擁護する声もある。</li>
-    <li><b>流行として使われすぎる。</b>2005 年には、角丸と階調が Web 2.0 の流行の定番（the new black）と書かれ、使われすぎて「visual static」、つまり目に付くだけで意味を持たない、雑音のような飾りになったとも評されていた。</li>
-  </ul>
-  <h4>丸めるほうに働く研究</h4>
-  <p>曲線のほうが好まれるという実験はある（Bar と Neta、2006。Bertamini ら、2016）。ただし物体や図形の好みの実験で、画面の角を丸めると読みやすさや操作の速さが上がるという結果ではない。</p>
-  <h4>本資料の判断</h4>
-  <ul>
-    <li>角丸は辺の端を削るので、グリッドの線と文字の開始位置がずれ、その分の余白が要る。</li>
-    <li>押せるもの（ボタン、チップ）は丸く、押せないもの（パネル、表、本文）は角のままにして、形で役割を分ける。</li>
-    <li>半径は 1〜3 段階に限り、入れ子は同心にし、本文を載せる面は角を立てる。</li>
-  </ul>
-  <p class="note">同心の形と、密度の高い画面での限定は <a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a>で、計算は <a href="https://cloudfour.com/thinks/the-math-behind-nesting-rounded-corners/">Cloud Four「The math behind nesting rounded corners」</a>で、macOS Tahoe への批判は <a href="https://daringfireball.net/2025/11/software_update_tahoe_confusing">Daring Fireball（2025-11-10）</a>、<a href="https://mjtsai.com/blog/2025/10/16/tahoe-window-corners/">Michael Tsai「Tahoe Window Corners」</a>、<a href="https://kirby.pika.page/posts/a-time-and-a-place-for-concentricity">Keren「A Time and a Place for Concentricity」</a>で、2005 年の評は <a href="https://snarkmarket.com/blog/snarkives/technosnark/the_web_20_design_aesthetic/">Snarkmarket「The "Web 2.0" Design Aesthetic」</a>で、曲線の好みは <a href="https://moshebar.org/_files/ugd/a77db7_5598c791a95a4436960eb2fe671ca1e5.pdf">Bar &amp; Neta（Psychological Science 17(8), 2006）</a>の要旨と、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4975689">Bertamini ら（British Journal of Psychology 107(1), 2016）</a>の要旨で確認した。</p>
+  <p>角丸の扱いは、<a href="#form">形と配置</a>の章で述べた。</p>
 </section>
 
 <!-- ============ apply ============ -->
@@ -1098,25 +1125,7 @@
       <h4>6 持ち出しと保存</h4><ul><li>書誌の書き出しと検索条件の保存（12。Shneiderman の「取り出し」）</li><li>エクスポートは件数を先に見せ、上限超過時だけ確認（11）</li><li>保存した検索の削除は即時実行して数秒の「元に戻す」（11）</li></ul>
       <h4>7 0件と失敗（どの段でも）</h4><ul><li>0件画面に検索欄を残し、緩めた結果と「もしかして」を自動で（7。東京都 5、NN/g 9）</li><li>タイポは「もしかして」で提案し、勝手に置換しない（11）</li><li>司書への相談導線を全ページに（7。東京都 5）</li><li>全文検索の索引が落ちても見出し検索の結果は出し、部分結果であることを示す（11。フェイルセーフ）</li></ul></div>
   </div>
-
-  <h3>詳細画面の配置 ― 主に見るものを左、補助を右</h3>
-  <p>上の「5 詳細」では、比べさせたいものを横に並べて軸をそろえ（<a href="#principles" data-prin="4">原則 4</a>）、紙面の拡大画像を左、紙面全体のミニマップを右に置き、文脈帯は紙面と同じ縦の列にすると決めた。ここではその理由と限界を示す。</p>
-  <h4>理由</h4>
-  <ul>
-    <li>見て探す課題では、一度に情報を取れる範囲が縦より横に広く、横方向に走査するほうが速いと報告されている。差は目の跳躍（サッケード）の側から来る（<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2712349/">Najemnik と Geisler の系統の視覚探索研究</a>）。</li>
-    <li>視野の水平方向（水平子午線）は、垂直方向より見え方の成績が良いと、多くの課題で繰り返し報告されている（<a href="https://link.springer.com/article/10.1007/s00221-025-07152-2">2025 年の研究</a>、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9012886">総説</a>）。</li>
-    <li>縦方向のサッケードは横より遅いという報告もあるが、振幅をそろえた比較は確認できなかった。</li>
-    <li>Cleveland と McGill（1984）は、共通の軸の上で位置を比べるのが最も正確で、比べるものが離れるほど精度が落ちると示した（<a href="https://vis.arc.vt.edu/%7Enpolys/projects/safas/science.pdf">論文</a>）。可視化の章の「正確に読める順」と同じ出典である。</li>
-    <li>比べるものを近くに並べ、軸をそろえるほど比較が楽になる。Tufte のスモールマルチプルと、Matlen ら（2020）の<a href="https://groups.psych.northwestern.edu/gentner/papers/MatlenEtAl_2020-SpatialAlign.pdf">空間整合の枠組み</a>がこの考え方である。</li>
-    <li>放射線科で前回と今回の画像を比べるときは、横に並べるのが一般的である（<a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">ハンギングプロトコルの解説</a>）。</li>
-    <li>全体と詳細を別々に見せる画面（overview+detail）の総説（<a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/01/cockburn-ComputingSurveys09.pdf">Cockburn ら、2009</a>）も、全体図（ミニマップ）を左右どちらに置くかは扱っていない。コードエディタのミニマップが右にあるのも慣習である。</li>
-    <li>左から右に読む人は、左から見始め、右側を見落としやすいとされる（<a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">NN/g</a>）。主に見るもの（拡大画像）を左、補助（ミニマップ）を右に置くのは、この点では筋が通る。</li>
-    <li>縦書きの日本語は、横書きより注視の回数が多くなるという報告と、読む速さは変わらないという報告がある（<a href="https://researchmap.jp/kojimiwa/published_papers/3501775">Miwa ら</a>）。</li>
-    <li>紙面に添える文脈帯を紙面と同じ縦の列にしておくのは自然だが、比較の精度を示す研究ではない。</li>
-  </ul>
-  <h4>限界</h4>
-  <p>横並びと縦並びの比較を、人の反応時間で直接確かめた研究は見つからなかった。拡大画像とミニマップの左右、文脈帯の向きは、研究ではなく慣習で決まる問題である。</p>
-  <p class="note">この節の研究は、各論文の要旨と解説で確かめた範囲で、原典は通読していない。</p>
+  <p>「5 詳細」の配置の理由と限界は、<a href="#form">形と配置</a>の章で述べた。</p>
 </section>
 
 <!-- ============ refs ============ -->
@@ -1137,7 +1146,7 @@
     <tr><th>資料</th><th>著者・発行</th><th>使った章</th><th>確認</th></tr>
     <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/">Human Interface Guidelines</a></td><td>Apple</td><td><a href="#intro">はじめに</a>、<a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
     <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/searching">HIG「Searching」</a></td><td>Apple</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-no">記載なし</span></td></tr>
-    <tr><td><a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a></td><td>Apple、2025</td><td><a href="#glass">Liquid Glass</a>、<a href="#principles">共通原則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25「Get to know the new design system」</a></td><td>Apple、2025</td><td><a href="#glass">Liquid Glass</a>、<a href="#form">形と配置</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://developer.apple.com/documentation/technologyoverviews/liquid-glass">Liquid Glass</a></td><td>Apple Developer</td><td><a href="#glass">Liquid Glass</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/">Apple introduces a delightful and elegant new software design</a></td><td>Apple Newsroom、2025</td><td><a href="#glass">Liquid Glass</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/materials">HIG「Materials」</a></td><td>Apple</td><td><a href="#glass">Liquid Glass</a></td><td><span class="lv lv-src">原典</span></td></tr>
@@ -1173,16 +1182,16 @@
     <tr><td><a href="https://link.springer.com/rwe/10.1007/978-3-319-55065-7_1588">Feature Integration Theory の解説</a></td><td>Treisman の理論</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Chartjunk">Chartjunk</a></td><td>Tufte、1983</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://en.wikipedia.org/wiki/Small_multiple">Small multiple</a></td><td>Tufte、1990</td><td><a href="#charts">可視化</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2712349/">視覚探索とサッケードの研究</a></td><td>Najemnik と Geisler の系統</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://link.springer.com/article/10.1007/s00221-025-07152-2">視野の水平・垂直の差の研究</a></td><td>Experimental Brain Research、2025</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9012886">視野の非対称性の総説</a></td><td>PMC</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://vis.arc.vt.edu/%7Enpolys/projects/safas/science.pdf">Graphical Perception（論文）</a></td><td>Cleveland と McGill、1984</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://groups.psych.northwestern.edu/gentner/papers/MatlenEtAl_2020-SpatialAlign.pdf">Spatial alignment</a></td><td>Matlen ら、2020</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/01/cockburn-ComputingSurveys09.pdf">A review of overview+detail, zooming, and focus+context interfaces</a></td><td>Cockburn ら、2009</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">Hanging Protocol Overview</a></td><td>LEADTOOLS</td><td><a href="#apply">適用</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">Text Scanning Patterns: Eyetracking Evidence</a></td><td>Nielsen Norman Group</td><td><a href="#apply">適用</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://researchmap.jp/kojimiwa/published_papers/3501775">縦書きと横書きの読みの研究</a></td><td>Miwa ら</td><td><a href="#apply">適用</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
-    <tr><td><a href="https://moshebar.org/_files/ugd/a77db7_5598c791a95a4436960eb2fe671ca1e5.pdf">Humans prefer curved visual objects</a></td><td>Bar と Neta、2006</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2712349/">視覚探索とサッケードの研究</a></td><td>Najemnik と Geisler の系統</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://link.springer.com/article/10.1007/s00221-025-07152-2">視野の水平・垂直の差の研究</a></td><td>Experimental Brain Research、2025</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9012886">視野の非対称性の総説</a></td><td>PMC</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://vis.arc.vt.edu/%7Enpolys/projects/safas/science.pdf">Graphical Perception（論文）</a></td><td>Cleveland と McGill、1984</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://groups.psych.northwestern.edu/gentner/papers/MatlenEtAl_2020-SpatialAlign.pdf">Spatial alignment</a></td><td>Matlen ら、2020</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/01/cockburn-ComputingSurveys09.pdf">A review of overview+detail, zooming, and focus+context interfaces</a></td><td>Cockburn ら、2009</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://www.leadtools.com/help/sdk/dh/medical/to/hanging-protocol-overview.html">Hanging Protocol Overview</a></td><td>LEADTOOLS</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">Text Scanning Patterns: Eyetracking Evidence</a></td><td>Nielsen Norman Group</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://researchmap.jp/kojimiwa/published_papers/3501775">縦書きと横書きの読みの研究</a></td><td>Miwa ら</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://moshebar.org/_files/ugd/a77db7_5598c791a95a4436960eb2fe671ca1e5.pdf">Humans prefer curved visual objects</a></td><td>Bar と Neta、2006</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
     <tr class="secret"><td><a href="https://link.springer.com/article/10.1186/s41235-023-00499-6">Cognitive Research: Principles and Implications の論文</a></td><td>Bellaiche ら、2023</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
     <tr class="secret"><td><a href="https://doi.org/10.1016/S0022-1031(03)00065-9">The effort heuristic</a></td><td>Kruger ら、2004</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr class="secret"><td><a href="https://online.ucpress.edu/collabra/article/9/1/87489/197632/The-Effort-Heuristic-Revisited-Mixed-Results-for">The Effort Heuristic Revisited</a></td><td>Collabra、2023</td><td><a href="#decoration">飾り</a></td><td><span class="lv lv-src">原典</span></td></tr>
@@ -1202,12 +1211,12 @@
     <tr><td><a href="https://en.wikipedia.org/wiki/Responsive_web_design">Responsive web design</a></td><td>Wikipedia</td><td><a href="#material">Material</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://developer.apple.com/design/human-interface-guidelines/buttons">HIG「Buttons」</a></td><td>Apple</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-src">原典</span></td></tr>
     <tr><td><a href="https://m3.material.io/foundations/designing/structure">Material Design 3「Structure」</a></td><td>Google</td><td><a href="#guidelines">ガイドライン</a></td><td><span class="lv lv-src">原典</span></td></tr>
-    <tr><td><a href="https://cloudfour.com/thinks/the-math-behind-nesting-rounded-corners/">The math behind nesting rounded corners</a></td><td>Cloud Four</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://snarkmarket.com/blog/snarkives/technosnark/the_web_20_design_aesthetic/">The "Web 2.0" Design Aesthetic</a></td><td>Snarkmarket、2005</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-src">原典</span></td></tr>
-    <tr><td><a href="https://daringfireball.net/2025/11/software_update_tahoe_confusing">Software Update: Tahoe（評論）</a></td><td>Gruber、2025</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://mjtsai.com/blog/2025/10/16/tahoe-window-corners/">Tahoe Window Corners</a></td><td>Michael Tsai、2025</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://kirby.pika.page/posts/a-time-and-a-place-for-concentricity">A Time and a Place for Concentricity</a></td><td>Keren、2025</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-sec">二次</span></td></tr>
-    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4975689">Do observers like curvature or do they dislike angularity?</a></td><td>Bertamini ら、2016</td><td><a href="#principles">共通原則</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
+    <tr><td><a href="https://cloudfour.com/thinks/the-math-behind-nesting-rounded-corners/">The math behind nesting rounded corners</a></td><td>Cloud Four</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://snarkmarket.com/blog/snarkives/technosnark/the_web_20_design_aesthetic/">The "Web 2.0" Design Aesthetic</a></td><td>Snarkmarket、2005</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-src">原典</span></td></tr>
+    <tr><td><a href="https://daringfireball.net/2025/11/software_update_tahoe_confusing">Software Update: Tahoe（評論）</a></td><td>Gruber、2025</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://mjtsai.com/blog/2025/10/16/tahoe-window-corners/">Tahoe Window Corners</a></td><td>Michael Tsai、2025</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://kirby.pika.page/posts/a-time-and-a-place-for-concentricity">A Time and a Place for Concentricity</a></td><td>Keren、2025</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-sec">二次</span></td></tr>
+    <tr><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4975689">Do observers like curvature or do they dislike angularity?</a></td><td>Bertamini ら、2016</td><td><a href="#form">形と配置</a></td><td><span class="lv lv-abs">要旨</span></td></tr>
     <tr><td><a href="https://ja.wikipedia.org/wiki/ポカヨケ">ポカヨケ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://ja.wikipedia.org/wiki/フェイルセーフ">フェイルセーフ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
     <tr><td><a href="https://ja.wikipedia.org/wiki/フールプルーフ">フールプルーフ</a></td><td>Wikipedia</td><td><a href="#foolproof">フールプルーフ</a></td><td><span class="lv lv-sec">二次</span></td></tr>
